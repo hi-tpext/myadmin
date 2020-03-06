@@ -92,7 +92,8 @@ composer update
         $form->text('name', '姓名', 3)->maxlength(20);
         $form->text('phone', '手机号', 3)->maxlength(20);
         $form->text('email', '邮箱', 3)->maxlength(20);
-        $form->select('role_id', '角色组', 3)->options($this->getRoleList());// getRoleList 获取角色列表，代码不列出来了
+        // getRoleList 获取角色列表，代码不列出来了
+        $form->select('role_id', '角色组', 3)->options($this->getRoleList());
 
         $table = $builder->table();//列表
 
@@ -148,7 +149,8 @@ composer update
             $where[] = ['role_id', 'eq', $searchData['role_id']];
         }
 
-        $sortOrder = 'id asc';//排序字段，默认为id ，可用 $table->sortable(['feild1','feild2'])控制哪些字段可排序
+        //排序字段，默认为id ，可用 $table->sortable(['feild1','feild2'])控制哪些字段可排序
+        $sortOrder = 'id asc';
 
         $sort = input('__sort__');
         if ($sort) {
@@ -158,7 +160,8 @@ composer update
             }
         }
 
-        $data = $this->dataModel->where($where)->order($sortOrder)->limit(($page - 1) * $pagezise, $pagezise)->select();
+        $data = $this->dataModel->where($where)->order($sortOrder)
+            ->limit(($page - 1) * $pagezise, $pagezise)->select();
 
         foreach ($data as &$d) {
             $d['__h_del__'] = $d['id'] == 1;// 用户id 为1是超级管理员
@@ -237,8 +240,10 @@ composer update
         $form = $builder->form();
 
         $form->text('username', '登录帐号')->required()->beforSymbol('<i class="mdi mdi-account-key"></i>');
-        $form->select('role_id', '角色组')->required()->options($this->getRoleList())->disabled($isEdit && $data['id'] == 1);
-        $form->password('password', '密码')->required(!$isEdit)->beforSymbol('<i class="mdi mdi-lock"></i>')->help($isEdit ? '不修改则留空（6～20位）' : '添加用户，密码必填（6～20位）');
+        $form->select('role_id', '角色组')->required()->options($this->getRoleList())
+            ->disabled($isEdit && $data['id'] == 1);
+        $form->password('password', '密码')->required(!$isEdit)->beforSymbol('<i class="mdi mdi-lock"></i>')
+            ->help($isEdit ? '不修改则留空（6～20位）' : '添加用户，密码必填（6～20位）');
         $form->text('name', '姓名')->required()->beforSymbol('<i class="mdi mdi-rename-box"></i>');
         $form->image('avatar', '头像')->default('/assets/lightyearadmin/images/no-avatar.jpg');
         $form->text('email', '电子邮箱')->beforSymbol('<i class="mdi mdi-email-variant"></i>');
@@ -259,7 +264,12 @@ composer update
 
     private function save($id = 0)
     {
-        //代码略
+        //代码略 ....
+        if (!$res) {
+            $this->error('保存失败');
+        }
+
+        return Builder::getInstance()->layer()->closeRefresh(1, '保存成功');
     }
 
 ```
