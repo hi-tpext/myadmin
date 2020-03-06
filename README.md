@@ -1,9 +1,12 @@
 1.安装
 全新安装：
-`
+`bash
 composer create-project topthink/think=5.1.* tp5
+`
+`bash
 composer require ichynul/tpextmyadmin>=1.1
 `
+
 或者 `composer update` 更新
 
 2.配置
