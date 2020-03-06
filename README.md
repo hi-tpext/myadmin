@@ -1,6 +1,6 @@
 # 欢迎使用 
 
-## 1.安装:**
+## 1.安装:
 ### 全新安装
 - thinkphp 5.1.*
 ```bash
@@ -209,10 +209,13 @@ composer update
 ```
 #### Form 数据列表展示
 ###### 基础组件：
-- text,checkbox,radio,button,select,multipleSelect,textarea,hidden,color,rangeSlider,
-- file,image,date,datetime,time,year,month,dateRange,datetimeRange,timeRange,number
-- switchBtn,rate,divider,password,decimal,html,raw,show,tags,icon,multipleImage,multipleFile
-- wangEditor,tinymce,ueditor,editor,ckeditor,mdeditor,match,matches
+> text ,checkbox ,radio ,button ,select ,multipleSelect ,textarea ,hidden ,color ,rangeSlider,
+> file ,image ,date ,datetime ,time ,year ,month ,dateRange ,datetimeRange ,timeRange ,number
+> switchBtn ,rate ,divider ,password ,decimal ,html ,raw ,show ,tags ,icon ,multipleImage ,multipleFile
+> wangEditor ,tinymce ,ueditor ,editor ,ckeditor ,mdeditor ,match ,matches
+###### 特殊 
+> tab ,step
+
 ###### 实例
 ```php
     public function add()
