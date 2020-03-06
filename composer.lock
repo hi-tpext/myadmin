@@ -1,0 +1,322 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "7e66626ab74b0d64c8c2724d00dfa787",
+    "packages": [
+        {
+            "name": "ichynul/lightyearadmin",
+            "version": "1.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://gitee.com/ichynul/lightyearadmin.git",
+                "reference": "aae9d0c73bfad81d109df19a947694d80bd82f3b"
+            },
+            "require": {
+                "ichynul/tpext": "^1.0.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "tpext\\lightyearadmin\\": "src/"
+                },
+                "files": [
+                    "src/helper.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "ichynul",
+                    "email": "ichynul@outlook.com"
+                }
+            ],
+            "description": "thinkphp extension",
+            "homepage": "http://thinkphp.cn/",
+            "keywords": [
+                "thinkphp"
+            ],
+            "time": "2020-03-03T14:38:00+00:00"
+        },
+        {
+            "name": "ichynul/tpext",
+            "version": "1.0.7",
+            "source": {
+                "type": "git",
+                "url": "https://gitee.com/ichynul/tpext.git",
+                "reference": "5d1da05db69f1d14e15382d7d522b8c07c685cc8"
+            },
+            "require": {
+                "topthink/framework": "5.1.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "tpext\\": "src/"
+                },
+                "files": [
+                    "src/helper.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "ichynul",
+                    "email": "ichynul@outlook.com"
+                }
+            ],
+            "description": "thinkphp extension",
+            "homepage": "http://www.ynyysc.com/",
+            "keywords": [
+                "thinkphp"
+            ],
+            "time": "2020-03-05T16:21:12+00:00"
+        },
+        {
+            "name": "ichynul/tpextbuilder",
+            "version": "1.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://gitee.com/ichynul/tpextbuilder.git",
+                "reference": "f4efc11ccd43330e6095d11e6ec606dde77dcbe8"
+            },
+            "require": {
+                "ichynul/lightyearadmin": "^1.0.1",
+                "ichynul/tpext": "^1.0.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "tpext\\builder\\": "src/"
+                },
+                "files": [
+                    "src/helper.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "ichynul",
+                    "email": "ichynul@outlook.com"
+                }
+            ],
+            "description": "thinkphp extension",
+            "homepage": "http://www.ynyysc.com/",
+            "keywords": [
+                "thinkphp"
+            ],
+            "time": "2020-03-05T16:19:48+00:00"
+        },
+        {
+            "name": "ichynul/tpextmyadmin",
+            "version": "1.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://gitee.com/ichynul/tpextmyadmin.git",
+                "reference": "0b2ada3772f0a57a7967be9aa18578ef4659c5d8"
+            },
+            "require": {
+                "ichynul/lightyearadmin": "^1.0.1",
+                "ichynul/tpext": "^1.0.1",
+                "ichynul/tpextbuilder": "^1.0.1",
+                "topthink/framework": "5.1.*",
+                "topthink/think-captcha": "^2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "tpext\\myadmin\\": "src/"
+                },
+                "files": [
+                    "src/helper.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "ichynul",
+                    "email": "ichynul@outlook.com"
+                }
+            ],
+            "description": "thinkphp extension",
+            "homepage": "http://thinkphp.cn/",
+            "keywords": [
+                "thinkphp"
+            ],
+            "time": "2020-03-05T16:22:26+00:00"
+        },
+        {
+            "name": "topthink/framework",
+            "version": "v5.1.39",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/top-think/framework.git",
+                "reference": "5762858f3d58faafb3a39427f8788884b2927007"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/top-think/framework/zipball/5762858f3d58faafb3a39427f8788884b2927007",
+                "reference": "5762858f3d58faafb3a39427f8788884b2927007",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "php": ">=5.6.0",
+                "topthink/think-installer": "2.*"
+            },
+            "require-dev": {
+                "johnkary/phpunit-speedtrap": "^1.0",
+                "mikey179/vfsstream": "~1.6",
+                "phpdocumentor/reflection-docblock": "^2.0",
+                "phploc/phploc": "2.*",
+                "phpunit/phpunit": "^5.0|^6.0",
+                "sebastian/phpcpd": "2.*",
+                "squizlabs/php_codesniffer": "2.*"
+            },
+            "type": "think-framework",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "liu21st",
+                    "email": "liu21st@gmail.com"
+                },
+                {
+                    "name": "yunwuxin",
+                    "email": "448901948@qq.com"
+                }
+            ],
+            "description": "the new thinkphp framework",
+            "homepage": "http://thinkphp.cn/",
+            "keywords": [
+                "framework",
+                "orm",
+                "thinkphp"
+            ],
+            "time": "2019-11-17T23:22:02+00:00"
+        },
+        {
+            "name": "topthink/think-captcha",
+            "version": "v2.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/top-think/think-captcha.git",
+                "reference": "54c8a51552f99ff9ea89ea9c272383a8f738ceee"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/top-think/think-captcha/zipball/54c8a51552f99ff9ea89ea9c272383a8f738ceee",
+                "reference": "54c8a51552f99ff9ea89ea9c272383a8f738ceee",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "topthink/framework": "5.1.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "think\\captcha\\": "src/"
+                },
+                "files": [
+                    "src/helper.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "yunwuxin",
+                    "email": "448901948@qq.com"
+                }
+            ],
+            "description": "captcha package for thinkphp5",
+            "time": "2017-12-31T16:37:49+00:00"
+        },
+        {
+            "name": "topthink/think-installer",
+            "version": "v2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/top-think/think-installer.git",
+                "reference": "f5400a12c60e513911aef41fe443fa6920952675"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/top-think/think-installer/zipball/f5400a12c60e513911aef41fe443fa6920952675",
+                "reference": "f5400a12c60e513911aef41fe443fa6920952675",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "composer-plugin-api": "^1.0"
+            },
+            "require-dev": {
+                "composer/composer": "1.0.*@dev"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "think\\composer\\Plugin"
+            },
+            "autoload": {
+                "psr-4": {
+                    "think\\composer\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "yunwuxin",
+                    "email": "448901948@qq.com"
+                }
+            ],
+            "time": "2018-05-11T06:45:42+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {
+        "php": ">=5.6.0"
+    },
+    "platform-dev": []
+}

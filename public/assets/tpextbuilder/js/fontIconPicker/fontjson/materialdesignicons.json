@@ -1,0 +1,8193 @@
+{
+  "name": "materialdesignicons",
+  "glyphs": [
+    {
+        "css":"mdi mdi-access-point",
+        "code":"f002"
+    },
+    {
+        "css":"mdi mdi-access-point-network",
+        "code":"f003"
+    },
+    {
+        "css":"mdi mdi-account",
+        "code":"f004"
+    },
+    {
+        "css":"mdi mdi-account-alert",
+        "code":"f005"
+    },
+    {
+        "css":"mdi mdi-account-box",
+        "code":"f006"
+    },
+    {
+        "css":"mdi mdi-account-box-outline",
+        "code":"f007"
+    },
+    {
+        "css":"mdi mdi-account-card-details",
+        "code":"f5d2"
+    },
+    {
+        "css":"mdi mdi-account-check",
+        "code":"f008"
+    },
+    {
+        "css":"mdi mdi-account-circle",
+        "code":"f009"
+    },
+    {
+        "css":"mdi mdi-account-convert",
+        "code":"f00a"
+    },
+    {
+        "css":"mdi mdi-account-edit",
+        "code":"f6bb"
+    },
+    {
+        "css":"mdi mdi-account-key",
+        "code":"f00b"
+    },
+    {
+        "css":"mdi mdi-account-location",
+        "code":"f00c"
+    },
+    {
+        "css":"mdi mdi-account-minus",
+        "code":"f00d"
+    },
+    {
+        "css":"mdi mdi-account-multiple",
+        "code":"f00e"
+    },
+    {
+        "css":"mdi mdi-account-multiple-minus",
+        "code":"f5d3"
+    },
+    {
+        "css":"mdi mdi-account-multiple-outline",
+        "code":"f00f"
+    },
+    {
+        "css":"mdi mdi-account-multiple-plus",
+        "code":"f010"
+    },
+    {
+        "css":"mdi mdi-account-network",
+        "code":"f011"
+    },
+    {
+        "css":"mdi mdi-account-off",
+        "code":"f012"
+    },
+    {
+        "css":"mdi mdi-account-outline",
+        "code":"f013"
+    },
+    {
+        "css":"mdi mdi-account-plus",
+        "code":"f014"
+    },
+    {
+        "css":"mdi mdi-account-remove",
+        "code":"f015"
+    },
+    {
+        "css":"mdi mdi-account-search",
+        "code":"f016"
+    },
+    {
+        "css":"mdi mdi-account-settings",
+        "code":"f630"
+    },
+    {
+        "css":"mdi mdi-account-settings-variant",
+        "code":"f631"
+    },
+    {
+        "css":"mdi mdi-account-star",
+        "code":"f017"
+    },
+    {
+        "css":"mdi mdi-account-switch",
+        "code":"f019"
+    },
+    {
+        "css":"mdi mdi-adjust",
+        "code":"f01a"
+    },
+    {
+        "css":"mdi mdi-air-conditioner",
+        "code":"f01b"
+    },
+    {
+        "css":"mdi mdi-airballoon",
+        "code":"f01c"
+    },
+    {
+        "css":"mdi mdi-airplane",
+        "code":"f01d"
+    },
+    {
+        "css":"mdi mdi-airplane-landing",
+        "code":"f5d4"
+    },
+    {
+        "css":"mdi mdi-airplane-off",
+        "code":"f01e"
+    },
+    {
+        "css":"mdi mdi-airplane-takeoff",
+        "code":"f5d5"
+    },
+    {
+        "css":"mdi mdi-airplay",
+        "code":"f01f"
+    },
+    {
+        "css":"mdi mdi-alarm",
+        "code":"f020"
+    },
+    {
+        "css":"mdi mdi-alarm-bell",
+        "code":"f78d"
+    },
+    {
+        "css":"mdi mdi-alarm-check",
+        "code":"f021"
+    },
+    {
+        "css":"mdi mdi-alarm-light",
+        "code":"f78e"
+    },
+    {
+        "css":"mdi mdi-alarm-multiple",
+        "code":"f022"
+    },
+    {
+        "css":"mdi mdi-alarm-off",
+        "code":"f023"
+    },
+    {
+        "css":"mdi mdi-alarm-plus",
+        "code":"f024"
+    },
+    {
+        "css":"mdi mdi-alarm-snooze",
+        "code":"f68d"
+    },
+    {
+        "css":"mdi mdi-album",
+        "code":"f025"
+    },
+    {
+        "css":"mdi mdi-alert",
+        "code":"f026"
+    },
+    {
+        "css":"mdi mdi-alert-box",
+        "code":"f027"
+    },
+    {
+        "css":"mdi mdi-alert-circle",
+        "code":"f028"
+    },
+    {
+        "css":"mdi mdi-alert-circle-outline",
+        "code":"f5d6"
+    },
+    {
+        "css":"mdi mdi-alert-decagram",
+        "code":"f6bc"
+    },
+    {
+        "css":"mdi mdi-alert-octagon",
+        "code":"f029"
+    },
+    {
+        "css":"mdi mdi-alert-octagram",
+        "code":"f766"
+    },
+    {
+        "css":"mdi mdi-alert-outline",
+        "code":"f02a"
+    },
+    {
+        "css":"mdi mdi-all-inclusive",
+        "code":"f6bd"
+    },
+    {
+        "css":"mdi mdi-alpha",
+        "code":"f02b"
+    },
+    {
+        "css":"mdi mdi-alphabetical",
+        "code":"f02c"
+    },
+    {
+        "css":"mdi mdi-altimeter",
+        "code":"f5d7"
+    },
+    {
+        "css":"mdi mdi-amazon",
+        "code":"f02d"
+    },
+    {
+        "css":"mdi mdi-amazon-clouddrive",
+        "code":"f02e"
+    },
+    {
+        "css":"mdi mdi-ambulance",
+        "code":"f02f"
+    },
+    {
+        "css":"mdi mdi-amplifier",
+        "code":"f030"
+    },
+    {
+        "css":"mdi mdi-anchor",
+        "code":"f031"
+    },
+    {
+        "css":"mdi mdi-android",
+        "code":"f032"
+    },
+    {
+        "css":"mdi mdi-android-debug-bridge",
+        "code":"f033"
+    },
+    {
+        "css":"mdi mdi-android-head",
+        "code":"f78f"
+    },
+    {
+        "css":"mdi mdi-android-studio",
+        "code":"f034"
+    },
+    {
+        "css":"mdi mdi-angular",
+        "code":"f6b1"
+    },
+    {
+        "css":"mdi mdi-angularjs",
+        "code":"f6be"
+    },
+    {
+        "css":"mdi mdi-animation",
+        "code":"f5d8"
+    },
+    {
+        "css":"mdi mdi-apple",
+        "code":"f035"
+    },
+    {
+        "css":"mdi mdi-apple-finder",
+        "code":"f036"
+    },
+    {
+        "css":"mdi mdi-apple-ios",
+        "code":"f037"
+    },
+    {
+        "css":"mdi mdi-apple-keyboard-caps",
+        "code":"f632"
+    },
+    {
+        "css":"mdi mdi-apple-keyboard-command",
+        "code":"f633"
+    },
+    {
+        "css":"mdi mdi-apple-keyboard-control",
+        "code":"f634"
+    },
+    {
+        "css":"mdi mdi-apple-keyboard-option",
+        "code":"f635"
+    },
+    {
+        "css":"mdi mdi-apple-keyboard-shift",
+        "code":"f636"
+    },
+    {
+        "css":"mdi mdi-apple-mobileme",
+        "code":"f038"
+    },
+    {
+        "css":"mdi mdi-apple-safari",
+        "code":"f039"
+    },
+    {
+        "css":"mdi mdi-application",
+        "code":"f614"
+    },
+    {
+        "css":"mdi mdi-approval",
+        "code":"f790"
+    },
+    {
+        "css":"mdi mdi-apps",
+        "code":"f03b"
+    },
+    {
+        "css":"mdi mdi-archive",
+        "code":"f03c"
+    },
+    {
+        "css":"mdi mdi-arrange-bring-forward",
+        "code":"f03d"
+    },
+    {
+        "css":"mdi mdi-arrange-bring-to-front",
+        "code":"f03e"
+    },
+    {
+        "css":"mdi mdi-arrange-send-backward",
+        "code":"f03f"
+    },
+    {
+        "css":"mdi mdi-arrange-send-to-back",
+        "code":"f040"
+    },
+    {
+        "css":"mdi mdi-arrow-all",
+        "code":"f041"
+    },
+    {
+        "css":"mdi mdi-arrow-bottom-left",
+        "code":"f042"
+    },
+    {
+        "css":"mdi mdi-arrow-bottom-right",
+        "code":"f043"
+    },
+    {
+        "css":"mdi mdi-arrow-collapse",
+        "code":"f615"
+    },
+    {
+        "css":"mdi mdi-arrow-collapse-all",
+        "code":"f044"
+    },
+    {
+        "css":"mdi mdi-arrow-collapse-down",
+        "code":"f791"
+    },
+    {
+        "css":"mdi mdi-arrow-collapse-left",
+        "code":"f792"
+    },
+    {
+        "css":"mdi mdi-arrow-collapse-right",
+        "code":"f793"
+    },
+    {
+        "css":"mdi mdi-arrow-collapse-up",
+        "code":"f794"
+    },
+    {
+        "css":"mdi mdi-arrow-down",
+        "code":"f045"
+    },
+    {
+        "css":"mdi mdi-arrow-down-bold",
+        "code":"f72d"
+    },
+    {
+        "css":"mdi mdi-arrow-down-bold-box",
+        "code":"f72e"
+    },
+    {
+        "css":"mdi mdi-arrow-down-bold-box-outline",
+        "code":"f72f"
+    },
+    {
+        "css":"mdi mdi-arrow-down-bold-circle",
+        "code":"f047"
+    },
+    {
+        "css":"mdi mdi-arrow-down-bold-circle-outline",
+        "code":"f048"
+    },
+    {
+        "css":"mdi mdi-arrow-down-bold-hexagon-outline",
+        "code":"f049"
+    },
+    {
+        "css":"mdi mdi-arrow-down-box",
+        "code":"f6bf"
+    },
+    {
+        "css":"mdi mdi-arrow-down-drop-circle",
+        "code":"f04a"
+    },
+    {
+        "css":"mdi mdi-arrow-down-drop-circle-outline",
+        "code":"f04b"
+    },
+    {
+        "css":"mdi mdi-arrow-down-thick",
+        "code":"f046"
+    },
+    {
+        "css":"mdi mdi-arrow-expand",
+        "code":"f616"
+    },
+    {
+        "css":"mdi mdi-arrow-expand-all",
+        "code":"f04c"
+    },
+    {
+        "css":"mdi mdi-arrow-expand-down",
+        "code":"f795"
+    },
+    {
+        "css":"mdi mdi-arrow-expand-left",
+        "code":"f796"
+    },
+    {
+        "css":"mdi mdi-arrow-expand-right",
+        "code":"f797"
+    },
+    {
+        "css":"mdi mdi-arrow-expand-up",
+        "code":"f798"
+    },
+    {
+        "css":"mdi mdi-arrow-left",
+        "code":"f04d"
+    },
+    {
+        "css":"mdi mdi-arrow-left-bold",
+        "code":"f730"
+    },
+    {
+        "css":"mdi mdi-arrow-left-bold-box",
+        "code":"f731"
+    },
+    {
+        "css":"mdi mdi-arrow-left-bold-box-outline",
+        "code":"f732"
+    },
+    {
+        "css":"mdi mdi-arrow-left-bold-circle",
+        "code":"f04f"
+    },
+    {
+        "css":"mdi mdi-arrow-left-bold-circle-outline",
+        "code":"f050"
+    },
+    {
+        "css":"mdi mdi-arrow-left-bold-hexagon-outline",
+        "code":"f051"
+    },
+    {
+        "css":"mdi mdi-arrow-left-box",
+        "code":"f6c0"
+    },
+    {
+        "css":"mdi mdi-arrow-left-drop-circle",
+        "code":"f052"
+    },
+    {
+        "css":"mdi mdi-arrow-left-drop-circle-outline",
+        "code":"f053"
+    },
+    {
+        "css":"mdi mdi-arrow-left-thick",
+        "code":"f04e"
+    },
+    {
+        "css":"mdi mdi-arrow-right",
+        "code":"f054"
+    },
+    {
+        "css":"mdi mdi-arrow-right-bold",
+        "code":"f733"
+    },
+    {
+        "css":"mdi mdi-arrow-right-bold-box",
+        "code":"f734"
+    },
+    {
+        "css":"mdi mdi-arrow-right-bold-box-outline",
+        "code":"f735"
+    },
+    {
+        "css":"mdi mdi-arrow-right-bold-circle",
+        "code":"f056"
+    },
+    {
+        "css":"mdi mdi-arrow-right-bold-circle-outline",
+        "code":"f057"
+    },
+    {
+        "css":"mdi mdi-arrow-right-bold-hexagon-outline",
+        "code":"f058"
+    },
+    {
+        "css":"mdi mdi-arrow-right-box",
+        "code":"f6c1"
+    },
+    {
+        "css":"mdi mdi-arrow-right-drop-circle",
+        "code":"f059"
+    },
+    {
+        "css":"mdi mdi-arrow-right-drop-circle-outline",
+        "code":"f05a"
+    },
+    {
+        "css":"mdi mdi-arrow-right-thick",
+        "code":"f055"
+    },
+    {
+        "css":"mdi mdi-arrow-top-left",
+        "code":"f05b"
+    },
+    {
+        "css":"mdi mdi-arrow-top-right",
+        "code":"f05c"
+    },
+    {
+        "css":"mdi mdi-arrow-up",
+        "code":"f05d"
+    },
+    {
+        "css":"mdi mdi-arrow-up-bold",
+        "code":"f736"
+    },
+    {
+        "css":"mdi mdi-arrow-up-bold-box",
+        "code":"f737"
+    },
+    {
+        "css":"mdi mdi-arrow-up-bold-box-outline",
+        "code":"f738"
+    },
+    {
+        "css":"mdi mdi-arrow-up-bold-circle",
+        "code":"f05f"
+    },
+    {
+        "css":"mdi mdi-arrow-up-bold-circle-outline",
+        "code":"f060"
+    },
+    {
+        "css":"mdi mdi-arrow-up-bold-hexagon-outline",
+        "code":"f061"
+    },
+    {
+        "css":"mdi mdi-arrow-up-box",
+        "code":"f6c2"
+    },
+    {
+        "css":"mdi mdi-arrow-up-drop-circle",
+        "code":"f062"
+    },
+    {
+        "css":"mdi mdi-arrow-up-drop-circle-outline",
+        "code":"f063"
+    },
+    {
+        "css":"mdi mdi-arrow-up-thick",
+        "code":"f05e"
+    },
+    {
+        "css":"mdi mdi-assistant",
+        "code":"f064"
+    },
+    {
+        "css":"mdi mdi-asterisk",
+        "code":"f6c3"
+    },
+    {
+        "css":"mdi mdi-at",
+        "code":"f065"
+    },
+    {
+        "css":"mdi mdi-atom",
+        "code":"f767"
+    },
+    {
+        "css":"mdi mdi-attachment",
+        "code":"f066"
+    },
+    {
+        "css":"mdi mdi-audiobook",
+        "code":"f067"
+    },
+    {
+        "css":"mdi mdi-auto-fix",
+        "code":"f068"
+    },
+    {
+        "css":"mdi mdi-auto-upload",
+        "code":"f069"
+    },
+    {
+        "css":"mdi mdi-autorenew",
+        "code":"f06a"
+    },
+    {
+        "css":"mdi mdi-av-timer",
+        "code":"f06b"
+    },
+    {
+        "css":"mdi mdi-baby",
+        "code":"f06c"
+    },
+    {
+        "css":"mdi mdi-baby-buggy",
+        "code":"f68e"
+    },
+    {
+        "css":"mdi mdi-backburger",
+        "code":"f06d"
+    },
+    {
+        "css":"mdi mdi-backspace",
+        "code":"f06e"
+    },
+    {
+        "css":"mdi mdi-backup-restore",
+        "code":"f06f"
+    },
+    {
+        "css":"mdi mdi-bandcamp",
+        "code":"f674"
+    },
+    {
+        "css":"mdi mdi-bank",
+        "code":"f070"
+    },
+    {
+        "css":"mdi mdi-barcode",
+        "code":"f071"
+    },
+    {
+        "css":"mdi mdi-barcode-scan",
+        "code":"f072"
+    },
+    {
+        "css":"mdi mdi-barley",
+        "code":"f073"
+    },
+    {
+        "css":"mdi mdi-barrel",
+        "code":"f074"
+    },
+    {
+        "css":"mdi mdi-basecamp",
+        "code":"f075"
+    },
+    {
+        "css":"mdi mdi-basket",
+        "code":"f076"
+    },
+    {
+        "css":"mdi mdi-basket-fill",
+        "code":"f077"
+    },
+    {
+        "css":"mdi mdi-basket-unfill",
+        "code":"f078"
+    },
+    {
+        "css":"mdi mdi-battery",
+        "code":"f079"
+    },
+    {
+        "css":"mdi mdi-battery-10",
+        "code":"f07a"
+    },
+    {
+        "css":"mdi mdi-battery-20",
+        "code":"f07b"
+    },
+    {
+        "css":"mdi mdi-battery-30",
+        "code":"f07c"
+    },
+    {
+        "css":"mdi mdi-battery-40",
+        "code":"f07d"
+    },
+    {
+        "css":"mdi mdi-battery-50",
+        "code":"f07e"
+    },
+    {
+        "css":"mdi mdi-battery-60",
+        "code":"f07f"
+    },
+    {
+        "css":"mdi mdi-battery-70",
+        "code":"f080"
+    },
+    {
+        "css":"mdi mdi-battery-80",
+        "code":"f081"
+    },
+    {
+        "css":"mdi mdi-battery-90",
+        "code":"f082"
+    },
+    {
+        "css":"mdi mdi-battery-alert",
+        "code":"f083"
+    },
+    {
+        "css":"mdi mdi-battery-charging",
+        "code":"f084"
+    },
+    {
+        "css":"mdi mdi-battery-charging-100",
+        "code":"f085"
+    },
+    {
+        "css":"mdi mdi-battery-charging-20",
+        "code":"f086"
+    },
+    {
+        "css":"mdi mdi-battery-charging-30",
+        "code":"f087"
+    },
+    {
+        "css":"mdi mdi-battery-charging-40",
+        "code":"f088"
+    },
+    {
+        "css":"mdi mdi-battery-charging-60",
+        "code":"f089"
+    },
+    {
+        "css":"mdi mdi-battery-charging-80",
+        "code":"f08a"
+    },
+    {
+        "css":"mdi mdi-battery-charging-90",
+        "code":"f08b"
+    },
+    {
+        "css":"mdi mdi-battery-minus",
+        "code":"f08c"
+    },
+    {
+        "css":"mdi mdi-battery-negative",
+        "code":"f08d"
+    },
+    {
+        "css":"mdi mdi-battery-outline",
+        "code":"f08e"
+    },
+    {
+        "css":"mdi mdi-battery-plus",
+        "code":"f08f"
+    },
+    {
+        "css":"mdi mdi-battery-positive",
+        "code":"f090"
+    },
+    {
+        "css":"mdi mdi-battery-unknown",
+        "code":"f091"
+    },
+    {
+        "css":"mdi mdi-beach",
+        "code":"f092"
+    },
+    {
+        "css":"mdi mdi-beaker",
+        "code":"f68f"
+    },
+    {
+        "css":"mdi mdi-beats",
+        "code":"f097"
+    },
+    {
+        "css":"mdi mdi-beer",
+        "code":"f098"
+    },
+    {
+        "css":"mdi mdi-behance",
+        "code":"f099"
+    },
+    {
+        "css":"mdi mdi-bell",
+        "code":"f09a"
+    },
+    {
+        "css":"mdi mdi-bell-off",
+        "code":"f09b"
+    },
+    {
+        "css":"mdi mdi-bell-outline",
+        "code":"f09c"
+    },
+    {
+        "css":"mdi mdi-bell-plus",
+        "code":"f09d"
+    },
+    {
+        "css":"mdi mdi-bell-ring",
+        "code":"f09e"
+    },
+    {
+        "css":"mdi mdi-bell-ring-outline",
+        "code":"f09f"
+    },
+    {
+        "css":"mdi mdi-bell-sleep",
+        "code":"f0a0"
+    },
+    {
+        "css":"mdi mdi-beta",
+        "code":"f0a1"
+    },
+    {
+        "css":"mdi mdi-bible",
+        "code":"f0a2"
+    },
+    {
+        "css":"mdi mdi-bike",
+        "code":"f0a3"
+    },
+    {
+        "css":"mdi mdi-bing",
+        "code":"f0a4"
+    },
+    {
+        "css":"mdi mdi-binoculars",
+        "code":"f0a5"
+    },
+    {
+        "css":"mdi mdi-bio",
+        "code":"f0a6"
+    },
+    {
+        "css":"mdi mdi-biohazard",
+        "code":"f0a7"
+    },
+    {
+        "css":"mdi mdi-bitbucket",
+        "code":"f0a8"
+    },
+    {
+        "css":"mdi mdi-black-mesa",
+        "code":"f0a9"
+    },
+    {
+        "css":"mdi mdi-blackberry",
+        "code":"f0aa"
+    },
+    {
+        "css":"mdi mdi-blender",
+        "code":"f0ab"
+    },
+    {
+        "css":"mdi mdi-blinds",
+        "code":"f0ac"
+    },
+    {
+        "css":"mdi mdi-block-helper",
+        "code":"f0ad"
+    },
+    {
+        "css":"mdi mdi-blogger",
+        "code":"f0ae"
+    },
+    {
+        "css":"mdi mdi-bluetooth",
+        "code":"f0af"
+    },
+    {
+        "css":"mdi mdi-bluetooth-audio",
+        "code":"f0b0"
+    },
+    {
+        "css":"mdi mdi-bluetooth-connect",
+        "code":"f0b1"
+    },
+    {
+        "css":"mdi mdi-bluetooth-off",
+        "code":"f0b2"
+    },
+    {
+        "css":"mdi mdi-bluetooth-settings",
+        "code":"f0b3"
+    },
+    {
+        "css":"mdi mdi-bluetooth-transfer",
+        "code":"f0b4"
+    },
+    {
+        "css":"mdi mdi-blur",
+        "code":"f0b5"
+    },
+    {
+        "css":"mdi mdi-blur-linear",
+        "code":"f0b6"
+    },
+    {
+        "css":"mdi mdi-blur-off",
+        "code":"f0b7"
+    },
+    {
+        "css":"mdi mdi-blur-radial",
+        "code":"f0b8"
+    },
+    {
+        "css":"mdi mdi-bomb",
+        "code":"f690"
+    },
+    {
+        "css":"mdi mdi-bomb-off",
+        "code":"f6c4"
+    },
+    {
+        "css":"mdi mdi-bone",
+        "code":"f0b9"
+    },
+    {
+        "css":"mdi mdi-book",
+        "code":"f0ba"
+    },
+    {
+        "css":"mdi mdi-book-minus",
+        "code":"f5d9"
+    },
+    {
+        "css":"mdi mdi-book-multiple",
+        "code":"f0bb"
+    },
+    {
+        "css":"mdi mdi-book-multiple-variant",
+        "code":"f0bc"
+    },
+    {
+        "css":"mdi mdi-book-open",
+        "code":"f0bd"
+    },
+    {
+        "css":"mdi mdi-book-open-page-variant",
+        "code":"f5da"
+    },
+    {
+        "css":"mdi mdi-book-open-variant",
+        "code":"f0be"
+    },
+    {
+        "css":"mdi mdi-book-plus",
+        "code":"f5db"
+    },
+    {
+        "css":"mdi mdi-book-secure",
+        "code":"f799"
+    },
+    {
+        "css":"mdi mdi-book-unsecure",
+        "code":"f79a"
+    },
+    {
+        "css":"mdi mdi-book-variant",
+        "code":"f0bf"
+    },
+    {
+        "css":"mdi mdi-bookmark",
+        "code":"f0c0"
+    },
+    {
+        "css":"mdi mdi-bookmark-check",
+        "code":"f0c1"
+    },
+    {
+        "css":"mdi mdi-bookmark-music",
+        "code":"f0c2"
+    },
+    {
+        "css":"mdi mdi-bookmark-outline",
+        "code":"f0c3"
+    },
+    {
+        "css":"mdi mdi-bookmark-plus",
+        "code":"f0c5"
+    },
+    {
+        "css":"mdi mdi-bookmark-plus-outline",
+        "code":"f0c4"
+    },
+    {
+        "css":"mdi mdi-bookmark-remove",
+        "code":"f0c6"
+    },
+    {
+        "css":"mdi mdi-boombox",
+        "code":"f5dc"
+    },
+    {
+        "css":"mdi mdi-bootstrap",
+        "code":"f6c5"
+    },
+    {
+        "css":"mdi mdi-border-all",
+        "code":"f0c7"
+    },
+    {
+        "css":"mdi mdi-border-bottom",
+        "code":"f0c8"
+    },
+    {
+        "css":"mdi mdi-border-color",
+        "code":"f0c9"
+    },
+    {
+        "css":"mdi mdi-border-horizontal",
+        "code":"f0ca"
+    },
+    {
+        "css":"mdi mdi-border-inside",
+        "code":"f0cb"
+    },
+    {
+        "css":"mdi mdi-border-left",
+        "code":"f0cc"
+    },
+    {
+        "css":"mdi mdi-border-none",
+        "code":"f0cd"
+    },
+    {
+        "css":"mdi mdi-border-outside",
+        "code":"f0ce"
+    },
+    {
+        "css":"mdi mdi-border-right",
+        "code":"f0cf"
+    },
+    {
+        "css":"mdi mdi-border-style",
+        "code":"f0d0"
+    },
+    {
+        "css":"mdi mdi-border-top",
+        "code":"f0d1"
+    },
+    {
+        "css":"mdi mdi-border-vertical",
+        "code":"f0d2"
+    },
+    {
+        "css":"mdi mdi-bow-tie",
+        "code":"f677"
+    },
+    {
+        "css":"mdi mdi-bowl",
+        "code":"f617"
+    },
+    {
+        "css":"mdi mdi-bowling",
+        "code":"f0d3"
+    },
+    {
+        "css":"mdi mdi-box",
+        "code":"f0d4"
+    },
+    {
+        "css":"mdi mdi-box-cutter",
+        "code":"f0d5"
+    },
+    {
+        "css":"mdi mdi-box-shadow",
+        "code":"f637"
+    },
+    {
+        "css":"mdi mdi-bridge",
+        "code":"f618"
+    },
+    {
+        "css":"mdi mdi-briefcase",
+        "code":"f0d6"
+    },
+    {
+        "css":"mdi mdi-briefcase-check",
+        "code":"f0d7"
+    },
+    {
+        "css":"mdi mdi-briefcase-download",
+        "code":"f0d8"
+    },
+    {
+        "css":"mdi mdi-briefcase-upload",
+        "code":"f0d9"
+    },
+    {
+        "css":"mdi mdi-brightness-1",
+        "code":"f0da"
+    },
+    {
+        "css":"mdi mdi-brightness-2",
+        "code":"f0db"
+    },
+    {
+        "css":"mdi mdi-brightness-3",
+        "code":"f0dc"
+    },
+    {
+        "css":"mdi mdi-brightness-4",
+        "code":"f0dd"
+    },
+    {
+        "css":"mdi mdi-brightness-5",
+        "code":"f0de"
+    },
+    {
+        "css":"mdi mdi-brightness-6",
+        "code":"f0df"
+    },
+    {
+        "css":"mdi mdi-brightness-7",
+        "code":"f0e0"
+    },
+    {
+        "css":"mdi mdi-brightness-auto",
+        "code":"f0e1"
+    },
+    {
+        "css":"mdi mdi-broom",
+        "code":"f0e2"
+    },
+    {
+        "css":"mdi mdi-brush",
+        "code":"f0e3"
+    },
+    {
+        "css":"mdi mdi-buffer",
+        "code":"f619"
+    },
+    {
+        "css":"mdi mdi-bug",
+        "code":"f0e4"
+    },
+    {
+        "css":"mdi mdi-bulletin-board",
+        "code":"f0e5"
+    },
+    {
+        "css":"mdi mdi-bullhorn",
+        "code":"f0e6"
+    },
+    {
+        "css":"mdi mdi-bullseye",
+        "code":"f5dd"
+    },
+    {
+        "css":"mdi mdi-burst-mode",
+        "code":"f5de"
+    },
+    {
+        "css":"mdi mdi-bus",
+        "code":"f0e7"
+    },
+    {
+        "css":"mdi mdi-bus-articulated-end",
+        "code":"f79b"
+    },
+    {
+        "css":"mdi mdi-bus-articulated-front",
+        "code":"f79c"
+    },
+    {
+        "css":"mdi mdi-bus-double-decker",
+        "code":"f79d"
+    },
+    {
+        "css":"mdi mdi-bus-school",
+        "code":"f79e"
+    },
+    {
+        "css":"mdi mdi-bus-side",
+        "code":"f79f"
+    },
+    {
+        "css":"mdi mdi-cached",
+        "code":"f0e8"
+    },
+    {
+        "css":"mdi mdi-cake",
+        "code":"f0e9"
+    },
+    {
+        "css":"mdi mdi-cake-layered",
+        "code":"f0ea"
+    },
+    {
+        "css":"mdi mdi-cake-variant",
+        "code":"f0eb"
+    },
+    {
+        "css":"mdi mdi-calculator",
+        "code":"f0ec"
+    },
+    {
+        "css":"mdi mdi-calendar",
+        "code":"f0ed"
+    },
+    {
+        "css":"mdi mdi-calendar-blank",
+        "code":"f0ee"
+    },
+    {
+        "css":"mdi mdi-calendar-check",
+        "code":"f0ef"
+    },
+    {
+        "css":"mdi mdi-calendar-clock",
+        "code":"f0f0"
+    },
+    {
+        "css":"mdi mdi-calendar-multiple",
+        "code":"f0f1"
+    },
+    {
+        "css":"mdi mdi-calendar-multiple-check",
+        "code":"f0f2"
+    },
+    {
+        "css":"mdi mdi-calendar-plus",
+        "code":"f0f3"
+    },
+    {
+        "css":"mdi mdi-calendar-question",
+        "code":"f691"
+    },
+    {
+        "css":"mdi mdi-calendar-range",
+        "code":"f678"
+    },
+    {
+        "css":"mdi mdi-calendar-remove",
+        "code":"f0f4"
+    },
+    {
+        "css":"mdi mdi-calendar-text",
+        "code":"f0f5"
+    },
+    {
+        "css":"mdi mdi-calendar-today",
+        "code":"f0f6"
+    },
+    {
+        "css":"mdi mdi-call-made",
+        "code":"f0f7"
+    },
+    {
+        "css":"mdi mdi-call-merge",
+        "code":"f0f8"
+    },
+    {
+        "css":"mdi mdi-call-missed",
+        "code":"f0f9"
+    },
+    {
+        "css":"mdi mdi-call-received",
+        "code":"f0fa"
+    },
+    {
+        "css":"mdi mdi-call-split",
+        "code":"f0fb"
+    },
+    {
+        "css":"mdi mdi-camcorder",
+        "code":"f0fc"
+    },
+    {
+        "css":"mdi mdi-camcorder-box",
+        "code":"f0fd"
+    },
+    {
+        "css":"mdi mdi-camcorder-box-off",
+        "code":"f0fe"
+    },
+    {
+        "css":"mdi mdi-camcorder-off",
+        "code":"f0ff"
+    },
+    {
+        "css":"mdi mdi-camera",
+        "code":"f100"
+    },
+    {
+        "css":"mdi mdi-camera-burst",
+        "code":"f692"
+    },
+    {
+        "css":"mdi mdi-camera-enhance",
+        "code":"f101"
+    },
+    {
+        "css":"mdi mdi-camera-front",
+        "code":"f102"
+    },
+    {
+        "css":"mdi mdi-camera-front-variant",
+        "code":"f103"
+    },
+    {
+        "css":"mdi mdi-camera-gopro",
+        "code":"f7a0"
+    },
+    {
+        "css":"mdi mdi-camera-iris",
+        "code":"f104"
+    },
+    {
+        "css":"mdi mdi-camera-metering-center",
+        "code":"f7a1"
+    },
+    {
+        "css":"mdi mdi-camera-metering-matrix",
+        "code":"f7a2"
+    },
+    {
+        "css":"mdi mdi-camera-metering-partial",
+        "code":"f7a3"
+    },
+    {
+        "css":"mdi mdi-camera-metering-spot",
+        "code":"f7a4"
+    },
+    {
+        "css":"mdi mdi-camera-off",
+        "code":"f5df"
+    },
+    {
+        "css":"mdi mdi-camera-party-mode",
+        "code":"f105"
+    },
+    {
+        "css":"mdi mdi-camera-rear",
+        "code":"f106"
+    },
+    {
+        "css":"mdi mdi-camera-rear-variant",
+        "code":"f107"
+    },
+    {
+        "css":"mdi mdi-camera-switch",
+        "code":"f108"
+    },
+    {
+        "css":"mdi mdi-camera-timer",
+        "code":"f109"
+    },
+    {
+        "css":"mdi mdi-cancel",
+        "code":"f739"
+    },
+    {
+        "css":"mdi mdi-candle",
+        "code":"f5e2"
+    },
+    {
+        "css":"mdi mdi-candycane",
+        "code":"f10a"
+    },
+    {
+        "css":"mdi mdi-cannabis",
+        "code":"f7a5"
+    },
+    {
+        "css":"mdi mdi-car",
+        "code":"f10b"
+    },
+    {
+        "css":"mdi mdi-car-battery",
+        "code":"f10c"
+    },
+    {
+        "css":"mdi mdi-car-connected",
+        "code":"f10d"
+    },
+    {
+        "css":"mdi mdi-car-convertable",
+        "code":"f7a6"
+    },
+    {
+        "css":"mdi mdi-car-estate",
+        "code":"f7a7"
+    },
+    {
+        "css":"mdi mdi-car-hatchback",
+        "code":"f7a8"
+    },
+    {
+        "css":"mdi mdi-car-pickup",
+        "code":"f7a9"
+    },
+    {
+        "css":"mdi mdi-car-side",
+        "code":"f7aa"
+    },
+    {
+        "css":"mdi mdi-car-sports",
+        "code":"f7ab"
+    },
+    {
+        "css":"mdi mdi-car-wash",
+        "code":"f10e"
+    },
+    {
+        "css":"mdi mdi-caravan",
+        "code":"f7ac"
+    },
+    {
+        "css":"mdi mdi-cards",
+        "code":"f638"
+    },
+    {
+        "css":"mdi mdi-cards-outline",
+        "code":"f639"
+    },
+    {
+        "css":"mdi mdi-cards-playing-outline",
+        "code":"f63a"
+    },
+    {
+        "css":"mdi mdi-cards-variant",
+        "code":"f6c6"
+    },
+    {
+        "css":"mdi mdi-carrot",
+        "code":"f10f"
+    },
+    {
+        "css":"mdi mdi-cart",
+        "code":"f110"
+    },
+    {
+        "css":"mdi mdi-cart-off",
+        "code":"f66b"
+    },
+    {
+        "css":"mdi mdi-cart-outline",
+        "code":"f111"
+    },
+    {
+        "css":"mdi mdi-cart-plus",
+        "code":"f112"
+    },
+    {
+        "css":"mdi mdi-case-sensitive-alt",
+        "code":"f113"
+    },
+    {
+        "css":"mdi mdi-cash",
+        "code":"f114"
+    },
+    {
+        "css":"mdi mdi-cash-100",
+        "code":"f115"
+    },
+    {
+        "css":"mdi mdi-cash-multiple",
+        "code":"f116"
+    },
+    {
+        "css":"mdi mdi-cash-usd",
+        "code":"f117"
+    },
+    {
+        "css":"mdi mdi-cast",
+        "code":"f118"
+    },
+    {
+        "css":"mdi mdi-cast-connected",
+        "code":"f119"
+    },
+    {
+        "css":"mdi mdi-cast-off",
+        "code":"f789"
+    },
+    {
+        "css":"mdi mdi-castle",
+        "code":"f11a"
+    },
+    {
+        "css":"mdi mdi-cat",
+        "code":"f11b"
+    },
+    {
+        "css":"mdi mdi-cctv",
+        "code":"f7ad"
+    },
+    {
+        "css":"mdi mdi-ceiling-light",
+        "code":"f768"
+    },
+    {
+        "css":"mdi mdi-cellphone",
+        "code":"f11c"
+    },
+    {
+        "css":"mdi mdi-cellphone-android",
+        "code":"f11d"
+    },
+    {
+        "css":"mdi mdi-cellphone-basic",
+        "code":"f11e"
+    },
+    {
+        "css":"mdi mdi-cellphone-dock",
+        "code":"f11f"
+    },
+    {
+        "css":"mdi mdi-cellphone-iphone",
+        "code":"f120"
+    },
+    {
+        "css":"mdi mdi-cellphone-link",
+        "code":"f121"
+    },
+    {
+        "css":"mdi mdi-cellphone-link-off",
+        "code":"f122"
+    },
+    {
+        "css":"mdi mdi-cellphone-settings",
+        "code":"f123"
+    },
+    {
+        "css":"mdi mdi-certificate",
+        "code":"f124"
+    },
+    {
+        "css":"mdi mdi-chair-school",
+        "code":"f125"
+    },
+    {
+        "css":"mdi mdi-chart-arc",
+        "code":"f126"
+    },
+    {
+        "css":"mdi mdi-chart-areaspline",
+        "code":"f127"
+    },
+    {
+        "css":"mdi mdi-chart-bar",
+        "code":"f128"
+    },
+    {
+        "css":"mdi mdi-chart-bar-stacked",
+        "code":"f769"
+    },
+    {
+        "css":"mdi mdi-chart-bubble",
+        "code":"f5e3"
+    },
+    {
+        "css":"mdi mdi-chart-donut",
+        "code":"f7ae"
+    },
+    {
+        "css":"mdi mdi-chart-donut-variant",
+        "code":"f7af"
+    },
+    {
+        "css":"mdi mdi-chart-gantt",
+        "code":"f66c"
+    },
+    {
+        "css":"mdi mdi-chart-histogram",
+        "code":"f129"
+    },
+    {
+        "css":"mdi mdi-chart-line",
+        "code":"f12a"
+    },
+    {
+        "css":"mdi mdi-chart-line-stacked",
+        "code":"f76a"
+    },
+    {
+        "css":"mdi mdi-chart-line-variant",
+        "code":"f7b0"
+    },
+    {
+        "css":"mdi mdi-chart-pie",
+        "code":"f12b"
+    },
+    {
+        "css":"mdi mdi-chart-scatterplot-hexbin",
+        "code":"f66d"
+    },
+    {
+        "css":"mdi mdi-chart-timeline",
+        "code":"f66e"
+    },
+    {
+        "css":"mdi mdi-check",
+        "code":"f12c"
+    },
+    {
+        "css":"mdi mdi-check-all",
+        "code":"f12d"
+    },
+    {
+        "css":"mdi mdi-check-circle",
+        "code":"f5e0"
+    },
+    {
+        "css":"mdi mdi-check-circle-outline",
+        "code":"f5e1"
+    },
+    {
+        "css":"mdi mdi-checkbox-blank",
+        "code":"f12e"
+    },
+    {
+        "css":"mdi mdi-checkbox-blank-circle",
+        "code":"f12f"
+    },
+    {
+        "css":"mdi mdi-checkbox-blank-circle-outline",
+        "code":"f130"
+    },
+    {
+        "css":"mdi mdi-checkbox-blank-outline",
+        "code":"f131"
+    },
+    {
+        "css":"mdi mdi-checkbox-marked",
+        "code":"f132"
+    },
+    {
+        "css":"mdi mdi-checkbox-marked-circle",
+        "code":"f133"
+    },
+    {
+        "css":"mdi mdi-checkbox-marked-circle-outline",
+        "code":"f134"
+    },
+    {
+        "css":"mdi mdi-checkbox-marked-outline",
+        "code":"f135"
+    },
+    {
+        "css":"mdi mdi-checkbox-multiple-blank",
+        "code":"f136"
+    },
+    {
+        "css":"mdi mdi-checkbox-multiple-blank-circle",
+        "code":"f63b"
+    },
+    {
+        "css":"mdi mdi-checkbox-multiple-blank-circle-outline",
+        "code":"f63c"
+    },
+    {
+        "css":"mdi mdi-checkbox-multiple-blank-outline",
+        "code":"f137"
+    },
+    {
+        "css":"mdi mdi-checkbox-multiple-marked",
+        "code":"f138"
+    },
+    {
+        "css":"mdi mdi-checkbox-multiple-marked-circle",
+        "code":"f63d"
+    },
+    {
+        "css":"mdi mdi-checkbox-multiple-marked-circle-outline",
+        "code":"f63e"
+    },
+    {
+        "css":"mdi mdi-checkbox-multiple-marked-outline",
+        "code":"f139"
+    },
+    {
+        "css":"mdi mdi-checkerboard",
+        "code":"f13a"
+    },
+    {
+        "css":"mdi mdi-chemical-weapon",
+        "code":"f13b"
+    },
+    {
+        "css":"mdi mdi-chevron-double-down",
+        "code":"f13c"
+    },
+    {
+        "css":"mdi mdi-chevron-double-left",
+        "code":"f13d"
+    },
+    {
+        "css":"mdi mdi-chevron-double-right",
+        "code":"f13e"
+    },
+    {
+        "css":"mdi mdi-chevron-double-up",
+        "code":"f13f"
+    },
+    {
+        "css":"mdi mdi-chevron-down",
+        "code":"f140"
+    },
+    {
+        "css":"mdi mdi-chevron-left",
+        "code":"f141"
+    },
+    {
+        "css":"mdi mdi-chevron-right",
+        "code":"f142"
+    },
+    {
+        "css":"mdi mdi-chevron-up",
+        "code":"f143"
+    },
+    {
+        "css":"mdi mdi-chili-hot",
+        "code":"f7b1"
+    },
+    {
+        "css":"mdi mdi-chili-medium",
+        "code":"f7b2"
+    },
+    {
+        "css":"mdi mdi-chili-mild",
+        "code":"f7b3"
+    },
+    {
+        "css":"mdi mdi-chip",
+        "code":"f61a"
+    },
+    {
+        "css":"mdi mdi-church",
+        "code":"f144"
+    },
+    {
+        "css":"mdi mdi-circle",
+        "code":"f764"
+    },
+    {
+        "css":"mdi mdi-circle-outline",
+        "code":"f765"
+    },
+    {
+        "css":"mdi mdi-cisco-webex",
+        "code":"f145"
+    },
+    {
+        "css":"mdi mdi-city",
+        "code":"f146"
+    },
+    {
+        "css":"mdi mdi-clipboard",
+        "code":"f147"
+    },
+    {
+        "css":"mdi mdi-clipboard-account",
+        "code":"f148"
+    },
+    {
+        "css":"mdi mdi-clipboard-alert",
+        "code":"f149"
+    },
+    {
+        "css":"mdi mdi-clipboard-arrow-down",
+        "code":"f14a"
+    },
+    {
+        "css":"mdi mdi-clipboard-arrow-left",
+        "code":"f14b"
+    },
+    {
+        "css":"mdi mdi-clipboard-check",
+        "code":"f14c"
+    },
+    {
+        "css":"mdi mdi-clipboard-flow",
+        "code":"f6c7"
+    },
+    {
+        "css":"mdi mdi-clipboard-outline",
+        "code":"f14d"
+    },
+    {
+        "css":"mdi mdi-clipboard-plus",
+        "code":"f750"
+    },
+    {
+        "css":"mdi mdi-clipboard-text",
+        "code":"f14e"
+    },
+    {
+        "css":"mdi mdi-clippy",
+        "code":"f14f"
+    },
+    {
+        "css":"mdi mdi-clock",
+        "code":"f150"
+    },
+    {
+        "css":"mdi mdi-clock-alert",
+        "code":"f5ce"
+    },
+    {
+        "css":"mdi mdi-clock-end",
+        "code":"f151"
+    },
+    {
+        "css":"mdi mdi-clock-fast",
+        "code":"f152"
+    },
+    {
+        "css":"mdi mdi-clock-in",
+        "code":"f153"
+    },
+    {
+        "css":"mdi mdi-clock-out",
+        "code":"f154"
+    },
+    {
+        "css":"mdi mdi-clock-start",
+        "code":"f155"
+    },
+    {
+        "css":"mdi mdi-close",
+        "code":"f156"
+    },
+    {
+        "css":"mdi mdi-close-box",
+        "code":"f157"
+    },
+    {
+        "css":"mdi mdi-close-box-outline",
+        "code":"f158"
+    },
+    {
+        "css":"mdi mdi-close-circle",
+        "code":"f159"
+    },
+    {
+        "css":"mdi mdi-close-circle-outline",
+        "code":"f15a"
+    },
+    {
+        "css":"mdi mdi-close-network",
+        "code":"f15b"
+    },
+    {
+        "css":"mdi mdi-close-octagon",
+        "code":"f15c"
+    },
+    {
+        "css":"mdi mdi-close-octagon-outline",
+        "code":"f15d"
+    },
+    {
+        "css":"mdi mdi-close-outline",
+        "code":"f6c8"
+    },
+    {
+        "css":"mdi mdi-closed-caption",
+        "code":"f15e"
+    },
+    {
+        "css":"mdi mdi-cloud",
+        "code":"f15f"
+    },
+    {
+        "css":"mdi mdi-cloud-braces",
+        "code":"f7b4"
+    },
+    {
+        "css":"mdi mdi-cloud-check",
+        "code":"f160"
+    },
+    {
+        "css":"mdi mdi-cloud-circle",
+        "code":"f161"
+    },
+    {
+        "css":"mdi mdi-cloud-download",
+        "code":"f162"
+    },
+    {
+        "css":"mdi mdi-cloud-off-outline",
+        "code":"f164"
+    },
+    {
+        "css":"mdi mdi-cloud-outline",
+        "code":"f163"
+    },
+    {
+        "css":"mdi mdi-cloud-print",
+        "code":"f165"
+    },
+    {
+        "css":"mdi mdi-cloud-print-outline",
+        "code":"f166"
+    },
+    {
+        "css":"mdi mdi-cloud-sync",
+        "code":"f63f"
+    },
+    {
+        "css":"mdi mdi-cloud-tags",
+        "code":"f7b5"
+    },
+    {
+        "css":"mdi mdi-cloud-upload",
+        "code":"f167"
+    },
+    {
+        "css":"mdi mdi-code-array",
+        "code":"f168"
+    },
+    {
+        "css":"mdi mdi-code-braces",
+        "code":"f169"
+    },
+    {
+        "css":"mdi mdi-code-brackets",
+        "code":"f16a"
+    },
+    {
+        "css":"mdi mdi-code-equal",
+        "code":"f16b"
+    },
+    {
+        "css":"mdi mdi-code-greater-than",
+        "code":"f16c"
+    },
+    {
+        "css":"mdi mdi-code-greater-than-or-equal",
+        "code":"f16d"
+    },
+    {
+        "css":"mdi mdi-code-less-than",
+        "code":"f16e"
+    },
+    {
+        "css":"mdi mdi-code-less-than-or-equal",
+        "code":"f16f"
+    },
+    {
+        "css":"mdi mdi-code-not-equal",
+        "code":"f170"
+    },
+    {
+        "css":"mdi mdi-code-not-equal-variant",
+        "code":"f171"
+    },
+    {
+        "css":"mdi mdi-code-parentheses",
+        "code":"f172"
+    },
+    {
+        "css":"mdi mdi-code-string",
+        "code":"f173"
+    },
+    {
+        "css":"mdi mdi-code-tags",
+        "code":"f174"
+    },
+    {
+        "css":"mdi mdi-code-tags-check",
+        "code":"f693"
+    },
+    {
+        "css":"mdi mdi-codepen",
+        "code":"f175"
+    },
+    {
+        "css":"mdi mdi-coffee",
+        "code":"f176"
+    },
+    {
+        "css":"mdi mdi-coffee-outline",
+        "code":"f6c9"
+    },
+    {
+        "css":"mdi mdi-coffee-to-go",
+        "code":"f177"
+    },
+    {
+        "css":"mdi mdi-coin",
+        "code":"f178"
+    },
+    {
+        "css":"mdi mdi-coins",
+        "code":"f694"
+    },
+    {
+        "css":"mdi mdi-collage",
+        "code":"f640"
+    },
+    {
+        "css":"mdi mdi-color-helper",
+        "code":"f179"
+    },
+    {
+        "css":"mdi mdi-comment",
+        "code":"f17a"
+    },
+    {
+        "css":"mdi mdi-comment-account",
+        "code":"f17b"
+    },
+    {
+        "css":"mdi mdi-comment-account-outline",
+        "code":"f17c"
+    },
+    {
+        "css":"mdi mdi-comment-alert",
+        "code":"f17d"
+    },
+    {
+        "css":"mdi mdi-comment-alert-outline",
+        "code":"f17e"
+    },
+    {
+        "css":"mdi mdi-comment-check",
+        "code":"f17f"
+    },
+    {
+        "css":"mdi mdi-comment-check-outline",
+        "code":"f180"
+    },
+    {
+        "css":"mdi mdi-comment-multiple-outline",
+        "code":"f181"
+    },
+    {
+        "css":"mdi mdi-comment-outline",
+        "code":"f182"
+    },
+    {
+        "css":"mdi mdi-comment-plus-outline",
+        "code":"f183"
+    },
+    {
+        "css":"mdi mdi-comment-processing",
+        "code":"f184"
+    },
+    {
+        "css":"mdi mdi-comment-processing-outline",
+        "code":"f185"
+    },
+    {
+        "css":"mdi mdi-comment-question-outline",
+        "code":"f186"
+    },
+    {
+        "css":"mdi mdi-comment-remove-outline",
+        "code":"f187"
+    },
+    {
+        "css":"mdi mdi-comment-text",
+        "code":"f188"
+    },
+    {
+        "css":"mdi mdi-comment-text-outline",
+        "code":"f189"
+    },
+    {
+        "css":"mdi mdi-compare",
+        "code":"f18a"
+    },
+    {
+        "css":"mdi mdi-compass",
+        "code":"f18b"
+    },
+    {
+        "css":"mdi mdi-compass-outline",
+        "code":"f18c"
+    },
+    {
+        "css":"mdi mdi-console",
+        "code":"f18d"
+    },
+    {
+        "css":"mdi mdi-console-line",
+        "code":"f7b6"
+    },
+    {
+        "css":"mdi mdi-contact-mail",
+        "code":"f18e"
+    },
+    {
+        "css":"mdi mdi-contacts",
+        "code":"f6ca"
+    },
+    {
+        "css":"mdi mdi-content-copy",
+        "code":"f18f"
+    },
+    {
+        "css":"mdi mdi-content-cut",
+        "code":"f190"
+    },
+    {
+        "css":"mdi mdi-content-duplicate",
+        "code":"f191"
+    },
+    {
+        "css":"mdi mdi-content-paste",
+        "code":"f192"
+    },
+    {
+        "css":"mdi mdi-content-save",
+        "code":"f193"
+    },
+    {
+        "css":"mdi mdi-content-save-all",
+        "code":"f194"
+    },
+    {
+        "css":"mdi mdi-content-save-settings",
+        "code":"f61b"
+    },
+    {
+        "css":"mdi mdi-contrast",
+        "code":"f195"
+    },
+    {
+        "css":"mdi mdi-contrast-box",
+        "code":"f196"
+    },
+    {
+        "css":"mdi mdi-contrast-circle",
+        "code":"f197"
+    },
+    {
+        "css":"mdi mdi-cookie",
+        "code":"f198"
+    },
+    {
+        "css":"mdi mdi-copyright",
+        "code":"f5e6"
+    },
+    {
+        "css":"mdi mdi-corn",
+        "code":"f7b7"
+    },
+    {
+        "css":"mdi mdi-counter",
+        "code":"f199"
+    },
+    {
+        "css":"mdi mdi-cow",
+        "code":"f19a"
+    },
+    {
+        "css":"mdi mdi-creation",
+        "code":"f1c9"
+    },
+    {
+        "css":"mdi mdi-credit-card",
+        "code":"f19b"
+    },
+    {
+        "css":"mdi mdi-credit-card-multiple",
+        "code":"f19c"
+    },
+    {
+        "css":"mdi mdi-credit-card-off",
+        "code":"f5e4"
+    },
+    {
+        "css":"mdi mdi-credit-card-plus",
+        "code":"f675"
+    },
+    {
+        "css":"mdi mdi-credit-card-scan",
+        "code":"f19d"
+    },
+    {
+        "css":"mdi mdi-crop",
+        "code":"f19e"
+    },
+    {
+        "css":"mdi mdi-crop-free",
+        "code":"f19f"
+    },
+    {
+        "css":"mdi mdi-crop-landscape",
+        "code":"f1a0"
+    },
+    {
+        "css":"mdi mdi-crop-portrait",
+        "code":"f1a1"
+    },
+    {
+        "css":"mdi mdi-crop-rotate",
+        "code":"f695"
+    },
+    {
+        "css":"mdi mdi-crop-square",
+        "code":"f1a2"
+    },
+    {
+        "css":"mdi mdi-crosshairs",
+        "code":"f1a3"
+    },
+    {
+        "css":"mdi mdi-crosshairs-gps",
+        "code":"f1a4"
+    },
+    {
+        "css":"mdi mdi-crown",
+        "code":"f1a5"
+    },
+    {
+        "css":"mdi mdi-cube",
+        "code":"f1a6"
+    },
+    {
+        "css":"mdi mdi-cube-outline",
+        "code":"f1a7"
+    },
+    {
+        "css":"mdi mdi-cube-send",
+        "code":"f1a8"
+    },
+    {
+        "css":"mdi mdi-cube-unfolded",
+        "code":"f1a9"
+    },
+    {
+        "css":"mdi mdi-cup",
+        "code":"f1aa"
+    },
+    {
+        "css":"mdi mdi-cup-off",
+        "code":"f5e5"
+    },
+    {
+        "css":"mdi mdi-cup-water",
+        "code":"f1ab"
+    },
+    {
+        "css":"mdi mdi-currency-btc",
+        "code":"f1ac"
+    },
+    {
+        "css":"mdi mdi-currency-chf",
+        "code":"f7b8"
+    },
+    {
+        "css":"mdi mdi-currency-cny",
+        "code":"f7b9"
+    },
+    {
+        "css":"mdi mdi-currency-eth",
+        "code":"f7ba"
+    },
+    {
+        "css":"mdi mdi-currency-eur",
+        "code":"f1ad"
+    },
+    {
+        "css":"mdi mdi-currency-gbp",
+        "code":"f1ae"
+    },
+    {
+        "css":"mdi mdi-currency-inr",
+        "code":"f1af"
+    },
+    {
+        "css":"mdi mdi-currency-jpy",
+        "code":"f7bb"
+    },
+    {
+        "css":"mdi mdi-currency-krw",
+        "code":"f7bc"
+    },
+    {
+        "css":"mdi mdi-currency-ngn",
+        "code":"f1b0"
+    },
+    {
+        "css":"mdi mdi-currency-rub",
+        "code":"f1b1"
+    },
+    {
+        "css":"mdi mdi-currency-sign",
+        "code":"f7bd"
+    },
+    {
+        "css":"mdi mdi-currency-try",
+        "code":"f1b2"
+    },
+    {
+        "css":"mdi mdi-currency-twd",
+        "code":"f7be"
+    },
+    {
+        "css":"mdi mdi-currency-usd",
+        "code":"f1b3"
+    },
+    {
+        "css":"mdi mdi-currency-usd-off",
+        "code":"f679"
+    },
+    {
+        "css":"mdi mdi-cursor-default",
+        "code":"f1b4"
+    },
+    {
+        "css":"mdi mdi-cursor-default-outline",
+        "code":"f1b5"
+    },
+    {
+        "css":"mdi mdi-cursor-move",
+        "code":"f1b6"
+    },
+    {
+        "css":"mdi mdi-cursor-pointer",
+        "code":"f1b7"
+    },
+    {
+        "css":"mdi mdi-cursor-text",
+        "code":"f5e7"
+    },
+    {
+        "css":"mdi mdi-database",
+        "code":"f1b8"
+    },
+    {
+        "css":"mdi mdi-database-minus",
+        "code":"f1b9"
+    },
+    {
+        "css":"mdi mdi-database-plus",
+        "code":"f1ba"
+    },
+    {
+        "css":"mdi mdi-debug-step-into",
+        "code":"f1bb"
+    },
+    {
+        "css":"mdi mdi-debug-step-out",
+        "code":"f1bc"
+    },
+    {
+        "css":"mdi mdi-debug-step-over",
+        "code":"f1bd"
+    },
+    {
+        "css":"mdi mdi-decagram",
+        "code":"f76b"
+    },
+    {
+        "css":"mdi mdi-decagram-outline",
+        "code":"f76c"
+    },
+    {
+        "css":"mdi mdi-decimal-decrease",
+        "code":"f1be"
+    },
+    {
+        "css":"mdi mdi-decimal-increase",
+        "code":"f1bf"
+    },
+    {
+        "css":"mdi mdi-delete",
+        "code":"f1c0"
+    },
+    {
+        "css":"mdi mdi-delete-circle",
+        "code":"f682"
+    },
+    {
+        "css":"mdi mdi-delete-empty",
+        "code":"f6cb"
+    },
+    {
+        "css":"mdi mdi-delete-forever",
+        "code":"f5e8"
+    },
+    {
+        "css":"mdi mdi-delete-sweep",
+        "code":"f5e9"
+    },
+    {
+        "css":"mdi mdi-delete-variant",
+        "code":"f1c1"
+    },
+    {
+        "css":"mdi mdi-delta",
+        "code":"f1c2"
+    },
+    {
+        "css":"mdi mdi-deskphone",
+        "code":"f1c3"
+    },
+    {
+        "css":"mdi mdi-desktop-classic",
+        "code":"f7bf"
+    },
+    {
+        "css":"mdi mdi-desktop-mac",
+        "code":"f1c4"
+    },
+    {
+        "css":"mdi mdi-desktop-tower",
+        "code":"f1c5"
+    },
+    {
+        "css":"mdi mdi-details",
+        "code":"f1c6"
+    },
+    {
+        "css":"mdi mdi-developer-board",
+        "code":"f696"
+    },
+    {
+        "css":"mdi mdi-deviantart",
+        "code":"f1c7"
+    },
+    {
+        "css":"mdi mdi-dialpad",
+        "code":"f61c"
+    },
+    {
+        "css":"mdi mdi-diamond",
+        "code":"f1c8"
+    },
+    {
+        "css":"mdi mdi-dice-1",
+        "code":"f1ca"
+    },
+    {
+        "css":"mdi mdi-dice-2",
+        "code":"f1cb"
+    },
+    {
+        "css":"mdi mdi-dice-3",
+        "code":"f1cc"
+    },
+    {
+        "css":"mdi mdi-dice-4",
+        "code":"f1cd"
+    },
+    {
+        "css":"mdi mdi-dice-5",
+        "code":"f1ce"
+    },
+    {
+        "css":"mdi mdi-dice-6",
+        "code":"f1cf"
+    },
+    {
+        "css":"mdi mdi-dice-d10",
+        "code":"f76e"
+    },
+    {
+        "css":"mdi mdi-dice-d20",
+        "code":"f5ea"
+    },
+    {
+        "css":"mdi mdi-dice-d4",
+        "code":"f5eb"
+    },
+    {
+        "css":"mdi mdi-dice-d6",
+        "code":"f5ec"
+    },
+    {
+        "css":"mdi mdi-dice-d8",
+        "code":"f5ed"
+    },
+    {
+        "css":"mdi mdi-dice-multiple",
+        "code":"f76d"
+    },
+    {
+        "css":"mdi mdi-dictionary",
+        "code":"f61d"
+    },
+    {
+        "css":"mdi mdi-dip-switch",
+        "code":"f7c0"
+    },
+    {
+        "css":"mdi mdi-directions",
+        "code":"f1d0"
+    },
+    {
+        "css":"mdi mdi-directions-fork",
+        "code":"f641"
+    },
+    {
+        "css":"mdi mdi-discord",
+        "code":"f66f"
+    },
+    {
+        "css":"mdi mdi-disk",
+        "code":"f5ee"
+    },
+    {
+        "css":"mdi mdi-disk-alert",
+        "code":"f1d1"
+    },
+    {
+        "css":"mdi mdi-disqus",
+        "code":"f1d2"
+    },
+    {
+        "css":"mdi mdi-disqus-outline",
+        "code":"f1d3"
+    },
+    {
+        "css":"mdi mdi-division",
+        "code":"f1d4"
+    },
+    {
+        "css":"mdi mdi-division-box",
+        "code":"f1d5"
+    },
+    {
+        "css":"mdi mdi-dna",
+        "code":"f683"
+    },
+    {
+        "css":"mdi mdi-dns",
+        "code":"f1d6"
+    },
+    {
+        "css":"mdi mdi-do-not-disturb",
+        "code":"f697"
+    },
+    {
+        "css":"mdi mdi-do-not-disturb-off",
+        "code":"f698"
+    },
+    {
+        "css":"mdi mdi-dolby",
+        "code":"f6b2"
+    },
+    {
+        "css":"mdi mdi-domain",
+        "code":"f1d7"
+    },
+    {
+        "css":"mdi mdi-donkey",
+        "code":"f7c1"
+    },
+    {
+        "css":"mdi mdi-dots-horizontal",
+        "code":"f1d8"
+    },
+    {
+        "css":"mdi mdi-dots-horizontal-circle",
+        "code":"f7c2"
+    },
+    {
+        "css":"mdi mdi-dots-vertical",
+        "code":"f1d9"
+    },
+    {
+        "css":"mdi mdi-dots-vertical-circle",
+        "code":"f7c3"
+    },
+    {
+        "css":"mdi mdi-douban",
+        "code":"f699"
+    },
+    {
+        "css":"mdi mdi-download",
+        "code":"f1da"
+    },
+    {
+        "css":"mdi mdi-download-network",
+        "code":"f6f3"
+    },
+    {
+        "css":"mdi mdi-drag",
+        "code":"f1db"
+    },
+    {
+        "css":"mdi mdi-drag-horizontal",
+        "code":"f1dc"
+    },
+    {
+        "css":"mdi mdi-drag-vertical",
+        "code":"f1dd"
+    },
+    {
+        "css":"mdi mdi-drawing",
+        "code":"f1de"
+    },
+    {
+        "css":"mdi mdi-drawing-box",
+        "code":"f1df"
+    },
+    {
+        "css":"mdi mdi-dribbble",
+        "code":"f1e0"
+    },
+    {
+        "css":"mdi mdi-dribbble-box",
+        "code":"f1e1"
+    },
+    {
+        "css":"mdi mdi-drone",
+        "code":"f1e2"
+    },
+    {
+        "css":"mdi mdi-dropbox",
+        "code":"f1e3"
+    },
+    {
+        "css":"mdi mdi-drupal",
+        "code":"f1e4"
+    },
+    {
+        "css":"mdi mdi-duck",
+        "code":"f1e5"
+    },
+    {
+        "css":"mdi mdi-dumbbell",
+        "code":"f1e6"
+    },
+    {
+        "css":"mdi mdi-ear-hearing",
+        "code":"f7c4"
+    },
+    {
+        "css":"mdi mdi-earth",
+        "code":"f1e7"
+    },
+    {
+        "css":"mdi mdi-earth-box",
+        "code":"f6cc"
+    },
+    {
+        "css":"mdi mdi-earth-box-off",
+        "code":"f6cd"
+    },
+    {
+        "css":"mdi mdi-earth-off",
+        "code":"f1e8"
+    },
+    {
+        "css":"mdi mdi-edge",
+        "code":"f1e9"
+    },
+    {
+        "css":"mdi mdi-eject",
+        "code":"f1ea"
+    },
+    {
+        "css":"mdi mdi-elephant",
+        "code":"f7c5"
+    },
+    {
+        "css":"mdi mdi-elevation-decline",
+        "code":"f1eb"
+    },
+    {
+        "css":"mdi mdi-elevation-rise",
+        "code":"f1ec"
+    },
+    {
+        "css":"mdi mdi-elevator",
+        "code":"f1ed"
+    },
+    {
+        "css":"mdi mdi-email",
+        "code":"f1ee"
+    },
+    {
+        "css":"mdi mdi-email-alert",
+        "code":"f6ce"
+    },
+    {
+        "css":"mdi mdi-email-open",
+        "code":"f1ef"
+    },
+    {
+        "css":"mdi mdi-email-open-outline",
+        "code":"f5ef"
+    },
+    {
+        "css":"mdi mdi-email-outline",
+        "code":"f1f0"
+    },
+    {
+        "css":"mdi mdi-email-secure",
+        "code":"f1f1"
+    },
+    {
+        "css":"mdi mdi-email-variant",
+        "code":"f5f0"
+    },
+    {
+        "css":"mdi mdi-emby",
+        "code":"f6b3"
+    },
+    {
+        "css":"mdi mdi-emoticon",
+        "code":"f1f2"
+    },
+    {
+        "css":"mdi mdi-emoticon-cool",
+        "code":"f1f3"
+    },
+    {
+        "css":"mdi mdi-emoticon-dead",
+        "code":"f69a"
+    },
+    {
+        "css":"mdi mdi-emoticon-devil",
+        "code":"f1f4"
+    },
+    {
+        "css":"mdi mdi-emoticon-excited",
+        "code":"f69b"
+    },
+    {
+        "css":"mdi mdi-emoticon-happy",
+        "code":"f1f5"
+    },
+    {
+        "css":"mdi mdi-emoticon-neutral",
+        "code":"f1f6"
+    },
+    {
+        "css":"mdi mdi-emoticon-poop",
+        "code":"f1f7"
+    },
+    {
+        "css":"mdi mdi-emoticon-sad",
+        "code":"f1f8"
+    },
+    {
+        "css":"mdi mdi-emoticon-tongue",
+        "code":"f1f9"
+    },
+    {
+        "css":"mdi mdi-engine",
+        "code":"f1fa"
+    },
+    {
+        "css":"mdi mdi-engine-outline",
+        "code":"f1fb"
+    },
+    {
+        "css":"mdi mdi-equal",
+        "code":"f1fc"
+    },
+    {
+        "css":"mdi mdi-equal-box",
+        "code":"f1fd"
+    },
+    {
+        "css":"mdi mdi-eraser",
+        "code":"f1fe"
+    },
+    {
+        "css":"mdi mdi-eraser-variant",
+        "code":"f642"
+    },
+    {
+        "css":"mdi mdi-escalator",
+        "code":"f1ff"
+    },
+    {
+        "css":"mdi mdi-ethernet",
+        "code":"f200"
+    },
+    {
+        "css":"mdi mdi-ethernet-cable",
+        "code":"f201"
+    },
+    {
+        "css":"mdi mdi-ethernet-cable-off",
+        "code":"f202"
+    },
+    {
+        "css":"mdi mdi-etsy",
+        "code":"f203"
+    },
+    {
+        "css":"mdi mdi-ev-station",
+        "code":"f5f1"
+    },
+    {
+        "css":"mdi mdi-eventbrite",
+        "code":"f7c6"
+    },
+    {
+        "css":"mdi mdi-evernote",
+        "code":"f204"
+    },
+    {
+        "css":"mdi mdi-exclamation",
+        "code":"f205"
+    },
+    {
+        "css":"mdi mdi-exit-to-app",
+        "code":"f206"
+    },
+    {
+        "css":"mdi mdi-export",
+        "code":"f207"
+    },
+    {
+        "css":"mdi mdi-eye",
+        "code":"f208"
+    },
+    {
+        "css":"mdi mdi-eye-off",
+        "code":"f209"
+    },
+    {
+        "css":"mdi mdi-eye-off-outline",
+        "code":"f6d0"
+    },
+    {
+        "css":"mdi mdi-eye-outline",
+        "code":"f6cf"
+    },
+    {
+        "css":"mdi mdi-eyedropper",
+        "code":"f20a"
+    },
+    {
+        "css":"mdi mdi-eyedropper-variant",
+        "code":"f20b"
+    },
+    {
+        "css":"mdi mdi-face",
+        "code":"f643"
+    },
+    {
+        "css":"mdi mdi-face-profile",
+        "code":"f644"
+    },
+    {
+        "css":"mdi mdi-facebook",
+        "code":"f20c"
+    },
+    {
+        "css":"mdi mdi-facebook-box",
+        "code":"f20d"
+    },
+    {
+        "css":"mdi mdi-facebook-messenger",
+        "code":"f20e"
+    },
+    {
+        "css":"mdi mdi-factory",
+        "code":"f20f"
+    },
+    {
+        "css":"mdi mdi-fan",
+        "code":"f210"
+    },
+    {
+        "css":"mdi mdi-fast-forward",
+        "code":"f211"
+    },
+    {
+        "css":"mdi mdi-fast-forward-outline",
+        "code":"f6d1"
+    },
+    {
+        "css":"mdi mdi-fax",
+        "code":"f212"
+    },
+    {
+        "css":"mdi mdi-feather",
+        "code":"f6d2"
+    },
+    {
+        "css":"mdi mdi-ferry",
+        "code":"f213"
+    },
+    {
+        "css":"mdi mdi-file",
+        "code":"f214"
+    },
+    {
+        "css":"mdi mdi-file-account",
+        "code":"f73a"
+    },
+    {
+        "css":"mdi mdi-file-chart",
+        "code":"f215"
+    },
+    {
+        "css":"mdi mdi-file-check",
+        "code":"f216"
+    },
+    {
+        "css":"mdi mdi-file-cloud",
+        "code":"f217"
+    },
+    {
+        "css":"mdi mdi-file-delimited",
+        "code":"f218"
+    },
+    {
+        "css":"mdi mdi-file-document",
+        "code":"f219"
+    },
+    {
+        "css":"mdi mdi-file-document-box",
+        "code":"f21a"
+    },
+    {
+        "css":"mdi mdi-file-excel",
+        "code":"f21b"
+    },
+    {
+        "css":"mdi mdi-file-excel-box",
+        "code":"f21c"
+    },
+    {
+        "css":"mdi mdi-file-export",
+        "code":"f21d"
+    },
+    {
+        "css":"mdi mdi-file-find",
+        "code":"f21e"
+    },
+    {
+        "css":"mdi mdi-file-hidden",
+        "code":"f613"
+    },
+    {
+        "css":"mdi mdi-file-image",
+        "code":"f21f"
+    },
+    {
+        "css":"mdi mdi-file-import",
+        "code":"f220"
+    },
+    {
+        "css":"mdi mdi-file-lock",
+        "code":"f221"
+    },
+    {
+        "css":"mdi mdi-file-multiple",
+        "code":"f222"
+    },
+    {
+        "css":"mdi mdi-file-music",
+        "code":"f223"
+    },
+    {
+        "css":"mdi mdi-file-outline",
+        "code":"f224"
+    },
+    {
+        "css":"mdi mdi-file-pdf",
+        "code":"f225"
+    },
+    {
+        "css":"mdi mdi-file-pdf-box",
+        "code":"f226"
+    },
+    {
+        "css":"mdi mdi-file-plus",
+        "code":"f751"
+    },
+    {
+        "css":"mdi mdi-file-powerpoint",
+        "code":"f227"
+    },
+    {
+        "css":"mdi mdi-file-powerpoint-box",
+        "code":"f228"
+    },
+    {
+        "css":"mdi mdi-file-presentation-box",
+        "code":"f229"
+    },
+    {
+        "css":"mdi mdi-file-restore",
+        "code":"f670"
+    },
+    {
+        "css":"mdi mdi-file-send",
+        "code":"f22a"
+    },
+    {
+        "css":"mdi mdi-file-tree",
+        "code":"f645"
+    },
+    {
+        "css":"mdi mdi-file-video",
+        "code":"f22b"
+    },
+    {
+        "css":"mdi mdi-file-word",
+        "code":"f22c"
+    },
+    {
+        "css":"mdi mdi-file-word-box",
+        "code":"f22d"
+    },
+    {
+        "css":"mdi mdi-file-xml",
+        "code":"f22e"
+    },
+    {
+        "css":"mdi mdi-film",
+        "code":"f22f"
+    },
+    {
+        "css":"mdi mdi-filmstrip",
+        "code":"f230"
+    },
+    {
+        "css":"mdi mdi-filmstrip-off",
+        "code":"f231"
+    },
+    {
+        "css":"mdi mdi-filter",
+        "code":"f232"
+    },
+    {
+        "css":"mdi mdi-filter-outline",
+        "code":"f233"
+    },
+    {
+        "css":"mdi mdi-filter-remove",
+        "code":"f234"
+    },
+    {
+        "css":"mdi mdi-filter-remove-outline",
+        "code":"f235"
+    },
+    {
+        "css":"mdi mdi-filter-variant",
+        "code":"f236"
+    },
+    {
+        "css":"mdi mdi-find-replace",
+        "code":"f6d3"
+    },
+    {
+        "css":"mdi mdi-fingerprint",
+        "code":"f237"
+    },
+    {
+        "css":"mdi mdi-fire",
+        "code":"f238"
+    },
+    {
+        "css":"mdi mdi-firefox",
+        "code":"f239"
+    },
+    {
+        "css":"mdi mdi-fish",
+        "code":"f23a"
+    },
+    {
+        "css":"mdi mdi-flag",
+        "code":"f23b"
+    },
+    {
+        "css":"mdi mdi-flag-checkered",
+        "code":"f23c"
+    },
+    {
+        "css":"mdi mdi-flag-outline",
+        "code":"f23d"
+    },
+    {
+        "css":"mdi mdi-flag-outline-variant",
+        "code":"f23e"
+    },
+    {
+        "css":"mdi mdi-flag-triangle",
+        "code":"f23f"
+    },
+    {
+        "css":"mdi mdi-flag-variant",
+        "code":"f240"
+    },
+    {
+        "css":"mdi mdi-flash",
+        "code":"f241"
+    },
+    {
+        "css":"mdi mdi-flash-auto",
+        "code":"f242"
+    },
+    {
+        "css":"mdi mdi-flash-off",
+        "code":"f243"
+    },
+    {
+        "css":"mdi mdi-flash-outline",
+        "code":"f6d4"
+    },
+    {
+        "css":"mdi mdi-flash-red-eye",
+        "code":"f67a"
+    },
+    {
+        "css":"mdi mdi-flashlight",
+        "code":"f244"
+    },
+    {
+        "css":"mdi mdi-flashlight-off",
+        "code":"f245"
+    },
+    {
+        "css":"mdi mdi-flask",
+        "code":"f093"
+    },
+    {
+        "css":"mdi mdi-flask-empty",
+        "code":"f094"
+    },
+    {
+        "css":"mdi mdi-flask-empty-outline",
+        "code":"f095"
+    },
+    {
+        "css":"mdi mdi-flask-outline",
+        "code":"f096"
+    },
+    {
+        "css":"mdi mdi-flattr",
+        "code":"f246"
+    },
+    {
+        "css":"mdi mdi-flip-to-back",
+        "code":"f247"
+    },
+    {
+        "css":"mdi mdi-flip-to-front",
+        "code":"f248"
+    },
+    {
+        "css":"mdi mdi-floppy",
+        "code":"f249"
+    },
+    {
+        "css":"mdi mdi-flower",
+        "code":"f24a"
+    },
+    {
+        "css":"mdi mdi-folder",
+        "code":"f24b"
+    },
+    {
+        "css":"mdi mdi-folder-account",
+        "code":"f24c"
+    },
+    {
+        "css":"mdi mdi-folder-download",
+        "code":"f24d"
+    },
+    {
+        "css":"mdi mdi-folder-google-drive",
+        "code":"f24e"
+    },
+    {
+        "css":"mdi mdi-folder-image",
+        "code":"f24f"
+    },
+    {
+        "css":"mdi mdi-folder-lock",
+        "code":"f250"
+    },
+    {
+        "css":"mdi mdi-folder-lock-open",
+        "code":"f251"
+    },
+    {
+        "css":"mdi mdi-folder-move",
+        "code":"f252"
+    },
+    {
+        "css":"mdi mdi-folder-multiple",
+        "code":"f253"
+    },
+    {
+        "css":"mdi mdi-folder-multiple-image",
+        "code":"f254"
+    },
+    {
+        "css":"mdi mdi-folder-multiple-outline",
+        "code":"f255"
+    },
+    {
+        "css":"mdi mdi-folder-open",
+        "code":"f76f"
+    },
+    {
+        "css":"mdi mdi-folder-outline",
+        "code":"f256"
+    },
+    {
+        "css":"mdi mdi-folder-plus",
+        "code":"f257"
+    },
+    {
+        "css":"mdi mdi-folder-remove",
+        "code":"f258"
+    },
+    {
+        "css":"mdi mdi-folder-star",
+        "code":"f69c"
+    },
+    {
+        "css":"mdi mdi-folder-upload",
+        "code":"f259"
+    },
+    {
+        "css":"mdi mdi-font-awesome",
+        "code":"f03a"
+    },
+    {
+        "css":"mdi mdi-food",
+        "code":"f25a"
+    },
+    {
+        "css":"mdi mdi-food-apple",
+        "code":"f25b"
+    },
+    {
+        "css":"mdi mdi-food-croissant",
+        "code":"f7c7"
+    },
+    {
+        "css":"mdi mdi-food-fork-drink",
+        "code":"f5f2"
+    },
+    {
+        "css":"mdi mdi-food-off",
+        "code":"f5f3"
+    },
+    {
+        "css":"mdi mdi-food-variant",
+        "code":"f25c"
+    },
+    {
+        "css":"mdi mdi-football",
+        "code":"f25d"
+    },
+    {
+        "css":"mdi mdi-football-australian",
+        "code":"f25e"
+    },
+    {
+        "css":"mdi mdi-football-helmet",
+        "code":"f25f"
+    },
+    {
+        "css":"mdi mdi-forklift",
+        "code":"f7c8"
+    },
+    {
+        "css":"mdi mdi-format-align-bottom",
+        "code":"f752"
+    },
+    {
+        "css":"mdi mdi-format-align-center",
+        "code":"f260"
+    },
+    {
+        "css":"mdi mdi-format-align-justify",
+        "code":"f261"
+    },
+    {
+        "css":"mdi mdi-format-align-left",
+        "code":"f262"
+    },
+    {
+        "css":"mdi mdi-format-align-middle",
+        "code":"f753"
+    },
+    {
+        "css":"mdi mdi-format-align-right",
+        "code":"f263"
+    },
+    {
+        "css":"mdi mdi-format-align-top",
+        "code":"f754"
+    },
+    {
+        "css":"mdi mdi-format-annotation-plus",
+        "code":"f646"
+    },
+    {
+        "css":"mdi mdi-format-bold",
+        "code":"f264"
+    },
+    {
+        "css":"mdi mdi-format-clear",
+        "code":"f265"
+    },
+    {
+        "css":"mdi mdi-format-color-fill",
+        "code":"f266"
+    },
+    {
+        "css":"mdi mdi-format-color-text",
+        "code":"f69d"
+    },
+    {
+        "css":"mdi mdi-format-float-center",
+        "code":"f267"
+    },
+    {
+        "css":"mdi mdi-format-float-left",
+        "code":"f268"
+    },
+    {
+        "css":"mdi mdi-format-float-none",
+        "code":"f269"
+    },
+    {
+        "css":"mdi mdi-format-float-right",
+        "code":"f26a"
+    },
+    {
+        "css":"mdi mdi-format-font",
+        "code":"f6d5"
+    },
+    {
+        "css":"mdi mdi-format-header-1",
+        "code":"f26b"
+    },
+    {
+        "css":"mdi mdi-format-header-2",
+        "code":"f26c"
+    },
+    {
+        "css":"mdi mdi-format-header-3",
+        "code":"f26d"
+    },
+    {
+        "css":"mdi mdi-format-header-4",
+        "code":"f26e"
+    },
+    {
+        "css":"mdi mdi-format-header-5",
+        "code":"f26f"
+    },
+    {
+        "css":"mdi mdi-format-header-6",
+        "code":"f270"
+    },
+    {
+        "css":"mdi mdi-format-header-decrease",
+        "code":"f271"
+    },
+    {
+        "css":"mdi mdi-format-header-equal",
+        "code":"f272"
+    },
+    {
+        "css":"mdi mdi-format-header-increase",
+        "code":"f273"
+    },
+    {
+        "css":"mdi mdi-format-header-pound",
+        "code":"f274"
+    },
+    {
+        "css":"mdi mdi-format-horizontal-align-center",
+        "code":"f61e"
+    },
+    {
+        "css":"mdi mdi-format-horizontal-align-left",
+        "code":"f61f"
+    },
+    {
+        "css":"mdi mdi-format-horizontal-align-right",
+        "code":"f620"
+    },
+    {
+        "css":"mdi mdi-format-indent-decrease",
+        "code":"f275"
+    },
+    {
+        "css":"mdi mdi-format-indent-increase",
+        "code":"f276"
+    },
+    {
+        "css":"mdi mdi-format-italic",
+        "code":"f277"
+    },
+    {
+        "css":"mdi mdi-format-line-spacing",
+        "code":"f278"
+    },
+    {
+        "css":"mdi mdi-format-line-style",
+        "code":"f5c8"
+    },
+    {
+        "css":"mdi mdi-format-line-weight",
+        "code":"f5c9"
+    },
+    {
+        "css":"mdi mdi-format-list-bulleted",
+        "code":"f279"
+    },
+    {
+        "css":"mdi mdi-format-list-bulleted-type",
+        "code":"f27a"
+    },
+    {
+        "css":"mdi mdi-format-list-checks",
+        "code":"f755"
+    },
+    {
+        "css":"mdi mdi-format-list-numbers",
+        "code":"f27b"
+    },
+    {
+        "css":"mdi mdi-format-page-break",
+        "code":"f6d6"
+    },
+    {
+        "css":"mdi mdi-format-paint",
+        "code":"f27c"
+    },
+    {
+        "css":"mdi mdi-format-paragraph",
+        "code":"f27d"
+    },
+    {
+        "css":"mdi mdi-format-pilcrow",
+        "code":"f6d7"
+    },
+    {
+        "css":"mdi mdi-format-quote-close",
+        "code":"f27e"
+    },
+    {
+        "css":"mdi mdi-format-quote-open",
+        "code":"f756"
+    },
+    {
+        "css":"mdi mdi-format-rotate-90",
+        "code":"f6a9"
+    },
+    {
+        "css":"mdi mdi-format-section",
+        "code":"f69e"
+    },
+    {
+        "css":"mdi mdi-format-size",
+        "code":"f27f"
+    },
+    {
+        "css":"mdi mdi-format-strikethrough",
+        "code":"f280"
+    },
+    {
+        "css":"mdi mdi-format-strikethrough-variant",
+        "code":"f281"
+    },
+    {
+        "css":"mdi mdi-format-subscript",
+        "code":"f282"
+    },
+    {
+        "css":"mdi mdi-format-superscript",
+        "code":"f283"
+    },
+    {
+        "css":"mdi mdi-format-text",
+        "code":"f284"
+    },
+    {
+        "css":"mdi mdi-format-textdirection-l-to-r",
+        "code":"f285"
+    },
+    {
+        "css":"mdi mdi-format-textdirection-r-to-l",
+        "code":"f286"
+    },
+    {
+        "css":"mdi mdi-format-title",
+        "code":"f5f4"
+    },
+    {
+        "css":"mdi mdi-format-underline",
+        "code":"f287"
+    },
+    {
+        "css":"mdi mdi-format-vertical-align-bottom",
+        "code":"f621"
+    },
+    {
+        "css":"mdi mdi-format-vertical-align-center",
+        "code":"f622"
+    },
+    {
+        "css":"mdi mdi-format-vertical-align-top",
+        "code":"f623"
+    },
+    {
+        "css":"mdi mdi-format-wrap-inline",
+        "code":"f288"
+    },
+    {
+        "css":"mdi mdi-format-wrap-square",
+        "code":"f289"
+    },
+    {
+        "css":"mdi mdi-format-wrap-tight",
+        "code":"f28a"
+    },
+    {
+        "css":"mdi mdi-format-wrap-top-bottom",
+        "code":"f28b"
+    },
+    {
+        "css":"mdi mdi-forum",
+        "code":"f28c"
+    },
+    {
+        "css":"mdi mdi-forward",
+        "code":"f28d"
+    },
+    {
+        "css":"mdi mdi-foursquare",
+        "code":"f28e"
+    },
+    {
+        "css":"mdi mdi-fridge",
+        "code":"f28f"
+    },
+    {
+        "css":"mdi mdi-fridge-filled",
+        "code":"f290"
+    },
+    {
+        "css":"mdi mdi-fridge-filled-bottom",
+        "code":"f291"
+    },
+    {
+        "css":"mdi mdi-fridge-filled-top",
+        "code":"f292"
+    },
+    {
+        "css":"mdi mdi-fuel",
+        "code":"f7c9"
+    },
+    {
+        "css":"mdi mdi-fullscreen",
+        "code":"f293"
+    },
+    {
+        "css":"mdi mdi-fullscreen-exit",
+        "code":"f294"
+    },
+    {
+        "css":"mdi mdi-function",
+        "code":"f295"
+    },
+    {
+        "css":"mdi mdi-gamepad",
+        "code":"f296"
+    },
+    {
+        "css":"mdi mdi-gamepad-variant",
+        "code":"f297"
+    },
+    {
+        "css":"mdi mdi-garage",
+        "code":"f6d8"
+    },
+    {
+        "css":"mdi mdi-garage-open",
+        "code":"f6d9"
+    },
+    {
+        "css":"mdi mdi-gas-cylinder",
+        "code":"f647"
+    },
+    {
+        "css":"mdi mdi-gas-station",
+        "code":"f298"
+    },
+    {
+        "css":"mdi mdi-gate",
+        "code":"f299"
+    },
+    {
+        "css":"mdi mdi-gauge",
+        "code":"f29a"
+    },
+    {
+        "css":"mdi mdi-gavel",
+        "code":"f29b"
+    },
+    {
+        "css":"mdi mdi-gender-female",
+        "code":"f29c"
+    },
+    {
+        "css":"mdi mdi-gender-male",
+        "code":"f29d"
+    },
+    {
+        "css":"mdi mdi-gender-male-female",
+        "code":"f29e"
+    },
+    {
+        "css":"mdi mdi-gender-transgender",
+        "code":"f29f"
+    },
+    {
+        "css":"mdi mdi-gesture",
+        "code":"f7ca"
+    },
+    {
+        "css":"mdi mdi-gesture-double-tap",
+        "code":"f73b"
+    },
+    {
+        "css":"mdi mdi-gesture-swipe-down",
+        "code":"f73c"
+    },
+    {
+        "css":"mdi mdi-gesture-swipe-left",
+        "code":"f73d"
+    },
+    {
+        "css":"mdi mdi-gesture-swipe-right",
+        "code":"f73e"
+    },
+    {
+        "css":"mdi mdi-gesture-swipe-up",
+        "code":"f73f"
+    },
+    {
+        "css":"mdi mdi-gesture-tap",
+        "code":"f740"
+    },
+    {
+        "css":"mdi mdi-gesture-two-double-tap",
+        "code":"f741"
+    },
+    {
+        "css":"mdi mdi-gesture-two-tap",
+        "code":"f742"
+    },
+    {
+        "css":"mdi mdi-ghost",
+        "code":"f2a0"
+    },
+    {
+        "css":"mdi mdi-gift",
+        "code":"f2a1"
+    },
+    {
+        "css":"mdi mdi-git",
+        "code":"f2a2"
+    },
+    {
+        "css":"mdi mdi-github-box",
+        "code":"f2a3"
+    },
+    {
+        "css":"mdi mdi-github-circle",
+        "code":"f2a4"
+    },
+    {
+        "css":"mdi mdi-github-face",
+        "code":"f6da"
+    },
+    {
+        "css":"mdi mdi-glass-flute",
+        "code":"f2a5"
+    },
+    {
+        "css":"mdi mdi-glass-mug",
+        "code":"f2a6"
+    },
+    {
+        "css":"mdi mdi-glass-stange",
+        "code":"f2a7"
+    },
+    {
+        "css":"mdi mdi-glass-tulip",
+        "code":"f2a8"
+    },
+    {
+        "css":"mdi mdi-glassdoor",
+        "code":"f2a9"
+    },
+    {
+        "css":"mdi mdi-glasses",
+        "code":"f2aa"
+    },
+    {
+        "css":"mdi mdi-gmail",
+        "code":"f2ab"
+    },
+    {
+        "css":"mdi mdi-gnome",
+        "code":"f2ac"
+    },
+    {
+        "css":"mdi mdi-gondola",
+        "code":"f685"
+    },
+    {
+        "css":"mdi mdi-google",
+        "code":"f2ad"
+    },
+    {
+        "css":"mdi mdi-google-analytics",
+        "code":"f7cb"
+    },
+    {
+        "css":"mdi mdi-google-assistant",
+        "code":"f7cc"
+    },
+    {
+        "css":"mdi mdi-google-cardboard",
+        "code":"f2ae"
+    },
+    {
+        "css":"mdi mdi-google-chrome",
+        "code":"f2af"
+    },
+    {
+        "css":"mdi mdi-google-circles",
+        "code":"f2b0"
+    },
+    {
+        "css":"mdi mdi-google-circles-communities",
+        "code":"f2b1"
+    },
+    {
+        "css":"mdi mdi-google-circles-extended",
+        "code":"f2b2"
+    },
+    {
+        "css":"mdi mdi-google-circles-group",
+        "code":"f2b3"
+    },
+    {
+        "css":"mdi mdi-google-controller",
+        "code":"f2b4"
+    },
+    {
+        "css":"mdi mdi-google-controller-off",
+        "code":"f2b5"
+    },
+    {
+        "css":"mdi mdi-google-drive",
+        "code":"f2b6"
+    },
+    {
+        "css":"mdi mdi-google-earth",
+        "code":"f2b7"
+    },
+    {
+        "css":"mdi mdi-google-glass",
+        "code":"f2b8"
+    },
+    {
+        "css":"mdi mdi-google-keep",
+        "code":"f6db"
+    },
+    {
+        "css":"mdi mdi-google-maps",
+        "code":"f5f5"
+    },
+    {
+        "css":"mdi mdi-google-nearby",
+        "code":"f2b9"
+    },
+    {
+        "css":"mdi mdi-google-pages",
+        "code":"f2ba"
+    },
+    {
+        "css":"mdi mdi-google-photos",
+        "code":"f6dc"
+    },
+    {
+        "css":"mdi mdi-google-physical-web",
+        "code":"f2bb"
+    },
+    {
+        "css":"mdi mdi-google-play",
+        "code":"f2bc"
+    },
+    {
+        "css":"mdi mdi-google-plus",
+        "code":"f2bd"
+    },
+    {
+        "css":"mdi mdi-google-plus-box",
+        "code":"f2be"
+    },
+    {
+        "css":"mdi mdi-google-translate",
+        "code":"f2bf"
+    },
+    {
+        "css":"mdi mdi-google-wallet",
+        "code":"f2c0"
+    },
+    {
+        "css":"mdi mdi-gradient",
+        "code":"f69f"
+    },
+    {
+        "css":"mdi mdi-grease-pencil",
+        "code":"f648"
+    },
+    {
+        "css":"mdi mdi-grid",
+        "code":"f2c1"
+    },
+    {
+        "css":"mdi mdi-grid-large",
+        "code":"f757"
+    },
+    {
+        "css":"mdi mdi-grid-off",
+        "code":"f2c2"
+    },
+    {
+        "css":"mdi mdi-group",
+        "code":"f2c3"
+    },
+    {
+        "css":"mdi mdi-guitar-acoustic",
+        "code":"f770"
+    },
+    {
+        "css":"mdi mdi-guitar-electric",
+        "code":"f2c4"
+    },
+    {
+        "css":"mdi mdi-guitar-pick",
+        "code":"f2c5"
+    },
+    {
+        "css":"mdi mdi-guitar-pick-outline",
+        "code":"f2c6"
+    },
+    {
+        "css":"mdi mdi-hackernews",
+        "code":"f624"
+    },
+    {
+        "css":"mdi mdi-hamburger",
+        "code":"f684"
+    },
+    {
+        "css":"mdi mdi-hand-pointing-right",
+        "code":"f2c7"
+    },
+    {
+        "css":"mdi mdi-hanger",
+        "code":"f2c8"
+    },
+    {
+        "css":"mdi mdi-hangouts",
+        "code":"f2c9"
+    },
+    {
+        "css":"mdi mdi-harddisk",
+        "code":"f2ca"
+    },
+    {
+        "css":"mdi mdi-headphones",
+        "code":"f2cb"
+    },
+    {
+        "css":"mdi mdi-headphones-box",
+        "code":"f2cc"
+    },
+    {
+        "css":"mdi mdi-headphones-off",
+        "code":"f7cd"
+    },
+    {
+        "css":"mdi mdi-headphones-settings",
+        "code":"f2cd"
+    },
+    {
+        "css":"mdi mdi-headset",
+        "code":"f2ce"
+    },
+    {
+        "css":"mdi mdi-headset-dock",
+        "code":"f2cf"
+    },
+    {
+        "css":"mdi mdi-headset-off",
+        "code":"f2d0"
+    },
+    {
+        "css":"mdi mdi-heart",
+        "code":"f2d1"
+    },
+    {
+        "css":"mdi mdi-heart-box",
+        "code":"f2d2"
+    },
+    {
+        "css":"mdi mdi-heart-box-outline",
+        "code":"f2d3"
+    },
+    {
+        "css":"mdi mdi-heart-broken",
+        "code":"f2d4"
+    },
+    {
+        "css":"mdi mdi-heart-half",
+        "code":"f6de"
+    },
+    {
+        "css":"mdi mdi-heart-half-full",
+        "code":"f6dd"
+    },
+    {
+        "css":"mdi mdi-heart-half-outline",
+        "code":"f6df"
+    },
+    {
+        "css":"mdi mdi-heart-off",
+        "code":"f758"
+    },
+    {
+        "css":"mdi mdi-heart-outline",
+        "code":"f2d5"
+    },
+    {
+        "css":"mdi mdi-heart-pulse",
+        "code":"f5f6"
+    },
+    {
+        "css":"mdi mdi-help",
+        "code":"f2d6"
+    },
+    {
+        "css":"mdi mdi-help-box",
+        "code":"f78a"
+    },
+    {
+        "css":"mdi mdi-help-circle",
+        "code":"f2d7"
+    },
+    {
+        "css":"mdi mdi-help-circle-outline",
+        "code":"f625"
+    },
+    {
+        "css":"mdi mdi-help-network",
+        "code":"f6f4"
+    },
+    {
+        "css":"mdi mdi-hexagon",
+        "code":"f2d8"
+    },
+    {
+        "css":"mdi mdi-hexagon-multiple",
+        "code":"f6e0"
+    },
+    {
+        "css":"mdi mdi-hexagon-outline",
+        "code":"f2d9"
+    },
+    {
+        "css":"mdi mdi-high-definition",
+        "code":"f7ce"
+    },
+    {
+        "css":"mdi mdi-highway",
+        "code":"f5f7"
+    },
+    {
+        "css":"mdi mdi-history",
+        "code":"f2da"
+    },
+    {
+        "css":"mdi mdi-hololens",
+        "code":"f2db"
+    },
+    {
+        "css":"mdi mdi-home",
+        "code":"f2dc"
+    },
+    {
+        "css":"mdi mdi-home-assistant",
+        "code":"f7cf"
+    },
+    {
+        "css":"mdi mdi-home-automation",
+        "code":"f7d0"
+    },
+    {
+        "css":"mdi mdi-home-circle",
+        "code":"f7d1"
+    },
+    {
+        "css":"mdi mdi-home-map-marker",
+        "code":"f5f8"
+    },
+    {
+        "css":"mdi mdi-home-modern",
+        "code":"f2dd"
+    },
+    {
+        "css":"mdi mdi-home-outline",
+        "code":"f6a0"
+    },
+    {
+        "css":"mdi mdi-home-variant",
+        "code":"f2de"
+    },
+    {
+        "css":"mdi mdi-hook",
+        "code":"f6e1"
+    },
+    {
+        "css":"mdi mdi-hook-off",
+        "code":"f6e2"
+    },
+    {
+        "css":"mdi mdi-hops",
+        "code":"f2df"
+    },
+    {
+        "css":"mdi mdi-hospital",
+        "code":"f2e0"
+    },
+    {
+        "css":"mdi mdi-hospital-building",
+        "code":"f2e1"
+    },
+    {
+        "css":"mdi mdi-hospital-marker",
+        "code":"f2e2"
+    },
+    {
+        "css":"mdi mdi-hotel",
+        "code":"f2e3"
+    },
+    {
+        "css":"mdi mdi-houzz",
+        "code":"f2e4"
+    },
+    {
+        "css":"mdi mdi-houzz-box",
+        "code":"f2e5"
+    },
+    {
+        "css":"mdi mdi-human",
+        "code":"f2e6"
+    },
+    {
+        "css":"mdi mdi-human-child",
+        "code":"f2e7"
+    },
+    {
+        "css":"mdi mdi-human-female",
+        "code":"f649"
+    },
+    {
+        "css":"mdi mdi-human-greeting",
+        "code":"f64a"
+    },
+    {
+        "css":"mdi mdi-human-handsdown",
+        "code":"f64b"
+    },
+    {
+        "css":"mdi mdi-human-handsup",
+        "code":"f64c"
+    },
+    {
+        "css":"mdi mdi-human-male",
+        "code":"f64d"
+    },
+    {
+        "css":"mdi mdi-human-male-female",
+        "code":"f2e8"
+    },
+    {
+        "css":"mdi mdi-human-pregnant",
+        "code":"f5cf"
+    },
+    {
+        "css":"mdi mdi-humble-bundle",
+        "code":"f743"
+    },
+    {
+        "css":"mdi mdi-image",
+        "code":"f2e9"
+    },
+    {
+        "css":"mdi mdi-image-album",
+        "code":"f2ea"
+    },
+    {
+        "css":"mdi mdi-image-area",
+        "code":"f2eb"
+    },
+    {
+        "css":"mdi mdi-image-area-close",
+        "code":"f2ec"
+    },
+    {
+        "css":"mdi mdi-image-broken",
+        "code":"f2ed"
+    },
+    {
+        "css":"mdi mdi-image-broken-variant",
+        "code":"f2ee"
+    },
+    {
+        "css":"mdi mdi-image-filter",
+        "code":"f2ef"
+    },
+    {
+        "css":"mdi mdi-image-filter-black-white",
+        "code":"f2f0"
+    },
+    {
+        "css":"mdi mdi-image-filter-center-focus",
+        "code":"f2f1"
+    },
+    {
+        "css":"mdi mdi-image-filter-center-focus-weak",
+        "code":"f2f2"
+    },
+    {
+        "css":"mdi mdi-image-filter-drama",
+        "code":"f2f3"
+    },
+    {
+        "css":"mdi mdi-image-filter-frames",
+        "code":"f2f4"
+    },
+    {
+        "css":"mdi mdi-image-filter-hdr",
+        "code":"f2f5"
+    },
+    {
+        "css":"mdi mdi-image-filter-none",
+        "code":"f2f6"
+    },
+    {
+        "css":"mdi mdi-image-filter-tilt-shift",
+        "code":"f2f7"
+    },
+    {
+        "css":"mdi mdi-image-filter-vintage",
+        "code":"f2f8"
+    },
+    {
+        "css":"mdi mdi-image-multiple",
+        "code":"f2f9"
+    },
+    {
+        "css":"mdi mdi-import",
+        "code":"f2fa"
+    },
+    {
+        "css":"mdi mdi-inbox",
+        "code":"f686"
+    },
+    {
+        "css":"mdi mdi-inbox-arrow-down",
+        "code":"f2fb"
+    },
+    {
+        "css":"mdi mdi-inbox-arrow-up",
+        "code":"f3d1"
+    },
+    {
+        "css":"mdi mdi-incognito",
+        "code":"f5f9"
+    },
+    {
+        "css":"mdi mdi-infinity",
+        "code":"f6e3"
+    },
+    {
+        "css":"mdi mdi-information",
+        "code":"f2fc"
+    },
+    {
+        "css":"mdi mdi-information-outline",
+        "code":"f2fd"
+    },
+    {
+        "css":"mdi mdi-information-variant",
+        "code":"f64e"
+    },
+    {
+        "css":"mdi mdi-instagram",
+        "code":"f2fe"
+    },
+    {
+        "css":"mdi mdi-instapaper",
+        "code":"f2ff"
+    },
+    {
+        "css":"mdi mdi-internet-explorer",
+        "code":"f300"
+    },
+    {
+        "css":"mdi mdi-invert-colors",
+        "code":"f301"
+    },
+    {
+        "css":"mdi mdi-itunes",
+        "code":"f676"
+    },
+    {
+        "css":"mdi mdi-jeepney",
+        "code":"f302"
+    },
+    {
+        "css":"mdi mdi-jira",
+        "code":"f303"
+    },
+    {
+        "css":"mdi mdi-jsfiddle",
+        "code":"f304"
+    },
+    {
+        "css":"mdi mdi-json",
+        "code":"f626"
+    },
+    {
+        "css":"mdi mdi-keg",
+        "code":"f305"
+    },
+    {
+        "css":"mdi mdi-kettle",
+        "code":"f5fa"
+    },
+    {
+        "css":"mdi mdi-key",
+        "code":"f306"
+    },
+    {
+        "css":"mdi mdi-key-change",
+        "code":"f307"
+    },
+    {
+        "css":"mdi mdi-key-minus",
+        "code":"f308"
+    },
+    {
+        "css":"mdi mdi-key-plus",
+        "code":"f309"
+    },
+    {
+        "css":"mdi mdi-key-remove",
+        "code":"f30a"
+    },
+    {
+        "css":"mdi mdi-key-variant",
+        "code":"f30b"
+    },
+    {
+        "css":"mdi mdi-keyboard",
+        "code":"f30c"
+    },
+    {
+        "css":"mdi mdi-keyboard-backspace",
+        "code":"f30d"
+    },
+    {
+        "css":"mdi mdi-keyboard-caps",
+        "code":"f30e"
+    },
+    {
+        "css":"mdi mdi-keyboard-close",
+        "code":"f30f"
+    },
+    {
+        "css":"mdi mdi-keyboard-off",
+        "code":"f310"
+    },
+    {
+        "css":"mdi mdi-keyboard-return",
+        "code":"f311"
+    },
+    {
+        "css":"mdi mdi-keyboard-tab",
+        "code":"f312"
+    },
+    {
+        "css":"mdi mdi-keyboard-variant",
+        "code":"f313"
+    },
+    {
+        "css":"mdi mdi-kickstarter",
+        "code":"f744"
+    },
+    {
+        "css":"mdi mdi-kodi",
+        "code":"f314"
+    },
+    {
+        "css":"mdi mdi-label",
+        "code":"f315"
+    },
+    {
+        "css":"mdi mdi-label-outline",
+        "code":"f316"
+    },
+    {
+        "css":"mdi mdi-lambda",
+        "code":"f627"
+    },
+    {
+        "css":"mdi mdi-lamp",
+        "code":"f6b4"
+    },
+    {
+        "css":"mdi mdi-lan",
+        "code":"f317"
+    },
+    {
+        "css":"mdi mdi-lan-connect",
+        "code":"f318"
+    },
+    {
+        "css":"mdi mdi-lan-disconnect",
+        "code":"f319"
+    },
+    {
+        "css":"mdi mdi-lan-pending",
+        "code":"f31a"
+    },
+    {
+        "css":"mdi mdi-language-c",
+        "code":"f671"
+    },
+    {
+        "css":"mdi mdi-language-cpp",
+        "code":"f672"
+    },
+    {
+        "css":"mdi mdi-language-csharp",
+        "code":"f31b"
+    },
+    {
+        "css":"mdi mdi-language-css3",
+        "code":"f31c"
+    },
+    {
+        "css":"mdi mdi-language-go",
+        "code":"f7d2"
+    },
+    {
+        "css":"mdi mdi-language-html5",
+        "code":"f31d"
+    },
+    {
+        "css":"mdi mdi-language-javascript",
+        "code":"f31e"
+    },
+    {
+        "css":"mdi mdi-language-php",
+        "code":"f31f"
+    },
+    {
+        "css":"mdi mdi-language-python",
+        "code":"f320"
+    },
+    {
+        "css":"mdi mdi-language-python-text",
+        "code":"f321"
+    },
+    {
+        "css":"mdi mdi-language-r",
+        "code":"f7d3"
+    },
+    {
+        "css":"mdi mdi-language-swift",
+        "code":"f6e4"
+    },
+    {
+        "css":"mdi mdi-language-typescript",
+        "code":"f6e5"
+    },
+    {
+        "css":"mdi mdi-laptop",
+        "code":"f322"
+    },
+    {
+        "css":"mdi mdi-laptop-chromebook",
+        "code":"f323"
+    },
+    {
+        "css":"mdi mdi-laptop-mac",
+        "code":"f324"
+    },
+    {
+        "css":"mdi mdi-laptop-off",
+        "code":"f6e6"
+    },
+    {
+        "css":"mdi mdi-laptop-windows",
+        "code":"f325"
+    },
+    {
+        "css":"mdi mdi-lastfm",
+        "code":"f326"
+    },
+    {
+        "css":"mdi mdi-launch",
+        "code":"f327"
+    },
+    {
+        "css":"mdi mdi-lava-lamp",
+        "code":"f7d4"
+    },
+    {
+        "css":"mdi mdi-layers",
+        "code":"f328"
+    },
+    {
+        "css":"mdi mdi-layers-off",
+        "code":"f329"
+    },
+    {
+        "css":"mdi mdi-lead-pencil",
+        "code":"f64f"
+    },
+    {
+        "css":"mdi mdi-leaf",
+        "code":"f32a"
+    },
+    {
+        "css":"mdi mdi-led-off",
+        "code":"f32b"
+    },
+    {
+        "css":"mdi mdi-led-on",
+        "code":"f32c"
+    },
+    {
+        "css":"mdi mdi-led-outline",
+        "code":"f32d"
+    },
+    {
+        "css":"mdi mdi-led-strip",
+        "code":"f7d5"
+    },
+    {
+        "css":"mdi mdi-led-variant-off",
+        "code":"f32e"
+    },
+    {
+        "css":"mdi mdi-led-variant-on",
+        "code":"f32f"
+    },
+    {
+        "css":"mdi mdi-led-variant-outline",
+        "code":"f330"
+    },
+    {
+        "css":"mdi mdi-library",
+        "code":"f331"
+    },
+    {
+        "css":"mdi mdi-library-books",
+        "code":"f332"
+    },
+    {
+        "css":"mdi mdi-library-music",
+        "code":"f333"
+    },
+    {
+        "css":"mdi mdi-library-plus",
+        "code":"f334"
+    },
+    {
+        "css":"mdi mdi-lightbulb",
+        "code":"f335"
+    },
+    {
+        "css":"mdi mdi-lightbulb-on",
+        "code":"f6e7"
+    },
+    {
+        "css":"mdi mdi-lightbulb-on-outline",
+        "code":"f6e8"
+    },
+    {
+        "css":"mdi mdi-lightbulb-outline",
+        "code":"f336"
+    },
+    {
+        "css":"mdi mdi-link",
+        "code":"f337"
+    },
+    {
+        "css":"mdi mdi-link-off",
+        "code":"f338"
+    },
+    {
+        "css":"mdi mdi-link-variant",
+        "code":"f339"
+    },
+    {
+        "css":"mdi mdi-link-variant-off",
+        "code":"f33a"
+    },
+    {
+        "css":"mdi mdi-linkedin",
+        "code":"f33b"
+    },
+    {
+        "css":"mdi mdi-linkedin-box",
+        "code":"f33c"
+    },
+    {
+        "css":"mdi mdi-linux",
+        "code":"f33d"
+    },
+    {
+        "css":"mdi mdi-loading",
+        "code":"f771"
+    },
+    {
+        "css":"mdi mdi-lock",
+        "code":"f33e"
+    },
+    {
+        "css":"mdi mdi-lock-open",
+        "code":"f33f"
+    },
+    {
+        "css":"mdi mdi-lock-open-outline",
+        "code":"f340"
+    },
+    {
+        "css":"mdi mdi-lock-outline",
+        "code":"f341"
+    },
+    {
+        "css":"mdi mdi-lock-pattern",
+        "code":"f6e9"
+    },
+    {
+        "css":"mdi mdi-lock-plus",
+        "code":"f5fb"
+    },
+    {
+        "css":"mdi mdi-lock-reset",
+        "code":"f772"
+    },
+    {
+        "css":"mdi mdi-locker",
+        "code":"f7d6"
+    },
+    {
+        "css":"mdi mdi-locker-multiple",
+        "code":"f7d7"
+    },
+    {
+        "css":"mdi mdi-login",
+        "code":"f342"
+    },
+    {
+        "css":"mdi mdi-login-variant",
+        "code":"f5fc"
+    },
+    {
+        "css":"mdi mdi-logout",
+        "code":"f343"
+    },
+    {
+        "css":"mdi mdi-logout-variant",
+        "code":"f5fd"
+    },
+    {
+        "css":"mdi mdi-looks",
+        "code":"f344"
+    },
+    {
+        "css":"mdi mdi-loop",
+        "code":"f6ea"
+    },
+    {
+        "css":"mdi mdi-loupe",
+        "code":"f345"
+    },
+    {
+        "css":"mdi mdi-lumx",
+        "code":"f346"
+    },
+    {
+        "css":"mdi mdi-magnet",
+        "code":"f347"
+    },
+    {
+        "css":"mdi mdi-magnet-on",
+        "code":"f348"
+    },
+    {
+        "css":"mdi mdi-magnify",
+        "code":"f349"
+    },
+    {
+        "css":"mdi mdi-magnify-minus",
+        "code":"f34a"
+    },
+    {
+        "css":"mdi mdi-magnify-minus-outline",
+        "code":"f6eb"
+    },
+    {
+        "css":"mdi mdi-magnify-plus",
+        "code":"f34b"
+    },
+    {
+        "css":"mdi mdi-magnify-plus-outline",
+        "code":"f6ec"
+    },
+    {
+        "css":"mdi mdi-mail-ru",
+        "code":"f34c"
+    },
+    {
+        "css":"mdi mdi-mailbox",
+        "code":"f6ed"
+    },
+    {
+        "css":"mdi mdi-map",
+        "code":"f34d"
+    },
+    {
+        "css":"mdi mdi-map-marker",
+        "code":"f34e"
+    },
+    {
+        "css":"mdi mdi-map-marker-circle",
+        "code":"f34f"
+    },
+    {
+        "css":"mdi mdi-map-marker-minus",
+        "code":"f650"
+    },
+    {
+        "css":"mdi mdi-map-marker-multiple",
+        "code":"f350"
+    },
+    {
+        "css":"mdi mdi-map-marker-off",
+        "code":"f351"
+    },
+    {
+        "css":"mdi mdi-map-marker-outline",
+        "code":"f7d8"
+    },
+    {
+        "css":"mdi mdi-map-marker-plus",
+        "code":"f651"
+    },
+    {
+        "css":"mdi mdi-map-marker-radius",
+        "code":"f352"
+    },
+    {
+        "css":"mdi mdi-margin",
+        "code":"f353"
+    },
+    {
+        "css":"mdi mdi-markdown",
+        "code":"f354"
+    },
+    {
+        "css":"mdi mdi-marker",
+        "code":"f652"
+    },
+    {
+        "css":"mdi mdi-marker-check",
+        "code":"f355"
+    },
+    {
+        "css":"mdi mdi-martini",
+        "code":"f356"
+    },
+    {
+        "css":"mdi mdi-material-ui",
+        "code":"f357"
+    },
+    {
+        "css":"mdi mdi-math-compass",
+        "code":"f358"
+    },
+    {
+        "css":"mdi mdi-matrix",
+        "code":"f628"
+    },
+    {
+        "css":"mdi mdi-maxcdn",
+        "code":"f359"
+    },
+    {
+        "css":"mdi mdi-medical-bag",
+        "code":"f6ee"
+    },
+    {
+        "css":"mdi mdi-medium",
+        "code":"f35a"
+    },
+    {
+        "css":"mdi mdi-memory",
+        "code":"f35b"
+    },
+    {
+        "css":"mdi mdi-menu",
+        "code":"f35c"
+    },
+    {
+        "css":"mdi mdi-menu-down",
+        "code":"f35d"
+    },
+    {
+        "css":"mdi mdi-menu-down-outline",
+        "code":"f6b5"
+    },
+    {
+        "css":"mdi mdi-menu-left",
+        "code":"f35e"
+    },
+    {
+        "css":"mdi mdi-menu-right",
+        "code":"f35f"
+    },
+    {
+        "css":"mdi mdi-menu-up",
+        "code":"f360"
+    },
+    {
+        "css":"mdi mdi-menu-up-outline",
+        "code":"f6b6"
+    },
+    {
+        "css":"mdi mdi-message",
+        "code":"f361"
+    },
+    {
+        "css":"mdi mdi-message-alert",
+        "code":"f362"
+    },
+    {
+        "css":"mdi mdi-message-bulleted",
+        "code":"f6a1"
+    },
+    {
+        "css":"mdi mdi-message-bulleted-off",
+        "code":"f6a2"
+    },
+    {
+        "css":"mdi mdi-message-draw",
+        "code":"f363"
+    },
+    {
+        "css":"mdi mdi-message-image",
+        "code":"f364"
+    },
+    {
+        "css":"mdi mdi-message-outline",
+        "code":"f365"
+    },
+    {
+        "css":"mdi mdi-message-plus",
+        "code":"f653"
+    },
+    {
+        "css":"mdi mdi-message-processing",
+        "code":"f366"
+    },
+    {
+        "css":"mdi mdi-message-reply",
+        "code":"f367"
+    },
+    {
+        "css":"mdi mdi-message-reply-text",
+        "code":"f368"
+    },
+    {
+        "css":"mdi mdi-message-settings",
+        "code":"f6ef"
+    },
+    {
+        "css":"mdi mdi-message-settings-variant",
+        "code":"f6f0"
+    },
+    {
+        "css":"mdi mdi-message-text",
+        "code":"f369"
+    },
+    {
+        "css":"mdi mdi-message-text-outline",
+        "code":"f36a"
+    },
+    {
+        "css":"mdi mdi-message-video",
+        "code":"f36b"
+    },
+    {
+        "css":"mdi mdi-meteor",
+        "code":"f629"
+    },
+    {
+        "css":"mdi mdi-metronome",
+        "code":"f7d9"
+    },
+    {
+        "css":"mdi mdi-metronome-tick",
+        "code":"f7da"
+    },
+    {
+        "css":"mdi mdi-micro-sd",
+        "code":"f7db"
+    },
+    {
+        "css":"mdi mdi-microphone",
+        "code":"f36c"
+    },
+    {
+        "css":"mdi mdi-microphone-off",
+        "code":"f36d"
+    },
+    {
+        "css":"mdi mdi-microphone-outline",
+        "code":"f36e"
+    },
+    {
+        "css":"mdi mdi-microphone-settings",
+        "code":"f36f"
+    },
+    {
+        "css":"mdi mdi-microphone-variant",
+        "code":"f370"
+    },
+    {
+        "css":"mdi mdi-microphone-variant-off",
+        "code":"f371"
+    },
+    {
+        "css":"mdi mdi-microscope",
+        "code":"f654"
+    },
+    {
+        "css":"mdi mdi-microsoft",
+        "code":"f372"
+    },
+    {
+        "css":"mdi mdi-minecraft",
+        "code":"f373"
+    },
+    {
+        "css":"mdi mdi-minus",
+        "code":"f374"
+    },
+    {
+        "css":"mdi mdi-minus-box",
+        "code":"f375"
+    },
+    {
+        "css":"mdi mdi-minus-box-outline",
+        "code":"f6f1"
+    },
+    {
+        "css":"mdi mdi-minus-circle",
+        "code":"f376"
+    },
+    {
+        "css":"mdi mdi-minus-circle-outline",
+        "code":"f377"
+    },
+    {
+        "css":"mdi mdi-minus-network",
+        "code":"f378"
+    },
+    {
+        "css":"mdi mdi-mixcloud",
+        "code":"f62a"
+    },
+    {
+        "css":"mdi mdi-mixer",
+        "code":"f7dc"
+    },
+    {
+        "css":"mdi mdi-monitor",
+        "code":"f379"
+    },
+    {
+        "css":"mdi mdi-monitor-multiple",
+        "code":"f37a"
+    },
+    {
+        "css":"mdi mdi-more",
+        "code":"f37b"
+    },
+    {
+        "css":"mdi mdi-motorbike",
+        "code":"f37c"
+    },
+    {
+        "css":"mdi mdi-mouse",
+        "code":"f37d"
+    },
+    {
+        "css":"mdi mdi-mouse-off",
+        "code":"f37e"
+    },
+    {
+        "css":"mdi mdi-mouse-variant",
+        "code":"f37f"
+    },
+    {
+        "css":"mdi mdi-mouse-variant-off",
+        "code":"f380"
+    },
+    {
+        "css":"mdi mdi-move-resize",
+        "code":"f655"
+    },
+    {
+        "css":"mdi mdi-move-resize-variant",
+        "code":"f656"
+    },
+    {
+        "css":"mdi mdi-movie",
+        "code":"f381"
+    },
+    {
+        "css":"mdi mdi-movie-roll",
+        "code":"f7dd"
+    },
+    {
+        "css":"mdi mdi-multiplication",
+        "code":"f382"
+    },
+    {
+        "css":"mdi mdi-multiplication-box",
+        "code":"f383"
+    },
+    {
+        "css":"mdi mdi-mushroom",
+        "code":"f7de"
+    },
+    {
+        "css":"mdi mdi-mushroom-outline",
+        "code":"f7df"
+    },
+    {
+        "css":"mdi mdi-music",
+        "code":"f759"
+    },
+    {
+        "css":"mdi mdi-music-box",
+        "code":"f384"
+    },
+    {
+        "css":"mdi mdi-music-box-outline",
+        "code":"f385"
+    },
+    {
+        "css":"mdi mdi-music-circle",
+        "code":"f386"
+    },
+    {
+        "css":"mdi mdi-music-note",
+        "code":"f387"
+    },
+    {
+        "css":"mdi mdi-music-note-bluetooth",
+        "code":"f5fe"
+    },
+    {
+        "css":"mdi mdi-music-note-bluetooth-off",
+        "code":"f5ff"
+    },
+    {
+        "css":"mdi mdi-music-note-eighth",
+        "code":"f388"
+    },
+    {
+        "css":"mdi mdi-music-note-half",
+        "code":"f389"
+    },
+    {
+        "css":"mdi mdi-music-note-off",
+        "code":"f38a"
+    },
+    {
+        "css":"mdi mdi-music-note-quarter",
+        "code":"f38b"
+    },
+    {
+        "css":"mdi mdi-music-note-sixteenth",
+        "code":"f38c"
+    },
+    {
+        "css":"mdi mdi-music-note-whole",
+        "code":"f38d"
+    },
+    {
+        "css":"mdi mdi-music-off",
+        "code":"f75a"
+    },
+    {
+        "css":"mdi mdi-nature",
+        "code":"f38e"
+    },
+    {
+        "css":"mdi mdi-nature-people",
+        "code":"f38f"
+    },
+    {
+        "css":"mdi mdi-navigation",
+        "code":"f390"
+    },
+    {
+        "css":"mdi mdi-near-me",
+        "code":"f5cd"
+    },
+    {
+        "css":"mdi mdi-needle",
+        "code":"f391"
+    },
+    {
+        "css":"mdi mdi-nest-protect",
+        "code":"f392"
+    },
+    {
+        "css":"mdi mdi-nest-thermostat",
+        "code":"f393"
+    },
+    {
+        "css":"mdi mdi-netflix",
+        "code":"f745"
+    },
+    {
+        "css":"mdi mdi-network",
+        "code":"f6f2"
+    },
+    {
+        "css":"mdi mdi-new-box",
+        "code":"f394"
+    },
+    {
+        "css":"mdi mdi-newspaper",
+        "code":"f395"
+    },
+    {
+        "css":"mdi mdi-nfc",
+        "code":"f396"
+    },
+    {
+        "css":"mdi mdi-nfc-tap",
+        "code":"f397"
+    },
+    {
+        "css":"mdi mdi-nfc-variant",
+        "code":"f398"
+    },
+    {
+        "css":"mdi mdi-ninja",
+        "code":"f773"
+    },
+    {
+        "css":"mdi mdi-nintendo-switch",
+        "code":"f7e0"
+    },
+    {
+        "css":"mdi mdi-nodejs",
+        "code":"f399"
+    },
+    {
+        "css":"mdi mdi-note",
+        "code":"f39a"
+    },
+    {
+        "css":"mdi mdi-note-multiple",
+        "code":"f6b7"
+    },
+    {
+        "css":"mdi mdi-note-multiple-outline",
+        "code":"f6b8"
+    },
+    {
+        "css":"mdi mdi-note-outline",
+        "code":"f39b"
+    },
+    {
+        "css":"mdi mdi-note-plus",
+        "code":"f39c"
+    },
+    {
+        "css":"mdi mdi-note-plus-outline",
+        "code":"f39d"
+    },
+    {
+        "css":"mdi mdi-note-text",
+        "code":"f39e"
+    },
+    {
+        "css":"mdi mdi-notification-clear-all",
+        "code":"f39f"
+    },
+    {
+        "css":"mdi mdi-npm",
+        "code":"f6f6"
+    },
+    {
+        "css":"mdi mdi-nuke",
+        "code":"f6a3"
+    },
+    {
+        "css":"mdi mdi-null",
+        "code":"f7e1"
+    },
+    {
+        "css":"mdi mdi-numeric",
+        "code":"f3a0"
+    },
+    {
+        "css":"mdi mdi-numeric-0-box",
+        "code":"f3a1"
+    },
+    {
+        "css":"mdi mdi-numeric-0-box-multiple-outline",
+        "code":"f3a2"
+    },
+    {
+        "css":"mdi mdi-numeric-0-box-outline",
+        "code":"f3a3"
+    },
+    {
+        "css":"mdi mdi-numeric-1-box",
+        "code":"f3a4"
+    },
+    {
+        "css":"mdi mdi-numeric-1-box-multiple-outline",
+        "code":"f3a5"
+    },
+    {
+        "css":"mdi mdi-numeric-1-box-outline",
+        "code":"f3a6"
+    },
+    {
+        "css":"mdi mdi-numeric-2-box",
+        "code":"f3a7"
+    },
+    {
+        "css":"mdi mdi-numeric-2-box-multiple-outline",
+        "code":"f3a8"
+    },
+    {
+        "css":"mdi mdi-numeric-2-box-outline",
+        "code":"f3a9"
+    },
+    {
+        "css":"mdi mdi-numeric-3-box",
+        "code":"f3aa"
+    },
+    {
+        "css":"mdi mdi-numeric-3-box-multiple-outline",
+        "code":"f3ab"
+    },
+    {
+        "css":"mdi mdi-numeric-3-box-outline",
+        "code":"f3ac"
+    },
+    {
+        "css":"mdi mdi-numeric-4-box",
+        "code":"f3ad"
+    },
+    {
+        "css":"mdi mdi-numeric-4-box-multiple-outline",
+        "code":"f3ae"
+    },
+    {
+        "css":"mdi mdi-numeric-4-box-outline",
+        "code":"f3af"
+    },
+    {
+        "css":"mdi mdi-numeric-5-box",
+        "code":"f3b0"
+    },
+    {
+        "css":"mdi mdi-numeric-5-box-multiple-outline",
+        "code":"f3b1"
+    },
+    {
+        "css":"mdi mdi-numeric-5-box-outline",
+        "code":"f3b2"
+    },
+    {
+        "css":"mdi mdi-numeric-6-box",
+        "code":"f3b3"
+    },
+    {
+        "css":"mdi mdi-numeric-6-box-multiple-outline",
+        "code":"f3b4"
+    },
+    {
+        "css":"mdi mdi-numeric-6-box-outline",
+        "code":"f3b5"
+    },
+    {
+        "css":"mdi mdi-numeric-7-box",
+        "code":"f3b6"
+    },
+    {
+        "css":"mdi mdi-numeric-7-box-multiple-outline",
+        "code":"f3b7"
+    },
+    {
+        "css":"mdi mdi-numeric-7-box-outline",
+        "code":"f3b8"
+    },
+    {
+        "css":"mdi mdi-numeric-8-box",
+        "code":"f3b9"
+    },
+    {
+        "css":"mdi mdi-numeric-8-box-multiple-outline",
+        "code":"f3ba"
+    },
+    {
+        "css":"mdi mdi-numeric-8-box-outline",
+        "code":"f3bb"
+    },
+    {
+        "css":"mdi mdi-numeric-9-box",
+        "code":"f3bc"
+    },
+    {
+        "css":"mdi mdi-numeric-9-box-multiple-outline",
+        "code":"f3bd"
+    },
+    {
+        "css":"mdi mdi-numeric-9-box-outline",
+        "code":"f3be"
+    },
+    {
+        "css":"mdi mdi-numeric-9-plus-box",
+        "code":"f3bf"
+    },
+    {
+        "css":"mdi mdi-numeric-9-plus-box-multiple-outline",
+        "code":"f3c0"
+    },
+    {
+        "css":"mdi mdi-numeric-9-plus-box-outline",
+        "code":"f3c1"
+    },
+    {
+        "css":"mdi mdi-nut",
+        "code":"f6f7"
+    },
+    {
+        "css":"mdi mdi-nutrition",
+        "code":"f3c2"
+    },
+    {
+        "css":"mdi mdi-oar",
+        "code":"f67b"
+    },
+    {
+        "css":"mdi mdi-octagon",
+        "code":"f3c3"
+    },
+    {
+        "css":"mdi mdi-octagon-outline",
+        "code":"f3c4"
+    },
+    {
+        "css":"mdi mdi-octagram",
+        "code":"f6f8"
+    },
+    {
+        "css":"mdi mdi-octagram-outline",
+        "code":"f774"
+    },
+    {
+        "css":"mdi mdi-odnoklassniki",
+        "code":"f3c5"
+    },
+    {
+        "css":"mdi mdi-office",
+        "code":"f3c6"
+    },
+    {
+        "css":"mdi mdi-oil",
+        "code":"f3c7"
+    },
+    {
+        "css":"mdi mdi-oil-temperature",
+        "code":"f3c8"
+    },
+    {
+        "css":"mdi mdi-omega",
+        "code":"f3c9"
+    },
+    {
+        "css":"mdi mdi-onedrive",
+        "code":"f3ca"
+    },
+    {
+        "css":"mdi mdi-onenote",
+        "code":"f746"
+    },
+    {
+        "css":"mdi mdi-opacity",
+        "code":"f5cc"
+    },
+    {
+        "css":"mdi mdi-open-in-app",
+        "code":"f3cb"
+    },
+    {
+        "css":"mdi mdi-open-in-new",
+        "code":"f3cc"
+    },
+    {
+        "css":"mdi mdi-openid",
+        "code":"f3cd"
+    },
+    {
+        "css":"mdi mdi-opera",
+        "code":"f3ce"
+    },
+    {
+        "css":"mdi mdi-orbit",
+        "code":"f018"
+    },
+    {
+        "css":"mdi mdi-ornament",
+        "code":"f3cf"
+    },
+    {
+        "css":"mdi mdi-ornament-variant",
+        "code":"f3d0"
+    },
+    {
+        "css":"mdi mdi-owl",
+        "code":"f3d2"
+    },
+    {
+        "css":"mdi mdi-package",
+        "code":"f3d3"
+    },
+    {
+        "css":"mdi mdi-package-down",
+        "code":"f3d4"
+    },
+    {
+        "css":"mdi mdi-package-up",
+        "code":"f3d5"
+    },
+    {
+        "css":"mdi mdi-package-variant",
+        "code":"f3d6"
+    },
+    {
+        "css":"mdi mdi-package-variant-closed",
+        "code":"f3d7"
+    },
+    {
+        "css":"mdi mdi-page-first",
+        "code":"f600"
+    },
+    {
+        "css":"mdi mdi-page-last",
+        "code":"f601"
+    },
+    {
+        "css":"mdi mdi-page-layout-body",
+        "code":"f6f9"
+    },
+    {
+        "css":"mdi mdi-page-layout-footer",
+        "code":"f6fa"
+    },
+    {
+        "css":"mdi mdi-page-layout-header",
+        "code":"f6fb"
+    },
+    {
+        "css":"mdi mdi-page-layout-sidebar-left",
+        "code":"f6fc"
+    },
+    {
+        "css":"mdi mdi-page-layout-sidebar-right",
+        "code":"f6fd"
+    },
+    {
+        "css":"mdi mdi-palette",
+        "code":"f3d8"
+    },
+    {
+        "css":"mdi mdi-palette-advanced",
+        "code":"f3d9"
+    },
+    {
+        "css":"mdi mdi-panda",
+        "code":"f3da"
+    },
+    {
+        "css":"mdi mdi-pandora",
+        "code":"f3db"
+    },
+    {
+        "css":"mdi mdi-panorama",
+        "code":"f3dc"
+    },
+    {
+        "css":"mdi mdi-panorama-fisheye",
+        "code":"f3dd"
+    },
+    {
+        "css":"mdi mdi-panorama-horizontal",
+        "code":"f3de"
+    },
+    {
+        "css":"mdi mdi-panorama-vertical",
+        "code":"f3df"
+    },
+    {
+        "css":"mdi mdi-panorama-wide-angle",
+        "code":"f3e0"
+    },
+    {
+        "css":"mdi mdi-paper-cut-vertical",
+        "code":"f3e1"
+    },
+    {
+        "css":"mdi mdi-paperclip",
+        "code":"f3e2"
+    },
+    {
+        "css":"mdi mdi-parking",
+        "code":"f3e3"
+    },
+    {
+        "css":"mdi mdi-passport",
+        "code":"f7e2"
+    },
+    {
+        "css":"mdi mdi-pause",
+        "code":"f3e4"
+    },
+    {
+        "css":"mdi mdi-pause-circle",
+        "code":"f3e5"
+    },
+    {
+        "css":"mdi mdi-pause-circle-outline",
+        "code":"f3e6"
+    },
+    {
+        "css":"mdi mdi-pause-octagon",
+        "code":"f3e7"
+    },
+    {
+        "css":"mdi mdi-pause-octagon-outline",
+        "code":"f3e8"
+    },
+    {
+        "css":"mdi mdi-paw",
+        "code":"f3e9"
+    },
+    {
+        "css":"mdi mdi-paw-off",
+        "code":"f657"
+    },
+    {
+        "css":"mdi mdi-pen",
+        "code":"f3ea"
+    },
+    {
+        "css":"mdi mdi-pencil",
+        "code":"f3eb"
+    },
+    {
+        "css":"mdi mdi-pencil-box",
+        "code":"f3ec"
+    },
+    {
+        "css":"mdi mdi-pencil-box-outline",
+        "code":"f3ed"
+    },
+    {
+        "css":"mdi mdi-pencil-circle",
+        "code":"f6fe"
+    },
+    {
+        "css":"mdi mdi-pencil-circle-outline",
+        "code":"f775"
+    },
+    {
+        "css":"mdi mdi-pencil-lock",
+        "code":"f3ee"
+    },
+    {
+        "css":"mdi mdi-pencil-off",
+        "code":"f3ef"
+    },
+    {
+        "css":"mdi mdi-pentagon",
+        "code":"f6ff"
+    },
+    {
+        "css":"mdi mdi-pentagon-outline",
+        "code":"f700"
+    },
+    {
+        "css":"mdi mdi-percent",
+        "code":"f3f0"
+    },
+    {
+        "css":"mdi mdi-periodic-table-co2",
+        "code":"f7e3"
+    },
+    {
+        "css":"mdi mdi-periscope",
+        "code":"f747"
+    },
+    {
+        "css":"mdi mdi-pharmacy",
+        "code":"f3f1"
+    },
+    {
+        "css":"mdi mdi-phone",
+        "code":"f3f2"
+    },
+    {
+        "css":"mdi mdi-phone-bluetooth",
+        "code":"f3f3"
+    },
+    {
+        "css":"mdi mdi-phone-classic",
+        "code":"f602"
+    },
+    {
+        "css":"mdi mdi-phone-forward",
+        "code":"f3f4"
+    },
+    {
+        "css":"mdi mdi-phone-hangup",
+        "code":"f3f5"
+    },
+    {
+        "css":"mdi mdi-phone-in-talk",
+        "code":"f3f6"
+    },
+    {
+        "css":"mdi mdi-phone-incoming",
+        "code":"f3f7"
+    },
+    {
+        "css":"mdi mdi-phone-locked",
+        "code":"f3f8"
+    },
+    {
+        "css":"mdi mdi-phone-log",
+        "code":"f3f9"
+    },
+    {
+        "css":"mdi mdi-phone-minus",
+        "code":"f658"
+    },
+    {
+        "css":"mdi mdi-phone-missed",
+        "code":"f3fa"
+    },
+    {
+        "css":"mdi mdi-phone-outgoing",
+        "code":"f3fb"
+    },
+    {
+        "css":"mdi mdi-phone-paused",
+        "code":"f3fc"
+    },
+    {
+        "css":"mdi mdi-phone-plus",
+        "code":"f659"
+    },
+    {
+        "css":"mdi mdi-phone-settings",
+        "code":"f3fd"
+    },
+    {
+        "css":"mdi mdi-phone-voip",
+        "code":"f3fe"
+    },
+    {
+        "css":"mdi mdi-pi",
+        "code":"f3ff"
+    },
+    {
+        "css":"mdi mdi-pi-box",
+        "code":"f400"
+    },
+    {
+        "css":"mdi mdi-piano",
+        "code":"f67c"
+    },
+    {
+        "css":"mdi mdi-pig",
+        "code":"f401"
+    },
+    {
+        "css":"mdi mdi-pill",
+        "code":"f402"
+    },
+    {
+        "css":"mdi mdi-pillar",
+        "code":"f701"
+    },
+    {
+        "css":"mdi mdi-pin",
+        "code":"f403"
+    },
+    {
+        "css":"mdi mdi-pin-off",
+        "code":"f404"
+    },
+    {
+        "css":"mdi mdi-pine-tree",
+        "code":"f405"
+    },
+    {
+        "css":"mdi mdi-pine-tree-box",
+        "code":"f406"
+    },
+    {
+        "css":"mdi mdi-pinterest",
+        "code":"f407"
+    },
+    {
+        "css":"mdi mdi-pinterest-box",
+        "code":"f408"
+    },
+    {
+        "css":"mdi mdi-pipe",
+        "code":"f7e4"
+    },
+    {
+        "css":"mdi mdi-pipe-disconnected",
+        "code":"f7e5"
+    },
+    {
+        "css":"mdi mdi-pistol",
+        "code":"f702"
+    },
+    {
+        "css":"mdi mdi-pizza",
+        "code":"f409"
+    },
+    {
+        "css":"mdi mdi-plane-shield",
+        "code":"f6ba"
+    },
+    {
+        "css":"mdi mdi-play",
+        "code":"f40a"
+    },
+    {
+        "css":"mdi mdi-play-box-outline",
+        "code":"f40b"
+    },
+    {
+        "css":"mdi mdi-play-circle",
+        "code":"f40c"
+    },
+    {
+        "css":"mdi mdi-play-circle-outline",
+        "code":"f40d"
+    },
+    {
+        "css":"mdi mdi-play-pause",
+        "code":"f40e"
+    },
+    {
+        "css":"mdi mdi-play-protected-content",
+        "code":"f40f"
+    },
+    {
+        "css":"mdi mdi-playlist-check",
+        "code":"f5c7"
+    },
+    {
+        "css":"mdi mdi-playlist-minus",
+        "code":"f410"
+    },
+    {
+        "css":"mdi mdi-playlist-play",
+        "code":"f411"
+    },
+    {
+        "css":"mdi mdi-playlist-plus",
+        "code":"f412"
+    },
+    {
+        "css":"mdi mdi-playlist-remove",
+        "code":"f413"
+    },
+    {
+        "css":"mdi mdi-playstation",
+        "code":"f414"
+    },
+    {
+        "css":"mdi mdi-plex",
+        "code":"f6b9"
+    },
+    {
+        "css":"mdi mdi-plus",
+        "code":"f415"
+    },
+    {
+        "css":"mdi mdi-plus-box",
+        "code":"f416"
+    },
+    {
+        "css":"mdi mdi-plus-box-outline",
+        "code":"f703"
+    },
+    {
+        "css":"mdi mdi-plus-circle",
+        "code":"f417"
+    },
+    {
+        "css":"mdi mdi-plus-circle-multiple-outline",
+        "code":"f418"
+    },
+    {
+        "css":"mdi mdi-plus-circle-outline",
+        "code":"f419"
+    },
+    {
+        "css":"mdi mdi-plus-network",
+        "code":"f41a"
+    },
+    {
+        "css":"mdi mdi-plus-one",
+        "code":"f41b"
+    },
+    {
+        "css":"mdi mdi-plus-outline",
+        "code":"f704"
+    },
+    {
+        "css":"mdi mdi-pocket",
+        "code":"f41c"
+    },
+    {
+        "css":"mdi mdi-pokeball",
+        "code":"f41d"
+    },
+    {
+        "css":"mdi mdi-polaroid",
+        "code":"f41e"
+    },
+    {
+        "css":"mdi mdi-poll",
+        "code":"f41f"
+    },
+    {
+        "css":"mdi mdi-poll-box",
+        "code":"f420"
+    },
+    {
+        "css":"mdi mdi-polymer",
+        "code":"f421"
+    },
+    {
+        "css":"mdi mdi-pool",
+        "code":"f606"
+    },
+    {
+        "css":"mdi mdi-popcorn",
+        "code":"f422"
+    },
+    {
+        "css":"mdi mdi-pot",
+        "code":"f65a"
+    },
+    {
+        "css":"mdi mdi-pot-mix",
+        "code":"f65b"
+    },
+    {
+        "css":"mdi mdi-pound",
+        "code":"f423"
+    },
+    {
+        "css":"mdi mdi-pound-box",
+        "code":"f424"
+    },
+    {
+        "css":"mdi mdi-power",
+        "code":"f425"
+    },
+    {
+        "css":"mdi mdi-power-plug",
+        "code":"f6a4"
+    },
+    {
+        "css":"mdi mdi-power-plug-off",
+        "code":"f6a5"
+    },
+    {
+        "css":"mdi mdi-power-settings",
+        "code":"f426"
+    },
+    {
+        "css":"mdi mdi-power-socket",
+        "code":"f427"
+    },
+    {
+        "css":"mdi mdi-power-socket-eu",
+        "code":"f7e6"
+    },
+    {
+        "css":"mdi mdi-power-socket-uk",
+        "code":"f7e7"
+    },
+    {
+        "css":"mdi mdi-power-socket-us",
+        "code":"f7e8"
+    },
+    {
+        "css":"mdi mdi-prescription",
+        "code":"f705"
+    },
+    {
+        "css":"mdi mdi-presentation",
+        "code":"f428"
+    },
+    {
+        "css":"mdi mdi-presentation-play",
+        "code":"f429"
+    },
+    {
+        "css":"mdi mdi-printer",
+        "code":"f42a"
+    },
+    {
+        "css":"mdi mdi-printer-3d",
+        "code":"f42b"
+    },
+    {
+        "css":"mdi mdi-printer-alert",
+        "code":"f42c"
+    },
+    {
+        "css":"mdi mdi-printer-settings",
+        "code":"f706"
+    },
+    {
+        "css":"mdi mdi-priority-high",
+        "code":"f603"
+    },
+    {
+        "css":"mdi mdi-priority-low",
+        "code":"f604"
+    },
+    {
+        "css":"mdi mdi-professional-hexagon",
+        "code":"f42d"
+    },
+    {
+        "css":"mdi mdi-projector",
+        "code":"f42e"
+    },
+    {
+        "css":"mdi mdi-projector-screen",
+        "code":"f42f"
+    },
+    {
+        "css":"mdi mdi-publish",
+        "code":"f6a6"
+    },
+    {
+        "css":"mdi mdi-pulse",
+        "code":"f430"
+    },
+    {
+        "css":"mdi mdi-puzzle",
+        "code":"f431"
+    },
+    {
+        "css":"mdi mdi-qqchat",
+        "code":"f605"
+    },
+    {
+        "css":"mdi mdi-qrcode",
+        "code":"f432"
+    },
+    {
+        "css":"mdi mdi-qrcode-scan",
+        "code":"f433"
+    },
+    {
+        "css":"mdi mdi-quadcopter",
+        "code":"f434"
+    },
+    {
+        "css":"mdi mdi-quality-high",
+        "code":"f435"
+    },
+    {
+        "css":"mdi mdi-quicktime",
+        "code":"f436"
+    },
+    {
+        "css":"mdi mdi-radar",
+        "code":"f437"
+    },
+    {
+        "css":"mdi mdi-radiator",
+        "code":"f438"
+    },
+    {
+        "css":"mdi mdi-radio",
+        "code":"f439"
+    },
+    {
+        "css":"mdi mdi-radio-handheld",
+        "code":"f43a"
+    },
+    {
+        "css":"mdi mdi-radio-tower",
+        "code":"f43b"
+    },
+    {
+        "css":"mdi mdi-radioactive",
+        "code":"f43c"
+    },
+    {
+        "css":"mdi mdi-radiobox-blank",
+        "code":"f43d"
+    },
+    {
+        "css":"mdi mdi-radiobox-marked",
+        "code":"f43e"
+    },
+    {
+        "css":"mdi mdi-raspberrypi",
+        "code":"f43f"
+    },
+    {
+        "css":"mdi mdi-ray-end",
+        "code":"f440"
+    },
+    {
+        "css":"mdi mdi-ray-end-arrow",
+        "code":"f441"
+    },
+    {
+        "css":"mdi mdi-ray-start",
+        "code":"f442"
+    },
+    {
+        "css":"mdi mdi-ray-start-arrow",
+        "code":"f443"
+    },
+    {
+        "css":"mdi mdi-ray-start-end",
+        "code":"f444"
+    },
+    {
+        "css":"mdi mdi-ray-vertex",
+        "code":"f445"
+    },
+    {
+        "css":"mdi mdi-rdio",
+        "code":"f446"
+    },
+    {
+        "css":"mdi mdi-react",
+        "code":"f707"
+    },
+    {
+        "css":"mdi mdi-read",
+        "code":"f447"
+    },
+    {
+        "css":"mdi mdi-readability",
+        "code":"f448"
+    },
+    {
+        "css":"mdi mdi-receipt",
+        "code":"f449"
+    },
+    {
+        "css":"mdi mdi-record",
+        "code":"f44a"
+    },
+    {
+        "css":"mdi mdi-record-rec",
+        "code":"f44b"
+    },
+    {
+        "css":"mdi mdi-recycle",
+        "code":"f44c"
+    },
+    {
+        "css":"mdi mdi-reddit",
+        "code":"f44d"
+    },
+    {
+        "css":"mdi mdi-redo",
+        "code":"f44e"
+    },
+    {
+        "css":"mdi mdi-redo-variant",
+        "code":"f44f"
+    },
+    {
+        "css":"mdi mdi-refresh",
+        "code":"f450"
+    },
+    {
+        "css":"mdi mdi-regex",
+        "code":"f451"
+    },
+    {
+        "css":"mdi mdi-relative-scale",
+        "code":"f452"
+    },
+    {
+        "css":"mdi mdi-reload",
+        "code":"f453"
+    },
+    {
+        "css":"mdi mdi-remote",
+        "code":"f454"
+    },
+    {
+        "css":"mdi mdi-rename-box",
+        "code":"f455"
+    },
+    {
+        "css":"mdi mdi-reorder-horizontal",
+        "code":"f687"
+    },
+    {
+        "css":"mdi mdi-reorder-vertical",
+        "code":"f688"
+    },
+    {
+        "css":"mdi mdi-repeat",
+        "code":"f456"
+    },
+    {
+        "css":"mdi mdi-repeat-off",
+        "code":"f457"
+    },
+    {
+        "css":"mdi mdi-repeat-once",
+        "code":"f458"
+    },
+    {
+        "css":"mdi mdi-replay",
+        "code":"f459"
+    },
+    {
+        "css":"mdi mdi-reply",
+        "code":"f45a"
+    },
+    {
+        "css":"mdi mdi-reply-all",
+        "code":"f45b"
+    },
+    {
+        "css":"mdi mdi-reproduction",
+        "code":"f45c"
+    },
+    {
+        "css":"mdi mdi-resize-bottom-right",
+        "code":"f45d"
+    },
+    {
+        "css":"mdi mdi-responsive",
+        "code":"f45e"
+    },
+    {
+        "css":"mdi mdi-restart",
+        "code":"f708"
+    },
+    {
+        "css":"mdi mdi-restore",
+        "code":"f6a7"
+    },
+    {
+        "css":"mdi mdi-rewind",
+        "code":"f45f"
+    },
+    {
+        "css":"mdi mdi-rewind-outline",
+        "code":"f709"
+    },
+    {
+        "css":"mdi mdi-rhombus",
+        "code":"f70a"
+    },
+    {
+        "css":"mdi mdi-rhombus-outline",
+        "code":"f70b"
+    },
+    {
+        "css":"mdi mdi-ribbon",
+        "code":"f460"
+    },
+    {
+        "css":"mdi mdi-rice",
+        "code":"f7e9"
+    },
+    {
+        "css":"mdi mdi-ring",
+        "code":"f7ea"
+    },
+    {
+        "css":"mdi mdi-road",
+        "code":"f461"
+    },
+    {
+        "css":"mdi mdi-road-variant",
+        "code":"f462"
+    },
+    {
+        "css":"mdi mdi-robot",
+        "code":"f6a8"
+    },
+    {
+        "css":"mdi mdi-rocket",
+        "code":"f463"
+    },
+    {
+        "css":"mdi mdi-roomba",
+        "code":"f70c"
+    },
+    {
+        "css":"mdi mdi-rotate-3d",
+        "code":"f464"
+    },
+    {
+        "css":"mdi mdi-rotate-left",
+        "code":"f465"
+    },
+    {
+        "css":"mdi mdi-rotate-left-variant",
+        "code":"f466"
+    },
+    {
+        "css":"mdi mdi-rotate-right",
+        "code":"f467"
+    },
+    {
+        "css":"mdi mdi-rotate-right-variant",
+        "code":"f468"
+    },
+    {
+        "css":"mdi mdi-rounded-corner",
+        "code":"f607"
+    },
+    {
+        "css":"mdi mdi-router-wireless",
+        "code":"f469"
+    },
+    {
+        "css":"mdi mdi-routes",
+        "code":"f46a"
+    },
+    {
+        "css":"mdi mdi-rowing",
+        "code":"f608"
+    },
+    {
+        "css":"mdi mdi-rss",
+        "code":"f46b"
+    },
+    {
+        "css":"mdi mdi-rss-box",
+        "code":"f46c"
+    },
+    {
+        "css":"mdi mdi-ruler",
+        "code":"f46d"
+    },
+    {
+        "css":"mdi mdi-run",
+        "code":"f70d"
+    },
+    {
+        "css":"mdi mdi-run-fast",
+        "code":"f46e"
+    },
+    {
+        "css":"mdi mdi-sale",
+        "code":"f46f"
+    },
+    {
+        "css":"mdi mdi-sass",
+        "code":"f7eb"
+    },
+    {
+        "css":"mdi mdi-satellite",
+        "code":"f470"
+    },
+    {
+        "css":"mdi mdi-satellite-variant",
+        "code":"f471"
+    },
+    {
+        "css":"mdi mdi-saxophone",
+        "code":"f609"
+    },
+    {
+        "css":"mdi mdi-scale",
+        "code":"f472"
+    },
+    {
+        "css":"mdi mdi-scale-balance",
+        "code":"f5d1"
+    },
+    {
+        "css":"mdi mdi-scale-bathroom",
+        "code":"f473"
+    },
+    {
+        "css":"mdi mdi-scanner",
+        "code":"f6aa"
+    },
+    {
+        "css":"mdi mdi-school",
+        "code":"f474"
+    },
+    {
+        "css":"mdi mdi-screen-rotation",
+        "code":"f475"
+    },
+    {
+        "css":"mdi mdi-screen-rotation-lock",
+        "code":"f476"
+    },
+    {
+        "css":"mdi mdi-screwdriver",
+        "code":"f477"
+    },
+    {
+        "css":"mdi mdi-script",
+        "code":"f478"
+    },
+    {
+        "css":"mdi mdi-sd",
+        "code":"f479"
+    },
+    {
+        "css":"mdi mdi-seal",
+        "code":"f47a"
+    },
+    {
+        "css":"mdi mdi-search-web",
+        "code":"f70e"
+    },
+    {
+        "css":"mdi mdi-seat-flat",
+        "code":"f47b"
+    },
+    {
+        "css":"mdi mdi-seat-flat-angled",
+        "code":"f47c"
+    },
+    {
+        "css":"mdi mdi-seat-individual-suite",
+        "code":"f47d"
+    },
+    {
+        "css":"mdi mdi-seat-legroom-extra",
+        "code":"f47e"
+    },
+    {
+        "css":"mdi mdi-seat-legroom-normal",
+        "code":"f47f"
+    },
+    {
+        "css":"mdi mdi-seat-legroom-reduced",
+        "code":"f480"
+    },
+    {
+        "css":"mdi mdi-seat-recline-extra",
+        "code":"f481"
+    },
+    {
+        "css":"mdi mdi-seat-recline-normal",
+        "code":"f482"
+    },
+    {
+        "css":"mdi mdi-security",
+        "code":"f483"
+    },
+    {
+        "css":"mdi mdi-security-home",
+        "code":"f689"
+    },
+    {
+        "css":"mdi mdi-security-network",
+        "code":"f484"
+    },
+    {
+        "css":"mdi mdi-select",
+        "code":"f485"
+    },
+    {
+        "css":"mdi mdi-select-all",
+        "code":"f486"
+    },
+    {
+        "css":"mdi mdi-select-inverse",
+        "code":"f487"
+    },
+    {
+        "css":"mdi mdi-select-off",
+        "code":"f488"
+    },
+    {
+        "css":"mdi mdi-selection",
+        "code":"f489"
+    },
+    {
+        "css":"mdi mdi-selection-off",
+        "code":"f776"
+    },
+    {
+        "css":"mdi mdi-send",
+        "code":"f48a"
+    },
+    {
+        "css":"mdi mdi-send-secure",
+        "code":"f7ec"
+    },
+    {
+        "css":"mdi mdi-serial-port",
+        "code":"f65c"
+    },
+    {
+        "css":"mdi mdi-server",
+        "code":"f48b"
+    },
+    {
+        "css":"mdi mdi-server-minus",
+        "code":"f48c"
+    },
+    {
+        "css":"mdi mdi-server-network",
+        "code":"f48d"
+    },
+    {
+        "css":"mdi mdi-server-network-off",
+        "code":"f48e"
+    },
+    {
+        "css":"mdi mdi-server-off",
+        "code":"f48f"
+    },
+    {
+        "css":"mdi mdi-server-plus",
+        "code":"f490"
+    },
+    {
+        "css":"mdi mdi-server-remove",
+        "code":"f491"
+    },
+    {
+        "css":"mdi mdi-server-security",
+        "code":"f492"
+    },
+    {
+        "css":"mdi mdi-set-all",
+        "code":"f777"
+    },
+    {
+        "css":"mdi mdi-set-center",
+        "code":"f778"
+    },
+    {
+        "css":"mdi mdi-set-center-right",
+        "code":"f779"
+    },
+    {
+        "css":"mdi mdi-set-left",
+        "code":"f77a"
+    },
+    {
+        "css":"mdi mdi-set-left-center",
+        "code":"f77b"
+    },
+    {
+        "css":"mdi mdi-set-left-right",
+        "code":"f77c"
+    },
+    {
+        "css":"mdi mdi-set-none",
+        "code":"f77d"
+    },
+    {
+        "css":"mdi mdi-set-right",
+        "code":"f77e"
+    },
+    {
+        "css":"mdi mdi-settings",
+        "code":"f493"
+    },
+    {
+        "css":"mdi mdi-settings-box",
+        "code":"f494"
+    },
+    {
+        "css":"mdi mdi-shape-circle-plus",
+        "code":"f65d"
+    },
+    {
+        "css":"mdi mdi-shape-plus",
+        "code":"f495"
+    },
+    {
+        "css":"mdi mdi-shape-polygon-plus",
+        "code":"f65e"
+    },
+    {
+        "css":"mdi mdi-shape-rectangle-plus",
+        "code":"f65f"
+    },
+    {
+        "css":"mdi mdi-shape-square-plus",
+        "code":"f660"
+    },
+    {
+        "css":"mdi mdi-share",
+        "code":"f496"
+    },
+    {
+        "css":"mdi mdi-share-variant",
+        "code":"f497"
+    },
+    {
+        "css":"mdi mdi-shield",
+        "code":"f498"
+    },
+    {
+        "css":"mdi mdi-shield-half-full",
+        "code":"f77f"
+    },
+    {
+        "css":"mdi mdi-shield-outline",
+        "code":"f499"
+    },
+    {
+        "css":"mdi mdi-shopping",
+        "code":"f49a"
+    },
+    {
+        "css":"mdi mdi-shopping-music",
+        "code":"f49b"
+    },
+    {
+        "css":"mdi mdi-shovel",
+        "code":"f70f"
+    },
+    {
+        "css":"mdi mdi-shovel-off",
+        "code":"f710"
+    },
+    {
+        "css":"mdi mdi-shredder",
+        "code":"f49c"
+    },
+    {
+        "css":"mdi mdi-shuffle",
+        "code":"f49d"
+    },
+    {
+        "css":"mdi mdi-shuffle-disabled",
+        "code":"f49e"
+    },
+    {
+        "css":"mdi mdi-shuffle-variant",
+        "code":"f49f"
+    },
+    {
+        "css":"mdi mdi-sigma",
+        "code":"f4a0"
+    },
+    {
+        "css":"mdi mdi-sigma-lower",
+        "code":"f62b"
+    },
+    {
+        "css":"mdi mdi-sign-caution",
+        "code":"f4a1"
+    },
+    {
+        "css":"mdi mdi-sign-direction",
+        "code":"f780"
+    },
+    {
+        "css":"mdi mdi-sign-text",
+        "code":"f781"
+    },
+    {
+        "css":"mdi mdi-signal",
+        "code":"f4a2"
+    },
+    {
+        "css":"mdi mdi-signal-2g",
+        "code":"f711"
+    },
+    {
+        "css":"mdi mdi-signal-3g",
+        "code":"f712"
+    },
+    {
+        "css":"mdi mdi-signal-4g",
+        "code":"f713"
+    },
+    {
+        "css":"mdi mdi-signal-hspa",
+        "code":"f714"
+    },
+    {
+        "css":"mdi mdi-signal-hspa-plus",
+        "code":"f715"
+    },
+    {
+        "css":"mdi mdi-signal-off",
+        "code":"f782"
+    },
+    {
+        "css":"mdi mdi-signal-variant",
+        "code":"f60a"
+    },
+    {
+        "css":"mdi mdi-silverware",
+        "code":"f4a3"
+    },
+    {
+        "css":"mdi mdi-silverware-fork",
+        "code":"f4a4"
+    },
+    {
+        "css":"mdi mdi-silverware-spoon",
+        "code":"f4a5"
+    },
+    {
+        "css":"mdi mdi-silverware-variant",
+        "code":"f4a6"
+    },
+    {
+        "css":"mdi mdi-sim",
+        "code":"f4a7"
+    },
+    {
+        "css":"mdi mdi-sim-alert",
+        "code":"f4a8"
+    },
+    {
+        "css":"mdi mdi-sim-off",
+        "code":"f4a9"
+    },
+    {
+        "css":"mdi mdi-sitemap",
+        "code":"f4aa"
+    },
+    {
+        "css":"mdi mdi-skip-backward",
+        "code":"f4ab"
+    },
+    {
+        "css":"mdi mdi-skip-forward",
+        "code":"f4ac"
+    },
+    {
+        "css":"mdi mdi-skip-next",
+        "code":"f4ad"
+    },
+    {
+        "css":"mdi mdi-skip-next-circle",
+        "code":"f661"
+    },
+    {
+        "css":"mdi mdi-skip-next-circle-outline",
+        "code":"f662"
+    },
+    {
+        "css":"mdi mdi-skip-previous",
+        "code":"f4ae"
+    },
+    {
+        "css":"mdi mdi-skip-previous-circle",
+        "code":"f663"
+    },
+    {
+        "css":"mdi mdi-skip-previous-circle-outline",
+        "code":"f664"
+    },
+    {
+        "css":"mdi mdi-skull",
+        "code":"f68b"
+    },
+    {
+        "css":"mdi mdi-skype",
+        "code":"f4af"
+    },
+    {
+        "css":"mdi mdi-skype-business",
+        "code":"f4b0"
+    },
+    {
+        "css":"mdi mdi-slack",
+        "code":"f4b1"
+    },
+    {
+        "css":"mdi mdi-sleep",
+        "code":"f4b2"
+    },
+    {
+        "css":"mdi mdi-sleep-off",
+        "code":"f4b3"
+    },
+    {
+        "css":"mdi mdi-smoking",
+        "code":"f4b4"
+    },
+    {
+        "css":"mdi mdi-smoking-off",
+        "code":"f4b5"
+    },
+    {
+        "css":"mdi mdi-snapchat",
+        "code":"f4b6"
+    },
+    {
+        "css":"mdi mdi-snowflake",
+        "code":"f716"
+    },
+    {
+        "css":"mdi mdi-snowman",
+        "code":"f4b7"
+    },
+    {
+        "css":"mdi mdi-soccer",
+        "code":"f4b8"
+    },
+    {
+        "css":"mdi mdi-sofa",
+        "code":"f4b9"
+    },
+    {
+        "css":"mdi mdi-solid",
+        "code":"f68c"
+    },
+    {
+        "css":"mdi mdi-sort",
+        "code":"f4ba"
+    },
+    {
+        "css":"mdi mdi-sort-alphabetical",
+        "code":"f4bb"
+    },
+    {
+        "css":"mdi mdi-sort-ascending",
+        "code":"f4bc"
+    },
+    {
+        "css":"mdi mdi-sort-descending",
+        "code":"f4bd"
+    },
+    {
+        "css":"mdi mdi-sort-numeric",
+        "code":"f4be"
+    },
+    {
+        "css":"mdi mdi-sort-variant",
+        "code":"f4bf"
+    },
+    {
+        "css":"mdi mdi-soundcloud",
+        "code":"f4c0"
+    },
+    {
+        "css":"mdi mdi-source-branch",
+        "code":"f62c"
+    },
+    {
+        "css":"mdi mdi-source-commit",
+        "code":"f717"
+    },
+    {
+        "css":"mdi mdi-source-commit-end",
+        "code":"f718"
+    },
+    {
+        "css":"mdi mdi-source-commit-end-local",
+        "code":"f719"
+    },
+    {
+        "css":"mdi mdi-source-commit-local",
+        "code":"f71a"
+    },
+    {
+        "css":"mdi mdi-source-commit-next-local",
+        "code":"f71b"
+    },
+    {
+        "css":"mdi mdi-source-commit-start",
+        "code":"f71c"
+    },
+    {
+        "css":"mdi mdi-source-commit-start-next-local",
+        "code":"f71d"
+    },
+    {
+        "css":"mdi mdi-source-fork",
+        "code":"f4c1"
+    },
+    {
+        "css":"mdi mdi-source-merge",
+        "code":"f62d"
+    },
+    {
+        "css":"mdi mdi-source-pull",
+        "code":"f4c2"
+    },
+    {
+        "css":"mdi mdi-soy-sauce",
+        "code":"f7ed"
+    },
+    {
+        "css":"mdi mdi-speaker",
+        "code":"f4c3"
+    },
+    {
+        "css":"mdi mdi-speaker-off",
+        "code":"f4c4"
+    },
+    {
+        "css":"mdi mdi-speaker-wireless",
+        "code":"f71e"
+    },
+    {
+        "css":"mdi mdi-speedometer",
+        "code":"f4c5"
+    },
+    {
+        "css":"mdi mdi-spellcheck",
+        "code":"f4c6"
+    },
+    {
+        "css":"mdi mdi-spotify",
+        "code":"f4c7"
+    },
+    {
+        "css":"mdi mdi-spotlight",
+        "code":"f4c8"
+    },
+    {
+        "css":"mdi mdi-spotlight-beam",
+        "code":"f4c9"
+    },
+    {
+        "css":"mdi mdi-spray",
+        "code":"f665"
+    },
+    {
+        "css":"mdi mdi-square",
+        "code":"f763"
+    },
+    {
+        "css":"mdi mdi-square-inc",
+        "code":"f4ca"
+    },
+    {
+        "css":"mdi mdi-square-inc-cash",
+        "code":"f4cb"
+    },
+    {
+        "css":"mdi mdi-square-outline",
+        "code":"f762"
+    },
+    {
+        "css":"mdi mdi-square-root",
+        "code":"f783"
+    },
+    {
+        "css":"mdi mdi-stackexchange",
+        "code":"f60b"
+    },
+    {
+        "css":"mdi mdi-stackoverflow",
+        "code":"f4cc"
+    },
+    {
+        "css":"mdi mdi-stadium",
+        "code":"f71f"
+    },
+    {
+        "css":"mdi mdi-stairs",
+        "code":"f4cd"
+    },
+    {
+        "css":"mdi mdi-standard-definition",
+        "code":"f7ee"
+    },
+    {
+        "css":"mdi mdi-star",
+        "code":"f4ce"
+    },
+    {
+        "css":"mdi mdi-star-circle",
+        "code":"f4cf"
+    },
+    {
+        "css":"mdi mdi-star-half",
+        "code":"f4d0"
+    },
+    {
+        "css":"mdi mdi-star-off",
+        "code":"f4d1"
+    },
+    {
+        "css":"mdi mdi-star-outline",
+        "code":"f4d2"
+    },
+    {
+        "css":"mdi mdi-steam",
+        "code":"f4d3"
+    },
+    {
+        "css":"mdi mdi-steering",
+        "code":"f4d4"
+    },
+    {
+        "css":"mdi mdi-step-backward",
+        "code":"f4d5"
+    },
+    {
+        "css":"mdi mdi-step-backward-2",
+        "code":"f4d6"
+    },
+    {
+        "css":"mdi mdi-step-forward",
+        "code":"f4d7"
+    },
+    {
+        "css":"mdi mdi-step-forward-2",
+        "code":"f4d8"
+    },
+    {
+        "css":"mdi mdi-stethoscope",
+        "code":"f4d9"
+    },
+    {
+        "css":"mdi mdi-sticker",
+        "code":"f5d0"
+    },
+    {
+        "css":"mdi mdi-sticker-emoji",
+        "code":"f784"
+    },
+    {
+        "css":"mdi mdi-stocking",
+        "code":"f4da"
+    },
+    {
+        "css":"mdi mdi-stop",
+        "code":"f4db"
+    },
+    {
+        "css":"mdi mdi-stop-circle",
+        "code":"f666"
+    },
+    {
+        "css":"mdi mdi-stop-circle-outline",
+        "code":"f667"
+    },
+    {
+        "css":"mdi mdi-store",
+        "code":"f4dc"
+    },
+    {
+        "css":"mdi mdi-store-24-hour",
+        "code":"f4dd"
+    },
+    {
+        "css":"mdi mdi-stove",
+        "code":"f4de"
+    },
+    {
+        "css":"mdi mdi-subdirectory-arrow-left",
+        "code":"f60c"
+    },
+    {
+        "css":"mdi mdi-subdirectory-arrow-right",
+        "code":"f60d"
+    },
+    {
+        "css":"mdi mdi-subway",
+        "code":"f6ab"
+    },
+    {
+        "css":"mdi mdi-subway-variant",
+        "code":"f4df"
+    },
+    {
+        "css":"mdi mdi-summit",
+        "code":"f785"
+    },
+    {
+        "css":"mdi mdi-sunglasses",
+        "code":"f4e0"
+    },
+    {
+        "css":"mdi mdi-surround-sound",
+        "code":"f5c5"
+    },
+    {
+        "css":"mdi mdi-surround-sound-2-0",
+        "code":"f7ef"
+    },
+    {
+        "css":"mdi mdi-surround-sound-3-1",
+        "code":"f7f0"
+    },
+    {
+        "css":"mdi mdi-surround-sound-5-1",
+        "code":"f7f1"
+    },
+    {
+        "css":"mdi mdi-surround-sound-7-1",
+        "code":"f7f2"
+    },
+    {
+        "css":"mdi mdi-svg",
+        "code":"f720"
+    },
+    {
+        "css":"mdi mdi-swap-horizontal",
+        "code":"f4e1"
+    },
+    {
+        "css":"mdi mdi-swap-vertical",
+        "code":"f4e2"
+    },
+    {
+        "css":"mdi mdi-swim",
+        "code":"f4e3"
+    },
+    {
+        "css":"mdi mdi-switch",
+        "code":"f4e4"
+    },
+    {
+        "css":"mdi mdi-sword",
+        "code":"f4e5"
+    },
+    {
+        "css":"mdi mdi-sword-cross",
+        "code":"f786"
+    },
+    {
+        "css":"mdi mdi-sync",
+        "code":"f4e6"
+    },
+    {
+        "css":"mdi mdi-sync-alert",
+        "code":"f4e7"
+    },
+    {
+        "css":"mdi mdi-sync-off",
+        "code":"f4e8"
+    },
+    {
+        "css":"mdi mdi-tab",
+        "code":"f4e9"
+    },
+    {
+        "css":"mdi mdi-tab-plus",
+        "code":"f75b"
+    },
+    {
+        "css":"mdi mdi-tab-unselected",
+        "code":"f4ea"
+    },
+    {
+        "css":"mdi mdi-table",
+        "code":"f4eb"
+    },
+    {
+        "css":"mdi mdi-table-column-plus-after",
+        "code":"f4ec"
+    },
+    {
+        "css":"mdi mdi-table-column-plus-before",
+        "code":"f4ed"
+    },
+    {
+        "css":"mdi mdi-table-column-remove",
+        "code":"f4ee"
+    },
+    {
+        "css":"mdi mdi-table-column-width",
+        "code":"f4ef"
+    },
+    {
+        "css":"mdi mdi-table-edit",
+        "code":"f4f0"
+    },
+    {
+        "css":"mdi mdi-table-large",
+        "code":"f4f1"
+    },
+    {
+        "css":"mdi mdi-table-row-height",
+        "code":"f4f2"
+    },
+    {
+        "css":"mdi mdi-table-row-plus-after",
+        "code":"f4f3"
+    },
+    {
+        "css":"mdi mdi-table-row-plus-before",
+        "code":"f4f4"
+    },
+    {
+        "css":"mdi mdi-table-row-remove",
+        "code":"f4f5"
+    },
+    {
+        "css":"mdi mdi-tablet",
+        "code":"f4f6"
+    },
+    {
+        "css":"mdi mdi-tablet-android",
+        "code":"f4f7"
+    },
+    {
+        "css":"mdi mdi-tablet-ipad",
+        "code":"f4f8"
+    },
+    {
+        "css":"mdi mdi-taco",
+        "code":"f761"
+    },
+    {
+        "css":"mdi mdi-tag",
+        "code":"f4f9"
+    },
+    {
+        "css":"mdi mdi-tag-faces",
+        "code":"f4fa"
+    },
+    {
+        "css":"mdi mdi-tag-heart",
+        "code":"f68a"
+    },
+    {
+        "css":"mdi mdi-tag-multiple",
+        "code":"f4fb"
+    },
+    {
+        "css":"mdi mdi-tag-outline",
+        "code":"f4fc"
+    },
+    {
+        "css":"mdi mdi-tag-plus",
+        "code":"f721"
+    },
+    {
+        "css":"mdi mdi-tag-remove",
+        "code":"f722"
+    },
+    {
+        "css":"mdi mdi-tag-text-outline",
+        "code":"f4fd"
+    },
+    {
+        "css":"mdi mdi-target",
+        "code":"f4fe"
+    },
+    {
+        "css":"mdi mdi-taxi",
+        "code":"f4ff"
+    },
+    {
+        "css":"mdi mdi-teamviewer",
+        "code":"f500"
+    },
+    {
+        "css":"mdi mdi-telegram",
+        "code":"f501"
+    },
+    {
+        "css":"mdi mdi-television",
+        "code":"f502"
+    },
+    {
+        "css":"mdi mdi-television-classic",
+        "code":"f7f3"
+    },
+    {
+        "css":"mdi mdi-television-guide",
+        "code":"f503"
+    },
+    {
+        "css":"mdi mdi-temperature-celsius",
+        "code":"f504"
+    },
+    {
+        "css":"mdi mdi-temperature-fahrenheit",
+        "code":"f505"
+    },
+    {
+        "css":"mdi mdi-temperature-kelvin",
+        "code":"f506"
+    },
+    {
+        "css":"mdi mdi-tennis",
+        "code":"f507"
+    },
+    {
+        "css":"mdi mdi-tent",
+        "code":"f508"
+    },
+    {
+        "css":"mdi mdi-terrain",
+        "code":"f509"
+    },
+    {
+        "css":"mdi mdi-test-tube",
+        "code":"f668"
+    },
+    {
+        "css":"mdi mdi-text-shadow",
+        "code":"f669"
+    },
+    {
+        "css":"mdi mdi-text-to-speech",
+        "code":"f50a"
+    },
+    {
+        "css":"mdi mdi-text-to-speech-off",
+        "code":"f50b"
+    },
+    {
+        "css":"mdi mdi-textbox",
+        "code":"f60e"
+    },
+    {
+        "css":"mdi mdi-textbox-password",
+        "code":"f7f4"
+    },
+    {
+        "css":"mdi mdi-texture",
+        "code":"f50c"
+    },
+    {
+        "css":"mdi mdi-theater",
+        "code":"f50d"
+    },
+    {
+        "css":"mdi mdi-theme-light-dark",
+        "code":"f50e"
+    },
+    {
+        "css":"mdi mdi-thermometer",
+        "code":"f50f"
+    },
+    {
+        "css":"mdi mdi-thermometer-lines",
+        "code":"f510"
+    },
+    {
+        "css":"mdi mdi-thought-bubble",
+        "code":"f7f5"
+    },
+    {
+        "css":"mdi mdi-thought-bubble-outline",
+        "code":"f7f6"
+    },
+    {
+        "css":"mdi mdi-thumb-down",
+        "code":"f511"
+    },
+    {
+        "css":"mdi mdi-thumb-down-outline",
+        "code":"f512"
+    },
+    {
+        "css":"mdi mdi-thumb-up",
+        "code":"f513"
+    },
+    {
+        "css":"mdi mdi-thumb-up-outline",
+        "code":"f514"
+    },
+    {
+        "css":"mdi mdi-thumbs-up-down",
+        "code":"f515"
+    },
+    {
+        "css":"mdi mdi-ticket",
+        "code":"f516"
+    },
+    {
+        "css":"mdi mdi-ticket-account",
+        "code":"f517"
+    },
+    {
+        "css":"mdi mdi-ticket-confirmation",
+        "code":"f518"
+    },
+    {
+        "css":"mdi mdi-ticket-percent",
+        "code":"f723"
+    },
+    {
+        "css":"mdi mdi-tie",
+        "code":"f519"
+    },
+    {
+        "css":"mdi mdi-tilde",
+        "code":"f724"
+    },
+    {
+        "css":"mdi mdi-timelapse",
+        "code":"f51a"
+    },
+    {
+        "css":"mdi mdi-timer",
+        "code":"f51b"
+    },
+    {
+        "css":"mdi mdi-timer-10",
+        "code":"f51c"
+    },
+    {
+        "css":"mdi mdi-timer-3",
+        "code":"f51d"
+    },
+    {
+        "css":"mdi mdi-timer-off",
+        "code":"f51e"
+    },
+    {
+        "css":"mdi mdi-timer-sand",
+        "code":"f51f"
+    },
+    {
+        "css":"mdi mdi-timer-sand-empty",
+        "code":"f6ac"
+    },
+    {
+        "css":"mdi mdi-timer-sand-full",
+        "code":"f78b"
+    },
+    {
+        "css":"mdi mdi-timetable",
+        "code":"f520"
+    },
+    {
+        "css":"mdi mdi-toggle-switch",
+        "code":"f521"
+    },
+    {
+        "css":"mdi mdi-toggle-switch-off",
+        "code":"f522"
+    },
+    {
+        "css":"mdi mdi-tooltip",
+        "code":"f523"
+    },
+    {
+        "css":"mdi mdi-tooltip-edit",
+        "code":"f524"
+    },
+    {
+        "css":"mdi mdi-tooltip-image",
+        "code":"f525"
+    },
+    {
+        "css":"mdi mdi-tooltip-outline",
+        "code":"f526"
+    },
+    {
+        "css":"mdi mdi-tooltip-outline-plus",
+        "code":"f527"
+    },
+    {
+        "css":"mdi mdi-tooltip-text",
+        "code":"f528"
+    },
+    {
+        "css":"mdi mdi-tooth",
+        "code":"f529"
+    },
+    {
+        "css":"mdi mdi-tor",
+        "code":"f52a"
+    },
+    {
+        "css":"mdi mdi-tower-beach",
+        "code":"f680"
+    },
+    {
+        "css":"mdi mdi-tower-fire",
+        "code":"f681"
+    },
+    {
+        "css":"mdi mdi-trackpad",
+        "code":"f7f7"
+    },
+    {
+        "css":"mdi mdi-traffic-light",
+        "code":"f52b"
+    },
+    {
+        "css":"mdi mdi-train",
+        "code":"f52c"
+    },
+    {
+        "css":"mdi mdi-tram",
+        "code":"f52d"
+    },
+    {
+        "css":"mdi mdi-transcribe",
+        "code":"f52e"
+    },
+    {
+        "css":"mdi mdi-transcribe-close",
+        "code":"f52f"
+    },
+    {
+        "css":"mdi mdi-transfer",
+        "code":"f530"
+    },
+    {
+        "css":"mdi mdi-transit-transfer",
+        "code":"f6ad"
+    },
+    {
+        "css":"mdi mdi-translate",
+        "code":"f5ca"
+    },
+    {
+        "css":"mdi mdi-treasure-chest",
+        "code":"f725"
+    },
+    {
+        "css":"mdi mdi-tree",
+        "code":"f531"
+    },
+    {
+        "css":"mdi mdi-trello",
+        "code":"f532"
+    },
+    {
+        "css":"mdi mdi-trending-down",
+        "code":"f533"
+    },
+    {
+        "css":"mdi mdi-trending-neutral",
+        "code":"f534"
+    },
+    {
+        "css":"mdi mdi-trending-up",
+        "code":"f535"
+    },
+    {
+        "css":"mdi mdi-triangle",
+        "code":"f536"
+    },
+    {
+        "css":"mdi mdi-triangle-outline",
+        "code":"f537"
+    },
+    {
+        "css":"mdi mdi-trophy",
+        "code":"f538"
+    },
+    {
+        "css":"mdi mdi-trophy-award",
+        "code":"f539"
+    },
+    {
+        "css":"mdi mdi-trophy-outline",
+        "code":"f53a"
+    },
+    {
+        "css":"mdi mdi-trophy-variant",
+        "code":"f53b"
+    },
+    {
+        "css":"mdi mdi-trophy-variant-outline",
+        "code":"f53c"
+    },
+    {
+        "css":"mdi mdi-truck",
+        "code":"f53d"
+    },
+    {
+        "css":"mdi mdi-truck-delivery",
+        "code":"f53e"
+    },
+    {
+        "css":"mdi mdi-truck-fast",
+        "code":"f787"
+    },
+    {
+        "css":"mdi mdi-truck-trailer",
+        "code":"f726"
+    },
+    {
+        "css":"mdi mdi-tshirt-crew",
+        "code":"f53f"
+    },
+    {
+        "css":"mdi mdi-tshirt-v",
+        "code":"f540"
+    },
+    {
+        "css":"mdi mdi-tumblr",
+        "code":"f541"
+    },
+    {
+        "css":"mdi mdi-tumblr-reblog",
+        "code":"f542"
+    },
+    {
+        "css":"mdi mdi-tune",
+        "code":"f62e"
+    },
+    {
+        "css":"mdi mdi-tune-vertical",
+        "code":"f66a"
+    },
+    {
+        "css":"mdi mdi-twitch",
+        "code":"f543"
+    },
+    {
+        "css":"mdi mdi-twitter",
+        "code":"f544"
+    },
+    {
+        "css":"mdi mdi-twitter-box",
+        "code":"f545"
+    },
+    {
+        "css":"mdi mdi-twitter-circle",
+        "code":"f546"
+    },
+    {
+        "css":"mdi mdi-twitter-retweet",
+        "code":"f547"
+    },
+    {
+        "css":"mdi mdi-uber",
+        "code":"f748"
+    },
+    {
+        "css":"mdi mdi-ubuntu",
+        "code":"f548"
+    },
+    {
+        "css":"mdi mdi-ultra-high-definition",
+        "code":"f7f8"
+    },
+    {
+        "css":"mdi mdi-umbraco",
+        "code":"f549"
+    },
+    {
+        "css":"mdi mdi-umbrella",
+        "code":"f54a"
+    },
+    {
+        "css":"mdi mdi-umbrella-outline",
+        "code":"f54b"
+    },
+    {
+        "css":"mdi mdi-undo",
+        "code":"f54c"
+    },
+    {
+        "css":"mdi mdi-undo-variant",
+        "code":"f54d"
+    },
+    {
+        "css":"mdi mdi-unfold-less-horizontal",
+        "code":"f54e"
+    },
+    {
+        "css":"mdi mdi-unfold-less-vertical",
+        "code":"f75f"
+    },
+    {
+        "css":"mdi mdi-unfold-more-horizontal",
+        "code":"f54f"
+    },
+    {
+        "css":"mdi mdi-unfold-more-vertical",
+        "code":"f760"
+    },
+    {
+        "css":"mdi mdi-ungroup",
+        "code":"f550"
+    },
+    {
+        "css":"mdi mdi-unity",
+        "code":"f6ae"
+    },
+    {
+        "css":"mdi mdi-untappd",
+        "code":"f551"
+    },
+    {
+        "css":"mdi mdi-update",
+        "code":"f6af"
+    },
+    {
+        "css":"mdi mdi-upload",
+        "code":"f552"
+    },
+    {
+        "css":"mdi mdi-upload-network",
+        "code":"f6f5"
+    },
+    {
+        "css":"mdi mdi-usb",
+        "code":"f553"
+    },
+    {
+        "css":"mdi mdi-van-passenger",
+        "code":"f7f9"
+    },
+    {
+        "css":"mdi mdi-van-utility",
+        "code":"f7fa"
+    },
+    {
+        "css":"mdi mdi-vanish",
+        "code":"f7fb"
+    },
+    {
+        "css":"mdi mdi-vector-arrange-above",
+        "code":"f554"
+    },
+    {
+        "css":"mdi mdi-vector-arrange-below",
+        "code":"f555"
+    },
+    {
+        "css":"mdi mdi-vector-circle",
+        "code":"f556"
+    },
+    {
+        "css":"mdi mdi-vector-circle-variant",
+        "code":"f557"
+    },
+    {
+        "css":"mdi mdi-vector-combine",
+        "code":"f558"
+    },
+    {
+        "css":"mdi mdi-vector-curve",
+        "code":"f559"
+    },
+    {
+        "css":"mdi mdi-vector-difference",
+        "code":"f55a"
+    },
+    {
+        "css":"mdi mdi-vector-difference-ab",
+        "code":"f55b"
+    },
+    {
+        "css":"mdi mdi-vector-difference-ba",
+        "code":"f55c"
+    },
+    {
+        "css":"mdi mdi-vector-intersection",
+        "code":"f55d"
+    },
+    {
+        "css":"mdi mdi-vector-line",
+        "code":"f55e"
+    },
+    {
+        "css":"mdi mdi-vector-point",
+        "code":"f55f"
+    },
+    {
+        "css":"mdi mdi-vector-polygon",
+        "code":"f560"
+    },
+    {
+        "css":"mdi mdi-vector-polyline",
+        "code":"f561"
+    },
+    {
+        "css":"mdi mdi-vector-radius",
+        "code":"f749"
+    },
+    {
+        "css":"mdi mdi-vector-rectangle",
+        "code":"f5c6"
+    },
+    {
+        "css":"mdi mdi-vector-selection",
+        "code":"f562"
+    },
+    {
+        "css":"mdi mdi-vector-square",
+        "code":"f001"
+    },
+    {
+        "css":"mdi mdi-vector-triangle",
+        "code":"f563"
+    },
+    {
+        "css":"mdi mdi-vector-union",
+        "code":"f564"
+    },
+    {
+        "css":"mdi mdi-verified",
+        "code":"f565"
+    },
+    {
+        "css":"mdi mdi-vibrate",
+        "code":"f566"
+    },
+    {
+        "css":"mdi mdi-video",
+        "code":"f567"
+    },
+    {
+        "css":"mdi mdi-video-3d",
+        "code":"f7fc"
+    },
+    {
+        "css":"mdi mdi-video-off",
+        "code":"f568"
+    },
+    {
+        "css":"mdi mdi-video-switch",
+        "code":"f569"
+    },
+    {
+        "css":"mdi mdi-view-agenda",
+        "code":"f56a"
+    },
+    {
+        "css":"mdi mdi-view-array",
+        "code":"f56b"
+    },
+    {
+        "css":"mdi mdi-view-carousel",
+        "code":"f56c"
+    },
+    {
+        "css":"mdi mdi-view-column",
+        "code":"f56d"
+    },
+    {
+        "css":"mdi mdi-view-dashboard",
+        "code":"f56e"
+    },
+    {
+        "css":"mdi mdi-view-day",
+        "code":"f56f"
+    },
+    {
+        "css":"mdi mdi-view-grid",
+        "code":"f570"
+    },
+    {
+        "css":"mdi mdi-view-headline",
+        "code":"f571"
+    },
+    {
+        "css":"mdi mdi-view-list",
+        "code":"f572"
+    },
+    {
+        "css":"mdi mdi-view-module",
+        "code":"f573"
+    },
+    {
+        "css":"mdi mdi-view-parallel",
+        "code":"f727"
+    },
+    {
+        "css":"mdi mdi-view-quilt",
+        "code":"f574"
+    },
+    {
+        "css":"mdi mdi-view-sequential",
+        "code":"f728"
+    },
+    {
+        "css":"mdi mdi-view-stream",
+        "code":"f575"
+    },
+    {
+        "css":"mdi mdi-view-week",
+        "code":"f576"
+    },
+    {
+        "css":"mdi mdi-vimeo",
+        "code":"f577"
+    },
+    {
+        "css":"mdi mdi-vine",
+        "code":"f578"
+    },
+    {
+        "css":"mdi mdi-violin",
+        "code":"f60f"
+    },
+    {
+        "css":"mdi mdi-visualstudio",
+        "code":"f610"
+    },
+    {
+        "css":"mdi mdi-vk",
+        "code":"f579"
+    },
+    {
+        "css":"mdi mdi-vk-box",
+        "code":"f57a"
+    },
+    {
+        "css":"mdi mdi-vk-circle",
+        "code":"f57b"
+    },
+    {
+        "css":"mdi mdi-vlc",
+        "code":"f57c"
+    },
+    {
+        "css":"mdi mdi-voice",
+        "code":"f5cb"
+    },
+    {
+        "css":"mdi mdi-voicemail",
+        "code":"f57d"
+    },
+    {
+        "css":"mdi mdi-volume-high",
+        "code":"f57e"
+    },
+    {
+        "css":"mdi mdi-volume-low",
+        "code":"f57f"
+    },
+    {
+        "css":"mdi mdi-volume-medium",
+        "code":"f580"
+    },
+    {
+        "css":"mdi mdi-volume-minus",
+        "code":"f75d"
+    },
+    {
+        "css":"mdi mdi-volume-mute",
+        "code":"f75e"
+    },
+    {
+        "css":"mdi mdi-volume-off",
+        "code":"f581"
+    },
+    {
+        "css":"mdi mdi-volume-plus",
+        "code":"f75c"
+    },
+    {
+        "css":"mdi mdi-vpn",
+        "code":"f582"
+    },
+    {
+        "css":"mdi mdi-walk",
+        "code":"f583"
+    },
+    {
+        "css":"mdi mdi-wall",
+        "code":"f7fd"
+    },
+    {
+        "css":"mdi mdi-wallet",
+        "code":"f584"
+    },
+    {
+        "css":"mdi mdi-wallet-giftcard",
+        "code":"f585"
+    },
+    {
+        "css":"mdi mdi-wallet-membership",
+        "code":"f586"
+    },
+    {
+        "css":"mdi mdi-wallet-travel",
+        "code":"f587"
+    },
+    {
+        "css":"mdi mdi-wan",
+        "code":"f588"
+    },
+    {
+        "css":"mdi mdi-washing-machine",
+        "code":"f729"
+    },
+    {
+        "css":"mdi mdi-watch",
+        "code":"f589"
+    },
+    {
+        "css":"mdi mdi-watch-export",
+        "code":"f58a"
+    },
+    {
+        "css":"mdi mdi-watch-import",
+        "code":"f58b"
+    },
+    {
+        "css":"mdi mdi-watch-vibrate",
+        "code":"f6b0"
+    },
+    {
+        "css":"mdi mdi-water",
+        "code":"f58c"
+    },
+    {
+        "css":"mdi mdi-water-off",
+        "code":"f58d"
+    },
+    {
+        "css":"mdi mdi-water-percent",
+        "code":"f58e"
+    },
+    {
+        "css":"mdi mdi-water-pump",
+        "code":"f58f"
+    },
+    {
+        "css":"mdi mdi-watermark",
+        "code":"f612"
+    },
+    {
+        "css":"mdi mdi-waves",
+        "code":"f78c"
+    },
+    {
+        "css":"mdi mdi-weather-cloudy",
+        "code":"f590"
+    },
+    {
+        "css":"mdi mdi-weather-fog",
+        "code":"f591"
+    },
+    {
+        "css":"mdi mdi-weather-hail",
+        "code":"f592"
+    },
+    {
+        "css":"mdi mdi-weather-lightning",
+        "code":"f593"
+    },
+    {
+        "css":"mdi mdi-weather-lightning-rainy",
+        "code":"f67d"
+    },
+    {
+        "css":"mdi mdi-weather-night",
+        "code":"f594"
+    },
+    {
+        "css":"mdi mdi-weather-partlycloudy",
+        "code":"f595"
+    },
+    {
+        "css":"mdi mdi-weather-pouring",
+        "code":"f596"
+    },
+    {
+        "css":"mdi mdi-weather-rainy",
+        "code":"f597"
+    },
+    {
+        "css":"mdi mdi-weather-snowy",
+        "code":"f598"
+    },
+    {
+        "css":"mdi mdi-weather-snowy-rainy",
+        "code":"f67e"
+    },
+    {
+        "css":"mdi mdi-weather-sunny",
+        "code":"f599"
+    },
+    {
+        "css":"mdi mdi-weather-sunset",
+        "code":"f59a"
+    },
+    {
+        "css":"mdi mdi-weather-sunset-down",
+        "code":"f59b"
+    },
+    {
+        "css":"mdi mdi-weather-sunset-up",
+        "code":"f59c"
+    },
+    {
+        "css":"mdi mdi-weather-windy",
+        "code":"f59d"
+    },
+    {
+        "css":"mdi mdi-weather-windy-variant",
+        "code":"f59e"
+    },
+    {
+        "css":"mdi mdi-web",
+        "code":"f59f"
+    },
+    {
+        "css":"mdi mdi-webcam",
+        "code":"f5a0"
+    },
+    {
+        "css":"mdi mdi-webhook",
+        "code":"f62f"
+    },
+    {
+        "css":"mdi mdi-webpack",
+        "code":"f72a"
+    },
+    {
+        "css":"mdi mdi-wechat",
+        "code":"f611"
+    },
+    {
+        "css":"mdi mdi-weight",
+        "code":"f5a1"
+    },
+    {
+        "css":"mdi mdi-weight-kilogram",
+        "code":"f5a2"
+    },
+    {
+        "css":"mdi mdi-whatsapp",
+        "code":"f5a3"
+    },
+    {
+        "css":"mdi mdi-wheelchair-accessibility",
+        "code":"f5a4"
+    },
+    {
+        "css":"mdi mdi-white-balance-auto",
+        "code":"f5a5"
+    },
+    {
+        "css":"mdi mdi-white-balance-incandescent",
+        "code":"f5a6"
+    },
+    {
+        "css":"mdi mdi-white-balance-iridescent",
+        "code":"f5a7"
+    },
+    {
+        "css":"mdi mdi-white-balance-sunny",
+        "code":"f5a8"
+    },
+    {
+        "css":"mdi mdi-widgets",
+        "code":"f72b"
+    },
+    {
+        "css":"mdi mdi-wifi",
+        "code":"f5a9"
+    },
+    {
+        "css":"mdi mdi-wifi-off",
+        "code":"f5aa"
+    },
+    {
+        "css":"mdi mdi-wii",
+        "code":"f5ab"
+    },
+    {
+        "css":"mdi mdi-wiiu",
+        "code":"f72c"
+    },
+    {
+        "css":"mdi mdi-wikipedia",
+        "code":"f5ac"
+    },
+    {
+        "css":"mdi mdi-window-close",
+        "code":"f5ad"
+    },
+    {
+        "css":"mdi mdi-window-closed",
+        "code":"f5ae"
+    },
+    {
+        "css":"mdi mdi-window-maximize",
+        "code":"f5af"
+    },
+    {
+        "css":"mdi mdi-window-minimize",
+        "code":"f5b0"
+    },
+    {
+        "css":"mdi mdi-window-open",
+        "code":"f5b1"
+    },
+    {
+        "css":"mdi mdi-window-restore",
+        "code":"f5b2"
+    },
+    {
+        "css":"mdi mdi-windows",
+        "code":"f5b3"
+    },
+    {
+        "css":"mdi mdi-wordpress",
+        "code":"f5b4"
+    },
+    {
+        "css":"mdi mdi-worker",
+        "code":"f5b5"
+    },
+    {
+        "css":"mdi mdi-wrap",
+        "code":"f5b6"
+    },
+    {
+        "css":"mdi mdi-wrench",
+        "code":"f5b7"
+    },
+    {
+        "css":"mdi mdi-wunderlist",
+        "code":"f5b8"
+    },
+    {
+        "css":"mdi mdi-xaml",
+        "code":"f673"
+    },
+    {
+        "css":"mdi mdi-xbox",
+        "code":"f5b9"
+    },
+    {
+        "css":"mdi mdi-xbox-controller",
+        "code":"f5ba"
+    },
+    {
+        "css":"mdi mdi-xbox-controller-battery-alert",
+        "code":"f74a"
+    },
+    {
+        "css":"mdi mdi-xbox-controller-battery-empty",
+        "code":"f74b"
+    },
+    {
+        "css":"mdi mdi-xbox-controller-battery-full",
+        "code":"f74c"
+    },
+    {
+        "css":"mdi mdi-xbox-controller-battery-low",
+        "code":"f74d"
+    },
+    {
+        "css":"mdi mdi-xbox-controller-battery-medium",
+        "code":"f74e"
+    },
+    {
+        "css":"mdi mdi-xbox-controller-battery-unknown",
+        "code":"f74f"
+    },
+    {
+        "css":"mdi mdi-xbox-controller-off",
+        "code":"f5bb"
+    },
+    {
+        "css":"mdi mdi-xda",
+        "code":"f5bc"
+    },
+    {
+        "css":"mdi mdi-xing",
+        "code":"f5bd"
+    },
+    {
+        "css":"mdi mdi-xing-box",
+        "code":"f5be"
+    },
+    {
+        "css":"mdi mdi-xing-circle",
+        "code":"f5bf"
+    },
+    {
+        "css":"mdi mdi-xml",
+        "code":"f5c0"
+    },
+    {
+        "css":"mdi mdi-xmpp",
+        "code":"f7fe"
+    },
+    {
+        "css":"mdi mdi-yammer",
+        "code":"f788"
+    },
+    {
+        "css":"mdi mdi-yeast",
+        "code":"f5c1"
+    },
+    {
+        "css":"mdi mdi-yelp",
+        "code":"f5c2"
+    },
+    {
+        "css":"mdi mdi-yin-yang",
+        "code":"f67f"
+    },
+    {
+        "css":"mdi mdi-youtube-play",
+        "code":"f5c3"
+    },
+    {
+        "css":"mdi mdi-zip-box",
+        "code":"f5c4"
+    },
+    {
+        "css":"mdi mdi-blank",
+        "code":"f68c"
+    }
+  ]
+}

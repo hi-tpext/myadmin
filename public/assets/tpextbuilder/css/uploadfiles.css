@@ -1,0 +1,43 @@
+.lyear-uploads-pic {
+    display: inherit;
+}
+
+.lyear-uploads-pic>li.pic-item {
+    margin-top: 10px;
+}
+
+.lyear-uploads-pic li.pic-item .progress {
+    position: absolute;
+    bottom: 0px;
+    margin-bottom: 0px;
+    left: 5px;
+    right: 5px;
+}
+
+.lyear-uploads-pic .success,
+.lyear-uploads-pic .error {
+    position: absolute;
+    top: 0px;
+    background-color: rgba(0, 0, 0, .125);
+    right: 5px;
+    left: 5px;
+    color: #fff;
+    text-align: center;
+}
+
+.lyear-uploads-pic figure img {
+    width: auto;
+    max-width: 100%;
+    max-height: 110px;
+}
+
+.lyear-uploads-pic figure {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+}
+
+.webuploader-container label {
+    margin-bottom: 0px;
+}
