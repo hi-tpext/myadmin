@@ -30,6 +30,12 @@ composer update
 
 
 ## 功能特性:
+- 模块化开发
+**扩展依赖**
+[tpextbuilder]<https://gitee.com/ichynul/tpextbuilder>
+[lightyearadmin]<https://gitee.com/ichynul/lightyearadmin>
+[tpextmyadmin]<https://gitee.com/ichynul/tpextmyadmin>
+
 - 基于 [bootstrap]和[Light-Year-Admin-Template]的后台模板， 封装了大部分常用组件。
 ### 基础组件：Column,Row,Tab,Table,Form,Toolbar,Layer,Content
 
