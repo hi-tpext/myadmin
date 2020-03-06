@@ -29,14 +29,15 @@ composer update
 - 打开 `http://www.yourhost.com/admin` ，会跳转登录 默认账号 admin tpextadmin
 
 
-## 功能特性:
+## 5.功能特性:
 - 模块化开发
 **扩展依赖**
-[tpextbuilder]<https://gitee.com/ichynul/tpextbuilder>
-[lightyearadmin]<https://gitee.com/ichynul/lightyearadmin>
-[tpextmyadmin]<https://gitee.com/ichynul/tpextmyadmin>
+- [tpextbuilder]<https://gitee.com/ichynul/tpextbuilder>
+- [lightyearadmin]<https://gitee.com/ichynul/lightyearadmin>
+- [tpextmyadmin]<https://gitee.com/ichynul/tpextmyadmin>
 
 - 基于 [bootstrap]和[Light-Year-Admin-Template]的后台模板， 封装了大部分常用组件。
+- [tpextbuilder] 简介
 ### 基础组件：Column,Row,Tab,Table,Form,Toolbar,Layer,Content
 
 #### Column ： 灵活的 col栅格布局，自由组合各个组件
