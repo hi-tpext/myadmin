@@ -1,8 +1,10 @@
 1.安装
 全新安装：
+- thinkphp 5.1.*
 `bash
 composer create-project topthink/think=5.1.* tp5
 `
+- 后台扩展
 `bash
 composer require ichynul/tpextmyadmin>=1.1
 `
