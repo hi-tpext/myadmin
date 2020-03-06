@@ -45,11 +45,11 @@
         },
         {
             "name": "ichynul/tpext",
-            "version": "1.0.7",
+            "version": "1.0.8",
             "source": {
                 "type": "git",
                 "url": "https://gitee.com/ichynul/tpext.git",
-                "reference": "5d1da05db69f1d14e15382d7d522b8c07c685cc8"
+                "reference": "830bbcf70becf965f1beed6849350459b2e59afa"
             },
             "require": {
                 "topthink/framework": "5.1.*"
@@ -78,7 +78,7 @@
             "keywords": [
                 "thinkphp"
             ],
-            "time": "2020-03-05T16:21:12+00:00"
+            "time": "2020-03-06T03:31:45+00:00"
         },
         {
             "name": "ichynul/tpextbuilder",
