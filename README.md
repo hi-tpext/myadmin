@@ -1,13 +1,14 @@
-1.安装
-全新安装：
+1.安装:
+全新安装
 - thinkphp 5.1.*
-`bash
+```bash
 composer create-project topthink/think=5.1.* tp5
-`
+```
 - 后台扩展
-`bash
+
+```bash
 composer require ichynul/tpextmyadmin>=1.1
-`
+```
 
 或者 `composer update` 更新
 
@@ -15,7 +16,7 @@ composer require ichynul/tpextmyadmin>=1.1
 正确配置 database数据库
 
 3.打开 `http://www.yourhost.com/admin/tpext/index`
-安装 `[tpext.core]`
+安装 `[tpext.core]`,
 安装其余装扩展
 
 4.打开 `http://www.yourhost.com/admin` ，会跳转登录 默认账号 admin tpextadmin
