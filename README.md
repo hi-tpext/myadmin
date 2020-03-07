@@ -9,6 +9,7 @@ composer create-project topthink/think=5.1.* myadmin
 - 后台扩展
 
 ```bash
+cd myadmin
 composer require ichynul/tpextmyadmin>=1.1
 ```
 ### 更新安装
