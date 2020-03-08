@@ -1,19 +1,20 @@
 # 欢迎使用 
 
 ## 1.安装:
-### 全新安装
-- thinkphp 5.1.*
+框架基于thinkphp 5.1*，有两种安装方式：
+### a.全新安装
+>安装 thinkphp 5.1.*
 ```bash
 composer create-project topthink/think=5.1.* myadmin
 ```
-- 后台扩展
+>安装后台扩展
 
 ```bash
 cd myadmin
 composer require ichynul/tpextmyadmin>=1.1
 ```
-### 更新安装
-- 在现有基础上更新
+### b.更新安装
+>在现有基础上更新
 ```bash
 composer update
 ```
@@ -22,7 +23,7 @@ composer update
 - 正确配置 database数据库
 
 ## 3.扩展安装:
-- 打开 `http://www.yourhost.com/admin/tpext/index`
+- 打开 `http://www.yourhost.com/admin/extension/index`
 - 安装 `[tpext.core]`,
 - 安装其余装扩展
 
@@ -33,9 +34,15 @@ composer update
 ## 5.功能特性:
 - 模块化开发
 **扩展依赖**
-- [tpextbuilder]<https://gitee.com/ichynul/tpextbuilder>
-- [lightyearadmin]<https://gitee.com/ichynul/lightyearadmin>
-- [tpextmyadmin]<https://gitee.com/ichynul/tpextmyadmin>
+>tpext           <https://gitee.com/ichynul/tpext>
+
+>tpextbuilder    <https://gitee.com/ichynul/tpextbuilder>
+
+>tpextmanager    <https://gitee.com/ichynul/tpextmanager>
+
+>lightyearadmin  <https://gitee.com/ichynul/lightyearadmin>
+
+>tpextmyadmin    <https://gitee.com/ichynul/tpextmyadmin>
 
 - 基于 [bootstrap]和[Light-Year-Admin-Template]的后台模板， 封装了大部分常用组件。
 ### [tpextbuilder] 简介
