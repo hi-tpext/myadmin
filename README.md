@@ -30,8 +30,10 @@ composer update
 ## 4.登录后台:
 - 打开 `http://www.yourhost.com/admin` ，会跳转登录 默认账号 admin tpextadmin
 
+## 5.文档 
+<https://gitee.com/ichynul/myadmin/wikis/pages>
 
-## 5.功能特性:
+## 6.功能特性:
 - 模块化开发
 **扩展依赖**
 >tpext           <https://gitee.com/ichynul/tpext>
@@ -291,7 +293,7 @@ composer update
     }
 
 ```
-## 6.效果展示:
+## 7.效果展示:
 
 [![](https://gitee.com/ichynul/myadmin/raw/master/images/1.png)](https://gitee.com/ichynul/myadmin/raw/master/images/1.png "1")
 [![](https://gitee.com/ichynul/myadmin/raw/master/images/2.png)](https://gitee.com/ichynul/myadmin/raw/master/images/2.png "2")
