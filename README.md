@@ -103,39 +103,32 @@ composer update
     {
         $builder = Builder::getInstance('用户管理', '列表');
 
-        $form = $table->getSearch();//搜索表单
+        $table = $builder->table();
 
+        $form = $table->getSearch();
         $form->text('username', '账号', 3)->maxlength(20);
         $form->text('name', '姓名', 3)->maxlength(20);
         $form->text('phone', '手机号', 3)->maxlength(20);
         $form->text('email', '邮箱', 3)->maxlength(20);
-        // getRoleList 获取角色列表，代码不列出来了
         $form->select('role_id', '角色组', 3)->options($this->getRoleList());
 
-        $table = $builder->table();//列表
-
-        $table->searchForm($form);//绑定搜索
-
-        $table->show('id', 'ID');//多大用show
+        $table->show('id', 'ID');
         $table->show('username', '登录帐号');
-        //支持行内编辑 [text,textarea,select,radio,checkbox]，其他组件应该也可以效果不太好，
-        //autoPost($url) 输入框失去焦点后自动提交。
-        //getWapper() addStyle addClass 控制td样式及class
         $table->text('name', '姓名')->autoPost()->getWapper()->addStyle('max-width:80px');
         $table->show('role_name', '角色');
+        $table->show('group_name', '分组');
         $table->show('email', '电子邮箱')->default('无');
         $table->show('phone', '手机号')->default('无');
         $table->show('errors', '登录失败');
+        $table->show('login_time', '登录时间')->getWapper()->addStyle('width:180px');
         $table->show('create_time', '添加时间')->getWapper()->addStyle('width:180px');
-        $table->show('update_time', '修改时间')->getWapper()->addStyle('width:180px');
 
-        $pagezise = 10;//每页显示
+        $pagesize = 14;
 
-        $page = input('__page__/d', 1);//获取当前页码
+        $page = input('__page__/d', 1);
 
         $page = $page < 1 ? 1 : $page;
 
-        //搜索数据
         $searchData = request()->only([
             'username',
             'name',
@@ -145,7 +138,6 @@ composer update
         ], 'post');
 
         $where = [];
-
         if (!empty($searchData['username'])) {
             $where[] = ['username', 'like', '%' . $searchData['username'] . '%'];
         }
@@ -166,47 +158,48 @@ composer update
             $where[] = ['role_id', 'eq', $searchData['role_id']];
         }
 
-        //排序字段，默认为id ，可用 $table->sortable(['feild1','feild2'])控制哪些字段可排序
         $sortOrder = input('__sort__', 'id desc');
 
-        $data = $this->dataModel->where($where)->order($sortOrder)
-            ->limit(($page - 1) * $pagezise, $pagezise)->select();
+        $data = $this->dataModel->where($where)->order($sortOrder)->limit(($page - 1) * $pagesize, $pagesize)->select();
 
         foreach ($data as &$d) {
-            $d['__h_del__'] = $d['id'] == 1;// 用户id 为1是超级管理员
-            $d['__h_en__'] = $d['enable'] == 1; 
+            $d['__h_del__'] = $d['id'] == 1;
+            $d['__h_en__'] = $d['enable'] == 1;
             $d['__h_dis__'] = $d['enable'] != 1 || $d['id'] == 1;
+            $d['__h_clr__'] = $d['errors'] < 1;
         }
 
-        $table->data($data);
-        $table->paginator($this->dataModel->where($where)->count(), $pagezise);//分页设置
+        unset($d);
 
-        //控制哪些tollbar显示，及显示文字，默认 [btnAdd btnDelete]
-        // $table->useToolbar(false);//禁用
+        $table->data($data);
+        $table->sortOrder($sortOrder);
+        $table->paginator($this->dataModel->where($where)->count(), $pagesize);
+
         $table->getToolbar()
             ->btnAdd()
             ->btnEnable()
             ->btnDisable()
             ->btnDelete()
             ->btnRefresh();
-        //控制操作按钮,及显示文字, 默认 [btnEdit btnDelete]
-        //$table->useActionbar(false);//禁用
+
         $table->getActionbar()
             ->btnEdit()
             ->btnEnable()
             ->btnDisable()
             ->btnDelete()
+            ->btnPostRowid('clear_errors', url('clearErrors'), '', 'btn-info', 'mdi-backup-restore', 'title="重置登录失败次数"')
             ->mapClass([
-                'delete' => ['hidden' => '__h_del__'], //控制按钮的class [hidden，disabled]
+                'delete' => ['hidden' => '__h_del__'],
                 'enable' => ['hidden' => '__h_en__'],
                 'disable' => ['hidden' => '__h_dis__'],
+                'clear_errors' => ['hidden' => '__h_clr__'],
             ]);
 
-        if (request()->isAjax()) {//ajax 一般是翻页、搜索，只返回表格部分替换
+        if (request()->isAjax()) {
             return $table->partial()->render();
         }
 
-        return $builder->render();//整个页面输出
+        return $builder->render();
     }
 ```
 #### Form 数据列表展示
