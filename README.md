@@ -96,7 +96,7 @@ composer update
 ###### 基础组件：同 from，只是不全部支持，考虑到显示效果，行内编辑的时候可用使用部分form组件
 ###### 实例
 ```php
-    // 代码取后台管理员列表 [/admin/config/index]
+    // 代码取后台管理员列表 [/admin/admin/index]
 
     // 代码比较原始，没有太多封装，后期再优化
     public function index()
