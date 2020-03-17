@@ -103,7 +103,7 @@ composer update
     {
         $builder = Builder::getInstance('用户管理', '列表');
 
-        $form = $builder->form();//搜索表单
+        $form = $table->getSearch();//搜索表单
 
         $form->text('username', '账号', 3)->maxlength(20);
         $form->text('name', '姓名', 3)->maxlength(20);
@@ -167,15 +167,7 @@ composer update
         }
 
         //排序字段，默认为id ，可用 $table->sortable(['feild1','feild2'])控制哪些字段可排序
-        $sortOrder = 'id asc';
-
-        $sort = input('__sort__');
-        if ($sort) {
-            $arr = explode(':', $sort);
-            if (count($arr) == 2) {
-                $sortOrder = implode(' ', $arr);
-            }
-        }
+        $sortOrder = input('__sort__', 'id desc');
 
         $data = $this->dataModel->where($where)->order($sortOrder)
             ->limit(($page - 1) * $pagezise, $pagezise)->select();
