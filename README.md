@@ -11,10 +11,18 @@ composer create-project topthink/think=5.1.* myadmin
 
 ```bash
 cd myadmin
+```
+```bash
 composer require ichynul/tpextmyadmin>=1.1
 ```
 ### b.更新安装
 >在现有基础上更新
+```bash
+git clone https://gitee.com/ichynul/myadmin.git
+```
+```bash
+cd myadmin
+```
 ```bash
 composer update
 ```
