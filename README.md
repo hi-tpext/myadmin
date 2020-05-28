@@ -13,7 +13,7 @@ composer create-project topthink/think=5.1.* myadmin
 cd myadmin
 ```
 ```bash
-composer require ichynul/tpextmyadmin>=1.1
+composer require ichynul/tpextmyadmin
 ```
 ### b.更新安装
 >在现有基础上更新
