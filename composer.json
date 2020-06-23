@@ -27,10 +27,13 @@
             "app\\": "application"
         }
     },
+    "prefer-stable": true,
     "extra": {
         "think-path": "thinkphp"
     },
     "config": {
-        "preferred-install": "dist"
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
     }
 }
