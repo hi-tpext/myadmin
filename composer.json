@@ -18,9 +18,7 @@
     "require": {
         "php": ">=5.6.0",
         "topthink/framework": "5.1.*",
-        "ichynul/tpextmyadmin": "^1.1",
-        "ichynul/tpextcms": "^1.0",
-        "ichynul/tpextshop": "^1.0"
+        "ichynul/tpextmyadmin": "^1.1"
     },
     "autoload": {
         "psr-4": {
