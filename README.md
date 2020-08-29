@@ -1,4 +1,4 @@
-# 欢迎使用 
+# 欢迎使用
 
 ## 1.安装:
 框架基于thinkphp 5.1*，有两种安装方式：
@@ -38,7 +38,7 @@ composer update
 ## 4.登录后台:
 - 打开 `http://www.yourhost.com/admin` ，会跳转登录 默认账号 admin tpextadmin
 
-## 5.文档 
+## 5.文档
 <https://gitee.com/ichynul/myadmin/wikis/pages>
 
 ## 6演示
@@ -67,231 +67,251 @@ composer update
 
 #### Column ： 灵活的 col栅格布局，自由组合各个组件
 ###### 实例
-- 默认 [col-md-12] 
-```php
-    //form 最简形式
-    $form = $builder->form();
-    //相当于 
-    $form = $builder->row()->column(12)->form();
+`HasBuilder`封装了常用操作
 
-    //table 最简形式
-    $table = $builder->table();
-    //相当于 
-    $table = $builder->row()->column(12)->table();
-```
-- 控制 [col-md-] 
 ```php
-    //创建一个 row
-    $row = $builder->row();
-    //在这个row 里面显示两个 col-md-6
-    $form = $row->column(6)->form();
-    $table = $row->column(6)->table();
-    //这个布局不太常用，一般一个都是单独的一个form或单独的table
-    //参考后台的个人信息页面 [/admin/index/profile]，左边一个form修改[信息个人]，右边一个table显示[登录记录]
-```
-#### Row 配合 Column 使用
+<?php
 
-#### Tab : tab 切换，每个tab-content里面可以放 form 和 table等
-###### 实例
-```php
-    // 获取一个tab
-    $tab = $builder->tab();
-    // 获取form
-    $form1 = $tab->add('tab-from1')->form();
-    $form1->formId('the-from' . 1);//重设formid 因为有多个form
-    //
-    $form2 = $tab->add('tab-from2')->form();
-    $form2->formId('the-from' . 1);
-    //
-    $table = $tab->add('tab-table')->table();
-    // 此例 或生成3个tab 两个form和一个table，他们之间相互独立
-    // 参考后台的平台设置 [/admin/config/index]，多个配置表单，最好一个配置列表
-```
-#### Table 数据列表展示
-###### 基础组件：同 from，只是不全部支持，考虑到显示效果，行内编辑的时候可用使用部分form组件
-###### 实例
-```php
-    // 代码取后台管理员列表 [/admin/admin/index]
+namespace app\admin\controller;
 
-    // 代码比较原始，没有太多封装，后期再优化
-    public function index()
+use app\common\logic\MemberLogic;
+use app\common\model;
+use think\Controller;
+use tpext\builder\traits\HasBuilder;
+
+
+/**
+ * Undocumented class
+ * @title 会员管理
+ */
+class Member extends Controller
+{
+    use HasBuilder;
+
+    /**
+     * Undocumented variable
+     *
+     * @var model\Member
+     */
+    protected $dataModel;
+
+    protected function initialize()
     {
-        $builder = Builder::getInstance('用户管理', '列表');
+        $this->dataModel = new model\Member;
+        $this->pageTitle = '会员管理';
+        $this->enableField = 'status';
+        $this->pagesize = 8;
 
-        $table = $builder->table();
+        //作为下拉选择数据源　相关设置
+        $this->selectTextField = '{id}#{nickname}({mobile})';//显示
+        $this->selectFields = 'id,nickname,mobile';// ->field('id,nickname,mobile') 字段，配合[显示],优化查询性能
+        $this->selectSearch = 'username|nickname|mobile'; //关键字　like　查询字段　->where('username|nickname|mobile', 'like', $kwd);
+    }
 
-        $form = $table->getSearch();
-        $form->text('username', '账号', 3)->maxlength(20);
-        $form->text('name', '姓名', 3)->maxlength(20);
-        $form->text('phone', '手机号', 3)->maxlength(20);
-        $form->text('email', '邮箱', 3)->maxlength(20);
-        $form->select('role_id', '角色组', 3)->options($this->getRoleList());
-
-        $table->show('id', 'ID');
-        $table->show('username', '登录帐号');
-        $table->text('name', '姓名')->autoPost()->getWapper()->addStyle('max-width:80px');
-        $table->show('role_name', '角色');
-        $table->show('group_name', '分组');
-        $table->show('email', '电子邮箱')->default('无');
-        $table->show('phone', '手机号')->default('无');
-        $table->show('errors', '登录失败');
-        $table->show('login_time', '登录时间')->getWapper()->addStyle('width:180px');
-        $table->show('create_time', '添加时间')->getWapper()->addStyle('width:180px');
-
-        $pagesize = 14;
-
-        $page = input('__page__/d', 1);
-
-        $page = $page < 1 ? 1 : $page;
-
-        $searchData = request()->only([
-            'username',
-            'name',
-            'email',
-            'phone',
-            'role_id',
-        ], 'post');
+    protected function filterWhere()
+    {
+        $searchData = request()->post();
 
         $where = [];
+
+        if (!empty($searchData['id'])) {
+            $where[] = ['id', 'eq', $searchData['id']];
+        }
+
         if (!empty($searchData['username'])) {
             $where[] = ['username', 'like', '%' . $searchData['username'] . '%'];
         }
-
-        if (!empty($searchData['name'])) {
-            $where[] = ['name', 'like', '%' . $searchData['name'] . '%'];
+        if (!empty($searchData['nickname'])) {
+            $where[] = ['nickname', 'like', '%' . $searchData['nickname'] . '%'];
+        }
+        if (!empty($searchData['mobile'])) {
+            $where[] = ['mobile', 'like', '%' . $searchData['mobile'] . '%'];
+        }
+        if (isset($searchData['status']) && $searchData['status'] != '') {
+            $where[] = ['status', 'eq', $searchData['status']];
+        }
+        if (isset($searchData['level']) && $searchData['level'] != '') {
+            $where[] = ['level', 'eq', $searchData['level']];
+        }
+        if (!empty($searchData['province'])) {
+            $where[] = ['province', 'eq', $searchData['province']];
+            if (!empty($searchData['city'])) {
+                $where[] = ['city', 'eq', $searchData['city']];
+                if (!empty($searchData['area'])) {
+                    $where[] = ['area', 'eq', $searchData['area']];
+                }
+            }
         }
 
-        if (!empty($searchData['phone'])) {
-            $where[] = ['phone', 'like', '%' . $searchData['phone'] . '%'];
-        }
+        return $where;
+    }
 
-        if (!empty($searchData['email'])) {
-            $where[] = ['email', 'like', '%' . $searchData['email'] . '%'];
-        }
+    /**
+     * 构建搜索
+     *
+     * @return void
+     */
+    protected function builSearch()
+    {
+        $search = $this->search;
 
-        if (!empty($searchData['role_id'])) {
-            $where[] = ['role_id', 'eq', $searchData['role_id']];
-        }
+        $search->text('id', '会员id')->maxlength(20);
+        $search->text('username', '账号')->maxlength(20);
+        $search->text('nickname', '昵称')->maxlength(20);
+        $search->text('mobile', '手机号')->maxlength(20);
 
-        $sortOrder = input('__sort__', 'id desc');
+        $search->select('level', '等级')->optionsData(model\MemberLevel::order('level')->select(), 'name', 'level')->afterOptions([0 => '普通会员']);
+        $search->select('status', '状态')->options([0 => '禁用', 1 => '正常']);
+        $search->select('province', '省份')->dataUrl(url('api/areacity/province'), 'ext_name')->withNext(
+            $search->select('city', '城市')->dataUrl(url('api/areacity/city'), 'ext_name')->withNext(
+                $search->select('area', '地区')->dataUrl(url('api/areacity/area'), 'ext_name')
+            )
+        );
+    }
 
-        $data = $this->dataModel->where($where)->order($sortOrder)->limit(($page - 1) * $pagesize, $pagesize)->select();
+    /**
+     * 构建表格
+     *
+     * @return void
+     */
+    protected function buildTable(&$data = [])
+    {
+        $table = $this->table;
 
-        foreach ($data as &$d) {
-            $d['__h_del__'] = $d['id'] == 1;
-            $d['__h_en__'] = $d['enable'] == 1;
-            $d['__h_dis__'] = $d['enable'] != 1 || $d['id'] == 1;
-            $d['__h_clr__'] = $d['errors'] < 1;
-        }
+        $table->show('id', 'ID');
+        $table->image('avatar', '头像')->thumbSize(50, 50)->default('/static/images/touxiang.png');
+        $table->show('username', '账号');
+        $table->text('nickname', '昵称')->autoPost()->getWrapper()->addStyle('width:130px');
+        $table->show('mobile', '手机号')->getWrapper()->addStyle('width:100px');
+        $table->match('gender', '性别')->options([1 => '男', 2 => '女', 0 => '未知'])->getWrapper()->addStyle('width:50px');
+        $table->show('age', '性别');
+        $table->show('level_name', '等级');
+        $table->show('money', model\MemberAccount::$types['money']);
+        $table->show('points', model\MemberAccount::$types['points']);
+        $table->show('pca', '省市区');
+        $table->switchBtn('status', '状态')->default(1)->autoPost()->getWrapper()->addStyle('width:60px');
+        $table->show('last_login_time', '最近登录')->getWrapper()->addStyle('width:150px');
+        $table->show('create_time', '注册时间')->getWrapper()->addStyle('width:150px');
 
-        unset($d);
-
-        $table->data($data);
-        $table->sortOrder($sortOrder);
-        $table->paginator($this->dataModel->where($where)->count(), $pagesize);
+        $table->sortable('id,sort,money,points,commission,re_comm,shares,last_login_time');
 
         $table->getToolbar()
             ->btnAdd()
-            ->btnEnable()
-            ->btnDisable()
-            ->btnDelete()
+            ->btnEnableAndDisable('启用', '禁用')
             ->btnRefresh();
 
         $table->getActionbar()
             ->btnEdit()
-            ->btnEnable()
-            ->btnDisable()
-            ->btnDelete()
-            ->btnPostRowid('clear_errors', url('clearErrors'), '', 'btn-info', 'mdi-backup-restore', 'title="重置登录失败次数"')
-            ->mapClass([
-                'delete' => ['hidden' => '__h_del__'],
-                'enable' => ['hidden' => '__h_en__'],
-                'disable' => ['hidden' => '__h_dis__'],
-                'clear_errors' => ['hidden' => '__h_clr__'],
-            ]);
-
-        if (request()->isAjax()) {
-            return $table->partial()->render();
-        }
-
-        return $builder->render();
-    }
-```
-#### Form 数据列表展示
-###### 基础组件：
-> text ,checkbox ,radio ,button ,select ,multipleSelect ,textarea ,hidden ,color ,rangeSlider,
-> file ,image ,date ,datetime ,time ,year ,month ,dateRange ,datetimeRange ,timeRange ,number
-> switchBtn ,rate ,divider ,password ,decimal ,html ,raw ,show ,tags ,icon ,multipleImage ,multipleFile
-> wangEditor ,tinymce ,ueditor ,editor ,ckeditor ,mdeditor ,match ,matches
-###### 特殊 
-> tab ,step
-
-###### 实例
-```php
-    public function add()
-    {
-        if (request()->isPost()) {
-            return $this->save();
-        } else {
-            return $this->form('添加');
-        }
+            ->btnView()
+            ->btnLink('account', url('/admin/memberaccount/add', ['member_id' => '__data.pk__']), '', 'btn-success', 'mdi-square-inc-cash');
     }
 
-    public function edit($id)
+    /**
+     * 构建表单
+     *
+     * @param boolean $isEdit
+     * @param array $data
+     */
+    protected function builForm($isEdit, &$data = [])
     {
-        if (request()->isPost()) {
-            return $this->save($id);
-        } else {
-            $data = $this->dataModel->get($id);
-            if (!$data) {
-                $this->error('数据不存在');
-            }
+        $form = $this->form;
 
-            return $this->form('编辑', $data);
-        }
-    }
-
-    private function form($title, $data = [])
-    {
-        $isEdit = isset($data['id']);
-
-        $builder = Builder::getInstance('用户管理', $title);
-
-        $form = $builder->form();
-
-        $form->text('username', '登录帐号')->required()->beforSymbol('<i class="mdi mdi-account-key"></i>');
-        $form->select('role_id', '角色组')->required()->options($this->getRoleList())
-            ->disabled($isEdit && $data['id'] == 1);
-        $form->password('password', '密码')->required(!$isEdit)->beforSymbol('<i class="mdi mdi-lock"></i>')
-            ->help($isEdit ? '不修改则留空（6～20位）' : '添加用户，密码必填（6～20位）');
-        $form->text('name', '姓名')->required()->beforSymbol('<i class="mdi mdi-rename-box"></i>');
-        $form->image('avatar', '头像')->default('/assets/lightyearadmin/images/no-avatar.jpg');
-        $form->text('email', '电子邮箱')->beforSymbol('<i class="mdi mdi-email-variant"></i>');
-        $form->text('phone', '手机号')->beforSymbol('<i class="mdi mdi-cellphone-iphone"></i>');
+        $form->tab('基本信息');
+        $form->image('avatar', '头像')->thumbSize(50, 50);
+        $form->text('username', '账号')->required()->maxlength(20);
+        $form->text('nickname', '昵称')->required()->maxlength(20);
+        $form->text('mobile', '手机号')->maxlength(11);
+        $form->text('email', '邮件')->maxlength(60);
+        $form->radio('gender', '性别')->options([0 => '未知', 1 => '男', 2 => '女'])->default(0);
+        $form->number('age', '年龄')->max(100)->min(1)->default(18);
 
         if ($isEdit) {
+            $form->show('points', model\MemberAccount::$types['points']);
+            $form->show('money', model\MemberAccount::$types['money']);
+        }
 
-            $data['password'] = '';
+        $form->tab('其他信息');
+        $form->fields('省/市/区');
+        $form->select('province', ' ', 4)->size(0, 12)->showLabel(false)->dataUrl(url('api/areacity/province'), 'ext_name')->withNext(
+            $form->select('city', ' ', 4)->size(0, 12)->showLabel(false)->dataUrl(url('api/areacity/city'), 'ext_name')->withNext(
+                $form->select('area', ' ', 4)->size(0, 12)->showLabel(false)->dataUrl(url('api/areacity/area'), 'ext_name')
+            )
+        );
+        $form->fieldsEnd();
 
-            $form->show('create_time', '添加时间');
+        $form->textarea('remark', '备注')->maxlength(255);
+        $form->switchBtn('status', '状态')->default(1);
+        $form->switchBtn('can_comm_sale', '蜜豆出售')->default(1);
+        $form->image('erweima_img', '二维码')->thumbSize(50, 50);
+
+        $levels = model\MemberLevel::order('level')->field('name,level')->select();
+
+        if ($isEdit) {
+            $form->match('level', '等级')->optionsData($levels, 'name', 'level');
+
+            $form->show('last_login_ip', '最近登录IP')->default('-');
+
+            if (session('admin_id') == 1) {
+                $form->show('openid', 'openid')->default('-');
+            }
+
+            $form->show('last_login_time', '最近登录时间');
+            $form->show('create_time', '注册时间');
             $form->show('update_time', '修改时间');
         }
-
-        $form->fill($data);
-
-        return $builder->render();
     }
 
+    /**
+     * 保存数据
+     *
+     * @param integer $id
+     * @return void
+     */
     private function save($id = 0)
     {
-        //代码略 ....
-        if (!$res) {
-            $this->error('保存失败');
+        $data = request()->only([
+            'avatar',
+            'username',
+            'nickname',
+            'mobile',
+            'email',
+            'gender',
+            'age',
+            'level',
+            'province',
+            'city',
+            'area',
+            'status',
+            'remark',
+            'erweima_img',
+        ], 'post');
+
+        $result = $this->validate($data, [
+            'username|账号' => 'require',
+            'nickname|昵称' => 'require',
+            'mobile|手机号' => 'mobile',
+            'level|等级' => 'number',
+            'age|年龄' => 'number',
+        ]);
+
+        if (true !== $result) {
+
+            $this->error($result);
         }
 
-        return Builder::getInstance()->layer()->closeRefresh(1, '保存成功');
-    }
+        if ($data['mobile'] && $exist = $this->dataModel->where(['mobile' => $data['mobile']])->find()) {
+            if ($id) {
+                if ($exist['id'] != $id) {
+                    $this->error('手机号未能修改，已被占用');
+                }
+            } else {
+                $this->error('手机号已被占用');
+            }
+        }
 
+        return $this->doSave($data, $id);
+    }
+}
 ```
 ## 8.效果展示:
 
