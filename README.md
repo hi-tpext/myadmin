@@ -1,9 +1,9 @@
 # 欢迎使用
 
 ## 1.安装:
-框架基于thinkphp 5.1*，有两种安装方式：
-### a.全新安装
->安装 thinkphp 5.1.*
+框架基于thinkphp 5.1*，有两种安装方式：全新安装/更新安装
+### a.全新安装[推荐]
+>安装 thinkphp 5.1.*,`myadmin`为新项目名称，可自行调整
 ```bash
 composer create-project topthink/think=5.1.* myadmin
 ```
@@ -28,15 +28,16 @@ composer update
 ```
 
 ## 2.配置:
-- 正确配置 database数据库
+- 创建mysql数据库和用户，正确配置到 `config/database.php`【重要】若后续访问页面报错，请回头检查这一步。
+- apache/nginx及配置、重写规则，略(自行百度)【重要】。没配置`重写规则`的话后续的url中加上`index.php` 如　`http://localhost:8081/index.php/admin`
 
 ## 3.扩展安装:
-- 打开 `http://www.yourhost.com/admin/extension/index`
-- 安装 `[tpext.core]`,
+- 打开 `http://localhost:8081/admin`　首次访问会自动跳转到 `http://localhost:8081/admin/extension/index` 安装页面
+- 安装 `[tpext.myadmin]`,
 - 安装其余装扩展
 
 ## 4.登录后台:
-- 打开 `http://www.yourhost.com/admin` ，会跳转登录 默认账号 admin tpextadmin
+- 再次打开 `http://localhost:8081/admin` ，会跳转登录 默认账号 admin tpextadmin
 
 ## 5.文档
 <https://gitee.com/ichynul/myadmin/wikis/pages>
@@ -49,7 +50,7 @@ composer update
 尽量不要上传大文件，空间不足
 
 ## 7.功能特性:
-- 模块化开发
+- 模块化开发（所以不要研究此git仓库，除了`README.md`外，其余基本就是一个空的的tp5.1，核心功能都是通过composer安装的！）
 **扩展依赖**
 >tpext           <https://gitee.com/ichynul/tpext>
 
@@ -78,7 +79,6 @@ use app\common\logic\MemberLogic;
 use app\common\model;
 use think\Controller;
 use tpext\builder\traits\HasBuilder;
-
 
 /**
  * Undocumented class
