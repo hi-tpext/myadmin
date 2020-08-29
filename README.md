@@ -241,7 +241,6 @@ class Member extends Controller
 
         $form->textarea('remark', '备注')->maxlength(255);
         $form->switchBtn('status', '状态')->default(1);
-        $form->switchBtn('can_comm_sale', '蜜豆出售')->default(1);
         $form->image('erweima_img', '二维码')->thumbSize(50, 50);
 
         $levels = model\MemberLevel::order('level')->field('name,level')->select();
