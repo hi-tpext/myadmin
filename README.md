@@ -37,14 +37,21 @@ composer update
 - 安装其余装扩展
 
 ## 4.登录后台:
-- 再次打开 `http://localhost:8081/admin` ，会跳转登录 默认账号 admin tpextadmin
+- 再次打开 `http://localhost:8081/admin` ，会跳转登录，默认账号： `admin` `tpextadmin`
 
 ## 5.文档
 <https://gitee.com/ichynul/myadmin/wikis/pages>
 
 ## 6演示
->网址： <http://www.tpext.top/admin/>
+>网址：
+-1 <http://www.tpext.top/admin/>　
+
+-2 <http://quick.shenzhuo.vip:10582/admin>
+
+>账号
+
 >admin
+
 >tpextadmin
 
 尽量不要上传大文件，空间不足
