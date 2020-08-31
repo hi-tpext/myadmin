@@ -44,9 +44,10 @@ composer update
 
 ## 6演示
 >网址：
--1 <http://www.tpext.top/admin/>　
 
--2 <http://quick.shenzhuo.vip:10582/admin>
+- 1 <http://www.tpext.top/admin/>　
+
+- 2 <http://quick.shenzhuo.vip:10582/admin>
 
 >账号
 
