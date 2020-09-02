@@ -62,11 +62,11 @@ composer update
 ## 7.功能特性:
 1. 模块化开发，核心功能都是通过composer安装的
 #### 主要扩展依赖：
-[tpext] <https://gitee.com/ichynul/tpext> 扩展核心
-[tpextbuilder] <https://gitee.com/ichynul/tpextbuilder> UI 生成器
-[tpextmanager] <https://gitee.com/ichynul/tpextmanager> 管理工具
-[lightyearadmin]<https://gitee.com/ichynul/lightyearadmin> 基础样式库
-[tpextmyadmin] <https://gitee.com/ichynul/tpextmyadmin> "集成后台基础功能：权限、设置等"
+* [tpext] <https://gitee.com/ichynul/tpext> 扩展核心
+* [tpextbuilder] <https://gitee.com/ichynul/tpextbuilder> UI 生成器
+* [tpextmanager] <https://gitee.com/ichynul/tpextmanager> 管理工具
+* [lightyearadmin]<https://gitee.com/ichynul/lightyearadmin> 基础样式库
+* [tpextmyadmin] <https://gitee.com/ichynul/tpextmyadmin> "集成后台基础功能：权限、设置等"
 2. `tpextbuilder`UI模块基于`bootstrap`和`Light-Year-Admin-Template`的后台模板， 封装了大部分常用组件 ：
 `Column`、`Row`、`Tab`、`Table`、`Form`、`Toolbar`、`Layer`、`Content`
 3. `HasBuilder`封装了常用操作
