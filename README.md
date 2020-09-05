@@ -2,7 +2,7 @@
 
 ## 一、安装：
 框架基于thinkphp 5.1*，有两种安装方式：全新安装/更新安装
-1. 全新安装 **推荐**
+1. 全新安装 ***推荐**
 > 安装 thinkphp 5.1.*，`myadmin`为新项目名称，可自行调整
 ```bash
 composer create-project topthink/think=5.1.* myadmin
@@ -22,7 +22,7 @@ composer require ichynul/tpextmyadmin
 ```bash
 git clone https://gitee.com/ichynul/myadmin.git myadmin
 ```
-进入新项目根目录：`myadmin`
+> 进入新项目根目录：`myadmin`
 ```bash
 cd myadmin
 ```
@@ -31,35 +31,32 @@ cd myadmin
 composer update
 ```
 
-## 二、配置：
-1. 创建mysql数据库和用户，正确配置到 `config/database.php`【重要】若后续访问页面报错，请回头检查这一步。
-2. 配置`apache/nginx`及重写规则，略(自行百度) **重要**
-没配置`重写规则`的话后续的url中加上`index.php` 如：
-`http://localhost:8081/index.php/admin`
+## 二、配置：　
+1. 创建mysql数据库和用户，正确配置到 `config/database.php` ***重要**　
+若后续访问页面报错，请回头检查这一步。　
+
+2. 配置`apache/nginx`及重写规则，略(自行百度) ***重要**　
+没配置`重写规则`的话后续的url中加上`index.php` 如：`http://localhost:8081/index.php/admin`
 
 ## 三、扩展安装：
-1. 打开 `http://localhost:8081/admin`　首次访问会自动跳转到：
-`http://localhost:8081/admin/extension/index` 安装页面
-2. 安装 `[tpext.myadmin]`
-3. 安装其余装扩展
+1. 打开 `http://localhost:8081/admin`　首次访问会自动跳转到：`http://localhost:8081/admin/extension/index` 安装页面　
+2. 安装 `[tpext.myadmin]`　
+3. 安装其余装扩展　
 
 ## 四、登录后台：
-再次打开 `http://localhost:8081/admin` ，会跳转登录，默认账号：
-`admin`
-`tpextadmin`
+再次打开 `http://localhost:8081/admin` ，会跳转登录，默认账号：`admin`：`tpextadmin`　
 
 ## 五、文档
-<https://gitee.com/ichynul/myadmin/wikis/pages>
+<https://gitee.com/ichynul/myadmin/wikis/pages>　
 
 ## 六、演示
 #### 网址：
 1.  <http://www.tpext.top/admin>　
-2.  <http://quick.shenzhuo.vip:10582/admin>
+2.  <http://quick.shenzhuo.vip:10582/admin>　
 #### 账号：
-`admin`
-`tpextadmin`
+`admin`：`tpextadmin`
 
-## 7.功能特性:
+## 七.功能特性:
 1. 模块化开发，核心功能都是通过composer安装的
 #### 主要扩展依赖：
 * [tpext] <https://gitee.com/ichynul/tpext> 扩展核心
@@ -68,8 +65,10 @@ composer update
 * [lightyearadmin]<https://gitee.com/ichynul/lightyearadmin> 基础样式库
 * [tpextmyadmin] <https://gitee.com/ichynul/tpextmyadmin> 集成后台基础功能：权限、设置等
 2. `tpextbuilder`UI模块基于`bootstrap`和`Light-Year-Admin-Template`的后台模板， 封装了大部分常用组件 ：
+
 `Column`、`Row`、`Tab`、`Table`、`Form`、`Toolbar`、`Layer`、`Content`
-3. `HasBuilder`封装了常用操作
+
+3. `HasBuilder` 封装了常用操作，可供控制器引入使用
 #### 实例：
 ```php
 <?php
@@ -268,7 +267,7 @@ class Member extends Controller
     }
 }
 ```
-## 8.效果展示:
+## 八.效果展示:
 
 [![](https://gitee.com/ichynul/myadmin/raw/master/images/1.png)](https://gitee.com/ichynul/myadmin/raw/master/images/1.png "1")
 [![](https://gitee.com/ichynul/myadmin/raw/master/images/2.png)](https://gitee.com/ichynul/myadmin/raw/master/images/2.png "2")
