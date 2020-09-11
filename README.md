@@ -1,11 +1,11 @@
 # 欢迎使用
 
 ## 一、安装：
-框架有两个版本：1.0基于thinkphp 5.1；3.0基于thinkphp 6.0　
+框架有两个版本：1.0基于thinkphp 5.1；3.0基于thinkphp 6.0
 1. 全新安装1.0 ***推荐(文档基于此版本)**
 > 安装 thinkphp 5.1.*，`myadmin`为新项目名称，可自行调整　
 ```bash
-composer create-project topthink/think=5.1.* myadmin　
+composer create-project topthink/think=5.1.* myadmin
 ```
 > 进入新项目根目录：`myadmin`　
 
@@ -20,7 +20,7 @@ composer require ichynul/tpextmyadmin:^1.1.1
 2. 全新安装3.0 ***beta**
 > 安装 thinkphp 6.0.*，`myadmin6`为新项目名称，可自行调整　
 ```bash
-composer create-project topthink/think=6.0.* myadmin6　
+composer create-project topthink/think=6.0.* myadmin6
 ```
 > 进入新项目根目录：`myadmin6`
 
@@ -29,11 +29,13 @@ cd myadmin6
 ```
 > 安装后台扩展
 ```bash
-composer require ichynul/tpextmyadmin:^3.0.0　
+composer require ichynul/tpextmyadmin:^3.0.0
 ```
 
 ## 二、配置：　
-1. 创建mysql数据库和用户，正确配置到 `config/database.php` ***重要**　
+1. 创建mysql数据库和用户,正确配置数据库 ***重要**
+- tp5.1:配置到 `config/database.php`
+- tp6.0:复制根目录下`.example.env`为`.env`,在`.env`里面修改数据库账号等配置。
 若后续访问页面报错，请回头检查这一步。　
 
 2. 配置`apache/nginx`及重写规则，略(自行百度) ***重要**　
