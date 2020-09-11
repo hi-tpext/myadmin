@@ -1,34 +1,35 @@
 # 欢迎使用
 
 ## 一、安装：
-框架基于thinkphp 5.1*，有两种安装方式：全新安装/更新安装
-1. 全新安装 ***推荐**
-> 安装 thinkphp 5.1.*，`myadmin`为新项目名称，可自行调整
+框架有两个版本：1.0基于thinkphp 5.1；3.0基于thinkphp 6.0　
+1. 全新安装1.0 ***推荐(文档基于此版本)**
+> 安装 thinkphp 5.1.*，`myadmin`为新项目名称，可自行调整　
 ```bash
-composer create-project topthink/think=5.1.* myadmin
+composer create-project topthink/think=5.1.* myadmin　
 ```
-> 进入新项目根目录：`myadmin`
+> 进入新项目根目录：`myadmin`　
 
 ```bash
 cd myadmin
 ```
 > 安装后台扩展
 ```bash
-composer require ichynul/tpextmyadmin
+composer require ichynul/tpextmyadmin:^1.1.1
 ```
-2. 更新安装
 
-> 使用`git`命令克隆此仓库，最后一个`myadmin`为新项目名称，可自行调整
+2. 全新安装3.0 ***beta**
+> 安装 thinkphp 6.0.*，`myadmin6`为新项目名称，可自行调整　
 ```bash
-git clone https://gitee.com/ichynul/myadmin.git myadmin
+composer create-project topthink/think=6.0.* myadmin6　
 ```
-> 进入新项目根目录：`myadmin`
+> 进入新项目根目录：`myadmin6`
+
 ```bash
-cd myadmin
+cd myadmin6
 ```
-> 使用`composer`命令更新依赖
+> 安装后台扩展
 ```bash
-composer update
+composer require ichynul/tpextmyadmin:^3.0.0　
 ```
 
 ## 二、配置：　
