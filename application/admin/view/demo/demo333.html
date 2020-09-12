@@ -1,0 +1,40 @@
+<div class="card">
+    <div class="card-header">
+        <h4>面积图 - 2</h4>
+    </div>
+    <div class="card-body">
+        <canvas id="chart-area-2" width="400" height="250"></canvas>
+    </div>
+</div>
+<!--<script src="__ADMIN__/js/Chart.js"></script>-->
+<!--<script src="/static/admin/js/Chart.js"></script> demo3.html已引入，不重复引入了-->
+<script>
+    var data = JSON.parse('{$data|raw}');//后端数据转换为json
+    new Chart(document.getElementById('chart-area-2'), {
+        type: 'line',
+        data: {
+            labels: data.months,
+            datasets: [{
+                label: "收入",
+                backgroundColor: "rgba(51,202,185,0.5)",
+                borderColor: "rgba(0,0,0,0)",
+                pointBackgroundColor: "rgba(51,202,185,0.5)",
+                pointBorderColor: "#fff",
+                pointHoverBackgroundColor: "#fff",
+                pointHoverBorderColor: "rgba(51,202,185,0.5)",
+                data: data.in
+            },
+            {
+                label: "支出",
+                backgroundColor: "rgba(243,245,246,0.8)",
+                borderColor: "rgba(0,0,0,0)",
+                pointBackgroundColor: "rgba(243,245,246,0.8)",
+                pointBorderColor: "#fff",
+                pointHoverBackgroundColor: "#fff",
+                pointHoverBorderColor: "rgba(243,245,246,0.8)",
+                data: data.out
+            }]
+        },
+        options: {}
+    });
+</script>

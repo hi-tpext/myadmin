@@ -35,7 +35,8 @@ composer require ichynul/tpextmyadmin:^3.0.0
 ## 二、配置：　
 1. 创建mysql数据库和用户,正确配置数据库 ***重要**
 - tp5.1:配置到 `config/database.php`
-- tp6.0:复制根目录下`.example.env`为`.env`,在`.env`里面修改数据库账号等配置。
+- tp6.0:复制根目录下`.example.env`为`.env`,在`.env`里面修改数据库账号等配置。　
+
 若后续访问页面报错，请回头检查这一步。　
 
 2. 配置`apache/nginx`及重写规则，略(自行百度) ***重要**　
@@ -54,8 +55,9 @@ composer require ichynul/tpextmyadmin:^3.0.0
 
 ## 六、演示
 #### 网址：
-1.  <http://www.tpext.top/admin>　
-2.  <http://quick.shenzhuo.vip:10582/admin>　
+1. [tp5.1] <http://quick.shenzhuo.vip:10582/admin>　
+2. [tp6.0] <http://tpext.shenzhuo.vip:10582/admin>　
+
 #### 账号：
 `admin`：`tpextadmin`
 

@@ -1,0 +1,51 @@
+<div class="card" style="margin-top:10px;">
+    <div class="card-header">
+        <h4>线形图 - 3</h4>
+    </div>
+    <div class="card-body">
+        <div class="chartjs-size-monitor" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;">
+            <div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;">
+                <div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div>
+            </div>
+            <div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;">
+                <div style="position:absolute;width:200%;height:200%;left:0; top:0"></div>
+            </div>
+        </div>
+        <canvas
+            id="chart-line-3"
+            width="699"
+            height="436"
+            class="chartjs-render-monitor"
+            style="display: block; width: 699px; height: 436px;"
+        ></canvas>
+    </div>
+</div>
+<!--<script src="__ADMIN__/js/Chart.js"></script>-->
+<script src="/static/admin/js/Chart.js"></script>
+<script>
+ new Chart(document.getElementById('chart-line-3'), {
+    type: 'line',
+    data: {
+        labels: ["一月", "二月", "三月", "四月"],
+        datasets: [{
+            label: "收入",
+            fill: false,
+            backgroundColor: "#36a2eb",
+            borderColor: "#36a2eb",
+            borderWidth: 3,
+            pointRadius: 0,
+            data: [30, 25, 35, 23]
+        },
+        {
+            label: "支出",
+            fill: false,
+            borderColor: "#ff6384",
+            backgroundColor: "#ff6384",
+            borderWidth: 3,
+            pointRadius: 0,
+            data: [23, 29, 30, 33]
+        }]
+    },
+    options: {}
+});
+</script>

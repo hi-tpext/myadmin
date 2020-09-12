@@ -1,0 +1,33 @@
+<div class="card" style="margin-top:10px;">
+    <div class="card-header">
+        <h4>饼图{$name}</h4>
+    </div>
+    <div class="card-body">
+        <canvas
+            id="chart-pie"
+            width="280"
+            height="280"
+            style="display: block;"
+        ></canvas>
+    </div>
+</div>
+<!--<script src="__ADMIN__/js/Chart.js"></script>-->
+<!--<script src="/static/admin/js/Chart.js"></script> demo3.html已引入，不重复引入了-->
+<script>
+    var data = JSON.parse('{$data|raw}');//后端数据转换为json
+    //var data = {$data|raw};//也可像这样，但对编辑器不友好
+
+    new Chart(document.getElementById('chart-pie'), {
+        type: 'pie',
+        data: {
+            labels: data.colors,
+            datasets: [{
+                data: data.datas,
+                backgroundColor: ['rgba(255,99,132,1)', 'rgba(54, 162, 235, 1)', 'rgba(255, 206, 86, 1)']
+            }]
+        },
+        options: {
+            responsive: false
+        }
+    });
+</script>
