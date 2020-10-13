@@ -1,0 +1,125 @@
+﻿{extend name="$admin_layout"/}
+
+{block name="style"}
+<style type="text/css">
+[class^="icon-"], [class*=" icon-"] {
+display: inline-block;
+width: 14px;
+height: 14px;
+margin-top: 1px;
+line-height: 14px;
+vertical-align: text-top;
+background-image: url("/static/admin/images/glyphicons-halflings.png");
+background-position: 14px 14px;
+background-repeat: no-repeat;
+}
+
+.icon-folder-open {
+width: 16px;
+background-position: -408px -120px;
+}
+
+.icon-minus-sign {
+background-position: -24px -96px;
+}
+
+.icon-plus-sign {
+background-position: 0 -96px;
+}
+
+.icon-leaf {
+background-position: -48px -120px;
+}
+
+.tree li:last-child::before {
+height: 25px;
+}
+ul
+{
+	list-style: none;
+}
+</style>
+</style>
+{/block}
+
+{block name="content"}
+<div class="row">
+    <div class="col-xs-12">
+        <div class="box">
+            <div class="box-header">
+                <nav class="navbar navbar-default">
+                    <div class="collapse navbar-collapse">
+                        <form
+                            method="post"
+                            role="search"
+                            class="navbar-form form-inline"
+                            id="search-form"
+                        >
+                            <div class="form-group">
+                                <input
+                                    placeholder="上级id"
+                                    name="member_id"
+                                    id="id"
+                                    value="{$member_id}"
+                                    class="form-control"
+                                    type="text"
+                                >
+                            </div>
+                            <button class="btn btn-info btn-xs" type="submit">
+                                <i class="fa fa-search"></i>
+                                筛选
+                            </button>
+                        </form>
+                    </div>
+                </nav>
+            </div>
+            <div class="box-body">
+                <div class="tree">
+                    <ul>
+                        {volist name="members" id="v"}
+                        <li>
+                            <span class="tree_span" data-id="{$v.id}">
+                                <i class="icon-folder-open"></i>
+                                {$v.id}: {$v.nickname}({$v.lowers})
+                            </span>
+                        </li>
+                        {/volist}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{/block}
+
+{block name="script"}
+<script>
+	//  ajax 请求树下面的节点
+$('.tree').on('click','.tree_span',function(){
+
+	tmp_span = $(this);
+	tmp_span.siblings('ul').toggle();
+	if(tmp_span.hasClass('requrst'))
+	{
+		return false;
+	}
+
+	var index = layer.load(1, {
+		shade: [0.1,'#fff'] //0.1透明度的白色背景
+	});
+
+	$.ajax({
+		type : "get",
+		url:"gets?id=" + tmp_span.data('id'),
+		success: function(data){
+			layer.close(index);
+			tmp_span.after(data);
+			tmp_span.addClass('requrst'); // 表示ajax 请求过了 不再请求第二次
+		},
+		error(){
+			layer.close(index);
+		}
+	});
+});
+</script>
+{/block}

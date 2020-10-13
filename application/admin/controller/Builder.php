@@ -241,7 +241,7 @@ class Demo extends Controller
 ```
 EOT;
 
-        $builder = Bd::getInstance('Builder', '总览');
+        $builder = Bd::getInstance('Builder', '自由布局');
 
         $form = $builder->form();
 
