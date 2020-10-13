@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7e66626ab74b0d64c8c2724d00dfa787",
+    "content-hash": "8fc2e78f1bfbff22e7411c5d5267d9cf",
     "packages": [
         {
             "name": "ichynul/lightyearadmin",
@@ -42,6 +42,40 @@
                 "thinkphp"
             ],
             "time": "2020-03-03T14:38:00+00:00"
+        },
+        {
+            "name": "ichynul/myadmin-data",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://gitee.com/ichynul/myadmin-data.git",
+                "reference": "22e8b55854b9c277b0de2510d67fb0cd20a1a019"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "myadmin\\data\\": "src/"
+                },
+                "files": [
+                    "src/helper.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "ichynul",
+                    "email": "ichynul@outlook.com"
+                }
+            ],
+            "description": "thinkphp extension",
+            "homepage": "http://www.ynyysc.com/",
+            "keywords": [
+                "thinkphp"
+            ],
+            "time": "2020-10-13T16:56:48+00:00"
         },
         {
             "name": "ichynul/tpext",
@@ -313,10 +347,11 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": [],
-    "prefer-stable": false,
+    "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
         "php": ">=5.6.0"
     },
-    "platform-dev": []
+    "platform-dev": [],
+    "plugin-api-version": "1.1.0"
 }
