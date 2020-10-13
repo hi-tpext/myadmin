@@ -234,7 +234,7 @@ class Cmscontent extends Controller
         $form->text('title', '标题')->required()->maxlength(55);
         $form->select('category_id', '栏目')->required()->dataUrl(url('/admin/cmscategory/selectPage'));
         $form->multipleSelect('tags', '标签')->dataUrl(url('/admin/cmstag/selectPage'))->help('可到【标签管理】菜单添加标签');
-        $form->tags('keyword', '关键字')->maxlength(255);
+        $form->tags('keyword', '关键字');
         $form->textarea('description', '摘要')->maxlength(255);
 
         $form->editor('content', '内容')->required();

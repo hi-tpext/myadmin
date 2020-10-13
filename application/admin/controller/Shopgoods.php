@@ -341,7 +341,7 @@ class Shopgoods extends Controller
         $form->select('admin_group_id', '商家')->dataUrl(url('/admin/group/selectPage'), 'name');
         $form->text('spu', 'spu码')->maxlength(100);
         $form->multipleSelect('tags', '标签')->dataUrl(url('/admin/shoptag/selectPage'))->help('可到【标签管理】菜单添加标签');
-        $form->tags('keyword', '关键字')->maxlength(255);
+        $form->tags('keyword', '关键字');
         $form->textarea('description', '摘要')->maxlength(255);
         $form->wangEditor('content', '产品详情')->required();
 

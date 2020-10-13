@@ -11,9 +11,9 @@ class MemberAccount extends Model
     protected $updateTime = false;
 
     public static $types = [
-        'points' => '花豆',
+        'points' => '积分',
         'money' => '余额',
-        'commission' => '采蜜豆',
+        'commission' => '佣金',
     ];
 
     public function getNicknameAttr($value, $data)
