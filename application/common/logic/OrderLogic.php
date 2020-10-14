@@ -297,10 +297,6 @@ class OrderLogic
 
         $orderInfo = $validate['order_info'];
 
-        if ($orderInfo['order_amount'] > 0) {
-            return ['code' => 0, 'msg' => '实付金额不能大于0。请使用提货券、花豆、余额、蜜豆购买', 'order_info' => $orderInfo];
-        }
-
         $address = $orderInfo['address'];
 
         $orderInfo = array_merge(
@@ -317,7 +313,7 @@ class OrderLogic
             $orderInfo
         );
 
-        $order_sn = $isEdit ? $orderInfo['order_sn'] : 'hzw' . date('YmdHis') . mt_rand(100, 999);
+        $order_sn = $isEdit ? $orderInfo['order_sn'] : 'sp' . date('YmdHis') . mt_rand(100, 999);
 
         $data = [
             'order_sn' => $order_sn,

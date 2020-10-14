@@ -469,7 +469,7 @@ class Shopgoods extends Controller
             'stock|库存' => 'require|number',
             'sale_price|销售价' => 'require|float',
             'share_commission' => 'float',
-            'admin_group_id|商家' => 'require|number|gt:1',
+            'admin_group_id|商家' => 'require|number|gt:0',
         ]);
 
         if (true !== $result) {

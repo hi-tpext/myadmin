@@ -588,7 +588,7 @@ EOT;
                 'is_add' => strpos($key, '__new__') !== false,
             ];
         }
-
+        $data['use_coupon_num'] = 0;
         $data['goods_list'] = $goods_list;
         $logic = new OrderLogic($data['member_id']);
         $res = $logic->create($data);
