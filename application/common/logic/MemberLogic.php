@@ -155,8 +155,6 @@ class MemberLogic
                 'create_time' => date('Y-m-d H:i:s'),
             ]);
 
-            model\Member::where('relation', 'like', '%,' . $member_id . ',%')->update(['last_sumary_time' => date('Y-m-d H:i:s', strtotime('-8 hours'))]); //等待重新计算
-
             return ['code' => 1, 'msg' => '修改代理等级成功'];
         }
 

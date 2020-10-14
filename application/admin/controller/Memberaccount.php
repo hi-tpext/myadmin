@@ -101,7 +101,7 @@ class Memberaccount extends Controller
         $table->match('admin_id', '管理员')->optionsData(AdminUser::all(), 'name');
         $table->show('create_time', '操作时间')->getWrapper()->addStyle('width:150px');
 
-        $table->sortable('id,money,points,commission,re_comm,shares,admin_id');
+        $table->sortable('id,money,points,commission,shares,admin_id');
 
         $table->getToolbar()
             ->btnAdd()
@@ -145,7 +145,7 @@ class Memberaccount extends Controller
 
                 $form->show('nickname', '会员')->value($member['id'] . '#' . $member['nickname']);
 
-                $form->show('account', '账号情况')->value("{$types['money']}：{$member['money']},{$types['points']}：{$member['points']},{$types['commission']}：{$member['commission']},{$types['re_comm']}：{$member['re_comm']}");
+                $form->show('account', '账号情况')->value("{$types['money']}：{$member['money']},{$types['points']}：{$member['points']},{$types['commission']}：{$member['commission']}");
 
                 $form->hidden('member_id')->value($member_id);
             } else {
@@ -186,7 +186,6 @@ class Memberaccount extends Controller
             'points',
             'money',
             'commission',
-            're_comm',
             'remark',
             'points_op',
             'money_op',
@@ -206,7 +205,7 @@ class Memberaccount extends Controller
             $this->error($result);
         }
 
-        if (empty($data['points']) && empty($data['money']) && empty($data['commission']) && empty($data['re_comm'])) {
+        if (empty($data['points']) && empty($data['money']) && empty($data['commission'])) {
             $this->error(AccountModel::getNames() . '不能全部为 0');
         }
 
