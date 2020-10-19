@@ -295,6 +295,7 @@ class Memberrecharge extends Controller
         }
 
         $logic = new RechargeLogic;
+        $data['use_child_account'] = 0;
 
         if ($id) {
             $this->error('不允许的操作');
