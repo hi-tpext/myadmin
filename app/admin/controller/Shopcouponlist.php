@@ -76,28 +76,28 @@ class Shopcouponlist extends Controller
         $where = [];
 
         if (!empty($searchData['member_id'])) {
-            $where[] = ['member_id', 'eq', $searchData['member_id']];
+            $where[] = ['member_id', '=', $searchData['member_id']];
         }
 
         if (!empty($searchData['order_id'])) {
-            $where[] = ['card_type', 'eq', $searchData['card_type']];
+            $where[] = ['card_type', '=', $searchData['card_type']];
         }
         if (!empty($searchData['no_'])) {
             $where[] = ['no_', 'like', '%,' . $searchData['no_'] . ',%'];
         }
         if (isset($searchData['coupon_type_id']) && $searchData['coupon_type_id'] != '') {
-            $where[] = ['coupon_type_id', 'eq', $searchData['coupon_type_id']];
+            $where[] = ['coupon_type_id', '=', $searchData['coupon_type_id']];
         }
         if (isset($searchData['is_use'])) {
             if ($searchData['is_use'] == '0') {
-                $where[] = ['order_id', 'eq', 0];
+                $where[] = ['order_id', '=', 0];
             } else if ($searchData['is_use'] == '1') {
-                $where[] = ['order_id', 'gt', 0];
+                $where[] = ['order_id', '>', 0];
             }
         }
 
         if (isset($searchData['status']) && $searchData['status'] != '') {
-            $where[] = ['status', 'eq', $searchData['status']];
+            $where[] = ['status', '=', $searchData['status']];
         }
 
         return $where;

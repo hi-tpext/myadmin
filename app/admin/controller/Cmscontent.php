@@ -53,11 +53,11 @@ class Cmscontent extends Controller
         }
 
         if (!empty($searchData['category_id'])) {
-            $where[] = ['category_id', 'eq', $searchData['category_id']];
+            $where[] = ['category_id', '=', $searchData['category_id']];
         }
 
         if (isset($searchData['is_show']) && $searchData['is_show'] != '') {
-            $where[] = ['is_show', 'eq', $searchData['is_show']];
+            $where[] = ['is_show', '=', $searchData['is_show']];
         }
 
         if (!empty($searchData['tags'])) {
@@ -66,13 +66,13 @@ class Cmscontent extends Controller
 
         if (isset($searchData['attr'])) {
             if (in_array('is_recommend', $searchData['attr'])) {
-                $where[] = ['is_recommend', 'eq', 1];
+                $where[] = ['is_recommend', '=', 1];
             }
             if (in_array('is_hot', $searchData['attr'])) {
-                $where[] = ['is_hot', 'eq', 1];
+                $where[] = ['is_hot', '=', 1];
             }
             if (in_array('is_top', $searchData['attr'])) {
-                $where[] = ['is_top', 'eq', 1];
+                $where[] = ['is_top', '=', 1];
             }
         }
 

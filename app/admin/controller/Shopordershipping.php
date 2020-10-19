@@ -52,7 +52,7 @@ class Shopordershipping extends Controller
             $where[] = ['g.goods_id', 'in', $this->goods_ids];
         }
 
-        $where[] = ['o.pay_status', 'eq', 1];
+        $where[] = ['o.pay_status', '=', 1];
         $where[] = ['o.order_status', 'not in', $order_status_arr];
 
         $table = $this->table;
@@ -122,7 +122,7 @@ class Shopordershipping extends Controller
         $where = [];
 
         if (isset($searchData['goods_id']) && $searchData['goods_id'] != '') {
-            $where[] = ['g.goods_id', 'eq', $searchData['goods_id']];
+            $where[] = ['g.goods_id', '=', $searchData['goods_id']];
         }
 
         if (!empty($searchData['order_sn'])) {
@@ -132,22 +132,22 @@ class Shopordershipping extends Controller
             $where[] = ['o.consignee', 'like', '%' . $searchData['consignee'] . '%'];
         }
         if (!empty($searchData['mobile'])) {
-            $where[] = ['o.mobile', 'eq', $searchData['mobile']];
+            $where[] = ['o.mobile', '=', $searchData['mobile']];
         }
         if (!empty($searchData['address'])) {
             $where[] = ['o.address', 'like', '%' . $searchData['address'] . '%'];
         }
         if (isset($searchData['is_send']) && $searchData['is_send'] != '') {
-            $where[] = ['g.is_send', 'eq', $searchData['is_send']];
+            $where[] = ['g.is_send', '=', $searchData['is_send']];
         }
         if (!empty($searchData['province'])) {
-            $where[] = ['o.province', 'eq', $searchData['province']];
+            $where[] = ['o.province', '=', $searchData['province']];
 
             if (!empty($searchData['city'])) {
-                $where[] = ['o.city', 'eq', $searchData['city']];
+                $where[] = ['o.city', '=', $searchData['city']];
 
                 if (!empty($searchData['area'])) {
-                    $where[] = ['o.area', 'eq', $searchData['area']];
+                    $where[] = ['o.area', '=', $searchData['area']];
                 }
             }
         }

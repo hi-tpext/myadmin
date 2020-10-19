@@ -119,7 +119,7 @@ class Member extends Controller
         $searchData = request()->post();
         $where = [];
         if (!empty($searchData['id'])) {
-            $where[] = ['id', 'eq', $searchData['id']];
+            $where[] = ['id', '=', $searchData['id']];
         }
         if (!empty($searchData['username'])) {
             $where[] = ['username', 'like', '%' . $searchData['username'] . '%'];
@@ -131,17 +131,17 @@ class Member extends Controller
             $where[] = ['mobile', 'like', '%' . $searchData['mobile'] . '%'];
         }
         if (isset($searchData['status']) && $searchData['status'] != '') {
-            $where[] = ['status', 'eq', $searchData['status']];
+            $where[] = ['status', '=', $searchData['status']];
         }
         if (isset($searchData['level']) && $searchData['level'] != '') {
-            $where[] = ['level', 'eq', $searchData['level']];
+            $where[] = ['level', '=', $searchData['level']];
         }
         if (!empty($searchData['province'])) {
-            $where[] = ['province', 'eq', $searchData['province']];
+            $where[] = ['province', '=', $searchData['province']];
             if (!empty($searchData['city'])) {
-                $where[] = ['city', 'eq', $searchData['city']];
+                $where[] = ['city', '=', $searchData['city']];
                 if (!empty($searchData['area'])) {
-                    $where[] = ['area', 'eq', $searchData['area']];
+                    $where[] = ['area', '=', $searchData['area']];
                 }
             }
         }

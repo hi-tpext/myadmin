@@ -60,7 +60,7 @@ class Shippingarea extends Controller
         }
 
         if (isset($searchData['enable']) && $searchData['enable'] != '') {
-            $where[] = ['enable', 'eq', $searchData['enable']];
+            $where[] = ['enable', '=', $searchData['enable']];
         }
 
         if (!empty($searchData['province'])) {

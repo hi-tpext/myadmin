@@ -182,7 +182,7 @@ class Shoporder extends Controller
         $where = [];
 
         if (!empty($searchData['member_id'])) {
-            $where[] = ['member_id', 'eq', $searchData['member_id']];
+            $where[] = ['member_id', '=', $searchData['member_id']];
         }
         if (!empty($searchData['order_sn'])) {
             $where[] = ['order_sn', 'like', '%' . $searchData['order_sn'] . '%'];
@@ -194,40 +194,40 @@ class Shoporder extends Controller
             $where[] = ['consignee', 'like', '%' . $searchData['consignee'] . '%'];
         }
         if (!empty($searchData['mobile'])) {
-            $where[] = ['mobile', 'eq', $searchData['mobile']];
+            $where[] = ['mobile', '=', $searchData['mobile']];
         }
         if (!empty($searchData['address'])) {
             $where[] = ['address', 'like', '%' . $searchData['address'] . '%'];
         }
         if (isset($searchData['order_status']) && $searchData['order_status'] != '') {
-            $where[] = ['order_status', 'eq', $searchData['order_status']];
+            $where[] = ['order_status', '=', $searchData['order_status']];
         }
         if (isset($searchData['pay_status']) && $searchData['pay_status'] != '') {
-            $where[] = ['pay_status', 'eq', $searchData['pay_status']];
+            $where[] = ['pay_status', '=', $searchData['pay_status']];
         }
         if (isset($searchData['shipping_status']) && $searchData['shipping_status'] != '') {
-            $where[] = ['shipping_status', 'eq', $searchData['shipping_status']];
+            $where[] = ['shipping_status', '=', $searchData['shipping_status']];
         }
         if (!empty($searchData['pay_name'])) {
-            $where[] = ['pay_name', 'eq', $searchData['pay_name']];
+            $where[] = ['pay_name', '=', $searchData['pay_name']];
         }
         if (!empty($searchData['province'])) {
-            $where[] = ['province', 'eq', $searchData['province']];
+            $where[] = ['province', '=', $searchData['province']];
 
             if (!empty($searchData['city'])) {
-                $where[] = ['city', 'eq', $searchData['city']];
+                $where[] = ['city', '=', $searchData['city']];
 
                 if (!empty($searchData['area'])) {
-                    $where[] = ['area', 'eq', $searchData['area']];
+                    $where[] = ['area', '=', $searchData['area']];
                 }
             }
         }
         if (!empty($searchData['start'])) {
-            $where[] = ['pay_time', 'egt', $searchData['start']];
+            $where[] = ['pay_time', '>=', $searchData['start']];
         }
 
         if (!empty($searchData['end'])) {
-            $where[] = ['pay_time', 'elt', $searchData['end']];
+            $where[] = ['pay_time', '<=', $searchData['end']];
         }
 
         return $where;
@@ -588,7 +588,7 @@ EOT;
                 'is_add' => strpos($key, '__new__') !== false,
             ];
         }
-        
+
         $data['use_coupon_num'] = 0;
         $data['goods_list'] = $goods_list;
         $logic = new OrderLogic($data['member_id']);

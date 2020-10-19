@@ -20,7 +20,7 @@ class ShippingLogic
         $shipping_code = strtoupper($shipping_code);
 
         $v = validate::make([
-            'province|省份' => 'require|number|gt:0',
+            'province|省份' => 'require|number|>:0',
             'city|城市' => 'require|number|gt:0',
             'area|地区' => 'require|number|gt:0',
             'town|街道' => 'number',

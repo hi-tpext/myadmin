@@ -82,7 +82,7 @@ class Shopcoupontype extends Controller
         }
 
         if (!empty($searchData['card_type'])) {
-            $where[] = ['card_type', 'eq', $searchData['card_type']];
+            $where[] = ['card_type', '=', $searchData['card_type']];
         }
 
         return $where;

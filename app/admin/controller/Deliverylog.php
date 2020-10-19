@@ -200,7 +200,7 @@ class Deliverylog extends Controller
             $where[] = ['id', 'in',  $ids];
         }
         if (!empty($searchData['member_id'])) {
-            $where[] = ['member_id', 'eq', $searchData['member_id']];
+            $where[] = ['member_id', '=', $searchData['member_id']];
         }
         if (!empty($searchData['order_sn'])) {
             $where[] = ['order_sn', 'like', '%' . $searchData['order_sn'] . '%'];
@@ -215,27 +215,27 @@ class Deliverylog extends Controller
             $where[] = ['address', 'like', '%' . $searchData['address'] . '%'];
         }
         if (!empty($searchData['province'])) {
-            $where[] = ['province', 'eq', $searchData['province']];
+            $where[] = ['province', '=', $searchData['province']];
 
             if (!empty($searchData['city'])) {
-                $where[] = ['city', 'eq', $searchData['city']];
+                $where[] = ['city', '=', $searchData['city']];
 
                 if (!empty($searchData['area'])) {
-                    $where[] = ['area', 'eq', $searchData['area']];
+                    $where[] = ['area', '=', $searchData['area']];
 
                     if (!empty($searchData['town'])) {
-                        $where[] = ['town', 'eq', $searchData['town']];
+                        $where[] = ['town', '=', $searchData['town']];
                     }
                 }
             }
         }
 
         if (!empty($searchData['start'])) {
-            $where[] = ['create_time', 'egt', $searchData['start']];
+            $where[] = ['create_time', '>=', $searchData['start']];
         }
 
         if (!empty($searchData['end'])) {
-            $where[] = ['create_time', 'elt', $searchData['end']];
+            $where[] = ['create_time', '<=', $searchData['end']];
         }
 
         return $where;

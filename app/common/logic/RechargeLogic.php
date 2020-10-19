@@ -30,7 +30,7 @@ class RechargeLogic
             return ['code' => 0, 'msg' => '会员不还不是代理，不能使用子账号'];
         }
 
-        $count = model\MemberRecharge::where(['member_id' => $member_id])->where('create_time', 'egt', date('Y-m-d'))->count();
+        $count = model\MemberRecharge::where(['member_id' => $member_id])->where('create_time', '>=', date('Y-m-d'))->count();
 
         if ($count > 20) {
             return ['code' => 0, 'msg' => '今天创建了太多充值订单'];

@@ -134,9 +134,9 @@ class OrderLogic
         $v = validate::make([
             'address_id|收货地址' => 'require|number',
             'shipping_code|物流code' => 'require',
-            'use_money|使用余额' => 'require|float|egt:0',
-            'use_points|使用积分' => 'require|float|egt:0',
-            'use_coupon_num|使用提货券' => 'require|number|egt:0',
+            'use_money|使用余额' => 'require|float|>=:0',
+            'use_points|使用积分' => 'require|float|>=:0',
+            'use_coupon_num|使用提货券' => 'require|number|>=:0',
         ]);
 
         if (true !== $v->check($orderInfo)) {
@@ -283,7 +283,7 @@ class OrderLogic
 
     public function create($orderInfo)
     {
-        if ((new model\ShopOrder())->where([['member_id', 'eq', $this->member_id], ['create_time', 'egt', date('Y-m-d 00:00:00')]])->count() > 50) {
+        if ((new model\ShopOrder())->where([['member_id', '=', $this->member_id], ['create_time', '>=', date('Y-m-d 00:00:00')]])->count() > 50) {
             return ['code' => 0, 'msg' => '一天只能下50个订单'];
         }
 
@@ -660,11 +660,11 @@ class OrderLogic
      */
     public function confirmOrder($order_id, $member_id = 0)
     {
-        $where = [['id', 'eq', $order_id]];
+        $where = [['id', '=', $order_id]];
 
         if ($member_id) {
             $where[] = [
-                'member_id', 'eq', $member_id,
+                'member_id', '=', $member_id,
             ];
         }
 
@@ -703,7 +703,7 @@ class OrderLogic
 
         $rebateLogs = $rebateLogModel
             ->where(['order_id' => $order_id, 'order_sn' => $order['order_sn'], 'enable' => 1])
-            ->where('status', 'lt', 3)->select(); ////0未付款,1已付款, 2等待分成(未收货) 3已分成, 4已取消
+            ->where('status', '<', 3)->select(); ////0未付款,1已付款, 2等待分成(未收货) 3已分成, 4已取消
 
         if (count($rebateLogs) > 0) {
 
@@ -740,11 +740,11 @@ class OrderLogic
     {
         Log::alert('取消订单：' . $order_id);
 
-        $where = [['id', 'eq', $order_id]];
+        $where = [['id', '=', $order_id]];
 
         if ($member_id) {
             $where[] = [
-                'member_id', 'eq', $member_id,
+                'member_id', '=', $member_id,
             ];
         }
 

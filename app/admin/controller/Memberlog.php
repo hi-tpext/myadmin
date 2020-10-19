@@ -35,7 +35,7 @@ class Memberlog extends Controller
 
         $where = [];
         if (!empty($searchData['member_id'])) {
-            $where[] = ['member_id', 'eq', $searchData['member_id']];
+            $where[] = ['member_id', '=', $searchData['member_id']];
         }
 
         if (!empty($searchData['desc'])) {

@@ -40,7 +40,7 @@ class Memberaccount extends Controller
 
         $where = [];
         if (!empty($searchData['member_id'])) {
-            $where[] = ['member_id', 'eq', $searchData['member_id']];
+            $where[] = ['member_id', '=', $searchData['member_id']];
         }
 
         if (!empty($searchData['type'])) {
@@ -52,15 +52,15 @@ class Memberaccount extends Controller
         }
 
         if (!empty($searchData['admin_id'])) {
-            $where[] = ['admin_id', 'eq', $searchData['admin_id']];
+            $where[] = ['admin_id', '=', $searchData['admin_id']];
         }
 
         if (!empty($searchData['start'])) {
-            $where[] = ['create_time', 'egt', $searchData['start']];
+            $where[] = ['create_time', '>=', $searchData['start']];
         }
 
         if (!empty($searchData['end'])) {
-            $where[] = ['create_time', 'elt', $searchData['end']];
+            $where[] = ['create_time', '<=', $searchData['end']];
         }
 
         return $where;

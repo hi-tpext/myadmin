@@ -22,7 +22,7 @@ class ShopCouponType extends Model
 
     public function getUseNumAttr($value, $data)
     {
-        $count = ShopCouponList::where(['coupon_type_id' => $data['id']])->where('order_id', 'gt', 0)->count();
+        $count = ShopCouponList::where(['coupon_type_id' => $data['id']])->where('order_id', '>', 0)->count();
         return $count;
     }
 }

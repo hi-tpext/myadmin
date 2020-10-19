@@ -41,7 +41,7 @@ class Memberrecharge extends Controller
 
         $where = [];
         if (!empty($searchData['member_id'])) {
-            $where[] = ['member_id', 'eq', $searchData['member_id']];
+            $where[] = ['member_id', '=', $searchData['member_id']];
         }
 
         if (!empty($searchData['order_sn'])) {
@@ -49,7 +49,7 @@ class Memberrecharge extends Controller
         }
 
         if (!empty($searchData['first_leader'])) {
-            $where[] = ['first_leader', 'eq', $searchData['first_leader']];
+            $where[] = ['first_leader', '=', $searchData['first_leader']];
         }
 
         if (!empty($searchData['leader_id'])) {
@@ -58,30 +58,30 @@ class Memberrecharge extends Controller
         }
 
         if (isset($searchData['pay_status']) && $searchData['pay_status'] != '') {
-            $where[] = ['pay_status', 'eq', $searchData['pay_status']];
+            $where[] = ['pay_status', '=', $searchData['pay_status']];
         }
 
         if (isset($searchData['pay_code']) && $searchData['pay_code'] != '') {
-            $where[] = ['pay_code', 'eq', $searchData['pay_code']];
+            $where[] = ['pay_code', '=', $searchData['pay_code']];
         }
 
         if (isset($searchData['goods_method']) && $searchData['goods_method'] != '') {
-            $where[] = ['goods_method', 'eq', $searchData['goods_method']];
+            $where[] = ['goods_method', '=', $searchData['goods_method']];
         }
         if (isset($searchData['use_commission']) && $searchData['use_commission'] > 0) {
-            $where[] = ['use_commission', 'gt', 0];
+            $where[] = ['use_commission', '>', 0];
         }
 
         if (isset($searchData['use_re_comm']) && $searchData['use_re_comm'] > 0) {
-            $where[] = ['use_re_comm', 'gt', 0];
+            $where[] = ['use_re_comm', '>', 0];
         }
 
         if (!empty($searchData['start'])) {
-            $where[] = ['pay_time', 'egt', $searchData['start']];
+            $where[] = ['pay_time', '>=', $searchData['start']];
         }
 
         if (!empty($searchData['end'])) {
-            $where[] = ['pay_time', 'elt', $searchData['end']];
+            $where[] = ['pay_time', '<=', $searchData['end']];
         }
 
         return $where;

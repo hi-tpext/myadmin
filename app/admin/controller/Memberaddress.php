@@ -48,7 +48,7 @@ class Memberaddress extends Controller
         $where = [];
 
         if ($member_id) {
-            $where[] = ['a.member_id', 'eq', $member_id];
+            $where[] = ['a.member_id', '=', $member_id];
         }
         if ($q) {
             $where[] = ['a.consignee|a.mobile|m.nickname|m.mobile', 'like', '%' . $q . '%'];
@@ -110,7 +110,7 @@ class Memberaddress extends Controller
 
         $where = [];
         if (!empty($searchData['member_id'])) {
-            $where[] = ['member_id', 'eq', $searchData['member_id']];
+            $where[] = ['member_id', '=', $searchData['member_id']];
         }
 
         if (!empty($searchData['consignee'])) {
@@ -126,13 +126,13 @@ class Memberaddress extends Controller
         }
 
         if (!empty($searchData['province'])) {
-            $where[] = ['province', 'eq', $searchData['province']];
+            $where[] = ['province', '=', $searchData['province']];
 
             if (!empty($searchData['city'])) {
-                $where[] = ['city', 'eq', $searchData['city']];
+                $where[] = ['city', '=', $searchData['city']];
 
                 if (!empty($searchData['area'])) {
-                    $where[] = ['area', 'eq', $searchData['area']];
+                    $where[] = ['area', '=', $searchData['area']];
                 }
             }
         }

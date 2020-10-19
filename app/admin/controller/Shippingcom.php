@@ -46,7 +46,7 @@ class Shippingcom extends Controller
         }
 
         if (isset($searchData['enable']) && $searchData['enable'] != '') {
-            $where[] = ['enable', 'eq', $searchData['enable']];
+            $where[] = ['enable', '=', $searchData['enable']];
         }
 
         return $where;

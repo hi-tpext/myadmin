@@ -23,7 +23,7 @@ class OrderLogic
     {
         $addressList = Db('member_address')->alias('a')
             ->join('member m', 'a.member_id = m.id')
-            ->where('a.member_id', 'eq', $member_id)
+            ->where('a.member_id', '=', $member_id)
             ->order('a.is_default desc')->field('a.*,m.nickname,m.mobile as m_mobile')->select();
 
         $data = [];
@@ -310,9 +310,9 @@ class OrderLogic
         }
 
         $where = [
-            ['order_id', 'eq', $order_id],
+            ['order_id', '=', $order_id],
             ['id', 'in', $goods_ids],
-            ['is_send', 'eq', 0],
+            ['is_send', '=', 0],
         ];
 
         $res = $orderGoodsModel->isUpdate(true, $where)->save(['is_send' => 1, 'delivery_id' => $id]);

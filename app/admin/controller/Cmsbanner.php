@@ -49,7 +49,7 @@ class Cmsbanner extends Controller
         }
 
         if (!empty($searchData['position_id'])) {
-            $where[] = ['position_id', 'eq', $searchData['position_id']];
+            $where[] = ['position_id', '=', $searchData['position_id']];
         }
 
         return $where;
