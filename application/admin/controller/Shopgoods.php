@@ -389,13 +389,13 @@ class Shopgoods extends Controller
         $form->items('spec_list', '规格型号')->dataWithId($specList)->with(
             $form->text('name', '名称')->placeholder('规格名称，如颜色')->maxlength(55)->required()->getWrapper()->addStyle('width:200px;'),
             $form->text('sort', '排序')->placeholder('规格名称，如颜色')->default(1)->required()->getWrapper()->addStyle('width:80px;'),
-            $form->tags('value', '可选值')->required()->getWrapper()->addStyle('min-width:70%;'),
+            $form->tags('value', '可选值')->required()->getWrapper()->addStyle('min-width:70%;')
         )->help('【规格型号】会影响价格，根据排列组合，用户选择不同价格会不同。多个值用英文`,`号或回车键<i class="mdi mdi-subdirectory-arrow-left"></i>分割');
 
         $form->items('attr_list', '产品属性')->dataWithId($attrList)->with(
             $form->text('name', '名称')->placeholder('属性名称，如生产日期')->maxlength(55)->required()->getWrapper()->addStyle('width:200px;'),
             $form->text('sort', '排序')->placeholder('规格名称，如颜色')->default(1)->required()->getWrapper()->addStyle('width:80px;'),
-            $form->text('value', '属性值')->required()->getWrapper()->addStyle('min-width:70%;'),
+            $form->text('value', '属性值')->required()->getWrapper()->addStyle('min-width:70%;')
         )->help('【属性】不影响价格，仅展示');
 
         if ($isEdit && count($specList)) {
