@@ -110,7 +110,7 @@ class Deliverylog extends Controller
                 $form->show('sale_price', '售价'),
                 $form->show('member_price', '会员价格'),
                 $form->show('goods_num', '数量')->to('x {val}'),
-                $form->checkbox('send', '发货')->options([1 => '是'])->default(1),
+                $form->checkbox('send', '发货')->options([1 => '是'])->default(1)
             )->canAdd(false)->cnaDelete(false)->size(12, 12)
                 ->help('同一个订单多个产品时，可以选择部分产品分多次发货');
         }
