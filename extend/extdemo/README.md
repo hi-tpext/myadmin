@@ -59,10 +59,11 @@ PS : tp框架的`extend`加载原理。自动查找`extend`目录下的目录和
     ├──...
     ├──model
     ├──...
-common
+── common
     └── Module.php             (模块定义)
+── src
+    └── config.php                  (扩展自定义配置)
 ── common.php
-── config.php                  (扩展自定义配置)
 ── LICENSE.txt
 ── README.md
 ```
@@ -133,6 +134,7 @@ return [
 6. 修改`LICENSE.txt`文件
 7. 修改`readme.md`，由于自定义插件不能加载其他`composer`扩展，若你的自定义扩展依赖于其他`composer`扩展，可在其中说明需要安装哪些。
 8. 目前只支持一级目录的扩展：
+
 ```
 ── extend
     ├── mymouule1（支持）
@@ -141,6 +143,7 @@ return [
 
 ```
 不支持二级的扩展，如：
+
 ```
 ── extend
     └── mymouule
