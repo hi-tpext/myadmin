@@ -56,15 +56,9 @@ PS : tp框架的`extend`加载原理。自动查找`extend`目录下的目录和
     └── uninstall.sql
 ── admin                     (admin模块)
     ├──controller
-<<<<<<< HEAD
     ├──...
     ├──model
     ├──...
-=======
-    │  ...
-    ├──model
-    │...
->>>>>>> 942eda4ba9fda6ddc07695032fa2129f68eed5e9
 common
     └── Module.php             (模块定义)
 ── common.php
