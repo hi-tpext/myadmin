@@ -49,10 +49,10 @@ self::addAutoLoadDir($rootPath . 'extend');
     ├── install.sql
     └── uninstall.sql
 ── admin                     (admin模块)
-── controller
-── ...
-── model
-── ...
+    ├──controller
+    ├──...
+    ├──model
+    ├──...
 common
     └── Module.php             (模块定义)
 ── common.php
