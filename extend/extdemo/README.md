@@ -88,7 +88,7 @@ use tpext\common\ExtLoader;
 
 class Extensions
 {
-    public function handle($user)
+    public function handle()
     {
         // 事件监听处理
 

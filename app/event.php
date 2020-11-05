@@ -10,6 +10,9 @@ return [
         'HttpEnd'  => [],
         'LogLevel' => [],
         'LogWrite' => [],
+        'tpext_find_extensions' => [
+            'app\event\Extensions',
+        ],
     ],
 
     'subscribe' => [
