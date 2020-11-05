@@ -53,7 +53,7 @@ self::addAutoLoadDir($rootPath . 'extend');
     ├──...
     ├──model
     ├──...
-common
+── common
     └── Module.php             (模块定义)
 ── src
     └── config.php                  (扩展自定义配置)
