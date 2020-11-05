@@ -61,8 +61,9 @@ PS : tp框架的`extend`加载原理。自动查找`extend`目录下的目录和
     ├──...
 common
     └── Module.php             (模块定义)
+── src
+    └── config.php                  (扩展自定义配置)
 ── common.php
-── config.php                  (扩展自定义配置)
 ── LICENSE.txt
 ── README.md
 ```
