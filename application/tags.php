@@ -25,4 +25,8 @@ return [
     'log_write'    => [],
     // 应用结束
     'app_end'      => [],
+    // 扩展加载
+    'tpext_find_extensions' => [
+        'app\\common\\behavior\\Extensions',
+    ],
 ];
