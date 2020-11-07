@@ -242,6 +242,8 @@ class Shoporder extends Controller
     {
         $search = $this->search;
 
+        $search->tabLink('pay_status')->options(OrderModel::$pay_status_types);
+
         $search->text('member_id', '会员id');
         $search->text('order_sn', '订单sn')->maxlength(30);
         $search->text('transaction_id', '支付流水号')->maxlength(55);

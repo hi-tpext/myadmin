@@ -31,6 +31,11 @@ class Demo extends Controller
     {
         $builder = Builder::getInstance('builer', 'table');
         $table = $builder->table(); //获取一个表格 实例
+
+        $search = $table->getSearch();
+        $search->tabLink('gender')->options([1 => '男', 2 => '女']);
+        $search->select('gender', '性别')->options([1 => '男', 2 => '女']);
+
         $table->text('name', '姓名')->autoPost()->getWrapper()->addStyle('width:140px;'); //限制列宽度
         $table->show('age', '年龄');
         $table->match('gender', '性别')->options([1 => '男', 2 => '女'])->mapClassWhen(1, 'success')->mapClassWhen(2, 'info');
