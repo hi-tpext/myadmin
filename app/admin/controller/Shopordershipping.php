@@ -8,6 +8,7 @@ use think\Controller;
 use tpext\builder\traits\actions;
 use tpext\myadmin\admin\model\AdminUser;
 use tpext\areacity\api\model\Areacity;
+use think\facade\Db;
 
 /**
  * Undocumented class
@@ -61,11 +62,11 @@ class Shopordershipping extends Controller
 
         $this->pagesize = $pagesize ?: $this->pagesize;
 
-        $total = db('shop_order_goods')->alias('g')
+        $total = Db::name('shop_order_goods')->alias('g')
             ->join('shop_order o', 'g.order_id=o.id')
             ->where($where)->count();
 
-        $data = db('shop_order_goods')->alias('g')
+        $data = Db::name('shop_order_goods')->alias('g')
             ->join('shop_order o', 'g.order_id=o.id')
             ->where($where)
             ->order('o.shipping_status,o.pay_time desc')
