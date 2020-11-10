@@ -17,7 +17,7 @@ class CmsBanner extends Model
 
     public function getPositionAttr($value, $data)
     {
-        $position = CmsPosition::get($data['position_id']);
+        $position = CmsPosition::find($data['position_id']);
         return $position ? $position['name'] : '--';
     }
 }

@@ -198,7 +198,7 @@ class Memberaddress extends Controller
         }
 
         if ($member_id) {
-            $member = Member::get($member_id);
+            $member = Member::find($member_id);
             if (!$member) {
                 return $this->builder()->layer()->close(0, '用户不存在！id-' . $member_id);
             }

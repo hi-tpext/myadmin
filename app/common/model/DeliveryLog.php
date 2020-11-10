@@ -11,7 +11,7 @@ class DeliveryLog extends Model
 
     public function getNicknameAttr($value, $data)
     {
-        $member = Member::get($data['member_id']);
+        $member = Member::find($data['member_id']);
         return $member ? $data['member_id'] . '#' . $member['nickname'] : $data['member_id'] . '#' . '不存在';
     }
 

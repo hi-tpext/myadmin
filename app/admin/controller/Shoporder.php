@@ -68,7 +68,7 @@ class Shoporder extends Controller
                     $orderGoods['spec_key'] = 'g_' . $orderGoods['goods_id'];
                 }
             }
-            $member = model\Member::get($data['member_id']);
+            $member = model\Member::find($data['member_id']);
 
             $specList = $goodsLogic->getSpecList();
         }
@@ -364,7 +364,7 @@ class Shoporder extends Controller
             $this->error('不允许的操作');
         } else {
             $builder = $this->builder($this->pageTitle, $this->viewText);
-            $data = $this->dataModel->get($id);
+            $data = $this->dataModel->find($id);
             if (!$data) {
                 return $builder->layer()->close(0, '数据不存在');
             }
@@ -547,7 +547,7 @@ EOT;
         }
 
         if ($id) {
-            $order = $this->dataModel->get($id);
+            $order = $this->dataModel->find($id);
             if (!$order) {
                 $this->error('订单数据不存在');
             }
@@ -559,7 +559,7 @@ EOT;
             $data['member_id'] = $order['member_id'];
             $data['order_sn'] = $order['order_sn'];
         } else {
-            $address = model\MemberAddress::get($data['address_id']);
+            $address = model\MemberAddress::find($data['address_id']);
             if (!$address) {
                 $this->error('地址不存在');
             }

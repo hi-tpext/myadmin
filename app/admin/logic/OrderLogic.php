@@ -196,7 +196,7 @@ class OrderLogic
         $orderModel = new model\ShopOrder();
         $rebateLogModel = new model\RebateLog();
 
-        $order = $orderModel->get($order_id);
+        $order = $orderModel->find($order_id);
 
         $options = [0 => '退款到用户余额', 1 => '原路退回第三方支付账户[开发中...]', 2 => '已通过其他方式退款'];
 
@@ -263,7 +263,7 @@ class OrderLogic
         $orderModel = new model\ShopOrder();
         $orderGoodsModel = new model\ShopOrderGoods();
 
-        $order = $orderModel->get($order_id);
+        $order = $orderModel->find($order_id);
 
         $v = Validate::make([
             'order_id|订单编号' => 'require|number',

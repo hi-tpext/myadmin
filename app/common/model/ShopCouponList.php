@@ -23,19 +23,19 @@ class ShopCouponList extends Model
 
     public function getNicknameAttr($value, $data)
     {
-        $member = Member::get($data['member_id']);
+        $member = Member::find($data['member_id']);
         return $data['member_id'] . '#' . ($member ? $member['nickname'] : '--');
     }
 
     public function getUsernameAttr($value, $data)
     {
-        $member = Member::get($data['member_id']);
+        $member = Member::find($data['member_id']);
         return $data['member_id'] . '#' . ($member ? $member['username'] : '--');
     }
 
     public function getTypeNameAttr($value, $data)
     {
-        $type = ShopCouponType::get($data['coupon_type_id']);
+        $type = ShopCouponType::find($data['coupon_type_id']);
         return $type ? $type['name'] : '--';
     }
 

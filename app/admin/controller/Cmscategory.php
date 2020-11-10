@@ -178,7 +178,7 @@ class Cmscategory extends Controller
         }
 
         if ($data['parent_id']) {
-            $parent = $this->dataModel->get($data['parent_id']);
+            $parent = $this->dataModel->find($data['parent_id']);
             if ($parent && $parent['type'] == 3) {
                 $this->error($parent['name'] . '不允许有下级栏目，请重新选择');
             }

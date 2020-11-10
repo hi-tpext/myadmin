@@ -29,7 +29,7 @@ class OrderLogic
         if (empty($this->member_id)) {
             return ['code' => 0, 'msg' => 'member_id不能为空'];
         }
-        $member = (new model\Member())->get($this->member_id);
+        $member = (new model\Member())->find($this->member_id);
         if (!$member) {
             return ['code' => 0, 'msg' => '会员不存在'];
         }
@@ -145,7 +145,7 @@ class OrderLogic
 
         $orderInfo['goods_price'] = $member_price; //产品合计
 
-        $address = (new model\MemberAddress())->get($orderInfo['address_id']);
+        $address = (new model\MemberAddress())->find($orderInfo['address_id']);
 
         if (!$address) {
             $orderInfo['shipping_price'] = 0;
@@ -193,7 +193,7 @@ class OrderLogic
                 return ['code' => 0, 'msg' => '可用提货券数量不足，本次需使用' . $goods_total_num . '张，您只有' . $member['coupon_ok'] . '张', 'order_info' => $orderInfo];
             }
 
-            $coupon = model\ShopCouponType::get(1);
+            $coupon = model\ShopCouponType::find(1);
             if (!$coupon) {
                 return ['code' => 0, 'msg' => '系统错误-提货券类型未找到', 'order_info' => $orderInfo];
             }
@@ -519,7 +519,7 @@ class OrderLogic
     public function orderBtn($order_id = 0, $order = array())
     {
         if (empty($order)) {
-            $order = model\ShopOrder::get($order_id);
+            $order = model\ShopOrder::find($order_id);
         }
 
         /**
@@ -606,7 +606,7 @@ class OrderLogic
     public function orderStatusDesc($order_id = 0, $order = array())
     {
         if (empty($order)) {
-            $order = model\ShopOrder::get($order_id);
+            $order = model\ShopOrder::find($order_id);
         }
 
         // 货到付款
@@ -707,7 +707,7 @@ class OrderLogic
 
         if (count($rebateLogs) > 0) {
 
-            $member = $memberModel->get($order['member_id']);
+            $member = $memberModel->find($order['member_id']);
 
             foreach ($rebateLogs as $rlog) {
                 $data = [
@@ -748,7 +748,7 @@ class OrderLogic
             ];
         }
 
-        $order = model\ShopOrder::get($order_id);
+        $order = model\ShopOrder::find($order_id);
 
         if (!$order) {
             return ['code' => 0, 'msg' => '订单不存在'];
@@ -825,7 +825,7 @@ class OrderLogic
     public function logOrder($order_id, $action_note, $status_desc)
     {
         $orderActionModel = new model\ShopOrderAction();
-        $order = model\ShopOrder::get($order_id);
+        $order = model\ShopOrder::find($order_id);
         if (!$order) {
             return true;
         }

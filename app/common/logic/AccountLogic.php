@@ -135,7 +135,7 @@ class AccountLogic
     {
         $memberModel = new model\Member();
 
-        $member = $memberModel->get($member_id);
+        $member = $memberModel->find($member_id);
         if (!$member) {
             return ['code' => 0, 'msg' => '会员不存在' . $member_id, 'current' => 0];
         }

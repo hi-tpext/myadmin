@@ -13,7 +13,7 @@ class CouponLogic
             return ['code' => 0, 'msg' => '参数有误'];
         }
 
-        $couponType = model\ShopCouponType::get($coupon_type_id);
+        $couponType = model\ShopCouponType::find($coupon_type_id);
 
         if (!$couponType) {
             return ['code' => 0, 'msg' => '优惠券类型不存在'];

@@ -103,7 +103,7 @@ class PaymentLogic
 
         $cartLogic->minusStock($order_id);
 
-        $member = model\Member::get($order['member_id']);
+        $member = model\Member::find($order['member_id']);
 
         if (!$member) {
             //
@@ -168,7 +168,7 @@ class PaymentLogic
 
         $recharge['goods_price'] = $recharge['account'];
 
-        $member = model\Member::get($recharge['member_id']);
+        $member = model\Member::find($recharge['member_id']);
         if (!$member) {
             //
         } else {

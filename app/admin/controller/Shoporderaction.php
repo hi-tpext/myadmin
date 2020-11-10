@@ -97,7 +97,7 @@ class Shoporderaction extends Controller
      */
     public function orderAction($id)
     {
-        $order = $this->orderModel->get($id);
+        $order = $this->orderModel->find($id);
         if (!$order) {
             return json([
                 'code' => 0,
@@ -142,7 +142,7 @@ class Shoporderaction extends Controller
     public function payCancel($id)
     {
         if (request()->isAjax()) {
-            $order = $this->orderModel->get($id);
+            $order = $this->orderModel->find($id);
             if (!$order) {
                 return json([
                     'code' => 0,
@@ -175,7 +175,7 @@ class Shoporderaction extends Controller
             return $this->builder()->layer()->closeRefresh(1, $res['msg']);
         } else {
             $builder = $this->builder('取消支付');
-            $order = $this->orderModel->get($id);
+            $order = $this->orderModel->find($id);
 
             if (!$order) {
                 return $builder->layer()->closeRefresh(0, '订单不存在！');
@@ -198,7 +198,7 @@ class Shoporderaction extends Controller
     public function orderCancel()
     {
         $id = input('ids');
-        $order = $this->orderModel->get($id);
+        $order = $this->orderModel->find($id);
         if (!$order) {
             return json([
                 'code' => 0,

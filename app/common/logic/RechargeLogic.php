@@ -21,7 +21,7 @@ class RechargeLogic
 
         $config_key = 'commission';
 
-        $member = model\Member::get($member_id);
+        $member = model\Member::find($member_id);
         if (!$member) {
             return ['code' => 0, 'msg' => '会员不存在：' . $member_id];
         }

@@ -22,7 +22,7 @@ class CmsCategory extends Model
                 $data['deep'] = 1;
                 $data['path'] = ',';
             } else {
-                $parent = static::get($data['parent_id']);
+                $parent = static::find($data['parent_id']);
                 if ($parent) {
                     $data['deep'] = $parent['deep'] + 1;
                     $data['path'] = $parent['path'] . $data['parent_id'] . ',';

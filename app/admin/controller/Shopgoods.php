@@ -497,14 +497,14 @@ class Shopgoods extends Controller
         $data['cost_price'] = $data['cost_price'] ? $data['cost_price'] : $data['sale_price'];
 
         if ($data['category_id']) {
-            $parent = $this->categoryModel->get($data['category_id']);
+            $parent = $this->categoryModel->find($data['category_id']);
             if ($parent && $parent['type'] == 2) {
                 $this->error('分类[' . $parent['name'] . ']是目录，不允许存放产品，请重新选择');
             }
         }
 
         if ($data['brand_id']) {
-            $parent = $this->brandModel->get($data['brand_id']);
+            $parent = $this->brandModel->find($data['brand_id']);
             if ($parent && $parent['type'] == 2) {
                 $this->error('品牌[' . $parent['name'] . ']是目录，不允许存放产品，请重新选择');
             }

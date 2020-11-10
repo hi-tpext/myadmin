@@ -17,7 +17,7 @@ class CmsContent extends Model
 
     public function getCategoryAttr($value, $data)
     {
-        $category = CmsCategory::get($data['category_id']);
+        $category = CmsCategory::find($data['category_id']);
         return $category ? $category['name'] : '--';
     }
 

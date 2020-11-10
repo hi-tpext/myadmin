@@ -11,7 +11,7 @@ class MemberAddress extends Model
 
     public function getNicknameAttr($value, $data)
     {
-        $member = Member::get($data['member_id']);
+        $member = Member::find($data['member_id']);
         return $data['member_id'] . '#' . ($member ? $member['nickname'] : '--');
     }
 

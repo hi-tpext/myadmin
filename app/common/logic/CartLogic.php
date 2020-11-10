@@ -331,7 +331,7 @@ class CartLogic
         $goodsModel = new model\ShopGoods();
 
         $goods = $goodsModel->field('id,name,spu,sale_price,market_price,cost_price,stock,on_sale,is_show,weight,logo')
-            ->get($goods_id);
+            ->find($goods_id);
 
         if (!$goods) {
             return ['code' => 0, 'msg' => '产品不存在', 'goods' => null];

@@ -81,7 +81,7 @@ class Deliverylog extends Controller
         $form = $this->form;
         $order_id = input('order_id');
 
-        $order = $this->orderModel->get($order_id);
+        $order = $this->orderModel->find($order_id);
         if (!$order) {
             return $this->builder()->layer()->closeRefresh(0, '订单不存在-' . $order_id);
         }
@@ -143,7 +143,7 @@ class Deliverylog extends Controller
     {
         $builder = $this->builder($this->pageTitle, $this->viewText);
 
-        $data = $this->dataModel->get($id);
+        $data = $this->dataModel->find($id);
         if (!$data) {
             return $builder->layer()->close(0, '数据不存在');
         }
@@ -305,7 +305,7 @@ class Deliverylog extends Controller
     {
         $order_id = input('order_id');
 
-        $order = $this->orderModel->get($order_id);
+        $order = $this->orderModel->find($order_id);
         if (!$order) {
             return $this->builder()->layer()->closeRefresh(0, '订单不存在-' . $order_id);
         }

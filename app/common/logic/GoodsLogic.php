@@ -79,7 +79,7 @@ class GoodsLogic
                         }
                     }
                 } else {
-                    $exist = $dataModel->get($key);
+                    $exist = $dataModel->find($key);
                     if ($exist && $exist['goods_id'] == $pdata['goods_id'] && $exist['value'] == $pdata['value'] && $exist['name'] == $pdata['name']) {
                         continue;
                     }
@@ -160,7 +160,7 @@ class GoodsLogic
                 $mvals[] = $selected;
                 $data[$sid] = $selected;
 
-                $valueInfo = $specValueModel->get($selected);
+                $valueInfo = $specValueModel->find($selected);
                 $modelNames[] = $valueInfo ? str_replace('*', '＊', $valueInfo['value']) : '-'; //规格名称里面的*号替换一下，避免混淆
             }
 

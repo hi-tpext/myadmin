@@ -61,19 +61,19 @@ class MemberRecharge extends Model
 
     public function getNicknameAttr($value, $data)
     {
-        $member = Member::get($data['member_id']);
+        $member = Member::find($data['member_id']);
         return $data['member_id'] . '#' . ($member ? $member['nickname'] : '--');
     }
 
     public function getUsernameAttr($value, $data)
     {
-        $member = Member::get($data['member_id']);
+        $member = Member::find($data['member_id']);
         return $data['member_id'] . '#' . ($member ? $member['username'] : '--');
     }
 
     public function getFirstLeaderNameAttr($value, $data)
     {
-        $member = Member::get($data['first_leader']);
+        $member = Member::find($data['first_leader']);
         return $data['first_leader'] . '#' . ($member ? $member['nickname'] : '--');
     }
 }

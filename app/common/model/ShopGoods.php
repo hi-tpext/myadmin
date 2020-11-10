@@ -36,13 +36,13 @@ class ShopGoods extends Model
     {
         $model = new \tpext\myadmin\admin\model\AdminUser;
         $model = $model->getAdminGroupModel();
-        $category = $model->get($data['admin_group_id']);
+        $category = $model->find($data['admin_group_id']);
         return $category ? $category['name'] : '--';
     }
 
     public function getCategoryAttr($value, $data)
     {
-        $category = ShopCategory::get($data['category_id']);
+        $category = ShopCategory::find($data['category_id']);
         return $category ? $category['name'] : '--';
     }
 

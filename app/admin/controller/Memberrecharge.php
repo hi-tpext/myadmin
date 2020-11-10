@@ -252,7 +252,7 @@ class Memberrecharge extends Controller
 
         } else if ($isEdit == 0) { //添加
             if ($member_id = input('member_id/d')) { //如果是从用户列表点某个用户进来的，直接操作这个用户，不用下拉选择了
-                $member = Member::get($member_id);
+                $member = Member::find($member_id);
 
                 if (!$member) {
                     return $this->builder()->layer()->close(0, '用户不存在！id-' . $member_id);

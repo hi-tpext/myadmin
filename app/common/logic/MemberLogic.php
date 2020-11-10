@@ -17,7 +17,7 @@ class MemberLogic
             return ['code' => 0, 'msg' => '上级不能是自己'];
         }
 
-        $member = model\Member::get($member_id);
+        $member = model\Member::find($member_id);
 
         if (!$member) {
             return ['code' => 0, 'msg' => '用户不存在'];
@@ -51,7 +51,7 @@ class MemberLogic
             return ['code' => 0, 'msg' => '已经是他上级，不能重复操作'];
         }
 
-        $leader = model\Member::get($leader_id);
+        $leader = model\Member::find($leader_id);
 
         if (!$leader) {
             return ['code' => 0, 'msg' => '上级用户不存在'];
@@ -78,7 +78,7 @@ class MemberLogic
             'create_time' => date('Y-m-d  H:i:s'),
         ]);
 
-        $member = model\Member::get($member_id);
+        $member = model\Member::find($member_id);
 
         model\Member::where('relation', 'like', '%,' . $member_id . ',%')->update(['relation' => '']); //修改上级，整条关系线重置，等待重新计算
 
@@ -93,7 +93,7 @@ class MemberLogic
             return ['code' => 0, 'msg' => '参数有误'];
         }
 
-        $member = model\Member::get($member_id);
+        $member = model\Member::find($member_id);
 
         if (!$member) {
             return ['code' => 0, 'msg' => '用户不存在'];
@@ -136,7 +136,7 @@ class MemberLogic
             return ['code' => 0, 'msg' => '等级不存在'];
         }
 
-        $member = model\Member::get($member_id);
+        $member = model\Member::find($member_id);
 
         if (!$member) {
             return ['code' => 0, 'msg' => '用户不存在'];
@@ -169,7 +169,7 @@ class MemberLogic
      */
     protected function getLeader($leader_id)
     {
-        $leader = model\Member::get($leader_id); //其上级可分成
+        $leader = model\Member::find($leader_id); //其上级可分成
         if (!$leader) //代理不存在或代理取消
         {
             return false;

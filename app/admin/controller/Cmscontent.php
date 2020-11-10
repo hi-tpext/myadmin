@@ -316,7 +316,7 @@ class Cmscontent extends Controller
         }
 
         if ($data['category_id']) {
-            $parent = $this->categoryModel->get($data['category_id']);
+            $parent = $this->categoryModel->find($data['category_id']);
             if ($parent && $parent['type'] == 2) {
                 $this->error($parent['name'] . '是目录，不允许存放文章，请重新选择');
             }

@@ -145,7 +145,7 @@ class ShopOrder extends Model
 
     public function getNicknameAttr($value, $data)
     {
-        $member = Member::get($data['member_id']);
+        $member = Member::find($data['member_id']);
         return $member ? $member['nickname'] : '会员不存在';
     }
 
