@@ -1,0 +1,112 @@
+[
+    {
+        "title": "tpext基础",
+        "name": "tpext.core",
+        "type": "module",
+        "tags": "未归类",
+        "description": "扩展核心支持",
+        "composer": "ichynul/tpext",
+        "website": "https://gitee.com/ichynul/tpext",
+        "platform": "*",
+        "is_free": "1"
+    },
+    {
+        "title": "tpext综合管理",
+        "name": "tpext.manager",
+        "type": "module",
+        "tags": "未归类",
+        "description": "提供对扩展的管理[安装/卸载/资源刷新/配置]/数据库管理",
+        "composer": "ichynul/tpextmanager",
+        "website": "https://gitee.com/ichynul/tpextmanager",
+        "platform": "*",
+        "is_free": "1"
+    },
+    {
+        "title": "后台框架",
+        "name": "tpext.myadmin",
+        "type": "module",
+        "tags": "未归类",
+        "description": "后台框架基础功能，建议优先安装，再装其他扩展",
+        "composer": "ichynul/tpextmyadmin",
+        "website": "https://gitee.com/ichynul/tpextmyadmin",
+        "platform": "*",
+        "is_free": "1"
+    },
+    {
+        "title": "lightyear模板样式",
+        "name": "lightyear.admin",
+        "type": "resource",
+        "tags": "未归类",
+        "description": "提供相关样式资源",
+        "composer": "ichynul/lightyearadmin",
+        "website": "https://gitee.com/ichynul/lightyearadmin",
+        "platform": "*",
+        "is_free": "1"
+    },
+    {
+        "title": "tpext ui生成",
+        "name": "tpext.builder",
+        "type": "module",
+        "tags": "未归类",
+        "description": "后台ui生成",
+        "composer": "ichynul/tpextbuilder",
+        "website": "https://gitee.com/ichynul/tpextbuilder",
+        "platform": "*",
+        "is_free": "1"
+    },
+    {
+        "title": "mdeditor资源包",
+        "name": "builder.mdeditor",
+        "type": "resource",
+        "tags": "未归类",
+        "description": "为[tpext.builder]提供[mdeditor]相关样式资源",
+        "composer": "ichynul/builder-mdeditor",
+        "website": "https://gitee.com/ichynul/builder-mdeditor",
+        "platform": "*",
+        "is_free": "1"
+    },
+    {
+        "title": "ckeditor资源包",
+        "name": "builder.ckeditor",
+        "type": "resource",
+        "tags": "未归类",
+        "description": "为[tpext.builder]提供[ckeditor]相关样式资源",
+        "composer": "ichynul/builder-ckeditor",
+        "website": "https://gitee.com/ichynul/builder-ckeditor",
+        "platform": "*",
+        "is_free": "1"
+    },
+    {
+        "title": "tinymce资源包",
+        "name": "builder.tinymce",
+        "type": "resource",
+        "tags": "未归类",
+        "description": "为[tpext.builder]提供[tinymce]相关样式资源",
+        "composer": "ichynul/builder-tinymce",
+        "website": "https://gitee.com/ichynul/builder-tinymce",
+        "platform": "*",
+        "is_free": "1"
+    },
+    {
+        "title": "ueditor资源包",
+        "name": "builder.ueditor",
+        "type": "resource",
+        "tags": "未归类",
+        "description": "为[tpext.builder]提供[ueditor]相关样式资源",
+        "composer": "ichynul/builder-ueditor",
+        "website": "https://gitee.com/ichynul/builder-ueditor",
+        "platform": "*",
+        "is_free": "1"
+    },
+    {
+        "title": "中国省市区县乡镇",
+        "name": "tpext.areacity",
+        "type": "module",
+        "tags": "未归类",
+        "description": "省市区县乡镇四级城市数据，带拼音首字母。数据较多，安装时间稍长。",
+        "composer": "ichynul/tpextareacity",
+        "website": "https://gitee.com/ichynul/tpextareacity",
+        "platform": "*",
+        "is_free": "1"
+    }
+]
