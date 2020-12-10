@@ -55,7 +55,6 @@ self::addAutoLoadDir($rootPath . 'extend');
     ├──...
 common
     └── Module.php             (模块定义)
-── src
 ── config.php                  (扩展自定义配置)
 ── common.php
 ── LICENSE.txt
