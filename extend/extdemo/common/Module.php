@@ -22,6 +22,11 @@ class Module extends baseModule
         'admin' => ['extdemo'],
     ];
 
+    public function configPath()
+    {
+        return realpath($this->getRoot() . 'config.php');
+    }
+
     /**
      * 后台菜单
      *

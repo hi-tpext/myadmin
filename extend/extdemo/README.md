@@ -56,7 +56,7 @@ self::addAutoLoadDir($rootPath . 'extend');
 common
     └── Module.php             (模块定义)
 ── src
-    └── config.php                  (扩展自定义配置)
+── config.php                  (扩展自定义配置)
 ── common.php
 ── LICENSE.txt
 ── README.md
@@ -67,62 +67,7 @@ common
 3. 不需要`helper.php`。
 4. 修改`Module.php`中`$root`定义，由于代码从`src`目录往上提了一级，所以：
 `protected $root = __DIR__ . '/../../';` 改为： `protected $root = __DIR__ . '/../';`
-5. 由于不能通过`helper.php`来加载扩展，所以需要监听`tpext_find_extensions`事件，在查找扩展前把自定义加入进去。
-
-***tp5.1***:
-
-新建文件`application\common\behavior\Extensions.php`:
-
-```php
-<?php
-
-namespace app\common\behavior;
-
-use tpext\common\ExtLoader;
-
-class Extensions
-{
-    public function run()
-    {
-        $classMap = [
-            'extdemo\\common\\Module',
-            //其他自定义扩展
-        ];
-
-        ExtLoader::addClassMap($classMap);
-    }
-}
-
-```
-
-编辑文件：`application\tags.php`，添加`tpext_find_extensions`键，数组里面写入：`app\\common\\behavior\\Extensions`:
-```php
-<?php
-
-// 应用行为扩展定义文件
-return [
-    // 应用初始化
-    'app_dispatch' => [],
-    // 应用开始
-    'app_begin' => [],
-    // 模块初始化
-    'module_init' => [],
-    // 操作开始执行
-    'action_begin' => [],
-    // 视图内容过滤
-    'view_filter' => [],
-    // 日志写入
-    'log_write' => [],
-    // 应用结束
-    'app_end' => [],
-    // 扩展加载
-    'tpext_find_extensions' => [
-        'app\\common\\behavior\\Extensions',
-    ],
-];
-
-```
-
+5. 由于不能通过`helper.php`来加载扩展，所以需要在【扩展管理】-【tpext基础】的配置中加入`extdemo\common\Module`，刷新。
 6. 修改`LICENSE.txt`文件
 7. 修改`readme.md`，由于自定义插件不能加载其他`composer`扩展，若你的自定义扩展依赖于其他`composer`扩展，可在其中说明需要安装哪些。
 8. 目前只支持一级目录的扩展：
