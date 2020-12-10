@@ -61,8 +61,7 @@ PS : tp框架的`extend`加载原理。自动查找`extend`目录下的目录和
     ├──...
 ── common
     └── Module.php             (模块定义)
-── src
-    └── config.php                  (扩展自定义配置)
+── config.php                  (扩展自定义配置)
 ── common.php
 ── LICENSE.txt
 ── README.md
@@ -73,64 +72,7 @@ PS : tp框架的`extend`加载原理。自动查找`extend`目录下的目录和
 3. 不需要`helper.php`。
 4. 修改`Module.php`中`$root`定义，由于代码从`src`目录往上提了一级，所以：
 `protected $root = __DIR__ . '/../../';` 改为： `protected $root = __DIR__ . '/../';`
-5. 由于不能通过`helper.php`来加载扩展，所以需要监听`tpext_find_extensions`事件，在查找扩展前把自定义加入进去。
-
-***tp6.0***:
-
-新建文件`app\event\Extensions.php`: `php think make:event Extensions`
-
-```php
-<?php
-declare (strict_types = 1);
-
-namespace app\event;
-
-use tpext\common\ExtLoader;
-
-class Extensions
-{
-    public function handle()
-    {
-        // 事件监听处理
-
-        $classMap = [
-            'extdemo\\common\\Module',
-            //其他自定义扩展
-        ];
-
-        ExtLoader::addClassMap($classMap);
-    }
-}
-
-```
-
-编辑文件：`app\event.php`，`listen`键内添加`tpext_find_extensions`键，数组里面写入：`app\event\Extensions`:
-```php
-<?php
-
-// 事件定义文件
-return [
-    'bind'      => [
-    ],
-
-    'listen'    => [
-        'AppInit'  => [],
-        'HttpRun'  => [],
-        'HttpEnd'  => [],
-        'LogLevel' => [],
-        'LogWrite' => [],
-        'tpext_find_extensions' => [
-            'app\event\Extensions',
-        ],
-    ],
-
-    'subscribe' => [
-    ],
-];
-
-
-```
-
+5. 由于不能通过`helper.php`来加载扩展，所以需要在【扩展管理】-【tpext基础】的配置中加入`extdemo\common\Module`，刷新。
 6. 修改`LICENSE.txt`文件
 7. 修改`readme.md`，由于自定义插件不能加载其他`composer`扩展，若你的自定义扩展依赖于其他`composer`扩展，可在其中说明需要安装哪些。
 8. 目前只支持一级目录的扩展：
