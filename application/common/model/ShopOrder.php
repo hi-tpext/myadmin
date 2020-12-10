@@ -193,4 +193,9 @@ class ShopOrder extends Model
         }
         return  implode('、', $names);
     }
+
+    public function member()
+    {
+        return $this->hasOne(Member::class, 'id', 'member_id');
+    }
 }

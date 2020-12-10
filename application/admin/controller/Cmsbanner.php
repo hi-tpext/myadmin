@@ -37,6 +37,8 @@ class Cmsbanner extends Controller
         $this->pagesize = 6;
 
         $this->selectSearch = 'title';
+
+        $this->indexWith = 'position';
     }
 
     protected function filterWhere()
@@ -80,7 +82,7 @@ class Cmsbanner extends Controller
         $table->show('id', 'ID');
         $table->image('image', '图片')->thumbSize(70, 70);
         $table->text('title', '标题')->autoPost()->getWrapper()->addStyle('max-width:200px');
-        $table->show('position', '位置');
+        $table->show('position.name', '位置');
         $table->show('description', '摘要')->default('暂无')->getWrapper()->addStyle('max-width:200px');
         $table->show('link', '链接');
         $table->text('sort', '排序')->autoPost()->getWrapper()->addStyle('max-width:100px');

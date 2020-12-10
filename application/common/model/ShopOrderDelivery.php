@@ -15,4 +15,9 @@ class ShopOrderDelivery extends Model
     {
 
     }
+
+    public function order()
+    {
+        return $this->hasOne(Shoporder::class, 'id', 'order_id');
+    }
 }

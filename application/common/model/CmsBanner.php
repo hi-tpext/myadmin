@@ -17,9 +17,8 @@ class CmsBanner extends Model
         });
     }
 
-    public function getPositionAttr($value, $data)
+    public function position()
     {
-        $position = CmsPosition::get($data['position_id']);
-        return $position ? $position['name'] : '--';
+        return $this->hasOne(CmsPosition::class, 'id', 'position_id');
     }
 }

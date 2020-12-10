@@ -73,6 +73,8 @@ class Shopgoods extends Controller
         $this->selectSearch = 'name|spu';
         $this->selectFields = 'id,name,spu'; //优化查询
         $this->selectTextField = '{name}#{spu}';
+
+        $this->indexWith = 'category';
     }
 
     /**
@@ -234,7 +236,7 @@ class Shopgoods extends Controller
             $table->show('name', '名称'),
             $table->show('spu', 'spu')
         )->getWrapper()->addStyle('max-width:200px');
-        $table->show('category', '分类');
+        $table->show('category.name', '分类');
         $table->show('admin_group', '商家');
         $table->show('sale_price', '售价');
         $table->show('share_commission', '分销佣金');

@@ -2,6 +2,8 @@
 
 namespace app\common\model;
 
+use app\admin\controller\Shopbrand;
+use app\admin\controller\Shopcategory;
 use think\Model;
 use app\common\Module;
 use think\model\concern\SoftDelete;
@@ -84,5 +86,15 @@ class ShopGoods extends Model
     public function getManyPriceAttr($value, $data)
     {
         return ShopGoodsSpecPrice::where(['goods_id' => $data['id']])->count() > 0 ? 1 : 0;
+    }
+
+    public function category()
+    {
+        return $this->hasOne(Shopcategory::class, 'id', 'category_id');
+    }
+
+    public function brand()
+    {
+        return $this->hasOne(Shopbrand::class, 'id', 'brand_id');
     }
 }

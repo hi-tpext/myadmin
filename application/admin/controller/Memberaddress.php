@@ -27,6 +27,8 @@ class Memberaddress extends Controller
     {
         $this->dataModel = new AddressModel;
         $this->pageTitle = '收货地址';
+
+        $this->indexWith = 'member';
     }
 
     /**
@@ -171,7 +173,7 @@ class Memberaddress extends Controller
         $table = $this->table;
 
         $table->show('id', 'ID');
-        $table->show('nickname', '会员');
+        $table->show('member.nickname', '会员');
         $table->text('consignee', '收货人')->autoPost()->getWrapper()->addStyle('width:150px');
         $table->show('mobile', '手机号')->getWrapper()->addStyle('width:150px');
         $table->show('pcat', '省市区');

@@ -79,4 +79,9 @@ class MemberAddress extends Model
 
         return $data;
     }
+
+    public function member()
+    {
+        return $this->hasOne(Member::class, 'id', 'member_id');
+    }
 }

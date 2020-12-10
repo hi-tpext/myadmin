@@ -35,6 +35,8 @@ class Shoporder extends Controller
         $this->pagesize = 8;
 
         $this->selectSearch = 'order_sn|mobile';
+
+        $this->indexWith = 'member';
     }
 
     /**
@@ -280,7 +282,7 @@ class Shoporder extends Controller
             $table->show('transaction_id', '支付流水号')->default('--')
         );
         $table->fields('nickname', '会员')->with(
-            $table->show('nickname', '昵称'),
+            $table->show('member.nickname', '昵称'),
             $table->show('member_id', '会员id')
         );
         $table->fields('consignee', '收货人/电话')->with(

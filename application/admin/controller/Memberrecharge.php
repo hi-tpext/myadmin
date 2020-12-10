@@ -33,6 +33,8 @@ class Memberrecharge extends Controller
         $this->dataModel = new RechargeModel;
         $this->pageTitle = '充值记录';
         $this->pagesize = 10;
+
+        $this->indexWith = 'member';
     }
 
     protected function filterWhere()
@@ -119,7 +121,7 @@ class Memberrecharge extends Controller
         $table = $this->table;
 
         $table->show('id', 'ID');
-        $table->show('nickname', '会员');
+        $table->show('member.nickname', '会员');
         $table->show('first_leader_name', '上级');
         $table->fields('order_sn', '订单sn/支付流水号')->with(
             $table->show('order_sn', '订单sn'),

@@ -21,4 +21,9 @@ class MemberLog extends Model
         $member = Member::get($data['member_id']);
         return $data['member_id'] . '#' . ($member ? $member['username'] : '--');
     }
+
+    public function member()
+    {
+        return $this->hasOne(Member::class, 'id', 'member_id');
+    }
 }

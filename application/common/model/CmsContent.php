@@ -17,10 +17,9 @@ class CmsContent extends Model
         });
     }
 
-    public function getCategoryAttr($value, $data)
+    public function category()
     {
-        $category = CmsCategory::get($data['category_id']);
-        return $category ? $category['name'] : '--';
+        return $this->hasOne(CmsCategory::class, 'id', 'category_id');
     }
 
     public function getAttrAttr($value, $data)

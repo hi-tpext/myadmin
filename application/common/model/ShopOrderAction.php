@@ -2,6 +2,7 @@
 
 namespace app\common\model;
 
+use app\admin\controller\Shoporder;
 use think\Model;
 
 class ShopOrderAction extends Model
@@ -13,5 +14,10 @@ class ShopOrderAction extends Model
     protected static function init()
     {
 
+    }
+
+    public function order()
+    {
+        return $this->hasOne(Shoporder::class, 'id', 'order_id');
     }
 }
