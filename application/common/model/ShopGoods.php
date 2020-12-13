@@ -2,12 +2,8 @@
 
 namespace app\common\model;
 
-use app\admin\controller\Shopbrand;
-use app\admin\controller\Shopcategory;
 use think\Model;
-use app\common\Module;
 use think\model\concern\SoftDelete;
-use tpext\myadmin\admin\model\AdminUser;
 
 class ShopGoods extends Model
 {
