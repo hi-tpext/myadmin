@@ -276,7 +276,7 @@ class Member extends Controller
 
 ## 八.QQ群:
 
-[![](https://gitee.com/ichynul/myadmin/raw/5.0/images/qq.jpg)](https://gitee.com/ichynul/myadmin/raw/5.0/images/qq.jpg "qq")
+[![](https://gitee.com/ichynul/myadmin/raw/5.0/images/qqqun.jpg)](https://gitee.com/ichynul/myadmin/raw/5.0/images/qqqun.jpg "qqqun")
 
 ## 九.效果展示:
 
