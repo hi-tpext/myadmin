@@ -273,7 +273,12 @@ class Member extends Controller
     }
 }
 ```
-## 八.效果展示:
+
+## 八.QQ群:
+
+[![](https://gitee.com/ichynul/myadmin/raw/5.0/images/qq.jpg)](https://gitee.com/ichynul/myadmin/raw/5.0/images/qq.jpg "qq")
+
+## 九.效果展示:
 
 [![](https://gitee.com/ichynul/myadmin/raw/5.0/images/1.png)](https://gitee.com/ichynul/myadmin/raw/5.0/images/1.png "1")
 [![](https://gitee.com/ichynul/myadmin/raw/5.0/images/2.png)](https://gitee.com/ichynul/myadmin/raw/5.0/images/2.png "2")
@@ -283,3 +288,4 @@ class Member extends Controller
 [![](https://gitee.com/ichynul/myadmin/raw/5.0/images/6.png)](https://gitee.com/ichynul/myadmin/raw/5.0/images/6.png "6")
 [![](https://gitee.com/ichynul/myadmin/raw/5.0/images/7.png)](https://gitee.com/ichynul/myadmin/raw/5.0/images/7.png "7")
 [![](https://gitee.com/ichynul/myadmin/raw/5.0/images/8.png)](https://gitee.com/ichynul/myadmin/raw/5.0/images/8.png "8")
+
