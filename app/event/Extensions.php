@@ -14,6 +14,7 @@ class Extensions
         $classMap = [
             'extdemo\\common\\Module',
             //其他自定义扩展
+            'myadmindata\\common\\Module',
         ];
 
         ExtLoader::addClassMap($classMap);
