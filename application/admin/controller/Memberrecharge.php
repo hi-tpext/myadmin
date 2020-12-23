@@ -70,13 +70,6 @@ class Memberrecharge extends Controller
         if (isset($searchData['goods_method']) && $searchData['goods_method'] != '') {
             $where[] = ['goods_method', 'eq', $searchData['goods_method']];
         }
-        if (isset($searchData['use_commission']) && $searchData['use_commission'] > 0) {
-            $where[] = ['use_commission', 'gt', 0];
-        }
-
-        if (isset($searchData['use_re_comm']) && $searchData['use_re_comm'] > 0) {
-            $where[] = ['use_re_comm', 'gt', 0];
-        }
 
         if (!empty($searchData['start'])) {
             $where[] = ['pay_time', 'egt', $searchData['start']];
@@ -105,8 +98,6 @@ class Memberrecharge extends Controller
         $search->select('pay_status', '支付状态', 3)->options(RechargeModel::$pay_status_types);
         $search->select('pay_code ', '支付方式', 3)->options(RechargeModel::$pay_codes);
         $search->select('goods_method', '套餐', 3)->options(RechargeModel::$get_goods_methds);
-        $search->select('use_commission', '使用采蜜豆', 3)->options([0 => '否', 1 => '是']);
-        $search->select('use_re_comm', '使用复投豆', 3)->options([0 => '否', 1 => '是']);
         $search->datetime('start ', '支付时间', 3)->placeholder('起始');
         $search->datetime('end ', '~', 3)->placeholder('截止');
     }
