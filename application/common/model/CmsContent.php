@@ -19,7 +19,7 @@ class CmsContent extends Model
 
     public function category()
     {
-        return $this->hasOne(CmsCategory::class, 'id', 'category_id');
+        return $this->belongsTo(CmsCategory::class, 'id', 'category_id');
     }
 
     public function getAttrAttr($value, $data)

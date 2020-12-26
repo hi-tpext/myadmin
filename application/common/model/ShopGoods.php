@@ -28,7 +28,7 @@ class ShopGoods extends Model
 
     public function cate()
     {
-        return $this->hasOne('shop_category', 'category_id');
+        return $this->belongsTo('shop_category', 'category_id');
     }
 
     public function getAdminGroupAttr($value, $data)
@@ -86,11 +86,11 @@ class ShopGoods extends Model
 
     public function category()
     {
-        return $this->hasOne(Shopcategory::class, 'id', 'category_id');
+        return $this->belongsTo(Shopcategory::class, 'id', 'category_id');
     }
 
     public function brand()
     {
-        return $this->hasOne(Shopbrand::class, 'id', 'brand_id');
+        return $this->belongsTo(Shopbrand::class, 'id', 'brand_id');
     }
 }

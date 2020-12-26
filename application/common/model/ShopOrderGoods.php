@@ -17,6 +17,6 @@ class ShopOrderGoods extends Model
 
     public function order()
     {
-        return $this->hasOne(Shoporder::class, 'id', 'order_id');
+        return $this->belongsTo(Shoporder::class, 'id', 'order_id');
     }
 }

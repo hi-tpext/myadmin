@@ -79,6 +79,6 @@ class MemberRecharge extends Model
 
     public function member()
     {
-        return $this->hasOne(Member::class, 'id', 'member_id');
+        return $this->belongsTo(Member::class, 'id', 'member_id');
     }
 }
