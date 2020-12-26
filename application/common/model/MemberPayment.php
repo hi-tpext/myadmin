@@ -56,6 +56,6 @@ class MemberPayment extends Model
 
     public function member()
     {
-        return $this->belongsTo(Member::class, 'id', 'member_id');
+        return $this->belongsTo(Member::class, 'member_id', 'id');
     }
 }

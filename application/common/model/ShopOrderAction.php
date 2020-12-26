@@ -18,6 +18,6 @@ class ShopOrderAction extends Model
 
     public function order()
     {
-        return $this->belongsTo(Shoporder::class, 'id', 'order_id');
+        return $this->belongsTo(Shoporder::class, 'order_id', 'id');
     }
 }

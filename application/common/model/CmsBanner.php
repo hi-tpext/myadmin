@@ -19,6 +19,6 @@ class CmsBanner extends Model
 
     public function position()
     {
-        return $this->belongsTo(CmsPosition::class, 'id', 'position_id');
+        return $this->belongsTo(CmsPosition::class, 'position_id', 'id');
     }
 }
