@@ -309,13 +309,13 @@ class Shoporder extends Controller
         $table->show('order_amount', '应付');
         $table->match('order_status', '订单状态')->options(OrderModel::$order_status_types);
         $table->fields('pay_status', '支付状态/时间')->with(
-            $table->match('pay_status', '支付状态')->options(OrderModel::$pay_status_types)->mapClassWhenGroup([[1, 'success'], [2, 'danger']]),
+            $table->match('pay_status', '支付状态')->options(OrderModel::$pay_status_types)->mapClassGroup([[1, 'success'], [2, 'danger']]),
             $table->show('pay_time', '支付时间')->default('--')
         );
         $table->match('pay_code', '支付方式')->options(OrderModel::$pay_codes)->afterOptions(['__default__' => '---']);
         $table->fields('shipping_status', '物流/状态/时间')->with(
             $table->show('shipping_name', '物流名称'),
-            $table->match('shipping_status', '物流状态')->options(OrderModel::$shipping_status_types)->mapClassWhenGroup([[1, 'success'], [2, 'info']]),
+            $table->match('shipping_status', '物流状态')->options(OrderModel::$shipping_status_types)->mapClassGroup([[1, 'success'], [2, 'info']]),
             $table->show('shipping_time', '发货时间')->default('--')
         );
         $table->sortable('id,order_status,pay_status,shipping_status');

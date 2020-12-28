@@ -38,7 +38,7 @@ class Demo extends Controller
 
         $table->text('name', '姓名')->autoPost()->getWrapper()->addStyle('width:140px;'); //限制列宽度
         $table->show('age', '年龄');
-        $table->match('gender', '性别')->options([1 => '男', 2 => '女'])->mapClassWhen(1, 'success')->mapClassWhen(2, 'info');
+        $table->match('gender', '性别')->options([1 => '男', 2 => '女'])->mapClass(1, 'success')->mapClass(2, 'info');
         $table->switchBtn('status', '状态')->autoPost();
         $table->show('about', '简介')->cut(50)->getWrapper()->addStyle('width:30%;');
 

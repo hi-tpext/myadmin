@@ -124,7 +124,7 @@ class Memberrecharge extends Controller
         $table->show('account', '支付金额');
         $table->match('pay_code', '支付方式')->options(RechargeModel::$pay_codes);
         $table->fields('pay_status', '支付状态')->with(
-            $table->match('pay_status', '支付状态')->options(RechargeModel::$pay_status_types)->mapClassWhenGroup([[1, 'success'], [2, 'danger']]),
+            $table->match('pay_status', '支付状态')->options(RechargeModel::$pay_status_types)->mapClassGroup([[1, 'success'], [2, 'danger']]),
             $table->show('pay_time', '支付时间')
         );
 
