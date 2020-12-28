@@ -137,7 +137,7 @@ class Shopcouponlist extends Controller
         $table->show('code', '优惠券兑换码');
         $table->show('create_time ', '发放时间')->getWrapper()->addStyle('width:160px;');
         $table->show('get_time ', '领取日期')->getWrapper()->addStyle('width:160px;');
-        $table->match('status ', '可用状态')->options([0 => '禁用', 1 => '正常', 2 => '已使用'])->mapClassWhenGroup([[0, 'danger'], [1, 'success']]);
+        $table->match('status ', '可用状态')->options([0 => '禁用', 1 => '正常', 2 => '已使用'])->mapClassGroup([[0, 'danger'], [1, 'success']]);
         $table->show('no_', '编号');
         $table->sortable('id,card_type,get_time,send_time');
 

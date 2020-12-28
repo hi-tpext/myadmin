@@ -242,7 +242,7 @@ class Shopgoods extends Controller
         $table->checkbox('attr', '属性')->autoPost(url('editAttr'))->options(['is_recommend' => '推荐', 'is_hot' => '热门', 'is_top' => '置顶'])->inline(false);
         $table->text('sort', '排序')->autoPost('', true)->getWrapper()->addStyle('width:80px');
         $table->text('click', '点击量')->autoPost('', true)->getWrapper()->addStyle('width:80px');
-        $table->text('stock', '库存')->autoPost('', true)->mapClassWhen(['1'], 'disabled', 'many_price')->getWrapper()->addStyle('width:80px');
+        $table->text('stock', '库存')->autoPost('', true)->mapClass(['1'], 'disabled', 'many_price')->getWrapper()->addStyle('width:80px');
         $table->text('sales_sum', '销量')->autoPost('', true)->getWrapper()->addStyle('width:80px');
         $table->switchBtn('on_sale', '上架')->autoPost('', true);
         $table->switchBtn('is_show', '显示')->autoPost('', true);
