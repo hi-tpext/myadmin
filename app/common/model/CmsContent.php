@@ -15,6 +15,11 @@ class CmsContent extends Model
         }
     }
 
+    public function category()
+    {
+        return $this->belongsTo(CmsCategory::class, 'category_id', 'id');
+    }
+
     public function getCategoryAttr($value, $data)
     {
         $category = CmsCategory::find($data['category_id']);

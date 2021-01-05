@@ -29,7 +29,7 @@ class ShopGoods extends Model
 
     public function cate()
     {
-        return $this->hasOne('shop_category', 'category_id');
+        return $this->belongsTo('shop_category', 'category_id', 'id');
     }
 
     public function getAdminGroupAttr($value, $data)
@@ -83,5 +83,15 @@ class ShopGoods extends Model
     public function getManyPriceAttr($value, $data)
     {
         return ShopGoodsSpecPrice::where(['goods_id' => $data['id']])->count() > 0 ? 1 : 0;
+    }
+
+    public function category()
+    {
+        return $this->belongsTo(Shopcategory::class, 'category_id', 'id');
+    }
+
+    public function brand()
+    {
+        return $this->belongsTo(Shopbrand::class, 'brand_id', 'id');
     }
 }

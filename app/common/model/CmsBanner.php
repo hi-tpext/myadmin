@@ -20,4 +20,9 @@ class CmsBanner extends Model
         $position = CmsPosition::find($data['position_id']);
         return $position ? $position['name'] : '--';
     }
+
+    public function position()
+    {
+        return $this->belongsTo(CmsPosition::class, 'position_id', 'id');
+    }
 }

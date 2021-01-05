@@ -10,4 +10,9 @@ class ShopOrderDelivery extends Model
     use SoftDelete;
 
     protected $autoWriteTimestamp = 'datetime';
+
+    public function order()
+    {
+        return $this->belongsTo(Shoporder::class, 'order_id', 'id');
+    }
 }

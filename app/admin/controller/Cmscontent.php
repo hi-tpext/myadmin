@@ -37,6 +37,8 @@ class Cmscontent extends Controller
         $this->pageTitle = '内容管理';
         $this->enableField = 'is_show';
         $this->pagesize = 6;
+
+        $this->indexWith = ['category'];
     }
 
     protected function filterWhere()
@@ -147,7 +149,7 @@ class Cmscontent extends Controller
         $table->show('id', 'ID');
         $table->image('logo', '封面图')->default('/static/images/logo.png')->thumbSize(60, 60);
         $table->text('title', '标题')->autoPost()->getWrapper()->addStyle('max-width:200px');
-        $table->show('category', '栏目');
+        $table->show('category.name', '栏目');
         $table->file('video', '视频')->thumbSize(60, 60)->jsOptions(['fileSingleSizeLimit' => 50 * 1024 * 1024]);
         $table->show('author', '作者')->default('暂无');
         $table->show('source', '来源')->default('暂无');

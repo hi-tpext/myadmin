@@ -79,4 +79,9 @@ class MemberAddress extends Model
 
         return $data;
     }
+
+    public function member()
+    {
+        return $this->belongsTo(Member::class, 'member_id', 'id');
+    }
 }

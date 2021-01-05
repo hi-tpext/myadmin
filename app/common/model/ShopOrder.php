@@ -191,4 +191,9 @@ class ShopOrder extends Model
         }
         return  implode('、', $names);
     }
+
+    public function member()
+    {
+        return $this->belongsTo(Member::class, 'member_id', 'id');
+    }
 }

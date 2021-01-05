@@ -32,6 +32,8 @@ class Memberaccount extends Controller
         $this->dataModel = new AccountModel;
         $this->pageTitle = '账户记录';
         $this->sortOrder = 'create_time desc';
+
+        $this->indexWith = ['member'];
     }
 
     protected function filterWhere()
@@ -93,7 +95,7 @@ class Memberaccount extends Controller
         $table = $this->table;
 
         $table->show('id', 'ID');
-        $table->show('nickname', '昵称');
+        $table->show('member.nickname', '昵称');
         $table->show('money', AccountModel::$types['money']);
         $table->show('points', AccountModel::$types['points']);
         $table->show('commission', AccountModel::$types['commission']);

@@ -34,4 +34,9 @@ class MemberAccount extends Model
 
         return $names;
     }
+
+    public function member()
+    {
+        return $this->belongsTo(Member::class, 'member_id', 'id');
+    }
 }

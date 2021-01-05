@@ -27,6 +27,8 @@ class Memberlog extends Controller
     {
         $this->dataModel = new LogModel;
         $this->pageTitle = '会员日志';
+
+        $this->indexWith = ['member'];
     }
 
     protected function filterWhere()
@@ -72,7 +74,7 @@ class Memberlog extends Controller
         $table = $this->table;
 
         $table->show('id', 'ID');
-        $table->show('nickname', '会员');
+        $table->show('member.nickname', '会员');
         $table->show('desc', '描述');
         $table->show('change', '等级变动');
         $table->show('create_time', '操作时间')->getWrapper()->addStyle('width:150px');

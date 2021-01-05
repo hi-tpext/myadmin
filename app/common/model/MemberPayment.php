@@ -53,4 +53,9 @@ class MemberPayment extends Model
 
         return '未知支付类型';
     }
+
+    public function member()
+    {
+        return $this->belongsTo(Member::class, 'member_id', 'id');
+    }
 }

@@ -76,4 +76,9 @@ class MemberRecharge extends Model
         $member = Member::find($data['first_leader']);
         return $data['first_leader'] . '#' . ($member ? $member['nickname'] : '--');
     }
+
+    public function member()
+    {
+        return $this->belongsTo(Member::class, 'member_id', 'id');
+    }
 }
