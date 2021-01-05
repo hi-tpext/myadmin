@@ -3,7 +3,7 @@
 namespace app\common\logic;
 
 use app\common\model;
-use think\Db;
+use think\facade\Db;
 use think\facade\Log;
 use think\validate;
 

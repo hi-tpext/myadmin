@@ -7,7 +7,7 @@ use app\common\logic\CartLogic;
 use app\common\logic\OrderLogic as CommonOrderLogic;
 use app\common\logic\PaymentLogic;
 use app\common\model;
-use think\Db;
+use think\facade\Db;
 use think\Validate;
 use tpext\areacity\api\model\Areacity;
 

@@ -14,7 +14,7 @@
 //-------------------------
 
 use think\Container;
-use think\Db;
+use think\facade\Db;
 use think\exception\HttpException;
 use think\exception\HttpResponseException;
 use think\facade\Cache;

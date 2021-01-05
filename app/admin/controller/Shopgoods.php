@@ -12,7 +12,7 @@ use app\common\model\ShopGoodsSpecPrice;
 use app\common\model\ShopGoodsSpecValue;
 use app\common\model\ShopTag;
 use think\Controller;
-use think\Db;
+use think\facade\Db;
 use tpext\builder\traits\HasBuilder;
 
 /**
@@ -511,12 +511,16 @@ class Shopgoods extends Controller
                 $this->error('品牌[' . $parent['name'] . ']是目录，不允许存放产品，请重新选择');
             }
         }
+        $res = 0;
 
         if ($id) {
-            $res = $this->dataModel->save($data, ['id' => $id]);
+            $exists = $this->dataModel->where(['id' => $id])->find();
+            if ($exists) {
+                $res = $exists->force()->save($data);
+            }
         } else {
             $data['create_user'] = session('admin_id');
-            $res = $this->dataModel->save($data);
+            $res = $this->dataModel->exists(false)->save($data);
             if ($res) {
                 $id = $this->dataModel->id;
             }

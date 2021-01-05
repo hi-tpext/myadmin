@@ -6,7 +6,7 @@ use app\common\model\ShippingArea as ShippingAreaModel;
 use app\common\model\ShippingAreaItem;
 use app\common\model\ShippingCom;
 use think\Controller;
-use think\Db;
+use think\facade\Db;
 use tpext\areacity\api\model\Areacity;
 use tpext\builder\traits\HasBuilder;
 

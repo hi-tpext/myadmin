@@ -3,7 +3,7 @@
 namespace app\common\logic;
 
 use app\common\model;
-use think\Db;
+use think\facade\Db;
 
 class CouponLogic
 {

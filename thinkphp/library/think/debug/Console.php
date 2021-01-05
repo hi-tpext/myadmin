@@ -12,7 +12,7 @@
 namespace think\debug;
 
 use think\Container;
-use think\Db;
+use think\facade\Db;
 use think\Response;
 
 /**

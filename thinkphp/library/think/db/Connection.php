@@ -15,7 +15,7 @@ use InvalidArgumentException;
 use PDO;
 use PDOStatement;
 use think\Container;
-use think\Db;
+use think\facade\Db;
 use think\db\exception\BindParamException;
 use think\Debug;
 use think\Exception;
