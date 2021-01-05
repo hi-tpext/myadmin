@@ -41,7 +41,7 @@ class Shopcategory extends Controller
     public function selectPage()
     {
 
-        $list = $this->dataModel->buildTree(0, 0, 0);
+        $list = $this->dataModel->getLineData();
         $selected = input('selected');
 
         $data = [];
