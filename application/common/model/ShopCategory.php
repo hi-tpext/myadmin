@@ -3,9 +3,12 @@
 namespace app\common\model;
 
 use think\Model;
+use tpext\builder\traits\TreeModel;
 
 class ShopCategory extends Model
 {
+    use TreeModel;
+
     protected $autoWriteTimestamp = 'dateTime';
 
     protected static function init()
@@ -42,51 +45,9 @@ class ShopCategory extends Model
         return ShopGoods::where('category_id', $data['id'])->count();
     }
 
-    public function buildList($parent = 0, $deep = 0)
+    protected function treeInit()
     {
-        $roots = static::where(['parent_id' => $parent])->order('sort')->select();
-        $data = [];
-
-        $deep += 1;
-
-        foreach ($roots as $root) {
-
-            if ($parent == 0) {
-                $root['title_show'] = '├─' . $root['name'];
-            } else {
-                $root['title_show'] = str_repeat('&nbsp;', ($deep - 1) * 6) . '├─' . $root['name'];
-            }
-
-            $data[] = $root;
-
-            $data = array_merge($data, $this->buildList($root['id'], $deep));
-        }
-
-        return $data;
-    }
-
-    public function buildTree($parent = 0, $deep = 0, $except = 0)
-    {
-        $roots = static::where(['parent_id' => $parent])->order('sort')->field('id,name,parent_id')->select();
-        $data = [];
-
-        $deep += 1;
-
-        foreach ($roots as $root) {
-
-            $root['title_show'] = '|' . str_repeat('──', $deep) . $root['name'];
-
-            if ($root['id'] == $except) {
-                continue;
-            }
-
-            $root['title_show'];
-
-            $data[$root['id']] = $root['title_show'];
-
-            $data += $this->buildTree($root['id'], $deep, $except);
-        }
-
-        return $data;
+        $this->treeTextField = 'name';
+        $this->treeSortField = 'sort';
     }
 }

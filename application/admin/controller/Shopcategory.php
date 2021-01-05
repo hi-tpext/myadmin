@@ -41,7 +41,7 @@ class Shopcategory extends Controller
     public function selectPage()
     {
 
-        $list = $this->dataModel->buildTree(0, 0, 0);
+        $list = $this->dataModel->getOptionsData();
         $selected = input('selected');
 
         $data = [];
@@ -83,7 +83,7 @@ class Shopcategory extends Controller
 
         $tree = [0 => '根分类'];
 
-        $tree += $this->dataModel->buildTree(0, 0, $isEdit ? $data['id'] : 0); //数组合并不要用 array_merge , 会重排数组键 ，作为options导致bug
+        $tree += $this->dataModel->getOptionsData($isEdit ? $data['id'] : 0); //数组合并不要用 array_merge , 会重排数组键 ，作为options导致bug
 
         $form->text('name', '名称')->required();
         $form->select('parent_id', '上级')->required()->options($tree);
@@ -100,36 +100,6 @@ class Shopcategory extends Controller
     }
 
     /**
-     * Undocumented function
-     *
-     * @param Table $table
-     * @return void
-     */
-    protected function buildDataList()
-    {
-        $table = $this->table;
-
-        $table->sortable([]);
-
-        $data = $this->dataModel->buildList(0, 0);
-        if ($this->isExporting) {
-            $__ids__ = input('post.__ids__');
-            if (!empty($__ids__)) {
-                $ids = explode(',', $__ids__);
-                $newd = [];
-                foreach ($data as $d) {
-                    if (in_array($d['id'], $ids)) {
-                        $newd[] = $d;
-                    }
-                }
-                $data = $newd;
-            }
-        }
-        $this->buildTable($data);
-        $table->fill($data);
-    }
-
-    /**
      * 构建表格
      *
      * @return void
@@ -138,7 +108,7 @@ class Shopcategory extends Controller
     {
         $table = $this->table;
         $table->show('id', 'ID');
-        $table->raw('title_show', '结构')->getWrapper()->addStyle('text-align:left;');
+        $table->raw('__text__', '结构')->getWrapper()->addStyle('text-align:left;');
         $table->image('logo', '封面')->thumbSize(50, 50);
         $table->show('link', '链接')->default('暂无');
         $table->text('name', '名称')->autoPost('', true)->getWrapper()->addStyle('max-width:80px');
