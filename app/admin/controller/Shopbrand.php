@@ -49,7 +49,7 @@ class Shopbrand extends Controller
         $tree += $this->dataModel->getOptionsData($isEdit ? $data['id'] : 0); //数组合并不要用 array_merge , 会重排数组键 ，作为options导致bug
 
         $form->text('name', '名称')->required();
-        $form->select('parent_id', '上级')->required()->options($tree);
+        $form->select('parent_id', '上级')->required()->options($tree)->default(input('parend_id'));
         $form->text('link', '链接');
         $form->image('logo', '封面图片');
         $form->switchBtn('is_show', '显示')->default(1);
@@ -87,6 +87,11 @@ class Shopbrand extends Controller
         unset($d);
 
         $table->sortable([]);
+
+        $table->getActionbar()
+            ->btnLink('add', url('add', ['parend_id' => '__data.pk__']), '', 'btn-secondary', 'mdi-plus', 'title="添加下级"')
+            ->btnEdit()
+            ->btnDelete();
     }
 
     private function save($id = 0)
