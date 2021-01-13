@@ -272,13 +272,17 @@ class Member extends Controller
     }
 }
 ```
-## 八.效果展示:
 
-[![](https://gitee.com/ichynul/myadmin/raw/master/images/1.png)](https://gitee.com/ichynul/myadmin/raw/master/images/1.png "1")
-[![](https://gitee.com/ichynul/myadmin/raw/master/images/2.png)](https://gitee.com/ichynul/myadmin/raw/master/images/2.png "2")
-[![](https://gitee.com/ichynul/myadmin/raw/master/images/3.png)](https://gitee.com/ichynul/myadmin/raw/master/images/3.png "3")
-[![](https://gitee.com/ichynul/myadmin/raw/master/images/4.png)](https://gitee.com/ichynul/myadmin/raw/master/images/4.png "4")
-[![](https://gitee.com/ichynul/myadmin/raw/master/images/5.png)](https://gitee.com/ichynul/myadmin/raw/master/images/5.png "5")
-[![](https://gitee.com/ichynul/myadmin/raw/master/images/6.png)](https://gitee.com/ichynul/myadmin/raw/master/images/6.png "6")
-[![](https://gitee.com/ichynul/myadmin/raw/master/images/7.png)](https://gitee.com/ichynul/myadmin/raw/master/images/7.png "7")
-[![](https://gitee.com/ichynul/myadmin/raw/master/images/8.png)](https://gitee.com/ichynul/myadmin/raw/master/images/8.png "8")
+## 八.QQ群:
+![alt qqqun](https://gitee.com/ichynul/myadmin/raw/5.0/images/qqqun.jpg "qqqun")
+
+## 九.效果展示:
+
+![alt 1](https://gitee.com/ichynul/myadmin/raw/5.0/images/1.png "1")
+![alt 2](https://gitee.com/ichynul/myadmin/raw/5.0/images/2.png "2")
+![alt 3](https://gitee.com/ichynul/myadmin/raw/5.0/images/3.png "3")
+![alt 4](https://gitee.com/ichynul/myadmin/raw/5.0/images/4.png "4")
+![alt 5](https://gitee.com/ichynul/myadmin/raw/5.0/images/5.png "5")
+![alt 6](https://gitee.com/ichynul/myadmin/raw/5.0/images/6.png "6")
+![alt 7](https://gitee.com/ichynul/myadmin/raw/5.0/images/7.png "7")
+![alt 8](https://gitee.com/ichynul/myadmin/raw/5.0/images/8.png "8")
