@@ -365,9 +365,9 @@ class Shopgoods extends Controller
         $form->number('click', '点击量', 4)->default(1);
         $form->number('sales_sum', '销量', 4)->default(0);
         $form->html('');
-        $form->radio('on_sale', '上架', 6)->options([1 => '已上架', 0 => '未上架'])->default(0)->help('下架后不显示也不可购买');
+        $form->radio('on_sale', '上架', 6)->blockStyle()->options([1 => '已上架', 0 => '未上架'])->default(0)->help('下架后不显示也不可购买');
         $form->datetime('publish_time', '上架时间', 6)->required()->default(date('Y-m-d H:i:s'));
-        $form->checkbox('attr', '属性')->options(['is_recommend' => '推荐', 'is_hot' => '热门', 'is_top' => '置顶']);
+        $form->checkbox('attr', '属性')->blockStyle()->checkallBtn()->options(['is_recommend' => '推荐', 'is_hot' => '热门', 'is_top' => '置顶']);
         $form->switchBtn('is_show', '显示')->default(1)
             ->help('仅对已上架产品生效，未上架无论如何都不显示<br>已上架产品隐藏后不在产品列表显示，但仍可购买(通过某些途径进入产品详情页)');
         $form->number('sort', '排序')->default(0);
