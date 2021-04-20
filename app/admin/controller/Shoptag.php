@@ -59,7 +59,7 @@ class Shoptag extends Controller
 
     protected function filterWhere()
     {
-        $searchData = request()->post();
+        $searchData = request()->get();
 
         $where = [];
         if (!empty($searchData['name'])) {

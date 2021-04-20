@@ -71,7 +71,7 @@ class Shopcouponlist extends Controller
 
     protected function filterWhere()
     {
-        $searchData = request()->post();
+        $searchData = request()->get();
 
         $where = [];
 
