@@ -215,7 +215,7 @@ class Cmscontent extends Controller
         $form->file('video', '视频')->video()->mediumSize();
         $form->file('attachment', '附件')->mediumSize();
         $form->text('author', '作者', 6)->maxlength(33)->default($admin ? $admin['name'] : '');
-        $form->text('source', '来源', 6)->maxlength(55)->default($admin ? $admin['group_name'] : '');
+        $form->text('source', '来源', 6)->maxlength(55)->default($admin && $admin['group'] ? $admin['group']['name'] : '');
         $form->datetime('publish_time', '发布时间')->required()->default(date('Y-m-d H:i:s'));
         $form->number('click', '点击量', 6)->default(0);
         $form->number('sort', '排序', 6)->default(0);
