@@ -37,6 +37,8 @@ class Cmsbanner extends Controller
         $this->pagesize = 6;
 
         $this->selectSearch = 'title';
+        $this->selectFields = 'id,title';
+        $this->selectTextField = 'title';
 
         $this->indexWith = ['position'];
     }

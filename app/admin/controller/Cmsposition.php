@@ -31,6 +31,10 @@ class Cmsposition extends Controller
         $this->pageTitle = '广告位置';
         $this->sortOrder = 'id desc';
         $this->pagesize = 8;
+
+        $this->selectSearch = 'name';
+        $this->selectFields = 'id,name';
+        $this->selectTextField = 'name';
     }
 
     /**

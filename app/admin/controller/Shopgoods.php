@@ -172,10 +172,10 @@ class Shopgoods extends Controller
         $search = $this->search;
 
         $search->text('kwd', '名称/spu', 3)->maxlength(20);
-        $search->select('category_id', '分类', 3)->dataUrl(url('/admin/shopcategory/selectPage'), 'name');
+        $search->select('category_id', '分类', 3)->dataUrl(url('/admin/shopcategory/selectPage'));
         $search->select('brand_id', '品牌', 3)->dataUrl(url('/admin/shopbrand/selectPage'));
         $search->select('is_show', '显示', 3)->options([1 => '是', 0 => '否']);
-        $search->select('admin_group_id', '商家', 3)->dataUrl(url('/admin/group/selectPage'), 'name');
+        $search->select('admin_group_id', '商家', 3)->dataUrl(url('/admin/group/selectPage'));
         $search->select('on_sale', '上架', 3)->options([1 => '是', 0 => '否']);
         $search->select('share_commission', '分销', 3)->options([1 => '是', 0 => '否']);
         $search->select('tags', '标签', 3)->dataUrl(url('/admin/shoptag/selectPage'));
@@ -338,9 +338,9 @@ class Shopgoods extends Controller
 
         $form->defaultDisplayerSize(12, 12);
         $form->text('name', '名称')->required()->maxlength(55);
-        $form->select('category_id', '分类')->required()->dataUrl(url('/admin/shopcategory/selectPage'), 'name');
+        $form->select('category_id', '分类')->required()->dataUrl(url('/admin/shopcategory/selectPage'));
         $form->select('brand_id', '品牌')->dataUrl(url('/admin/shopbrand/selectPage'));
-        $form->select('admin_group_id', '商家')->dataUrl(url('/admin/group/selectPage'), 'name');
+        $form->select('admin_group_id', '商家')->dataUrl(url('/admin/group/selectPage'));
         $form->text('spu', 'spu码')->maxlength(100);
         $form->multipleSelect('tags', '标签')->dataUrl(url('/admin/shoptag/selectPage'))->help('可到【标签管理】菜单添加标签');
         $form->tags('keyword', '关键字');

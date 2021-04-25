@@ -30,45 +30,10 @@ class Shopcategory extends Controller
         $this->pageTitle = '产品分类';
         $this->sortOrder = 'id desc';
         $this->pagesize = 8;
-    }
 
-    /**
-     * Undocumented function
-     *
-     * @title 下拉选择产品分类
-     * @return mixed
-     */
-    public function selectPage()
-    {
-
-        $list = $this->dataModel->getOptionsData();
-        $selected = input('selected');
-
-        $data = [];
-
-        foreach ($list as $k => $v) {
-            if ($selected) {
-                if ($selected && $k == $selected) {
-                    $data[] = [
-                        'id' => $k,
-                        'name' => $v,
-                    ];
-                    break;
-                }
-            } else {
-                $data[] = [
-                    'id' => $k,
-                    'name' => $v,
-                ];
-            }
-        }
-
-        return json(
-            [
-                'data' => $data,
-                'has_more' => 0,
-            ]
-        );
+        $this->selectSearch = 'name';
+        $this->selectFields = 'id,name';
+        $this->selectTextField = 'name';
     }
 
     /**

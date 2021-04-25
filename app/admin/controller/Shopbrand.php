@@ -32,6 +32,8 @@ class Shopbrand extends Controller
         $this->pagesize = 8;
 
         $this->selectSearch = 'name';
+        $this->selectFields = 'id,name';
+        $this->selectTextField = 'name';
     }
 
     /**
