@@ -32,45 +32,8 @@ class Shopbrand extends Controller
         $this->pagesize = 8;
 
         $this->selectSearch = 'name';
-    }
-
-    /**
-     * Undocumented function
-     *
-     * @title 下拉选择产品分类
-     * @return mixed
-     */
-    public function selectPage()
-    {
-
-        $list = $this->dataModel->getOptionsData();
-        $selected = input('selected');
-
-        $data = [];
-
-        foreach ($list as $k => $v) {
-            if ($selected) {
-                if ($selected && $k == $selected) {
-                    $data[] = [
-                        'id' => $k,
-                        'name' => $v,
-                    ];
-                    break;
-                }
-            } else {
-                $data[] = [
-                    'id' => $k,
-                    'name' => $v,
-                ];
-            }
-        }
-
-        return json(
-            [
-                'data' => $data,
-                'has_more' => 0,
-            ]
-        );
+        $this->selectFields = 'id,name';
+        $this->selectTextField = 'name';
     }
 
     /**
