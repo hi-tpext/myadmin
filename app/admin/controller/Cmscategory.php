@@ -89,7 +89,16 @@ class Cmscategory extends Controller
         $table->getActionbar()
             ->btnLink('add', url('add', ['parend_id' => '__data.pk__']), '', 'btn-secondary', 'mdi-plus', 'title="添加下级"')
             ->btnEdit()
-            ->btnDelete();
+            ->btnDelete()
+            ->mapClass([
+                'add' => [
+                    'hidden' => '__hi_add__'
+                ]
+            ]);
+
+        foreach ($data as $d) {
+            $d['__hi_add__'] = $d['type'] == 3;
+        }
     }
 
     private function save($id = 0)
