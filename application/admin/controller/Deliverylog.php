@@ -262,8 +262,8 @@ class Deliverylog extends Controller
             )
         );
 
-        $search->datetime('start ', '操作时间', 3)->placeholder('起始');
-        $search->datetime('end ', '~', 3)->placeholder('截止');
+        $search->datetime('start ', '操作时间')->placeholder('起始');
+        $search->datetime('end ', '~')->placeholder('截止');
     }
 
     /**
