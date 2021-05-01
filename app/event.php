@@ -11,7 +11,7 @@ return [
         'LogLevel' => [],
         'LogWrite' => [],
         'tpext_find_extensions' => [
-            'app\event\Extensions',
+            'app\\event\\Extensions',
         ],
     ],
 
