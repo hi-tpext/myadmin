@@ -244,7 +244,7 @@ class Shoporder extends Controller
     {
         $search = $this->search;
 
-        $search->tabLink('pay_status')->options(OrderModel::$pay_status_types);
+        $search->tabLink('pay_status')->options(['' => '全部'] + OrderModel::$pay_status_types);
 
         $search->text('member_id', '会员id');
         $search->text('order_sn', '订单sn')->maxlength(30);
@@ -263,8 +263,8 @@ class Shoporder extends Controller
             )
         );
 
-        $search->datetime('start', '支付时间', 3)->placeholder('起始');
-        $search->datetime('end', '~', 3)->placeholder('截止');
+        $search->datetime('start', '支付时间')->placeholder('起始');
+        $search->datetime('end', '~')->placeholder('截止');
     }
 
     /**
@@ -322,13 +322,13 @@ class Shoporder extends Controller
 
         foreach ($data as &$d) {
             $d['__hi_edit__'] = $d['pay_status'] != OrderModel::PAY_STATUS_0
-            || !in_array($d['order_status'], [OrderModel::ORDER_STATUS_0, OrderModel::ORDER_STATUS_1]);
+                || !in_array($d['order_status'], [OrderModel::ORDER_STATUS_0, OrderModel::ORDER_STATUS_1]);
 
             $d['__hi_del__'] = !in_array($d['order_status'], [OrderModel::ORDER_STATUS_3, OrderModel::ORDER_STATUS_5])
-            || $d['pay_status'] == OrderModel::PAY_STATUS_1 || $d['shipping_status'] != OrderModel::SHIPPING_STATUS_0;
+                || $d['pay_status'] == OrderModel::PAY_STATUS_1 || $d['shipping_status'] != OrderModel::SHIPPING_STATUS_0;
 
             $d['__hi_deliver__'] = $d['order_status'] != OrderModel::ORDER_STATUS_1
-            || $d['pay_status'] != OrderModel::PAY_STATUS_1 || $d['shipping_status'] == OrderModel::SHIPPING_STATUS_1;
+                || $d['pay_status'] != OrderModel::PAY_STATUS_1 || $d['shipping_status'] == OrderModel::SHIPPING_STATUS_1;
 
             //$ps == 0 && $ss == 0 && ($os == 1 || $os == 0
             $d['__hi_order_cancel__'] = !($d['order_status'] <= OrderModel::ORDER_STATUS_1
