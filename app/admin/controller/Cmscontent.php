@@ -39,6 +39,11 @@ class Cmscontent extends Controller
         $this->pagesize = 6;
 
         $this->indexWith = ['category'];
+
+        //左侧树
+        $this->treeModel = $this->categoryModel;//分类模型
+        $this->treeTextField = 'name';//分类模型中的分类名称字段
+        $this->treeKey = 'category_id';//关联的键　localKey
     }
 
     protected function filterWhere()
@@ -96,45 +101,6 @@ class Cmscontent extends Controller
         $search->select('is_show', '显示', 3)->options([1 => '是', 0 => '否']);
         $search->select('tags', '标签', 3)->dataUrl(url('/admin/cmstag/selectPage'));
         $search->checkbox('attr', '属性', 3)->options(['is_recommend' => '推荐', 'is_hot' => '热门', 'is_top' => '置顶']);
-    }
-
-    public function index()
-    {
-        $builder = $this->builder($this->pageTitle, $this->indexText);
-
-        $tree = $builder->tree('1 left-tree');
-
-        $tree->fill($this->categoryModel->select());
-
-        $tree->trigger('.row-category_id');
-
-        $this->table = $builder->table('1 right-list');
-
-        $builder->addStyleSheet('
-            .left-tree
-            {
-                width:12%;
-                float:left;
-            }
-
-            .right-list
-            {
-                width:88%;
-                float:right;
-            }
-        ');
-
-        $this->table->pk($this->getPk());
-        $this->search = $this->table->getSearch();
-
-        $this->buildSearch();
-        $this->buildDataList();
-
-        if (request()->isAjax()) {
-            return $this->table->partial()->render();
-        }
-
-        return $builder->render();
     }
 
     /**
