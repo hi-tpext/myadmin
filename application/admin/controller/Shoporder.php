@@ -244,7 +244,7 @@ class Shoporder extends Controller
     {
         $search = $this->search;
 
-        $search->tabLink('pay_status')->options(OrderModel::$pay_status_types);
+        $search->tabLink('pay_status')->options(['' => '全部'] + OrderModel::$pay_status_types);
 
         $search->text('member_id', '会员id');
         $search->text('order_sn', '订单sn')->maxlength(30);
@@ -263,8 +263,8 @@ class Shoporder extends Controller
             )
         );
 
-        $search->datetime('start', '支付时间', 3)->placeholder('起始');
-        $search->datetime('end', '~', 3)->placeholder('截止');
+        $search->datetime('start', '支付时间')->placeholder('起始');
+        $search->datetime('end', '~')->placeholder('截止');
     }
 
     /**
