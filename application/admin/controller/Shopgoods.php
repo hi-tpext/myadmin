@@ -332,7 +332,7 @@ class Shopgoods extends Controller
          * );
          */
 
-         //  参数是可变参数的多个fields:
+         //
         $form->fields('', '', 7)->size(0, 12)->showLabel(false);
 
         $form->defaultDisplayerSize(12, 12);
