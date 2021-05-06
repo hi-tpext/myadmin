@@ -74,12 +74,13 @@ class Shopgoods extends Controller
         $this->selectFields = 'id,name,spu'; //优化查询
         $this->selectTextField = '{name}#{spu}';
 
-        $this->indexWith = 'category'; //列表页模型关联
+        $this->indexWith = ['category']; //列表页模型关联
 
         //左侧树
         $this->treeModel = $this->categoryModel; //分类模型
         $this->treeTextField = 'name'; //分类模型中的分类名称字段
         $this->treeKey = 'category_id'; //关联的键　localKey
+        //$this->treeExpandAll = false; //左侧树默认不展开
     }
 
     /**
@@ -332,7 +333,7 @@ class Shopgoods extends Controller
          * );
          */
 
-         //
+        //
         $form->fields('', '', 7)->size(0, 12)->showLabel(false);
 
         $form->defaultDisplayerSize(12, 12);
