@@ -108,5 +108,27 @@
         "website": "https://gitee.com/ichynul/tpextareacity",
         "platform": "*",
         "is_free": "1"
+    },
+    {
+        "title": "myadmin演示",
+        "name": "myadmin.data",
+        "type": "module",
+        "tags": "未归类",
+        "description": "提供demo数据库脚本，请下载压缩包[myadmindata.zip]解压放在extend目录",
+        "composer": "extend 自定义",
+        "website": "https://gitee.com/ichynul/myadmin/tree/5.0/extend",
+        "platform": "*",
+        "is_free": "1"
+    },
+    {
+        "title": "H+admin后台主框架模板样式",
+        "name": "hplus.admin",
+        "type": "resource",
+        "tags": "未归类",
+        "description": "提供[H+admin]相关样式资源，主要改变主框架[/admin/index/index]的样式，请下载压缩包[hplusadmin.zip]解压放在extend目录",
+        "composer": "extend 自定义",
+        "website": "https://gitee.com/ichynul/myadmin/tree/5.0/extend",
+        "platform": "*",
+        "is_free": "1"
     }
 ]
