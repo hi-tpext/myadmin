@@ -210,8 +210,8 @@ class Shoporder extends Controller
         if (isset($searchData['shipping_status']) && $searchData['shipping_status'] != '') {
             $where[] = ['shipping_status', '=', $searchData['shipping_status']];
         }
-        if (!empty($searchData['pay_name'])) {
-            $where[] = ['pay_name', '=', $searchData['pay_name']];
+        if (!empty($searchData['pay_code'])) {
+            $where[] = ['pay_code', '=', $searchData['pay_code']];
         }
         if (!empty($searchData['province'])) {
             $where[] = ['province', '=', $searchData['province']];
@@ -255,7 +255,7 @@ class Shoporder extends Controller
         $search->select('order_status', '订单状态')->options(OrderModel::$order_status_types)->default(input('order_status'));
         $search->select('pay_status', '支付状态')->options(OrderModel::$pay_status_types)->default(input('pay_status'));
         $search->select('shipping_status', '物流状态')->options(OrderModel::$shipping_status_types)->default(input('shipping_status'));
-        $search->select('pay_name', '支付方式')->options(OrderModel::$pay_codes);
+        $search->select('pay_code', '支付方式')->options(OrderModel::$pay_codes);
 
         $search->select('province', '省份')->dataUrl(url('api/areacity/province'), 'ext_name')->withNext(
             $search->select('city', '城市')->dataUrl(url('api/areacity/city'), 'ext_name')->withNext(
