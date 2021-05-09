@@ -51,7 +51,7 @@ composer require ichynul/tpextmyadmin:^3.0.0
 再次打开 `http://localhost:8081/admin` ，会跳转登录，默认账号：`admin`：`tpextadmin`　
 
 ## 五、文档
-<https://gitee.com/ichynul/myadmin/wikis/pages>　
+<https://gitee.com/tpext/myadmin/wikis/pages>　
 
 ## 六、演示
 #### 网址：
