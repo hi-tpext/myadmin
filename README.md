@@ -69,7 +69,7 @@ composer require ichynul/tpextmyadmin:^3.0.0
 * [tpextmanager] <https://gitee.com/tpext/tpextmanager> 管理工具
 * [lightyearadmin]<https://gitee.com/tpext/lightyearadmin> 基础样式库
 * [tpextmyadmin] <https://gitee.com/tpext/tpextmyadmin> 集成后台基础功能：权限、设置等
-* [更多] <https://gitee.com/ichynul/myadmin/blob/5.0/extensions.json> 查看全部扩展介绍
+* [更多] <https://gitee.com/tpext/myadmin/blob/5.0/extensions.json> 查看全部扩展介绍
 2. `tpextbuilder`UI模块基于`bootstrap`和`Light-Year-Admin-Template`的后台模板， 封装了大部分常用组件 ：
 
 `Column`、`Row`、`Tab`、`Table`、`Form`、`Toolbar`、`Layer`、`Content`
