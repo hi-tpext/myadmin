@@ -2,7 +2,6 @@
 
 namespace app\common\model;
 
-use app\admin\controller\Shopcouponlist as ControllerShopcouponlist;
 use think\Model;
 use think\model\concern\SoftDelete;
 
