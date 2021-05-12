@@ -2,7 +2,6 @@
 
 namespace app\common\model;
 
-use app\admin\controller\Shopcouponlist as ControllerShopcouponlist;
 use think\Model;
 use think\model\concern\SoftDelete;
 
@@ -14,11 +13,9 @@ class ShopCouponList extends Model
 
     use SoftDelete;
 
-    protected static function init()
+    public static function onAfterDelete($data)
     {
-        self::afterDelete(function ($data) {
-            ShopCouponType::where(['id' => $data['coupon_type_id']])->setInc('del_num');
-        });
+        ShopCouponType::where(['id' => $data['coupon_type_id']])->setInc('del_num');
     }
 
     public function getNicknameAttr($value, $data)
@@ -38,5 +35,4 @@ class ShopCouponList extends Model
         $type = ShopCouponType::find($data['coupon_type_id']);
         return $type ? $type['name'] : '--';
     }
-
 }
