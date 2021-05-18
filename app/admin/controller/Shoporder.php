@@ -497,10 +497,6 @@ EOT;
                 $this->builder()->addScript($script);
             }
 
-            $form->bottomOffset(5);
-            $form->btnLayerClose('返&nbsp;&nbsp;回', 2);
-            $form->bottomButtons(false);
-
             $logList = model\ShopOrderAction::where(['order_id' => $data['id']])->order('id desc')->select();
             $form->tab('操作日志');
             $form->items('log_list', ' ')->dataWithId($logList)->with(
@@ -511,6 +507,8 @@ EOT;
                 $form->match('shipping_status', '物流状态')->options(OrderModel::$shipping_status_types),
                 $form->show('create_time', '时间')
             )->canAdd(false)->cnaDelete(false)->size(0, 12)->showLabel(false);
+
+            $form->btnLayerClose();
 
             return $builder->render();
         }

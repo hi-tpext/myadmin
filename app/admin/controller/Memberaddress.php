@@ -7,6 +7,7 @@ use app\common\model\MemberAddress as AddressModel;
 use think\Controller;
 use tpext\areacity\api\model\Areacity;
 use tpext\builder\traits\HasBuilder;
+use think\facade\Db;
 
 /**
  * Undocumented class
@@ -60,7 +61,7 @@ class Memberaddress extends Controller
             $where[] = ['a.id', 'in', $selected];
         }
 
-        $list = Db('member_address')->alias('a')->join('member m', 'a.member_id = m.id')->where($where)->field('a.*,m.nickname,m.mobile as m_mobile')->select();
+        $list = Db::name('member_address')->alias('a')->join('member m', 'a.member_id = m.id')->where($where)->field('a.*,m.nickname,m.mobile as m_mobile')->select();
 
         $data = [];
 

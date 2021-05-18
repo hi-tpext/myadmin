@@ -21,7 +21,7 @@ class OrderLogic
      */
     public function getAddressList($member_id)
     {
-        $addressList = Db('member_address')->alias('a')
+        $addressList = Db::name('member_address')->alias('a')
             ->join('member m', 'a.member_id = m.id')
             ->where('a.member_id', '=', $member_id)
             ->order('a.is_default desc')->field('a.*,m.nickname,m.mobile as m_mobile')->select();

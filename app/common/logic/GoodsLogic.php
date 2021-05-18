@@ -3,7 +3,7 @@
 namespace app\common\logic;
 
 use app\common\model;
-use think\Validate;
+use think\facade\Validate;
 
 class GoodsLogic
 {
@@ -28,7 +28,7 @@ class GoodsLogic
         $errors = [];
         $names = [];
 
-        $valedate = Validate::make([
+        $valedate = new Validate([
             'name|名称' => 'require',
             'value|值' => 'require',
         ]);

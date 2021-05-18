@@ -43,7 +43,7 @@ class OrderLogic
         $orderInfo['member_money'] = $member['money'];
         $orderInfo['member_commission'] = $member['commission'];
 
-        $v = validate::make([
+        $v = new Validate([
             'goods_list|产品' => 'require|array',
         ]);
 
@@ -68,7 +68,7 @@ class OrderLogic
         $goods_total_num = 0;
 
         foreach ($cart_goods_list as $g) {
-            $v = validate::make([
+            $v = new validate([
                 'goods_id|产品id' => 'require|number|gt:0',
                 'goods_num|产品数量' => 'require|number|gt:0',
             ]);
@@ -131,7 +131,7 @@ class OrderLogic
         $orderInfo['goods_ids'] = $goods_ids;
         $orderInfo['goods_total_num'] = $goods_total_num;
 
-        $v = validate::make([
+        $v = new validate([
             'address_id|收货地址' => 'require|number',
             'shipping_code|物流code' => 'require',
             'use_money|使用余额' => 'require|float|>=:0',

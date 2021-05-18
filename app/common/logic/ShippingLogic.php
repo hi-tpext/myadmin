@@ -10,7 +10,7 @@ class ShippingLogic
     /**
      * Undocumented function
      *
-     * @param array $address
+     * @param array|\think\Model $address
      * @param string $shipping_code
      * @param array $goods
      * @return float
@@ -19,14 +19,14 @@ class ShippingLogic
     {
         $shipping_code = strtoupper($shipping_code);
 
-        $v = validate::make([
+        $v = new validate([
             'province|省份' => 'require|number|>:0',
             'city|城市' => 'require|number|gt:0',
             'area|地区' => 'require|number|gt:0',
             'town|街道' => 'number',
         ]);
 
-        if (true !== $v->check($address)) {
+        if (true !== $v->check($address->toArray())) {
             return ['code' => 0, 'msg' => '参数有误-' . $v->getError()];
         }
 
