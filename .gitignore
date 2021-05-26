@@ -5,4 +5,8 @@
 thinkphp
 .env
 .DS_Store
-/images
+images
+public/uploads/
+public/static/
+extend/*
+!extend/*.zip
