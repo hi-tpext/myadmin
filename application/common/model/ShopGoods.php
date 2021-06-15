@@ -39,12 +39,6 @@ class ShopGoods extends Model
         return $category ? $category['name'] : '--';
     }
 
-    public function getCategoryAttr($value, $data)
-    {
-        $category = ShopCategory::get($data['category_id']);
-        return $category ? $category['name'] : '--';
-    }
-
     public function setTags($value)
     {
         if (empty($value)) {

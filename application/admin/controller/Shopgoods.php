@@ -14,6 +14,7 @@ use app\common\model\ShopTag;
 use think\Controller;
 use think\Db;
 use tpext\builder\traits\HasBuilder;
+use tpext\builder\logic\Export;
 
 /**
  * Undocumented class
@@ -198,9 +199,9 @@ class Shopgoods extends Controller
         $table = $this->table;
 
         $table->show('id', 'ID');
-        $table->image('logo', '封面图')->thumbSize(60, 60);
+        $table->image('logo', '封面图')->canUpload(true)->autoPost()->thumbSize(60, 60);
         $table->fields('name_spu', '名称/spu')->with(
-            $table->show('name', '名称'),
+            $table->text('name', '名称')->autoPost(),
             $table->show('spu', 'spu')
         )->getWrapper()->addStyle('max-width:200px');
         $table->show('category.name', '分类');
@@ -232,9 +233,18 @@ class Shopgoods extends Controller
 
         $table->getToolbar()
             ->btnAdd('', '添加', 'btn-primary', 'mdi-plus', 'data-layer-size="98%,98%"')
-            ->btnEnableAndDisable('上架', '下架')
-            ->btnDelete()
-            ->btnRefresh();
+            //->btnEnableAndDisable('上架', '下架')
+            //->btnDelete()
+            ->btnActions(
+                [
+                    'enable' => '上架',
+                    'disable' => '下架',
+                    'delete' => '删除',
+                ]
+            )
+            ->btnRefresh()
+            ->btnExport('', '二维码zip打包下载', 'btn-warning')
+            ->btnExports(['zip' => '二维码图片zip打包', 'csv' => 'csv文件', 'xls' => 'xls文件', 'xlsx' => 'xlsx文件']);
 
         $table->getActionbar()
             ->btnEdit('', '', 'btn-primary', 'mdi-lead-pencil', 'data-layer-size="98%,98%"')
@@ -299,6 +309,18 @@ class Shopgoods extends Controller
 
         $tab = input('tab', 0);
 
+        // $form->tab('test');
+
+        // $form->left(6, function () use ($form) {
+        //     $form->text('name2', '名称')->required()->maxlength(55);
+        //     $form->select('category_id2', '分类')->required()->dataUrl(url('/admin/shopcategory/selectPage'));
+        // });
+
+        // $form->right(6)->with(
+        //     $form->text('name3', '名称')->required()->maxlength(55),
+        //     $form->select('category_id3', '分类')->required()->dataUrl(url('/admin/shopcategory/selectPage'))
+        // );
+
         $form->tab('基本信息');
 
         /**
@@ -334,6 +356,7 @@ class Shopgoods extends Controller
          */
 
         //
+
         $form->fields('', '', 7)->size(0, 12)->showLabel(false);
 
         $form->defaultDisplayerSize(12, 12);
@@ -406,7 +429,6 @@ class Shopgoods extends Controller
             $form->tab('库存/价格设置', $tab == 4);
             $form->items('price_list', '设置')->help('规格型号增加/删除/修改后，先保存一次此处才显示最新规格');
             foreach ($specList as $spec) {
-
                 foreach ($priceList as &$price) {
                     if ($price['data']) {
                         $savedData = json_decode($price['data'], 1);
@@ -414,6 +436,7 @@ class Shopgoods extends Controller
                             $price['spec_id' . $spec['id']] = $savedData[$spec['id']];
                         }
                     }
+                    //$price['img'] = '/uploads/images/202105/13/file1cee5058023a5f1f1d5e1d40c79efd5e5219.png';
                 }
 
                 $valueList = $this->specValueModel->where(['spec_id' => $spec['id']])->select();
@@ -425,6 +448,7 @@ class Shopgoods extends Controller
             $form->text('sku', 'SKU编码');
             $form->text('sale_price', '销售价格')->required();
             $form->number('stock', '库存')->required();
+            $form->image('img', '封面图')->required()->thumbSize(40, 40);
 
             $form->itemsEnd();
         }
@@ -575,5 +599,17 @@ class Shopgoods extends Controller
         }
 
         $this->error(implode('<br>', $errors), url('edit', ['id' => $id, 'tab' => $tab]), '', 3);
+    }
+
+    protected function exportTo($data, $displayers, $__file_type__)
+    {
+        if ($__file_type__ == 'zip' || $__file_type__ == '') {
+
+            //require_once app()->getRootPath() . 'extend/phpqrcode/phpqrcode.php';
+
+            $logic = new Export;
+
+            return $logic->toQrcode('二维码', $data, 'spu');
+        }
     }
 }
