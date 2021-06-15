@@ -431,6 +431,7 @@ class CartLogic
     public function refreshStock($goods_id)
     {
         $specPriceModel = new model\ShopGoodsSpecPrice();
+        $goodsModel = new model\ShopGoods();
 
         $count = $specPriceModel->where(['goods_id' => $goods_id])->count();
 
@@ -438,7 +439,8 @@ class CartLogic
             return false;
         }
         $allStock = $specPriceModel->where(['goods_id' => $goods_id])->sum('stock');
-        $res = $specPriceModel->where(['id' => $goods_id])->update(['stock' => $allStock]);
+
+        $res = $goodsModel->isUpdate(true, ['id' => $goods_id])->save(['stock' => $allStock]);
 
         return $res;
     }
