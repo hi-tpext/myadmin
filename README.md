@@ -14,7 +14,7 @@ cd myadmin
 ```
 > 安装后台扩展
 ```bash
-composer require ichynul/tpextmyadmin:^1.1.1
+composer require ichynul/tpextmyadmin:^1.*
 ```
 
 2. 全新安装3.0 ***beta**
@@ -29,7 +29,7 @@ cd myadmin6
 ```
 > 安装后台扩展
 ```bash
-composer require ichynul/tpextmyadmin:^3.0.0
+composer require ichynul/tpextmyadmin:^3.*
 ```
 
 ## 二、配置：　
