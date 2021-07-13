@@ -8,5 +8,6 @@ thinkphp
 images
 public/uploads/
 public/static/
+public/assets/
 extend/*
 !extend/*.zip
