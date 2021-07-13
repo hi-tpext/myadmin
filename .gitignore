@@ -3,6 +3,10 @@
 /vendor
 *.log
 .env
-/public/assets
-/public/uploads
-composer.lock
+.DS_Store
+images
+public/uploads/
+public/static/
+public/assets/
+extend/*
+!extend/*.zip
