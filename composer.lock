@@ -11,8 +11,20 @@
             "version": "1.1.2",
             "source": {
                 "type": "git",
-                "url": "https://gitee.com/ichynul/builder-mdeditor",
+                "url": "https://github.com/hi-tpext/builder-mdeditor.git",
                 "reference": "ce51a036c81f824770aa1ce3c0a11139e5d0db5c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hi-tpext/builder-mdeditor/zipball/ce51a036c81f824770aa1ce3c0a11139e5d0db5c",
+                "reference": "ce51a036c81f824770aa1ce3c0a11139e5d0db5c",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
             },
             "type": "library",
             "autoload": {
@@ -38,15 +50,31 @@
             "keywords": [
                 "thinkphp"
             ],
+            "support": {
+                "issues": "https://github.com/hi-tpext/builder-mdeditor/issues",
+                "source": "https://github.com/hi-tpext/builder-mdeditor/tree/1.1.2"
+            },
             "time": "2020-04-19T16:50:15+00:00"
         },
         {
             "name": "ichynul/lightyearadmin",
-            "version": "1.1.6",
+            "version": "1.1.7",
             "source": {
                 "type": "git",
-                "url": "https://gitee.com/ichynul/lightyearadmin",
-                "reference": "f8ca8f040bbd560072da8cb4cd6c6fae3bc44dc7"
+                "url": "https://github.com/hi-tpext/lightyearadmin.git",
+                "reference": "2c40d973655162ec0dde922d2f9c83bf454fc0b0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hi-tpext/lightyearadmin/zipball/2c40d973655162ec0dde922d2f9c83bf454fc0b0",
+                "reference": "2c40d973655162ec0dde922d2f9c83bf454fc0b0",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
             },
             "type": "library",
             "autoload": {
@@ -72,15 +100,31 @@
             "keywords": [
                 "thinkphp"
             ],
-            "time": "2020-09-09T09:39:43+00:00"
+            "support": {
+                "issues": "https://github.com/hi-tpext/lightyearadmin/issues",
+                "source": "https://github.com/hi-tpext/lightyearadmin/tree/1.1.7"
+            },
+            "time": "2021-05-05T15:42:57+00:00"
         },
         {
             "name": "ichynul/tpext",
-            "version": "3.0.9",
+            "version": "3.1.7",
             "source": {
                 "type": "git",
-                "url": "https://gitee.com/ichynul/tpext",
-                "reference": "182f8fcbc433cc913d304667167e1c81375abc15"
+                "url": "https://github.com/hi-tpext/tpext.git",
+                "reference": "2d321a653d86a0467acec8ebd81e5b8c4f34e101"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hi-tpext/tpext/zipball/2d321a653d86a0467acec8ebd81e5b8c4f34e101",
+                "reference": "2d321a653d86a0467acec8ebd81e5b8c4f34e101",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
             },
             "require": {
                 "php": ">=7.0.0",
@@ -118,15 +162,31 @@
             "keywords": [
                 "thinkphp"
             ],
-            "time": "2020-12-19T14:01:25+00:00"
+            "support": {
+                "issues": "https://github.com/hi-tpext/tpext/issues",
+                "source": "https://github.com/hi-tpext/tpext/tree/3.1.7"
+            },
+            "time": "2021-06-08T07:14:49+00:00"
         },
         {
             "name": "ichynul/tpextareacity",
-            "version": "1.1.8",
+            "version": "1.2.1",
             "source": {
                 "type": "git",
-                "url": "https://gitee.com/ichynul/tpextareacity",
-                "reference": "d32e5e02c8476fc7b4019805e9451f7d224e902e"
+                "url": "https://github.com/hi-tpext/tpextareacity.git",
+                "reference": "0b6b6d2d2732bb2db37cfae08848404bc3f6e2cc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hi-tpext/tpextareacity/zipball/0b6b6d2d2732bb2db37cfae08848404bc3f6e2cc",
+                "reference": "0b6b6d2d2732bb2db37cfae08848404bc3f6e2cc",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
             },
             "type": "library",
             "autoload": {
@@ -152,15 +212,31 @@
             "keywords": [
                 "thinkphp"
             ],
-            "time": "2020-12-17T14:00:55+00:00"
+            "support": {
+                "issues": "https://github.com/hi-tpext/tpextareacity/issues",
+                "source": "https://github.com/hi-tpext/tpextareacity/tree/1.2.1"
+            },
+            "time": "2021-06-21T02:44:41+00:00"
         },
         {
             "name": "ichynul/tpextbuilder",
-            "version": "3.1.5",
+            "version": "3.4.8",
             "source": {
                 "type": "git",
-                "url": "https://gitee.com/ichynul/tpextbuilder",
-                "reference": "a49d1a938be00a9465ce7a7556741bc3dbbf9569"
+                "url": "https://github.com/hi-tpext/tpextbuilder.git",
+                "reference": "10d0e0ea3a5491a6ade8614f5bd0afcc8dc8595e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hi-tpext/tpextbuilder/zipball/10d0e0ea3a5491a6ade8614f5bd0afcc8dc8595e",
+                "reference": "10d0e0ea3a5491a6ade8614f5bd0afcc8dc8595e",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
             },
             "type": "library",
             "autoload": {
@@ -186,27 +262,36 @@
             "keywords": [
                 "thinkphp"
             ],
-            "time": "2021-01-02T08:54:37+00:00"
+            "support": {
+                "issues": "https://github.com/hi-tpext/tpextbuilder/issues",
+                "source": "https://github.com/hi-tpext/tpextbuilder/tree/3.4.8"
+            },
+            "time": "2021-07-13T03:25:06+00:00"
         },
         {
             "name": "ichynul/tpextmanager",
-            "version": "3.0.7",
+            "version": "3.1.8",
             "source": {
                 "type": "git",
-                "url": "https://gitee.com/ichynul/tpextmanager",
-                "reference": "06d490f33cfeaedc901fd26613be551bbbbf04d0"
+                "url": "https://github.com/hi-tpext/tpextmanager.git",
+                "reference": "6057c51e3c1088475912315e9da4c6d50e271e35"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hi-tpext/tpextmanager/zipball/6057c51e3c1088475912315e9da4c6d50e271e35",
+                "reference": "6057c51e3c1088475912315e9da4c6d50e271e35",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
             },
             "require": {
                 "ichynul/builder-mdeditor": "^1.1.1"
             },
             "type": "library",
-            "extra": {
-                "think": {
-                    "services": [
-                        "tpext\\manager\\common\\Service"
-                    ]
-                }
-            },
             "autoload": {
                 "psr-4": {
                     "tpext\\manager\\": "src/"
@@ -230,15 +315,31 @@
             "keywords": [
                 "thinkphp"
             ],
-            "time": "2020-12-29T15:18:44+00:00"
+            "support": {
+                "issues": "https://github.com/hi-tpext/tpextmanager/issues",
+                "source": "https://github.com/hi-tpext/tpextmanager/tree/3.1.8"
+            },
+            "time": "2021-07-15T13:06:40+00:00"
         },
         {
             "name": "ichynul/tpextmyadmin",
-            "version": "3.1.2",
+            "version": "3.2.5",
             "source": {
                 "type": "git",
-                "url": "https://gitee.com/ichynul/tpextmyadmin",
-                "reference": "3608e5b4759f46a37bf648beb6c8aff6563e88e7"
+                "url": "https://github.com/hi-tpext/tpextmyadmin.git",
+                "reference": "d4db8d8e2f9111bab29f6324dd4a822e63e9b2f1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hi-tpext/tpextmyadmin/zipball/d4db8d8e2f9111bab29f6324dd4a822e63e9b2f1",
+                "reference": "d4db8d8e2f9111bab29f6324dd4a822e63e9b2f1",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
             },
             "require": {
                 "ichynul/lightyearadmin": "^1.0.1",
@@ -279,20 +380,24 @@
             "keywords": [
                 "thinkphp"
             ],
-            "time": "2021-01-05T14:19:18+00:00"
+            "support": {
+                "issues": "https://github.com/hi-tpext/tpextmyadmin/issues",
+                "source": "https://github.com/hi-tpext/tpextmyadmin/tree/3.2.5"
+            },
+            "time": "2021-07-08T09:46:48+00:00"
         },
         {
             "name": "league/flysystem",
-            "version": "1.1.3",
+            "version": "1.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "9be3b16c877d477357c015cec057548cf9b2a14a"
+                "reference": "f3ad69181b8afed2c9edf7be5a2918144ff4ea32"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/9be3b16c877d477357c015cec057548cf9b2a14a",
-                "reference": "9be3b16c877d477357c015cec057548cf9b2a14a",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/f3ad69181b8afed2c9edf7be5a2918144ff4ea32",
+                "reference": "f3ad69181b8afed2c9edf7be5a2918144ff4ea32",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -314,7 +419,6 @@
                 "phpunit/phpunit": "^8.5.8"
             },
             "suggest": {
-                "ext-fileinfo": "Required for MimeType",
                 "ext-ftp": "Allows you to use FTP server storage",
                 "ext-openssl": "Allows you to use FTPS server storage",
                 "league/flysystem-aws-s3-v2": "Allows you to use S3 storage with AWS SDK v2",
@@ -370,13 +474,17 @@
                 "sftp",
                 "storage"
             ],
+            "support": {
+                "issues": "https://github.com/thephpleague/flysystem/issues",
+                "source": "https://github.com/thephpleague/flysystem/tree/1.1.4"
+            },
             "funding": [
                 {
                     "url": "https://offset.earth/frankdejonge",
                     "type": "other"
                 }
             ],
-            "time": "2020-08-23T07:39:11+00:00"
+            "time": "2021-06-23T21:56:05+00:00"
         },
         {
             "name": "league/flysystem-cached-adapter",
@@ -429,20 +537,24 @@
                 }
             ],
             "description": "An adapter decorator to enable meta-data caching.",
+            "support": {
+                "issues": "https://github.com/thephpleague/flysystem-cached-adapter/issues",
+                "source": "https://github.com/thephpleague/flysystem-cached-adapter/tree/master"
+            },
             "time": "2020-07-25T15:56:04+00:00"
         },
         {
             "name": "league/mime-type-detection",
-            "version": "1.5.1",
+            "version": "1.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/mime-type-detection.git",
-                "reference": "353f66d7555d8a90781f6f5e7091932f9a4250aa"
+                "reference": "3b9dff8aaf7323590c1d2e443db701eb1f9aa0d3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/mime-type-detection/zipball/353f66d7555d8a90781f6f5e7091932f9a4250aa",
-                "reference": "353f66d7555d8a90781f6f5e7091932f9a4250aa",
+                "url": "https://api.github.com/repos/thephpleague/mime-type-detection/zipball/3b9dff8aaf7323590c1d2e443db701eb1f9aa0d3",
+                "reference": "3b9dff8aaf7323590c1d2e443db701eb1f9aa0d3",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -456,8 +568,9 @@
                 "php": "^7.2 || ^8.0"
             },
             "require-dev": {
-                "phpstan/phpstan": "^0.12.36",
-                "phpunit/phpunit": "^8.5.8"
+                "friendsofphp/php-cs-fixer": "^2.18",
+                "phpstan/phpstan": "^0.12.68",
+                "phpunit/phpunit": "^8.5.8 || ^9.3"
             },
             "type": "library",
             "autoload": {
@@ -476,6 +589,10 @@
                 }
             ],
             "description": "Mime-type detection for Flysystem",
+            "support": {
+                "issues": "https://github.com/thephpleague/mime-type-detection/issues",
+                "source": "https://github.com/thephpleague/mime-type-detection/tree/1.7.0"
+            },
             "funding": [
                 {
                     "url": "https://github.com/frankdejonge",
@@ -486,20 +603,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-10-18T11:50:25+00:00"
+            "time": "2021-01-18T20:58:21+00:00"
         },
         {
             "name": "matthiasmullie/minify",
-            "version": "1.3.65",
+            "version": "1.3.66",
             "source": {
                 "type": "git",
                 "url": "https://github.com/matthiasmullie/minify.git",
-                "reference": "227f19062451c55a797e0cc667ef983834e6580c"
+                "reference": "45fd3b0f1dfa2c965857c6d4a470bea52adc31a6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/matthiasmullie/minify/zipball/227f19062451c55a797e0cc667ef983834e6580c",
-                "reference": "227f19062451c55a797e0cc667ef983834e6580c",
+                "url": "https://api.github.com/repos/matthiasmullie/minify/zipball/45fd3b0f1dfa2c965857c6d4a470bea52adc31a6",
+                "reference": "45fd3b0f1dfa2c965857c6d4a470bea52adc31a6",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -515,8 +632,8 @@
             },
             "require-dev": {
                 "friendsofphp/php-cs-fixer": "~2.0",
-                "matthiasmullie/scrapbook": "~1.0",
-                "phpunit/phpunit": "~4.8"
+                "matthiasmullie/scrapbook": "dev-master",
+                "phpunit/phpunit": ">=4.8"
             },
             "suggest": {
                 "psr/cache-implementation": "Cache implementation to use with Minify::cache"
@@ -552,6 +669,10 @@
                 "minifier",
                 "minify"
             ],
+            "support": {
+                "issues": "https://github.com/matthiasmullie/minify/issues",
+                "source": "https://github.com/matthiasmullie/minify/tree/1.3.66"
+            },
             "funding": [
                 {
                     "url": "https://github.com/[user1",
@@ -566,7 +687,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2020-12-27T21:43:29+00:00"
+            "time": "2021-01-06T15:18:10+00:00"
         },
         {
             "name": "matthiasmullie/path-converter",
@@ -621,6 +742,10 @@
                 "paths",
                 "relative"
             ],
+            "support": {
+                "issues": "https://github.com/matthiasmullie/path-converter/issues",
+                "source": "https://github.com/matthiasmullie/path-converter/tree/1.1.3"
+            },
             "time": "2019-02-05T23:41:09+00:00"
         },
         {
@@ -673,20 +798,23 @@
                 "psr",
                 "psr-6"
             ],
+            "support": {
+                "source": "https://github.com/php-fig/cache/tree/master"
+            },
             "time": "2016-08-06T20:24:11+00:00"
         },
         {
             "name": "psr/container",
-            "version": "1.0.0",
+            "version": "1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/container.git",
-                "reference": "b7ce3b176482dbbc1245ebf52b181af44c2cf55f"
+                "reference": "8622567409010282b7aeebe4bb841fe98b58dcaf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/container/zipball/b7ce3b176482dbbc1245ebf52b181af44c2cf55f",
-                "reference": "b7ce3b176482dbbc1245ebf52b181af44c2cf55f",
+                "url": "https://api.github.com/repos/php-fig/container/zipball/8622567409010282b7aeebe4bb841fe98b58dcaf",
+                "reference": "8622567409010282b7aeebe4bb841fe98b58dcaf",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -696,14 +824,9 @@
                 ]
             },
             "require": {
-                "php": ">=5.3.0"
+                "php": ">=7.2.0"
             },
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                }
-            },
             "autoload": {
                 "psr-4": {
                     "Psr\\Container\\": "src/"
@@ -716,7 +839,7 @@
             "authors": [
                 {
                     "name": "PHP-FIG",
-                    "homepage": "http://www.php-fig.org/"
+                    "homepage": "https://www.php-fig.org/"
                 }
             ],
             "description": "Common Container Interface (PHP FIG PSR-11)",
@@ -728,20 +851,24 @@
                 "container-interop",
                 "psr"
             ],
-            "time": "2017-02-14T16:28:37+00:00"
+            "support": {
+                "issues": "https://github.com/php-fig/container/issues",
+                "source": "https://github.com/php-fig/container/tree/1.1.1"
+            },
+            "time": "2021-03-05T17:36:06+00:00"
         },
         {
             "name": "psr/log",
-            "version": "1.1.3",
+            "version": "1.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/log.git",
-                "reference": "0f73288fd15629204f9d42b7055f72dacbe811fc"
+                "reference": "d49695b909c3b7628b6289db5479a1c204601f11"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/log/zipball/0f73288fd15629204f9d42b7055f72dacbe811fc",
-                "reference": "0f73288fd15629204f9d42b7055f72dacbe811fc",
+                "url": "https://api.github.com/repos/php-fig/log/zipball/d49695b909c3b7628b6289db5479a1c204601f11",
+                "reference": "d49695b909c3b7628b6289db5479a1c204601f11",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -771,7 +898,7 @@
             "authors": [
                 {
                     "name": "PHP-FIG",
-                    "homepage": "http://www.php-fig.org/"
+                    "homepage": "https://www.php-fig.org/"
                 }
             ],
             "description": "Common interface for logging libraries",
@@ -781,7 +908,10 @@
                 "psr",
                 "psr-3"
             ],
-            "time": "2020-03-23T09:12:05+00:00"
+            "support": {
+                "source": "https://github.com/php-fig/log/tree/1.1.4"
+            },
+            "time": "2021-05-03T11:20:27+00:00"
         },
         {
             "name": "psr/simple-cache",
@@ -835,20 +965,23 @@
                 "psr-16",
                 "simple-cache"
             ],
+            "support": {
+                "source": "https://github.com/php-fig/simple-cache/tree/master"
+            },
             "time": "2017-10-23T01:57:42+00:00"
         },
         {
             "name": "topthink/framework",
-            "version": "v6.0.5",
+            "version": "v6.0.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/top-think/framework.git",
-                "reference": "85625d984f5c96699dc27d384869f206c3aec1cc"
+                "reference": "4789343672aef06d571d556da369c0e156609bce"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/top-think/framework/zipball/85625d984f5c96699dc27d384869f206c3aec1cc",
-                "reference": "85625d984f5c96699dc27d384869f206c3aec1cc",
+                "url": "https://api.github.com/repos/top-think/framework/zipball/4789343672aef06d571d556da369c0e156609bce",
+                "reference": "4789343672aef06d571d556da369c0e156609bce",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -902,7 +1035,11 @@
                 "orm",
                 "thinkphp"
             ],
-            "time": "2020-10-26T07:18:00+00:00"
+            "support": {
+                "issues": "https://github.com/top-think/framework/issues",
+                "source": "https://github.com/top-think/framework/tree/v6.0.8"
+            },
+            "time": "2021-04-27T00:41:08+00:00"
         },
         {
             "name": "topthink/think-captcha",
@@ -957,20 +1094,24 @@
                 }
             ],
             "description": "captcha package for thinkphp",
+            "support": {
+                "issues": "https://github.com/top-think/think-captcha/issues",
+                "source": "https://github.com/top-think/think-captcha/tree/v3.0.3"
+            },
             "time": "2020-05-19T10:55:45+00:00"
         },
         {
             "name": "topthink/think-helper",
-            "version": "v3.1.4",
+            "version": "v3.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/top-think/think-helper.git",
-                "reference": "c28d37743bda4a0455286ca85b17b5791d626e10"
+                "reference": "f98e3ad44acd27ae85a4d923b1bdfd16c6d8d905"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/top-think/think-helper/zipball/c28d37743bda4a0455286ca85b17b5791d626e10",
-                "reference": "c28d37743bda4a0455286ca85b17b5791d626e10",
+                "url": "https://api.github.com/repos/top-think/think-helper/zipball/f98e3ad44acd27ae85a4d923b1bdfd16c6d8d905",
+                "reference": "f98e3ad44acd27ae85a4d923b1bdfd16c6d8d905",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -1002,7 +1143,11 @@
                 }
             ],
             "description": "The ThinkPHP6 Helper Package",
-            "time": "2019-11-08T08:01:10+00:00"
+            "support": {
+                "issues": "https://github.com/top-think/think-helper/issues",
+                "source": "https://github.com/top-think/think-helper/tree/v3.1.5"
+            },
+            "time": "2021-06-21T06:17:31+00:00"
         },
         {
             "name": "topthink/think-multi-app",
@@ -1052,20 +1197,24 @@
                 }
             ],
             "description": "thinkphp6 multi app support",
+            "support": {
+                "issues": "https://github.com/top-think/think-multi-app/issues",
+                "source": "https://github.com/top-think/think-multi-app/tree/master"
+            },
             "time": "2020-07-12T13:50:37+00:00"
         },
         {
             "name": "topthink/think-orm",
-            "version": "v2.0.34",
+            "version": "v2.0.41",
             "source": {
                 "type": "git",
                 "url": "https://github.com/top-think/think-orm.git",
-                "reference": "57f9b98895b0ff4ae7b7b75e51456fd8cb8fb629"
+                "reference": "64bbfdde01f4fd6939c2f695fceb08e6d764ac6b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/top-think/think-orm/zipball/57f9b98895b0ff4ae7b7b75e51456fd8cb8fb629",
-                "reference": "57f9b98895b0ff4ae7b7b75e51456fd8cb8fb629",
+                "url": "https://api.github.com/repos/top-think/think-orm/zipball/64bbfdde01f4fd6939c2f695fceb08e6d764ac6b",
+                "reference": "64bbfdde01f4fd6939c2f695fceb08e6d764ac6b",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -1076,17 +1225,23 @@
             },
             "require": {
                 "ext-json": "*",
+                "ext-pdo": "*",
                 "php": ">=7.1.0",
                 "psr/log": "~1.0",
                 "psr/simple-cache": "^1.0",
                 "topthink/think-helper": "^3.1"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^7|^8|^9.5"
             },
             "type": "library",
             "autoload": {
                 "psr-4": {
                     "think\\": "src"
                 },
-                "files": []
+                "files": [
+                    "stubs/load_stubs.php"
+                ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -1103,20 +1258,24 @@
                 "database",
                 "orm"
             ],
-            "time": "2020-09-28T08:24:57+00:00"
+            "support": {
+                "issues": "https://github.com/top-think/think-orm/issues",
+                "source": "https://github.com/top-think/think-orm/tree/v2.0.41"
+            },
+            "time": "2021-07-14T07:51:15+00:00"
         },
         {
             "name": "topthink/think-template",
-            "version": "v2.0.7",
+            "version": "v2.0.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/top-think/think-template.git",
-                "reference": "e98bdbb4a4c94b442f17dfceba81e0134d4fbd19"
+                "reference": "abfc293f74f9ef5127b5c416310a01fe42e59368"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/top-think/think-template/zipball/e98bdbb4a4c94b442f17dfceba81e0134d4fbd19",
-                "reference": "e98bdbb4a4c94b442f17dfceba81e0134d4fbd19",
+                "url": "https://api.github.com/repos/top-think/think-template/zipball/abfc293f74f9ef5127b5c416310a01fe42e59368",
+                "reference": "abfc293f74f9ef5127b5c416310a01fe42e59368",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -1146,7 +1305,11 @@
                 }
             ],
             "description": "the php template engine",
-            "time": "2019-09-20T15:31:04+00:00"
+            "support": {
+                "issues": "https://github.com/top-think/think-template/issues",
+                "source": "https://github.com/top-think/think-template/tree/v2.0.8"
+            },
+            "time": "2020-12-10T07:52:03+00:00"
         },
         {
             "name": "topthink/think-view",
@@ -1189,22 +1352,26 @@
                 }
             ],
             "description": "thinkphp template driver",
+            "support": {
+                "issues": "https://github.com/top-think/think-view/issues",
+                "source": "https://github.com/top-think/think-view/tree/v1.0.14"
+            },
             "time": "2019-11-06T11:40:13+00:00"
         }
     ],
     "packages-dev": [
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.20.0",
+            "version": "v1.23.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "39d483bdf39be819deabf04ec872eb0b2410b531"
+                "reference": "2df51500adbaebdc4c38dea4c89a2e131c45c8a1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/39d483bdf39be819deabf04ec872eb0b2410b531",
-                "reference": "39d483bdf39be819deabf04ec872eb0b2410b531",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/2df51500adbaebdc4c38dea4c89a2e131c45c8a1",
+                "reference": "2df51500adbaebdc4c38dea4c89a2e131c45c8a1",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -1222,7 +1389,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "1.20-dev"
+                    "dev-main": "1.23-dev"
                 },
                 "thanks": {
                     "name": "symfony/polyfill",
@@ -1260,6 +1427,9 @@
                 "portable",
                 "shim"
             ],
+            "support": {
+                "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.23.0"
+            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -1274,20 +1444,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-10-23T14:02:19+00:00"
+            "time": "2021-05-27T09:27:20+00:00"
         },
         {
             "name": "symfony/polyfill-php72",
-            "version": "v1.20.0",
+            "version": "v1.23.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php72.git",
-                "reference": "cede45fcdfabdd6043b3592e83678e42ec69e930"
+                "reference": "9a142215a36a3888e30d0a9eeea9766764e96976"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-php72/zipball/cede45fcdfabdd6043b3592e83678e42ec69e930",
-                "reference": "cede45fcdfabdd6043b3592e83678e42ec69e930",
+                "url": "https://api.github.com/repos/symfony/polyfill-php72/zipball/9a142215a36a3888e30d0a9eeea9766764e96976",
+                "reference": "9a142215a36a3888e30d0a9eeea9766764e96976",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -1302,7 +1472,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "1.20-dev"
+                    "dev-main": "1.23-dev"
                 },
                 "thanks": {
                     "name": "symfony/polyfill",
@@ -1339,6 +1509,9 @@
                 "portable",
                 "shim"
             ],
+            "support": {
+                "source": "https://github.com/symfony/polyfill-php72/tree/v1.23.0"
+            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -1353,20 +1526,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-10-23T14:02:19+00:00"
+            "time": "2021-05-27T09:17:38+00:00"
         },
         {
             "name": "symfony/polyfill-php80",
-            "version": "v1.20.0",
+            "version": "v1.23.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php80.git",
-                "reference": "e70aa8b064c5b72d3df2abd5ab1e90464ad009de"
+                "reference": "eca0bf41ed421bed1b57c4958bab16aa86b757d0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-php80/zipball/e70aa8b064c5b72d3df2abd5ab1e90464ad009de",
-                "reference": "e70aa8b064c5b72d3df2abd5ab1e90464ad009de",
+                "url": "https://api.github.com/repos/symfony/polyfill-php80/zipball/eca0bf41ed421bed1b57c4958bab16aa86b757d0",
+                "reference": "eca0bf41ed421bed1b57c4958bab16aa86b757d0",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -1381,7 +1554,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "1.20-dev"
+                    "dev-main": "1.23-dev"
                 },
                 "thanks": {
                     "name": "symfony/polyfill",
@@ -1425,6 +1598,9 @@
                 "portable",
                 "shim"
             ],
+            "support": {
+                "source": "https://github.com/symfony/polyfill-php80/tree/v1.23.0"
+            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -1439,20 +1615,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-10-23T14:02:19+00:00"
+            "time": "2021-02-19T12:13:01+00:00"
         },
         {
             "name": "symfony/var-dumper",
-            "version": "v4.4.18",
+            "version": "v4.4.26",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/var-dumper.git",
-                "reference": "4f31364bbc8177f2a6dbc125ac3851634ebe2a03"
+                "reference": "a586efdf2aa832d05b9249e9115d24f6a2691160"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/4f31364bbc8177f2a6dbc125ac3851634ebe2a03",
-                "reference": "4f31364bbc8177f2a6dbc125ac3851634ebe2a03",
+                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/a586efdf2aa832d05b9249e9115d24f6a2691160",
+                "reference": "a586efdf2aa832d05b9249e9115d24f6a2691160",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -1475,7 +1651,7 @@
                 "ext-iconv": "*",
                 "symfony/console": "^3.4|^4.0|^5.0",
                 "symfony/process": "^4.4|^5.0",
-                "twig/twig": "^1.34|^2.4|^3.0"
+                "twig/twig": "^1.43|^2.13|^3.0.4"
             },
             "suggest": {
                 "ext-iconv": "To convert non-UTF-8 strings to UTF-8 (or symfony/polyfill-iconv in case ext-iconv cannot be used).",
@@ -1511,12 +1687,15 @@
                     "homepage": "https://symfony.com/contributors"
                 }
             ],
-            "description": "Symfony mechanism for exploring and dumping PHP variables",
+            "description": "Provides mechanisms for walking through any arbitrary PHP variable",
             "homepage": "https://symfony.com",
             "keywords": [
                 "debug",
                 "dump"
             ],
+            "support": {
+                "source": "https://github.com/symfony/var-dumper/tree/v4.4.26"
+            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -1531,7 +1710,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-12-08T16:59:59+00:00"
+            "time": "2021-06-17T06:35:48+00:00"
         },
         {
             "name": "topthink/think-trace",
@@ -1584,6 +1763,10 @@
                 }
             ],
             "description": "thinkphp debug trace",
+            "support": {
+                "issues": "https://github.com/top-think/think-trace/issues",
+                "source": "https://github.com/top-think/think-trace/tree/v1.4"
+            },
             "time": "2020-06-29T05:27:28+00:00"
         }
     ],
@@ -1596,5 +1779,5 @@
         "php": ">=7.1.0"
     },
     "platform-dev": [],
-    "plugin-api-version": "1.1.0"
+    "plugin-api-version": "2.0.0"
 }
