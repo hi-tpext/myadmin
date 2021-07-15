@@ -4,18 +4,77 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8fc2e78f1bfbff22e7411c5d5267d9cf",
+    "content-hash": "b22124d98f53c08a926ca94a5614d68a",
     "packages": [
         {
-            "name": "ichynul/lightyearadmin",
-            "version": "1.0.5",
+            "name": "ichynul/builder-mdeditor",
+            "version": "1.1.2",
             "source": {
                 "type": "git",
-                "url": "https://gitee.com/ichynul/lightyearadmin.git",
-                "reference": "aae9d0c73bfad81d109df19a947694d80bd82f3b"
+                "url": "https://github.com/hi-tpext/builder-mdeditor.git",
+                "reference": "ce51a036c81f824770aa1ce3c0a11139e5d0db5c"
             },
-            "require": {
-                "ichynul/tpext": "^1.0.1"
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hi-tpext/builder-mdeditor/zipball/ce51a036c81f824770aa1ce3c0a11139e5d0db5c",
+                "reference": "ce51a036c81f824770aa1ce3c0a11139e5d0db5c",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "tpext\\builder\\mdeditor\\": "src/"
+                },
+                "files": [
+                    "src/helper.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "ichynul",
+                    "email": "ichynul@outlook.com"
+                }
+            ],
+            "description": "thinkphp extension",
+            "homepage": "http://thinkphp.cn/",
+            "keywords": [
+                "thinkphp"
+            ],
+            "support": {
+                "issues": "https://github.com/hi-tpext/builder-mdeditor/issues",
+                "source": "https://github.com/hi-tpext/builder-mdeditor/tree/1.1.2"
+            },
+            "time": "2020-04-19T16:50:15+00:00"
+        },
+        {
+            "name": "ichynul/lightyearadmin",
+            "version": "1.1.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hi-tpext/lightyearadmin.git",
+                "reference": "2c40d973655162ec0dde922d2f9c83bf454fc0b0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hi-tpext/lightyearadmin/zipball/2c40d973655162ec0dde922d2f9c83bf454fc0b0",
+                "reference": "2c40d973655162ec0dde922d2f9c83bf454fc0b0",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
             },
             "type": "library",
             "autoload": {
@@ -37,55 +96,38 @@
                 }
             ],
             "description": "thinkphp extension",
-            "homepage": "http://thinkphp.cn/",
-            "keywords": [
-                "thinkphp"
-            ],
-            "time": "2020-03-03T14:38:00+00:00"
-        },
-        {
-            "name": "ichynul/myadmin-data",
-            "version": "1.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://gitee.com/ichynul/myadmin-data.git",
-                "reference": "22e8b55854b9c277b0de2510d67fb0cd20a1a019"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "myadmin\\data\\": "src/"
-                },
-                "files": [
-                    "src/helper.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "Apache-2.0"
-            ],
-            "authors": [
-                {
-                    "name": "ichynul",
-                    "email": "ichynul@outlook.com"
-                }
-            ],
-            "description": "thinkphp extension",
             "homepage": "http://www.ynyysc.com/",
             "keywords": [
                 "thinkphp"
             ],
-            "time": "2020-10-13T16:56:48+00:00"
+            "support": {
+                "issues": "https://github.com/hi-tpext/lightyearadmin/issues",
+                "source": "https://github.com/hi-tpext/lightyearadmin/tree/1.1.7"
+            },
+            "time": "2021-05-05T15:42:57+00:00"
         },
         {
             "name": "ichynul/tpext",
-            "version": "1.0.8",
+            "version": "1.5.0",
             "source": {
                 "type": "git",
-                "url": "https://gitee.com/ichynul/tpext.git",
-                "reference": "830bbcf70becf965f1beed6849350459b2e59afa"
+                "url": "https://github.com/hi-tpext/tpext.git",
+                "reference": "1def51d718749f85627ba6d36f6f16554ac71985"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hi-tpext/tpext/zipball/1def51d718749f85627ba6d36f6f16554ac71985",
+                "reference": "1def51d718749f85627ba6d36f6f16554ac71985",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
             },
             "require": {
+                "php": ">=7.0.0",
                 "topthink/framework": "5.1.*"
             },
             "type": "library",
@@ -112,19 +154,81 @@
             "keywords": [
                 "thinkphp"
             ],
-            "time": "2020-03-06T03:31:45+00:00"
+            "support": {
+                "issues": "https://github.com/hi-tpext/tpext/issues",
+                "source": "https://github.com/hi-tpext/tpext/tree/1.5.0"
+            },
+            "time": "2021-05-23T15:25:53+00:00"
+        },
+        {
+            "name": "ichynul/tpextareacity",
+            "version": "1.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hi-tpext/tpextareacity.git",
+                "reference": "0b6b6d2d2732bb2db37cfae08848404bc3f6e2cc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hi-tpext/tpextareacity/zipball/0b6b6d2d2732bb2db37cfae08848404bc3f6e2cc",
+                "reference": "0b6b6d2d2732bb2db37cfae08848404bc3f6e2cc",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "tpext\\areacity\\": "src/"
+                },
+                "files": [
+                    "src/helper.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "ichynul",
+                    "email": "ichynul@outlook.com"
+                }
+            ],
+            "description": "thinkphp extension",
+            "homepage": "http://www.ynyysc.com/",
+            "keywords": [
+                "thinkphp"
+            ],
+            "support": {
+                "issues": "https://github.com/hi-tpext/tpextareacity/issues",
+                "source": "https://github.com/hi-tpext/tpextareacity/tree/1.2.1"
+            },
+            "time": "2021-06-21T02:44:41+00:00"
         },
         {
             "name": "ichynul/tpextbuilder",
-            "version": "1.1.2",
+            "version": "1.9.0025",
             "source": {
                 "type": "git",
-                "url": "https://gitee.com/ichynul/tpextbuilder.git",
-                "reference": "f4efc11ccd43330e6095d11e6ec606dde77dcbe8"
+                "url": "https://github.com/hi-tpext/tpextbuilder.git",
+                "reference": "4046641acba5fe719386a4a1b04df30488a6c7e0"
             },
-            "require": {
-                "ichynul/lightyearadmin": "^1.0.1",
-                "ichynul/tpext": "^1.0.1"
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hi-tpext/tpextbuilder/zipball/4046641acba5fe719386a4a1b04df30488a6c7e0",
+                "reference": "4046641acba5fe719386a4a1b04df30488a6c7e0",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
             },
             "type": "library",
             "autoload": {
@@ -150,21 +254,91 @@
             "keywords": [
                 "thinkphp"
             ],
-            "time": "2020-03-05T16:19:48+00:00"
+            "support": {
+                "issues": "https://github.com/hi-tpext/tpextbuilder/issues",
+                "source": "https://github.com/hi-tpext/tpextbuilder/tree/1.9.0025"
+            },
+            "time": "2021-07-13T03:26:09+00:00"
+        },
+        {
+            "name": "ichynul/tpextmanager",
+            "version": "1.6.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hi-tpext/tpextmanager.git",
+                "reference": "6057c51e3c1088475912315e9da4c6d50e271e35"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hi-tpext/tpextmanager/zipball/6057c51e3c1088475912315e9da4c6d50e271e35",
+                "reference": "6057c51e3c1088475912315e9da4c6d50e271e35",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "ichynul/builder-mdeditor": "^1.1.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "tpext\\manager\\": "src/"
+                },
+                "files": [
+                    "src/helper.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "ichynul",
+                    "email": "ichynul@outlook.com"
+                }
+            ],
+            "description": "thinkphp extension",
+            "homepage": "http://www.ynyysc.com/",
+            "keywords": [
+                "thinkphp"
+            ],
+            "support": {
+                "issues": "https://github.com/hi-tpext/tpextmanager/issues",
+                "source": "https://github.com/hi-tpext/tpextmanager/tree/1.6.6"
+            },
+            "time": "2021-07-15T13:06:40+00:00"
         },
         {
             "name": "ichynul/tpextmyadmin",
-            "version": "1.1.1",
+            "version": "1.9.1",
             "source": {
                 "type": "git",
-                "url": "https://gitee.com/ichynul/tpextmyadmin.git",
-                "reference": "0b2ada3772f0a57a7967be9aa18578ef4659c5d8"
+                "url": "https://github.com/hi-tpext/tpextmyadmin.git",
+                "reference": "234c3c4b6d5af0e724753f3b96160ba12fb86e90"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hi-tpext/tpextmyadmin/zipball/234c3c4b6d5af0e724753f3b96160ba12fb86e90",
+                "reference": "234c3c4b6d5af0e724753f3b96160ba12fb86e90",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
             },
             "require": {
                 "ichynul/lightyearadmin": "^1.0.1",
-                "ichynul/tpext": "^1.0.1",
-                "ichynul/tpextbuilder": "^1.0.1",
-                "topthink/framework": "5.1.*",
+                "ichynul/tpext": "^1.1.1",
+                "ichynul/tpextbuilder": "^1.1.1",
+                "ichynul/tpextmanager": "^1.1.1",
+                "matthiasmullie/minify": "^1.3",
                 "topthink/think-captcha": "^2.0"
             },
             "type": "library",
@@ -187,24 +361,171 @@
                 }
             ],
             "description": "thinkphp extension",
-            "homepage": "http://thinkphp.cn/",
+            "homepage": "http://www.ynyysc.com/",
             "keywords": [
                 "thinkphp"
             ],
-            "time": "2020-03-05T16:22:26+00:00"
+            "support": {
+                "issues": "https://github.com/hi-tpext/tpextmyadmin/issues",
+                "source": "https://github.com/hi-tpext/tpextmyadmin/tree/1.9.1"
+            },
+            "time": "2021-07-08T09:46:06+00:00"
         },
         {
-            "name": "topthink/framework",
-            "version": "v5.1.39",
+            "name": "matthiasmullie/minify",
+            "version": "1.3.66",
             "source": {
                 "type": "git",
-                "url": "https://github.com/top-think/framework.git",
-                "reference": "5762858f3d58faafb3a39427f8788884b2927007"
+                "url": "https://github.com/matthiasmullie/minify.git",
+                "reference": "45fd3b0f1dfa2c965857c6d4a470bea52adc31a6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/top-think/framework/zipball/5762858f3d58faafb3a39427f8788884b2927007",
-                "reference": "5762858f3d58faafb3a39427f8788884b2927007",
+                "url": "https://api.github.com/repos/matthiasmullie/minify/zipball/45fd3b0f1dfa2c965857c6d4a470bea52adc31a6",
+                "reference": "45fd3b0f1dfa2c965857c6d4a470bea52adc31a6",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "ext-pcre": "*",
+                "matthiasmullie/path-converter": "~1.1",
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "~2.0",
+                "matthiasmullie/scrapbook": "dev-master",
+                "phpunit/phpunit": ">=4.8"
+            },
+            "suggest": {
+                "psr/cache-implementation": "Cache implementation to use with Minify::cache"
+            },
+            "bin": [
+                "bin/minifycss",
+                "bin/minifyjs"
+            ],
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "MatthiasMullie\\Minify\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Matthias Mullie",
+                    "email": "minify@mullie.eu",
+                    "homepage": "http://www.mullie.eu",
+                    "role": "Developer"
+                }
+            ],
+            "description": "CSS & JavaScript minifier, in PHP. Removes whitespace, strips comments, combines files (incl. @import statements and small assets in CSS files), and optimizes/shortens a few common programming patterns.",
+            "homepage": "http://www.minifier.org",
+            "keywords": [
+                "JS",
+                "css",
+                "javascript",
+                "minifier",
+                "minify"
+            ],
+            "support": {
+                "issues": "https://github.com/matthiasmullie/minify/issues",
+                "source": "https://github.com/matthiasmullie/minify/tree/1.3.66"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/[user1",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/matthiasmullie] # Replace with up to 4 GitHub Sponsors-enabled usernames e.g.",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/user2",
+                    "type": "github"
+                }
+            ],
+            "time": "2021-01-06T15:18:10+00:00"
+        },
+        {
+            "name": "matthiasmullie/path-converter",
+            "version": "1.1.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/matthiasmullie/path-converter.git",
+                "reference": "e7d13b2c7e2f2268e1424aaed02085518afa02d9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/matthiasmullie/path-converter/zipball/e7d13b2c7e2f2268e1424aaed02085518afa02d9",
+                "reference": "e7d13b2c7e2f2268e1424aaed02085518afa02d9",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "ext-pcre": "*",
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.8"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "MatthiasMullie\\PathConverter\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Matthias Mullie",
+                    "email": "pathconverter@mullie.eu",
+                    "homepage": "http://www.mullie.eu",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Relative path converter",
+            "homepage": "http://github.com/matthiasmullie/path-converter",
+            "keywords": [
+                "converter",
+                "path",
+                "paths",
+                "relative"
+            ],
+            "support": {
+                "issues": "https://github.com/matthiasmullie/path-converter/issues",
+                "source": "https://github.com/matthiasmullie/path-converter/tree/1.1.3"
+            },
+            "time": "2019-02-05T23:41:09+00:00"
+        },
+        {
+            "name": "topthink/framework",
+            "version": "v5.1.41",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/top-think/framework.git",
+                "reference": "7137741a323a4a60cfca334507cd1812fac91bb2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/top-think/framework/zipball/7137741a323a4a60cfca334507cd1812fac91bb2",
+                "reference": "7137741a323a4a60cfca334507cd1812fac91bb2",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -248,7 +569,11 @@
                 "orm",
                 "thinkphp"
             ],
-            "time": "2019-11-17T23:22:02+00:00"
+            "support": {
+                "issues": "https://github.com/top-think/framework/issues",
+                "source": "https://github.com/top-think/framework/tree/v5.1.41"
+            },
+            "time": "2021-01-11T02:51:29+00:00"
         },
         {
             "name": "topthink/think-captcha",
@@ -293,20 +618,24 @@
                 }
             ],
             "description": "captcha package for thinkphp5",
+            "support": {
+                "issues": "https://github.com/top-think/think-captcha/issues",
+                "source": "https://github.com/top-think/think-captcha/tree/2.0"
+            },
             "time": "2017-12-31T16:37:49+00:00"
         },
         {
             "name": "topthink/think-installer",
-            "version": "v2.0.0",
+            "version": "v2.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/top-think/think-installer.git",
-                "reference": "f5400a12c60e513911aef41fe443fa6920952675"
+                "reference": "38ba647706e35d6704b5d370c06f8a160b635f88"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/top-think/think-installer/zipball/f5400a12c60e513911aef41fe443fa6920952675",
-                "reference": "f5400a12c60e513911aef41fe443fa6920952675",
+                "url": "https://api.github.com/repos/top-think/think-installer/zipball/38ba647706e35d6704b5d370c06f8a160b635f88",
+                "reference": "38ba647706e35d6704b5d370c06f8a160b635f88",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -316,10 +645,10 @@
                 ]
             },
             "require": {
-                "composer-plugin-api": "^1.0"
+                "composer-plugin-api": "^1.0||^2.0"
             },
             "require-dev": {
-                "composer/composer": "1.0.*@dev"
+                "composer/composer": "^1.0||^2.0"
             },
             "type": "composer-plugin",
             "extra": {
@@ -340,7 +669,11 @@
                     "email": "448901948@qq.com"
                 }
             ],
-            "time": "2018-05-11T06:45:42+00:00"
+            "support": {
+                "issues": "https://github.com/top-think/think-installer/issues",
+                "source": "https://github.com/top-think/think-installer/tree/v2.0.5"
+            },
+            "time": "2021-01-14T12:12:14+00:00"
         }
     ],
     "packages-dev": [],
@@ -353,5 +686,5 @@
         "php": ">=5.6.0"
     },
     "platform-dev": [],
-    "plugin-api-version": "1.1.0"
+    "plugin-api-version": "2.0.0"
 }
