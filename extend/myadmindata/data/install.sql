@@ -462,6 +462,7 @@ CREATE TABLE IF NOT EXISTS `__PREFIX__shop_goods_spec_price` (
   `sku` varchar(55) NOT NULL DEFAULT '' COMMENT 'SKU编码',
   `sale_price` decimal(10,2) unsigned NOT NULL DEFAULT '0.00' COMMENT '销售价格',
   `stock` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '库存',
+  `img` varchar(255) NOT NULL DEFAULT '' COMMENT '图片',
   `create_time` datetime NOT NULL DEFAULT '1970-01-01 08:00:00' COMMENT '添加时间',
   `update_time` datetime NOT NULL DEFAULT '1970-01-01 08:00:00' COMMENT '更新时间',
   PRIMARY KEY (`id`),
