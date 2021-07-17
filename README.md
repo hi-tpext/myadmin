@@ -1,81 +1,158 @@
 # 欢迎使用
 
-## 一、安装：
-框架有两个版本：1.0基于thinkphp 5.1；3.0基于thinkphp 6.0
-1. 全新安装1.0 ***推荐(文档基于此版本)**
-> 安装 thinkphp 5.1.*，`myadmin`为新项目名称，可自行调整　
-```bash
-composer create-project topthink/think=5.1.* myadmin
-```
-> 进入新项目根目录：`myadmin`　
+## 一、安装
+
+### 框架有两个版本
+
+- `5.0` 基于thinkphp 5.1 (**推荐(文档基于此版本)**)
+
+- `6.0` 基于thinkphp 6.0 (**beta**)
+
+### 框架需要使用 composer和git
+
+安装 `composer`
+
+<https://pkg.phpcomposer.com/#how-to-install-composer/>
+
+安装 `git`
+
+<https://git-scm.com/>
+
+### 使用 `composer` 全新安装
+
+> 安装 thinkphp(`5.0` 或 `6.0`，根据您的需要，选择其中一个版本)，
+
+ [5.0]分支对应 `tpextmyadmin`的[1.0]分支，依次执行以下命令，`myadmin` 为新项目目录，可自行调整
 
 ```bash
+composer create-project topthink/think=5.1.* myadmin
+
 cd myadmin
-```
-> 安装后台扩展
-```bash
+
 composer require ichynul/tpextmyadmin:^1.*
 ```
 
-2. 全新安装3.0 ***beta**
-> 安装 thinkphp 6.0.*，`myadmin6`为新项目名称，可自行调整　
-```bash
-composer create-project topthink/think=6.0.* myadmin6
-```
-> 进入新项目根目录：`myadmin6`
+或
+
+[6.0]分支对应 `tpextmyadmin`的[3.0]分支，依次执行以下命令，`myadmin6` 为新项目目录，可自行调整
 
 ```bash
+composer create-project topthink/think=6.0.* myadmin6
+
 cd myadmin6
-```
-> 安装后台扩展
-```bash
+
 composer require ichynul/tpextmyadmin:^3.*
 ```
 
-## 二、配置：　
-1. 创建mysql数据库和用户,正确配置数据库 ***重要**
-- tp5.1:配置到 `config/database.php`
-- tp6.0:复制根目录下`.example.env`为`.env`,在`.env`里面修改数据库账号等配置。　
+> 安装完毕，此安装版是最小模式，只包含基本的后台功能，建议开发新项目时使用此方式。
 
-若后续访问页面报错，请回头检查这一步。　
+---
 
-2. 配置`apache/nginx`及重写规则，略(自行百度) ***重要**　
-没配置`重写规则`的话后续的url中加上`index.php` 如：`http://localhost:8081/index.php/admin`
+### 使用 `git` 安装演示站
 
-## 三、扩展安装：
-1. 打开 `http://localhost:8081/admin`　首次访问会自动跳转到：`http://localhost:8081/admin/extension/index` 安装页面　
-2. 安装 `[tpext.myadmin]`　
-3. 安装其余装扩展　
+> 拉取 `5.0` 分支代码，依次执行以下命令，`myadmin` 为新项目目录，可自行调整
 
-## 四、登录后台：
-再次打开 `http://localhost:8081/admin` ，会跳转登录，默认账号：`admin`：`tpextadmin`　
+```bash
+git clone -b 5.0 https://github.com/hi-tpext/myadmin.git myadmin
+
+cd myadmin
+
+composer update
+````
+
+或 拉取 `6.0` 分支代码，依次执行以下命令，`myadmin6` 为新项目目录，可自行调整
+
+```bash
+git clone -b 6.0 https://github.com/hi-tpext/myadmin.git myadmin6
+
+cd myadmin6
+
+composer update
+```
+
+> 安装完毕，此安装版是最和演示站同步的，如果你想自己搭建演示站可用此方式。
+> 注意：此方式的仓库是不带`composer`依赖`vendor`目录和`thinkphp`目录的，请务必运行`composer update`安装所有依赖后再访问网站。
+
+### 一些问题
+
+- 细节很重要，安装过程中若有问题，请多检查。
+- 比如创建项目后没进入新项目目录就运行命令，再比如跑到`public`里面运行命令的，网站运行目录没指向到`public`的。
+- `composer`报错的版本冲突，php版本不符问题，php依赖缺失(如curl、zip)，php方法被禁用等。
+- 因为涉及到的东西不可能所有的都列出来详细的讲。
+
+---
+
+## 二、配置
+
+- `apache/nginx` 重写规则，略(自行百度) ***重要**
+
+- 没配置`重写规则`的话后续的url中加上`index.php`
+
+- 如：`http://localhost:8081/index.php/admin`
+
+## 三、扩展安装
+
+1. 浏览器输入 [`http://localhost:8081/admin`] 打开，如果没有事先配置数据库，将会跳转到配置数据库的页面。
+
+2. 自动安装基础扩展
+
+3. 手动安装 [`tpext.myadmin`]，确保此扩展优先，以支持其他扩展的后台菜单创建
+
+4. 手动安装其余装扩展
+
+## 四、登录后台
+
+- 浏览器再次输入[`http://localhost:8081/admin`]打开，会跳转登录页面
+- 默认账号：`admin`：`tpextadmin`
+- 成功登录后台即说明安装完成
+
+---
 
 ## 五、文档
-<https://gitee.com/tpext/myadmin/wikis/pages>　
+
+<https://gitee.com/tpext/myadmin/wikis/pages>
 
 ## 六、演示
-#### 网址：
-1. [tp5.1] <http://quick.shenzhuo.vip:10582/admin>　
-2. [tp6.0] <http://tpext.shenzhuo.vip:10582/admin>　
 
-#### 账号：
+### 网址
+
+1. [tp5.1] <http://quick.shenzhuo.vip:10582/admin>
+
+2. [tp6.0] <http://tpext.shenzhuo.vip:10582/admin>
+
+### 账号
+
 `admin`：`tpextadmin`
 
-## 七.功能特性:
-1. 模块化开发，核心功能都是通过composer安装的
-#### 主要扩展依赖：
-* [tpext] <https://gitee.com/tpext/tpext> 扩展核心
-* [tpextbuilder] <https://gitee.com/tpext/tpextbuilder> UI 生成器
-* [tpextmanager] <https://gitee.com/tpext/tpextmanager> 管理工具
-* [lightyearadmin]<https://gitee.com/tpext/lightyearadmin> 基础样式库
-* [tpextmyadmin] <https://gitee.com/tpext/tpextmyadmin> 集成后台基础功能：权限、设置等
-* [更多] <https://gitee.com/tpext/myadmin/blob/5.0/extensions.json> 查看全部扩展介绍
-2. `tpextbuilder`UI模块基于`bootstrap`和`Light-Year-Admin-Template`的后台模板， 封装了大部分常用组件 ：
+### 注意事项
+
+- 请不要乱修改数据
+- 请不要上传非法内容或图片
+- 请不要上传您的重要数据到上面以防泄漏
+- 有问题请联系：ichynul#163.com (#换@)，或通过群联系。
+- 网站不文档属于正常，会定期重启
+
+## 七.功能特性
+
+1.模块化开发，核心功能都是通过 `composer` 安装的
+
+### 主要扩展依赖
+
+- [tpext] <https://gitee.com/tpext/tpext> 扩展核心
+- [tpextbuilder] <https://gitee.com/tpext/tpextbuilder> UI 生成器
+- [tpextmanager] <https://gitee.com/tpext/tpextmanager> 管理工具
+- [lightyearadmin]<https://gitee.com/tpext/lightyearadmin> 基础样式库
+- [tpextmyadmin] <https://gitee.com/tpext/tpextmyadmin> 集成后台基础功能：权限、设置等
+- [更多] <https://gitee.com/tpext/extensions/blob/main/extensions.json> 查看全部扩展介绍
+
+2.`tpextbuilder`UI模块基于`bootstrap`和`Light-Year-Admin-Template`的后台模板， 封装了大部分常用组件 ：
 
 `Column`、`Row`、`Tab`、`Table`、`Form`、`Toolbar`、`Layer`、`Content`
 
-3. `HasBuilder` 封装了常用操作，可供控制器引入使用
-#### 实例：
+3.`HasBuilder` 封装了常用操作，可供控制器引入使用
+
+#### 实例
+
 ```php
 <?php
 
@@ -120,7 +197,7 @@ class Member extends Controller
         $searchData = request()->get();
         $where = [];
         if (!empty($searchData['id'])) {
-            $where[] = ['id', '=', $searchData['id']];
+            $where[] = ['id', 'eq', $searchData['id']];
         }
         if (!empty($searchData['username'])) {
             $where[] = ['username', 'like', '%' . $searchData['username'] . '%'];
@@ -132,17 +209,17 @@ class Member extends Controller
             $where[] = ['mobile', 'like', '%' . $searchData['mobile'] . '%'];
         }
         if (isset($searchData['status']) && $searchData['status'] != '') {
-            $where[] = ['status', '=', $searchData['status']];
+            $where[] = ['status', 'eq', $searchData['status']];
         }
         if (isset($searchData['level']) && $searchData['level'] != '') {
-            $where[] = ['level', '=', $searchData['level']];
+            $where[] = ['level', 'eq', $searchData['level']];
         }
         if (!empty($searchData['province'])) {
-            $where[] = ['province', '=', $searchData['province']];
+            $where[] = ['province', 'eq', $searchData['province']];
             if (!empty($searchData['city'])) {
-                $where[] = ['city', '=', $searchData['city']];
+                $where[] = ['city', 'eq', $searchData['city']];
                 if (!empty($searchData['area'])) {
-                    $where[] = ['area', '=', $searchData['area']];
+                    $where[] = ['area', 'eq', $searchData['area']];
                 }
             }
         }
@@ -274,10 +351,17 @@ class Member extends Controller
 }
 ```
 
-## 八.QQ群:
-![alt qqqun](https://gitee.com/tpext/myadmin/raw/5.0/images/qqqun.jpg "qqqun")
+## 八.QQ群
 
-## 九.效果展示:
+<img src="https://images.gitee.com/uploads/images/2021/0527/115851_20d4c40a_306213.jpeg" width="180" style="width:180px;" />
+
+## 九.捐助
+
+如果您觉得我们的开源软件对你有所帮助，请扫下方二维码打赏我们一杯咖啡。
+
+<img src="https://images.gitee.com/uploads/images/2021/0610/122853_5a765aac_306213.jpeg" width="180" style="width:180px;" />
+
+## 十.效果展示
 
 ![alt 1](https://gitee.com/tpext/myadmin/raw/5.0/images/1.png "1")
 ![alt 2](https://gitee.com/tpext/myadmin/raw/5.0/images/2.png "2")
@@ -287,3 +371,38 @@ class Member extends Controller
 ![alt 6](https://gitee.com/tpext/myadmin/raw/5.0/images/6.png "6")
 ![alt 7](https://gitee.com/tpext/myadmin/raw/5.0/images/7.png "7")
 ![alt 8](https://gitee.com/tpext/myadmin/raw/5.0/images/8.png "8")
+
+## 十一.鸣谢
+
+`Tpext` 系列扩展和使用了以下框架技术或受到其启发：
+
+- Thinkphp
+- Botstrap
+- Lightyear-admin
+- Laravel-admin
+- Jquery
+- Layer
+- Bootstrap-number-input
+- Bootstrap-duallistbox
+- Bootstrap-datepicker
+- Bootstrap-daterangepicker
+- Bootstrap-colorpicker
+- Bootstrap-maxlength
+- Bootstrap-touchspin
+- Webuploader
+- FontIconPicker
+- Select2
+- Dropzone
+- ZTree
+- Jstree
+- CKEditor
+- Editormd
+- Tinymce
+- UEditor
+- WangEditor
+- AreaCity-JsSpider-StatsGov
+- 等
+
+## 十二.License
+
+Apache2
