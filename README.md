@@ -70,6 +70,7 @@ cd myadmin6
 composer update
 ```
 
+> 相关演示代码在`application/admin/`或`app/admin/`中，数据库脚本由`[myadmindata]`扩展提供，请下载安装。
 > 安装完毕，此安装版是最和演示站同步的，如果你想自己搭建演示站可用此方式。
 > 注意：此方式的仓库是不带`composer`依赖`vendor`目录和`thinkphp`目录的，请务必运行`composer update`安装所有依赖后再访问网站。
 
