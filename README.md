@@ -4,7 +4,7 @@
 
 ### 框架有两个版本
 
-- `5.0` 基于thinkphp 5.1 (**推荐(文档基于此版本)**)
+- `5.1` 基于thinkphp 5.1 (**推荐(文档基于此版本)**)
 
 - `6.0` 基于thinkphp 6.0 (**beta**)
 
@@ -20,9 +20,9 @@
 
 ### 使用 `composer` 全新安装
 
-> 安装 thinkphp(`5.0` 或 `6.0`，根据您的需要，选择其中一个版本)，
+> 安装 thinkphp(`5.1` 或 `6.0`，根据您的需要，选择其中一个版本)，
 
- [5.0]分支对应 `tpextmyadmin`的[1.0]分支，依次执行以下命令，`myadmin` 为新项目目录，可自行调整
+ [5.1]分支对应 `tpextmyadmin`的[1.0]分支，依次执行以下命令，`myadmin` 为新项目目录，可自行调整
 
 ```bash
 composer create-project topthink/think=5.1.* myadmin
@@ -50,10 +50,10 @@ composer require ichynul/tpextmyadmin:^3.*
 
 ### 使用 `git` 安装演示站
 
-> 拉取 `5.0` 分支代码，依次执行以下命令，`myadmin` 为新项目目录，可自行调整
+> 拉取 `5.1` 分支代码，依次执行以下命令，`myadmin` 为新项目目录，可自行调整
 
 ```bash
-git clone -b 5.0 https://github.com/hi-tpext/myadmin.git myadmin
+git clone -b 5.1 https://github.com/hi-tpext/myadmin.git myadmin
 
 cd myadmin
 
@@ -364,14 +364,14 @@ class Member extends Controller
 
 ## 十.效果展示
 
-![alt 1](https://gitee.com/tpext/myadmin/raw/5.0/images/1.png "1")
-![alt 2](https://gitee.com/tpext/myadmin/raw/5.0/images/2.png "2")
-![alt 3](https://gitee.com/tpext/myadmin/raw/5.0/images/3.png "3")
-![alt 4](https://gitee.com/tpext/myadmin/raw/5.0/images/4.png "4")
-![alt 5](https://gitee.com/tpext/myadmin/raw/5.0/images/5.png "5")
-![alt 6](https://gitee.com/tpext/myadmin/raw/5.0/images/6.png "6")
-![alt 7](https://gitee.com/tpext/myadmin/raw/5.0/images/7.png "7")
-![alt 8](https://gitee.com/tpext/myadmin/raw/5.0/images/8.png "8")
+![alt 1](https://gitee.com/tpext/myadmin/raw/5.1/images/1.png "1")
+![alt 2](https://gitee.com/tpext/myadmin/raw/5.1/images/2.png "2")
+![alt 3](https://gitee.com/tpext/myadmin/raw/5.1/images/3.png "3")
+![alt 4](https://gitee.com/tpext/myadmin/raw/5.1/images/4.png "4")
+![alt 5](https://gitee.com/tpext/myadmin/raw/5.1/images/5.png "5")
+![alt 6](https://gitee.com/tpext/myadmin/raw/5.1/images/6.png "6")
+![alt 7](https://gitee.com/tpext/myadmin/raw/5.1/images/7.png "7")
+![alt 8](https://gitee.com/tpext/myadmin/raw/5.1/images/8.png "8")
 
 ## 十一.鸣谢
 
