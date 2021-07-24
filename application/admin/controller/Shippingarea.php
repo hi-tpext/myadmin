@@ -158,26 +158,26 @@ class Shippingarea extends Controller
         $form->switchBtn('enable', '启用')->default(1);
 
         $selected = [];
-        if ($isEdit && count($itemList)) {
-            $ids = [];
-            foreach ($itemList as $it) {
-                $ids[] = $it['province'];
-                $ids[] = $it['city'];
-                $ids[] = $it['area'];
-                $ids[] = $it['town'];
-            }
+        // if ($isEdit && count($itemList)) {
+        //     $ids = [];
+        //     foreach ($itemList as $it) {
+        //         $ids[] = $it['province'];
+        //         $ids[] = $it['city'];
+        //         $ids[] = $it['area'];
+        //         $ids[] = $it['town'];
+        //     }
 
-            $selected = Areacity::where('id', 'in', $ids)->field('id,ext_name')->select();
-        }
+        //     $selected = Areacity::where('id', 'in', $ids)->field('id,ext_name')->select();
+        // }
 
         $form->multipleSelect('com_codes', '快递公司')->required()->size(2, 10)->dataUrl(url('/admin/shippingcom/selectPage'), 'name', 'code')->help('从已启用的快递公司总选择，可以多选');
 
         $form->items('pcat_list', '地区')->required()->dataWithId($itemList)->size(12, 12)->help('省份不选则对全国有效，市不选则全省有效，以此类推。<br/>查找费用时从下级往上找，例如有两条规则:1、云南省[首重:1000克,费用:10元],２、云南省-昆明市[首重:1000克,费用:8元]。云南其他地区没有设置[市/区]具体规则。<br/>那么昆明市按规则2，云南其他地区按规则1');
 
-        $form->select('province', '省', 3)->optionsData($selected, 'ext_name')->showLabel(false)->dataUrl(url('api/areacity/province'), 'ext_name')->withNext(
-            $form->select('city', '市', 3)->optionsData($selected, 'ext_name')->showLabel(false)->dataUrl(url('api/areacity/city'), 'ext_name')->withNext(
-                $form->select('area', '区', 3)->optionsData($selected, 'ext_name')->showLabel(false)->dataUrl(url('api/areacity/area'), 'ext_name')->withNext(
-                    $form->select('town', '街道', 3)->optionsData($selected, 'ext_name')->showLabel(false)->dataUrl(url('api/areacity/town'), 'ext_name')
+        $form->select('province', '省', 3)->dataUrl(url('api/areacity/province'), 'ext_name')->withNext(
+            $form->select('city', '市', 3)->dataUrl(url('api/areacity/city'), 'ext_name')->withNext(
+                $form->select('area', '区', 3)->dataUrl(url('api/areacity/area'), 'ext_name')->withNext(
+                    $form->select('town', '街道', 3)->dataUrl(url('api/areacity/town'), 'ext_name')
                 )
             )
         );
