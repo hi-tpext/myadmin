@@ -133,7 +133,7 @@ composer update
 - 有问题请联系：ichynul#163.com (#换@)，或通过群联系。
 - 网站不文档属于正常，会定期重启
 
-## 七.功能特性
+## 七、功能特性
 
 1.模块化开发，核心功能都是通过 `composer` 安装的
 
@@ -352,17 +352,17 @@ class Member extends Controller
 }
 ```
 
-## 八.QQ群
+## 八、QQ群
 
 <img src="https://images.gitee.com/uploads/images/2021/0527/115851_20d4c40a_306213.jpeg" width="180" style="width:180px;" />
 
-## 九.捐助
+## 九、捐助
 
 如果您觉得我们的开源软件对你有所帮助，请扫下方二维码打赏我们一杯咖啡。
 
 <img src="https://images.gitee.com/uploads/images/2021/0610/122853_5a765aac_306213.jpeg" width="180" style="width:180px;" />
 
-## 十.效果展示
+## 十、效果展示
 
 ![alt 1](https://gitee.com/tpext/myadmin/raw/5.1/images/1.png "1")
 ![alt 2](https://gitee.com/tpext/myadmin/raw/5.1/images/2.png "2")
@@ -373,7 +373,7 @@ class Member extends Controller
 ![alt 7](https://gitee.com/tpext/myadmin/raw/5.1/images/7.png "7")
 ![alt 8](https://gitee.com/tpext/myadmin/raw/5.1/images/8.png "8")
 
-## 十一.鸣谢
+## 十一、鸣谢
 
 `Tpext` 系列扩展和使用了以下框架技术或受到其启发：
 
@@ -404,6 +404,6 @@ class Member extends Controller
 - AreaCity-JsSpider-StatsGov
 - 等
 
-## 十二.License
+## 十二、License
 
 Apache2
