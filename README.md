@@ -117,9 +117,9 @@ composer update
 
 ### 网址
 
-1. [tp5.1] <http://quick.shenzhuo.vip:10582/admin>
+1. [tp5.1] <http://f0vh2ohz.shenzhuo.vip:40035/admin>
 
-2. [tp6.0] <http://tpext.shenzhuo.vip:10582/admin>
+2. [tp6.0] <http://f0vh2ohz.shenzhuo.vip:40036/admin>
 
 ### 账号
 
