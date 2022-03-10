@@ -357,29 +357,26 @@ class Shopgoods extends Controller
 
         //
 
-        $form->fields('', '', 7)->size(0, 12)->showLabel(false);
-
         $form->defaultDisplayerSize(12, 12);
-        $form->text('name', '名称')->required()->maxlength(55);
-        $form->select('category_id', '分类')->required()->dataUrl(url('/admin/shopcategory/selectPage'));
-        $form->select('brand_id', '品牌')->dataUrl(url('/admin/shopbrand/selectPage'));
-        $form->select('admin_group_id', '商家')->dataUrl(url('/admin/group/selectPage'));
-        $form->text('spu', 'spu码')->maxlength(100);
-        $form->multipleSelect('tags', '标签')->dataUrl(url('/admin/shoptag/selectPage'))->help('可到【标签管理】菜单添加标签');
-        $form->tags('keyword', '关键字');
-        $form->textarea('description', '摘要')->maxlength(255);
-        $form->wangEditor('content', '产品详情')->required();
-
-        $form->fieldsEnd();
+        
+        $form->left(7)->with(
+            $form->text('name', '名称')->required()->maxlength(55),
+            $form->select('category_id', '分类')->required()->dataUrl(url('/admin/shopcategory/selectPage')),
+            $form->select('brand_id', '品牌')->dataUrl(url('/admin/shopbrand/selectPage')),
+            $form->select('admin_group_id', '商家')->dataUrl(url('/admin/group/selectPage')),
+            $form->text('spu', 'spu码')->maxlength(100),
+            $form->multipleSelect('tags', '标签')->dataUrl(url('/admin/shoptag/selectPage'))->help('可到【标签管理】菜单添加标签'),
+            $form->tags('keyword', '关键字'),
+            $form->textarea('description', '摘要')->maxlength(255),
+            $form->wangEditor('content', '产品详情')->required()
+        );
 
         $hasManyPrice = $isEdit && count($priceList) > 0 ? true : false;
 
         //  以下代码展示使用匿名方法的with
-        $form->fields('', '', 5)->size(0, 12)->showLabel(false)->with(
+        $form->right(5)->with(
             function ($f) use ($form, $isEdit, $hasManyPrice) { //匿名方法中使用了外部变量，要使用 use($vars...)
-                //$form->image('logo', '封面图')->required()->mediumSize();
-                $f->image('logo', '封面图')->required()->mediumSize(); //$f 和 use中的 $from都一样，$from的好处是可以有ide的代码提示
-
+                $form->image('logo', '封面图')->required()->mediumSize();
                 $form->text('share_commission', '分销佣金')->default(0);
 
                 $form->text('sale_price', '销售价', 4)->required()->readonly($hasManyPrice)->help($hasManyPrice ? '存在多个规格型号，显示价为所有规格型号最低价' : '');
