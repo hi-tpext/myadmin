@@ -208,7 +208,7 @@ class Cmscontent extends Controller
             $form->editor('content', '内容')->required();
         });
 
-        $form->right(7)->with(function () use ($form, $admin, $isEdit) {
+        $form->right(5)->with(function () use ($form, $admin, $isEdit) {
             $form->image('logo', '封面图')->mediumSize();
             $form->file('video', '视频')->video()->mediumSize();
             $form->file('attachment', '附件')->mediumSize();
