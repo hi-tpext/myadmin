@@ -3,7 +3,7 @@
 namespace app\common\logic;
 
 use app\common\model;
-use think\facade\Validate;
+use think\Validate;
 
 class GoodsLogic
 {
@@ -20,7 +20,6 @@ class GoodsLogic
         $postModels = [];
         if ($type == 'spec_list') {
             $postModels = input('post.spec_list/a', []);
-
         } else {
             $postModels = input('post.attr_list/a', []);
         }
@@ -59,7 +58,7 @@ class GoodsLogic
             }
 
             if ($is_add) {
-                $res = $dataModel->isUpdate(false)->save($pdata);
+                $res = $dataModel->exists(false)->save($pdata);
                 if ($res) {
                     $names[] = $pdata['name'];
                     if ($type == 'spec_list') {
@@ -80,10 +79,13 @@ class GoodsLogic
                     }
                 } else {
                     $exist = $dataModel->find($key);
-                    if ($exist && $exist['goods_id'] == $pdata['goods_id'] && $exist['value'] == $pdata['value'] && $exist['name'] == $pdata['name']) {
+                    if (!$exist) {
                         continue;
                     }
-                    $res = $dataModel->isUpdate(true, ['id' => $key])->save($pdata);
+                    if ($exist['goods_id'] == $pdata['goods_id'] && $exist['value'] == $pdata['value'] && $exist['name'] == $pdata['name']) {
+                        continue;
+                    }
+                    $res = $exist->save($pdata);
                     if ($res) {
                         $names[] = $pdata['name'];
                         if ($type == 'spec_list') {
@@ -124,7 +126,7 @@ class GoodsLogic
             return [];
         }
 
-        $valedate = Validate::make([
+        $valedate = new Validate([
             'sale_price|销售价格' => 'require|float',
             'stock|库存' => 'require|integer',
         ]);
@@ -200,7 +202,8 @@ class GoodsLogic
                 if ($is_del) {
                     $goodsPriceModel->destroy($key);
                 } else {
-                    $res = $goodsPriceModel->save($pdata, ['id' => $key]);
+                    $exist = $goodsPriceModel->find($key);
+                    $res = $exist && $exist->save($pdata);
                     if ($res) {
                         $specKeyIds[] = $pdata['spec_key'];
                     } else {

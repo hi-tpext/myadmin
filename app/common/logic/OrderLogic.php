@@ -407,7 +407,8 @@ class OrderLogic
                             return ['code' => 0, 'msg' => '保存出错'];
                         }
                     } else {
-                        $res = $orderGoodsModel->save($gdata, ['id' => $goods['order_goods_id']]);
+                        $exist = $orderGoodsModel->find($goods['order_goods_id']);
+                        $res = $exist && $exist->save($gdata);
                         if (!$res) {
                             Db::rollback();
                             return ['code' => 0, 'msg' => '保存出错'];
@@ -684,7 +685,7 @@ class OrderLogic
             $data['pay_time'] = date('Y-m-d H:i:s');
         }
 
-        $res = $orderModel->save($data, ['id' => $order_id]);
+        $res = $order->save($data);
 
         if (!$res) {
             return ['code' => 0, 'msg' => '操作失败'];

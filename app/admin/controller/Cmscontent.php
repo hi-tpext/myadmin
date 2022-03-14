@@ -196,37 +196,37 @@ class Cmscontent extends Controller
 
         $admin = !$isEdit ? AdminUser::current() : null;
 
-        $form->fields('', '', 7)->size(0, 12)->showLabel(false);
         $form->defaultDisplayerSize(12, 12);
 
-        $form->text('title', '标题')->required()->maxlength(55);
-        $form->select('category_id', '栏目')->required()->dataUrl(url('/admin/cmscategory/selectPage'));
-        $form->multipleSelect('tags', '标签')->dataUrl(url('/admin/cmstag/selectPage'))->help('可到【标签管理】菜单添加标签');
-        $form->tags('keyword', '关键字');
-        $form->textarea('description', '摘要')->maxlength(255);
+        $form->left(7)->with(function () use ($form) {
+            $form->text('title', '标题')->required()->maxlength(55);
+            $form->select('category_id', '栏目')->required()->dataUrl(url('/admin/cmscategory/selectPage'));
+            $form->multipleSelect('tags', '标签')->dataUrl(url('/admin/cmstag/selectPage'))->help('可到【标签管理】菜单添加标签');
+            $form->tags('keyword', '关键字');
+            $form->textarea('description', '摘要')->maxlength(255);
 
-        $form->editor('content', '内容')->required();
+            $form->editor('content', '内容')->required();
+        });
 
-        $form->fieldsEnd();
+        $form->right(5)->with(function () use ($form, $admin, $isEdit) {
+            $form->image('logo', '封面图')->mediumSize();
+            $form->file('video', '视频')->video()->mediumSize();
+            $form->file('attachment', '附件')->mediumSize();
+            $form->text('author', '作者', 6)->maxlength(33)->default($admin ? $admin['name'] : '');
+            $form->text('source', '来源', 6)->maxlength(55)->default($admin && $admin['group'] ? $admin['group']['name'] : '');
+            $form->datetime('publish_time', '发布时间')->required()->default(date('Y-m-d H:i:s'));
+            $form->number('click', '点击量', 6)->default(0);
+            $form->number('sort', '排序', 6)->default(0);
 
-        $form->fields('', '', 5)->size(0, 12)->showLabel(false);
+            $form->checkbox('attr', '属性')->options(['is_recommend' => '推荐', 'is_hot' => '热门', 'is_top' => '置顶']);
+            $form->switchBtn('is_show', '显示')->default(1);
 
-        $form->image('logo', '封面图')->mediumSize();
-        $form->file('video', '视频')->video()->mediumSize();
-        $form->file('attachment', '附件')->mediumSize();
-        $form->text('author', '作者', 6)->maxlength(33)->default($admin ? $admin['name'] : '');
-        $form->text('source', '来源', 6)->maxlength(55)->default($admin && $admin['group'] ? $admin['group']['name'] : '');
-        $form->datetime('publish_time', '发布时间')->required()->default(date('Y-m-d H:i:s'));
-        $form->number('click', '点击量', 6)->default(0);
-        $form->number('sort', '排序', 6)->default(0);
+            if ($isEdit) {
+                $form->show('create_time', '添加时间', 6);
+                $form->show('update_time', '修改时间', 6);
+            }
+        });
 
-        $form->checkbox('attr', '属性')->options(['is_recommend' => '推荐', 'is_hot' => '热门', 'is_top' => '置顶']);
-        $form->switchBtn('is_show', '显示')->default(1);
-
-        if ($isEdit) {
-            $form->show('create_time', '添加时间', 6);
-            $form->show('update_time', '修改时间', 6);
-        }
     }
 
     /**

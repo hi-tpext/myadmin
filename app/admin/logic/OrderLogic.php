@@ -164,8 +164,9 @@ class OrderLogic
             default:
                 return true;
         }
-        $orderModel = new model\ShopOrder();
-        $res = $orderModel->isUpdate(true)->save($updata, ['id' => $order_id]); //改变订单状态
+
+        $order = model\ShopOrder::where(['id' => $order_id])->find();
+        $res = $order && $order->save($updata); //改变订单状态
         return $res;
     }
 
@@ -224,7 +225,7 @@ class OrderLogic
 
         $orderLogic = new CommonOrderLogic(0);
 
-        $rebateLogModel->isUpdate(true, ['order_id' => $order_id, 'order_sn' => $order['order_sn']])->save(['status' => 0]);
+        $rebateLogModel->save(['status' => 0], ['order_id' => $order_id, 'order_sn' => $order['order_sn']]);
 
         if ($refund_type == 0 && $refund_amount > 0) {
             $accountLogic = new AccountLogic;
@@ -265,7 +266,7 @@ class OrderLogic
 
         $order = $orderModel->find($order_id);
 
-        $v = Validate::make([
+        $v = new Validate([
             'order_id|订单编号' => 'require|number',
             'shipping_code|物流公司' => 'require',
             'invoice_no|物流单号' => 'require',
@@ -315,7 +316,7 @@ class OrderLogic
             ['is_send', '=', 0],
         ];
 
-        $res = $orderGoodsModel->isUpdate(true, $where)->save(['is_send' => 1, 'delivery_id' => $id]);
+        $res = $orderGoodsModel->save(['is_send' => 1, 'delivery_id' => $id],$where);
 
         if (!$res) {
             Db::rollback();
@@ -325,8 +326,8 @@ class OrderLogic
         $sendCount = $orderGoodsModel->where(['order_id' => $order_id, 'is_send' => 1])->count();
         $allCount = $orderGoodsModel->where(['order_id' => $order_id])->count();
 
-        $res = $orderModel->isUpdate(true, ['id' => $order_id])
-            ->save(['shipping_status' => $sendCount < $allCount ? 2 : 1, 'shipping_time' => date('Y-m-d H:i:s')]);
+        $res = $orderModel
+            ->save(['shipping_status' => $sendCount < $allCount ? 2 : 1, 'shipping_time' => date('Y-m-d H:i:s')],['id' => $order_id]);
 
         if (!$res) {
             Db::rollback();

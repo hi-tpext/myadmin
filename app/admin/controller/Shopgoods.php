@@ -299,114 +299,79 @@ class Shopgoods extends Controller
 
         $tab = input('tab', 0);
 
-        $form->tab('基本信息');
-
-        /**
-         * 
-         * fields,items 的 with 方法有三种方式：
-         * 
-         * 1.with参数是可变参数的多个fields:
-         * $from->fields('demo1')->with(
-         *    $form->field('f1', 'f1'),
-         *    $form->field('f2', 'f2'),
-         *    //....
-         *    $form->field('fn', 'fn'), //最后一个跟随着`,`号，在php低版本会报错，删除后正常
-         * );
-         * 
-         * 2.with参数是一个数组包含多个fields:
-         * $from->fields('demo2')->with([
-         *    $form->field('f1', 'f1'),
-         *    $form->field('f2', 'f3'),
-         *    //....
-         *    $form->field('fn', 'fn'), //因为在数组中，最后一个跟随着`,`号也不报错，兼容性更好（一般作为方法1的改进，在php低版本中的折衷方案）
-         * ]
-         * );
-         * 
-         * 3.with参数是一个用匿名方法:
-         * $from->fields('demo1')->with(
-         *     function ($f) use ($form) {
-         *         $form->field('f1', 'f1');
-         *         $form->field('f2', 'f3');
-         *         //....
-         *         $form->field('fn', 'fn');//格式更自由，代码格式化以后层次结构好
-         *     }
-         * );
-         */
-
-         //
-        $form->fields('', '', 7)->size(0, 12)->showLabel(false);
-
         $form->defaultDisplayerSize(12, 12);
-        $form->text('name', '名称')->required()->maxlength(55);
-        $form->select('category_id', '分类')->required()->dataUrl(url('/admin/shopcategory/selectPage'));
-        $form->select('brand_id', '品牌')->dataUrl(url('/admin/shopbrand/selectPage'));
-        $form->select('admin_group_id', '商家')->dataUrl(url('/admin/group/selectPage'));
-        $form->text('spu', 'spu码')->maxlength(100);
-        $form->multipleSelect('tags', '标签')->dataUrl(url('/admin/shoptag/selectPage'))->help('可到【标签管理】菜单添加标签');
-        $form->tags('keyword', '关键字');
-        $form->textarea('description', '摘要')->maxlength(255);
-        $form->wangEditor('content', '产品详情')->required();
-
-        $form->fieldsEnd();
 
         $hasManyPrice = $isEdit && count($priceList) > 0 ? true : false;
 
-        //  以下代码展示使用匿名方法的with
-        $form->fields('', '', 5)->size(0, 12)->showLabel(false)->with(
-            function ($f) use ($form, $isEdit, $hasManyPrice) { //匿名方法中使用了外部变量，要使用 use($vars...)
-                //$form->image('logo', '封面图')->required()->mediumSize();
-                $f->image('logo', '封面图')->required()->mediumSize(); //$f 和 use中的 $from都一样，$from的好处是可以有ide的代码提示
+        $form->tab('基本信息')->with(function () use ($form, $isEdit, $hasManyPrice) {
+            //
+            $form->left(7)->with(
+                $form->text('name', '名称')->required()->maxlength(55),
+                $form->select('category_id', '分类')->required()->dataUrl(url('/admin/shopcategory/selectPage')),
+                $form->select('brand_id', '品牌')->dataUrl(url('/admin/shopbrand/selectPage')),
+                $form->select('admin_group_id', '商家')->dataUrl(url('/admin/group/selectPage')),
+                $form->text('spu', 'spu码')->maxlength(100),
+                $form->multipleSelect('tags', '标签')->dataUrl(url('/admin/shoptag/selectPage'))->help('可到【标签管理】菜单添加标签'),
+                $form->tags('keyword', '关键字'),
+                $form->textarea('description', '摘要')->maxlength(255),
+                $form->wangEditor('content', '产品详情')->required()
+            );
 
-                $form->text('share_commission', '分销佣金')->default(0);
+            //  以下代码展示使用匿名方法的with
+            $form->right(5)->with(
+                function ($f) use ($form, $isEdit, $hasManyPrice) { //匿名方法中使用了外部变量，要使用 use($vars...)
+                    $form->image('logo', '封面图')->required()->mediumSize();
+                    $form->text('share_commission', '分销佣金')->default(0);
 
-                $form->text('sale_price', '销售价', 4)->required()->readonly($hasManyPrice)->help($hasManyPrice ? '存在多个规格型号，显示价为所有规格型号最低价' : '');
-                $form->text('market_price', '市场价', 4);
-                $form->text('cost_price', '成本价', 4);
-                $form->html('');
-                $form->number('stock', '库存', 4)->default(99)->readonly($hasManyPrice)->help($hasManyPrice ? '存在多个规格型号，总库存为所有规格型号总和' : '');
-                $form->number('click', '点击量', 4)->default(1);
-                $form->number('sales_sum', '销量', 4)->default(0);
-                $form->html('');
-                $form->radio('on_sale', '上架', 6)->blockStyle()->options([1 => '已上架', 0 => '未上架'])->default(0)->help('下架后不显示也不可购买');
-                $form->datetime('publish_time', '上架时间', 6)->required()->default(date('Y-m-d H:i:s'));
-                $form->checkbox('attr', '属性')->blockStyle()->checkallBtn()->options(['is_recommend' => '推荐', 'is_hot' => '热门', 'is_top' => '置顶']);
-                $form->switchBtn('is_show', '显示')->default(1)
-                    ->help('仅对已上架产品生效，未上架无论如何都不显示<br>已上架产品隐藏后不在产品列表显示，但仍可购买(通过某些途径进入产品详情页)');
-                $form->number('sort', '排序')->default(0);
-                $form->number('weight', '重量')->default(1000)->help('单位:克');
+                    $form->text('sale_price', '销售价', 4)->required()->readonly($hasManyPrice)->help($hasManyPrice ? '存在多个规格型号，显示价为所有规格型号最低价' : '');
+                    $form->text('market_price', '市场价', 4);
+                    $form->text('cost_price', '成本价', 4);
+                    $form->html('');
+                    $form->number('stock', '库存', 4)->default(99)->readonly($hasManyPrice)->help($hasManyPrice ? '存在多个规格型号，总库存为所有规格型号总和' : '');
+                    $form->number('click', '点击量', 4)->default(1);
+                    $form->number('sales_sum', '销量', 4)->default(0);
+                    $form->html('');
+                    $form->radio('on_sale', '上架', 6)->blockStyle()->options([1 => '已上架', 0 => '未上架'])->default(0)->help('下架后不显示也不可购买');
+                    $form->datetime('publish_time', '上架时间', 6)->required()->default(date('Y-m-d H:i:s'));
+                    $form->checkbox('attr', '属性')->blockStyle()->checkallBtn()->options(['is_recommend' => '推荐', 'is_hot' => '热门', 'is_top' => '置顶']);
+                    $form->switchBtn('is_show', '显示')->default(1)
+                        ->help('仅对已上架产品生效，未上架无论如何都不显示<br>已上架产品隐藏后不在产品列表显示，但仍可购买(通过某些途径进入产品详情页)');
+                    $form->number('sort', '排序')->default(0);
+                    $form->number('weight', '重量')->default(1000)->help('单位:克');
 
-                if ($isEdit) {
-                    $form->show('create_time', '添加时间', 6);
-                    $form->show('update_time', '修改时间', 6);
+                    if ($isEdit) {
+                        $form->show('create_time', '添加时间', 6);
+                        $form->show('update_time', '修改时间', 6);
+                    }
                 }
-            }
+            );
+        });
+
+        $form->tab('多图/视频')->with(
+            $form->left(10)->with(
+                $form->multipleImage('images', '多图')->video()->mediumSize(),
+                $form->file('video', '视频')->video()->mediumSize()->jsOptions(['fileSingleSizeLimit' => 50 * 1024 * 1024])
+            )
         );
 
-        $form->tab('多图/视频');
-        $form->fields('', '', 10)->size(0, 12)->showLabel(false);
-        $form->multipleImage('images', '多图')->video()->mediumSize();
-        $form->file('video', '视频')->video()->mediumSize()->jsOptions(['fileSingleSizeLimit' => 50 * 1024 * 1024]);
-        $form->fieldsEnd();
-
-        $form->tab('规格型号/属性', $tab == 3);
-
-        $form->items('spec_list', '规格型号')->dataWithId($specList)->with(
-            $form->text('name', '名称')->placeholder('规格名称，如颜色')->maxlength(55)->required()->getWrapper()->addStyle('width:200px;'),
-            $form->text('sort', '排序')->placeholder('规格名称，如颜色')->default(1)->required()->getWrapper()->addStyle('width:80px;'),
-            $form->tags('value', '可选值')->required()->getWrapper()->addStyle('min-width:70%;')
-        )->help('【规格型号】会影响价格，根据排列组合，用户选择不同价格会不同。多个值用英文`,`号或回车键<i class="mdi mdi-subdirectory-arrow-left"></i>分割');
-
-        $form->items('attr_list', '产品属性')->dataWithId($attrList)->with(
-            $form->text('name', '名称')->placeholder('属性名称，如生产日期')->maxlength(55)->required()->getWrapper()->addStyle('width:200px;'),
-            $form->text('sort', '排序')->placeholder('规格名称，如颜色')->default(1)->required()->getWrapper()->addStyle('width:80px;'),
-            $form->text('value', '属性值')->required()->getWrapper()->addStyle('min-width:70%;')
-        )->help('【属性】不影响价格，仅展示');
+        $form->tab('规格型号/属性', $tab == 3)->with(
+            $form->items('spec_list', '规格型号')->dataWithId($specList)->with(
+                $form->text('name', '名称')->placeholder('规格名称，如颜色')->maxlength(55)->required()->getWrapper()->addStyle('width:200px;'),
+                $form->text('sort', '排序')->placeholder('规格名称，如颜色')->default(1)->required()->getWrapper()->addStyle('width:80px;'),
+                $form->tags('value', '可选值')->required()->getWrapper()->addStyle('min-width:70%;')
+            )->help('【规格型号】会影响价格，根据排列组合，用户选择不同价格会不同。多个值用英文`,`号或回车键<i class="mdi mdi-subdirectory-arrow-left"></i>分割'),
+            //
+            $form->items('attr_list', '产品属性')->dataWithId($attrList)->with(
+                $form->text('name', '名称')->placeholder('属性名称，如生产日期')->maxlength(55)->required()->getWrapper()->addStyle('width:200px;'),
+                $form->text('sort', '排序')->placeholder('规格名称，如颜色')->default(1)->required()->getWrapper()->addStyle('width:80px;'),
+                $form->text('value', '属性值')->required()->getWrapper()->addStyle('min-width:70%;')
+            )->help('【属性】不影响价格，仅展示')
+        );
 
         if ($isEdit && count($specList)) {
             $form->tab('库存/价格设置', $tab == 4);
             $form->items('price_list', '设置')->help('规格型号增加/删除/修改后，先保存一次此处才显示最新规格');
             foreach ($specList as $spec) {
-
                 foreach ($priceList as &$price) {
                     if ($price['data']) {
                         $savedData = json_decode($price['data'], 1);
@@ -414,6 +379,7 @@ class Shopgoods extends Controller
                             $price['spec_id' . $spec['id']] = $savedData[$spec['id']];
                         }
                     }
+                    //$price['img'] = '/uploads/images/202105/13/file1cee5058023a5f1f1d5e1d40c79efd5e5219.png';
                 }
 
                 $valueList = $this->specValueModel->where(['spec_id' => $spec['id']])->select();
@@ -425,6 +391,7 @@ class Shopgoods extends Controller
             $form->text('sku', 'SKU编码');
             $form->text('sale_price', '销售价格')->required();
             $form->number('stock', '库存')->required();
+            $form->image('img', '封面图')->required()->thumbSize(40, 40);
 
             $form->itemsEnd();
         }

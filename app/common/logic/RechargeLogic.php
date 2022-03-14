@@ -3,14 +3,14 @@
 namespace app\common\logic;
 
 use app\common\model;
-use think\validate;
+use think\Validate;
 use tpext\common\model\WebConfig;
 
 class RechargeLogic
 {
     public function create($member_id, $data)
     {
-        $v = validate::make([
+        $v = new Validate([
             'use_child_account|是否使用子账户' => 'require',
             'goods_method|方式' => 'require|float|egt:0',
         ]);

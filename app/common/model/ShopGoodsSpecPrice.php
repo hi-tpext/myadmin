@@ -6,7 +6,7 @@ use think\Model;
 
 class ShopGoodsSpecPrice extends Model
 {
-    protected $autoWriteTimestamp = 'dateTime';
+    protected $autoWriteTimestamp = 'datetime';
 
     public static function onBeforeWrite($data)
     {

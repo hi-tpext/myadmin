@@ -101,10 +101,10 @@ class CartLogic
         $id = 0;
 
         if ($exits) {
-            $res = $cartModel->isUpdate(true, ['id' => $exits['id']])->save($data);
+            $res = $exits->save($data);
             $id = $exits['id'];
         } else {
-            $res = $cartModel->isUpdate(false)->save($data);
+            $res = $cartModel->exists(false)->save($data);
             $id = $cartModel['id'];
         }
 
@@ -440,7 +440,7 @@ class CartLogic
         }
         $allStock = $specPriceModel->where(['goods_id' => $goods_id])->sum('stock');
 
-        $res = $goodsModel->isUpdate(true, ['id' => $goods_id])->save(['stock' => $allStock]);
+        $res = $goodsModel->save(['stock' => $allStock], ['id' => $goods_id]);
 
         return $res;
     }
