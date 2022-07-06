@@ -2,11 +2,13 @@
 
 ## 一、安装
 
-### 框架有两个版本
+### tp框架有两个版本
 
 - `5.1` 基于thinkphp 5.1 (**推荐(文档基于此版本)**)
 
 - `6.0` 基于thinkphp 6.0 (**beta**)
+
+### 基于`webman`的实现：<https://github.com/hi-tpext/mywebman>
 
 ### 框架需要使用 composer和git
 
@@ -101,10 +103,12 @@ composer update
 
 4. 手动安装其余装扩展
 
-## 四、登录后台
+## 四、进入后台
 
-- 浏览器再次输入[`http://localhost:8081/admin`]打开，会跳转登录页面
+- 浏览器再次输入[`http://localhost:8081/admin`]打开，会跳转后台主页，安装成功后默认创建管理员账号并处于已登录状态。
+
 - 默认账号：`admin`：`tpextadmin`
+
 - 成功登录后台即说明安装完成
 
 ---
@@ -362,7 +366,7 @@ class Member extends Controller
 
 <img src="https://images.gitee.com/uploads/images/2021/0610/122853_5a765aac_306213.jpeg" width="180" style="width:180px;" />
 
-## 十、效果展示
+## 十.效果展示
 
 ![alt 1](https://gitee.com/tpext/myadmin/raw/5.1/images/1.png "1")
 ![alt 2](https://gitee.com/tpext/myadmin/raw/5.1/images/2.png "2")
