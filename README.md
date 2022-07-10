@@ -123,7 +123,7 @@ composer update
 
 1. [tp5.1] <http://f0vh2ohz.shenzhuo.vip:40035/admin>
 
-2. [tp6.0] <http://f0vh2ohz.shenzhuo.vip:40036/admin>
+2. [webman] <http://f0vh2ohz.shenzhuo.vip:40036/admin>
 
 ### 账号
 
