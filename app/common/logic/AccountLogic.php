@@ -38,7 +38,7 @@ class AccountLogic
         $sql = '';
         try
         {
-            $prefix = config('database.prefix');
+            $prefix = config('database.connections.mysql.prefix', '');
 
             $sql = "UPDATE {$prefix}member SET points = points + {$data['points']}," .
                 " money = money + {$data['money']}, commission = commission + {$data['commission']}"
