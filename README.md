@@ -115,7 +115,7 @@ composer update
 
 ## 五、文档
 
-<https://gitee.com/tpext/myadmin/wikis/pages>
+<https://gxzrnxb27j.k.topthink.com/@tpext-docs/about.html>
 
 ## 六、演示
 
