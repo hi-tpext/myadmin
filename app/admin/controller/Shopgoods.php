@@ -349,7 +349,7 @@ class Shopgoods extends Controller
 
         $form->tab('多图/视频')->with(
             $form->left(10)->with(
-                $form->multipleImage('images', '多图')->video()->mediumSize(),
+                $form->multipleImage('images', '多图')->mediumSize(),
                 $form->file('video', '视频')->video()->mediumSize()->jsOptions(['fileSingleSizeLimit' => 50 * 1024 * 1024])
             )
         );
