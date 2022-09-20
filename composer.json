@@ -21,7 +21,7 @@
     ],
     "require": {
         "php": ">=7.1.0",
-        "topthink/framework": "^6.0.9",
+        "topthink/framework": "^6.0.13",
         "topthink/think-orm": "^2.0",
         "ichynul/tpextmyadmin": "^3.0",
         "ichynul/tpextareacity": "^1.1"
