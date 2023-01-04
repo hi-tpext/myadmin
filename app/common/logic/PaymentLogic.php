@@ -85,7 +85,7 @@ class PaymentLogic
             $data['pay_code'] = $extData['pay_code'];
         }
 
-        $orderModel->update($data, ['id' => $order_id]); //先保存一次，防止支付接口重复通知
+        $order->save(($data); //先保存一次，防止支付接口重复通知
 
         $orderLogic = new OrderLogic($order['member_id']);
 
@@ -97,7 +97,7 @@ class PaymentLogic
             $orderData['order_status'] = 1;
         }
 
-        $orderModel->update($orderData, ['id' => $order_id]);
+        $order->save($orderData);
 
         $cartLogic = new CartLogic($order['member_id']);
 
@@ -146,7 +146,7 @@ class PaymentLogic
             $data['pay_code'] = $extData['pay_code'];
         }
 
-        $rechargeModel->update($data, ['id' => $recharge_id]); //先保存一次，防止支付接口重复通知
+        $recharge->save($data); //先保存一次，防止支付接口重复通知
 
         $account = new AccountLogic;
 
