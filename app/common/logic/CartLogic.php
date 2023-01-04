@@ -440,7 +440,9 @@ class CartLogic
         }
         $allStock = $specPriceModel->where(['goods_id' => $goods_id])->sum('stock');
 
-        $res = $goodsModel->save(['stock' => $allStock], ['id' => $goods_id]);
+        $goods = $goodsModel->find($goods_id);
+
+        $res = $goods && $goods->save(['stock' => $allStock]);
 
         return $res;
     }
@@ -462,13 +464,13 @@ class CartLogic
         foreach ($orderGoodsArr as $val) {
 
             if (!empty($val['spec_key'])) {
-                $specPriceModel->where(['goods_id' => $val['goods_id'], 'spec_key' => $val['spec_key']])->setDec('stock', $val['goods_num']); // 减规格库存
+                $specPriceModel->where(['goods_id' => $val['goods_id'], 'spec_key' => $val['spec_key']])->dec('stock', $val['goods_num']); // 减规格库存
                 $this->refreshStock($val['goods_id']);
             } else {
-                $goodsModel->where(['id' => $val['goods_id']])->setDec('stock', $val['goods_num']); // 减库存
+                $goodsModel->where(['id' => $val['goods_id']])->dec('stock', $val['goods_num']); // 减库存
             }
 
-            $goodsModel->where(['id' => $val['goods_id']])->setInc('sales_sum', $val['goods_num']); // 加销量
+            $goodsModel->where(['id' => $val['goods_id']])->inc('sales_sum', $val['goods_num']); // 加销量
         }
     }
 
@@ -488,13 +490,13 @@ class CartLogic
         foreach ($orderGoodsArr as $val) {
 
             if (!empty($val['spec_key'])) {
-                $specPriceModel->where(['goods_id' => $val['goods_id'], 'spec_key' => $val['spec_key']])->setInc('stock', $val['goods_num']); // 加规格库存
+                $specPriceModel->where(['goods_id' => $val['goods_id'], 'spec_key' => $val['spec_key']])->inc('stock', $val['goods_num']); // 加规格库存
                 $this->refreshStock($val['goods_id']);
             } else {
-                $goodsModel->where(['id' => $val['goods_id']])->setInc('stock', $val['goods_num']); // 加库存
+                $goodsModel->where(['id' => $val['goods_id']])->inc('stock', $val['goods_num']); // 加库存
             }
 
-            $goodsModel->where(['id' => $val['goods_id']])->setDec('sales_sum', $val['goods_num']); // 减销量
+            $goodsModel->where(['id' => $val['goods_id']])->dec('sales_sum', $val['goods_num']); // 减销量
         }
     }
 }
