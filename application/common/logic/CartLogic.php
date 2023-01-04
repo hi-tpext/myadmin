@@ -334,16 +334,16 @@ class CartLogic
             ->get($goods_id);
 
         if (!$goods) {
-            return ['code' => 0, 'msg' => '产品不存在', 'goods' => null];
+            return ['code' => 0, 'msg' => '产品不存在', 'goods' => null, 'spec_price' => null];
         }
         if (!$goods['on_sale']) {
-            return ['code' => 0, 'msg' => '产品已下架', 'goods' => $goods];
+            return ['code' => 0, 'msg' => '产品已下架', 'goods' => $goods, 'spec_price' => null];
         }
         if ($goods['stock'] < 1) {
-            return ['code' => 0, 'msg' => '产品库存不足', 'goods' => $goods];
+            return ['code' => 0, 'msg' => '产品库存不足', 'goods' => $goods, 'spec_price' => null];
         }
 
-        return ['code' => 1, 'msg' => 'ok', 'goods' => $goods];
+        return ['code' => 1, 'msg' => 'ok', 'goods' => $goods, 'spec_price' => null];
     }
 
     /**
