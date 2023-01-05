@@ -44,6 +44,8 @@ class Cmscontent extends Controller
         $this->treeModel = $this->categoryModel; //分类模型
         $this->treeTextField = 'name'; //分类模型中的分类名称字段
         $this->treeKey = 'category_id'; //关联的键　localKey
+        
+        $this->indexFieldsExcept = 'content';//排除某字段
     }
 
     protected function filterWhere()
