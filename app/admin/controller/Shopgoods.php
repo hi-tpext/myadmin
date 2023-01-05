@@ -75,6 +75,8 @@ class Shopgoods extends Controller
         $this->selectTextField = '{name}#{spu}';
 
         $this->indexWith = ['category'];
+        
+        $this->indexFieldsExcept = 'content';//排除某字段
 
         //左侧树
         $this->treeModel = $this->categoryModel; //分类模型
