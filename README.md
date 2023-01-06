@@ -4,9 +4,9 @@
 
 ### tp框架有两个版本
 
-- `5.1` 基于thinkphp 5.1 (**推荐(文档基于此版本)**)
+- `5.1` 基于thinkphp 5.1 (**推荐(稳定)**)
 
-- `6.0` 基于thinkphp 6.0 (**beta**)
+- `6.0/6.1` 基于thinkphp 6.0 (**逐步切换到此版本**)
 
 ### 基于`webman`的实现：<https://github.com/hi-tpext/mywebman>
 
