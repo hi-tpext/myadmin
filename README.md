@@ -121,9 +121,9 @@ composer update
 
 ### 网址
 
-1. [tp6.1] <http://gaosu.shenzhuo.vip:49587/admin>
+1. [tp6.1] <http://gaosu.shenzhuo.vip:50469/admin>
 
-2. [webman] <http://gaosu.shenzhuo.vip:49588/admin>
+2. [webman] <http://gaosu.shenzhuo.vip:50468/admin>
 
 ### 账号
 
