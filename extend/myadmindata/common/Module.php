@@ -241,4 +241,9 @@ class Module extends baseModule
             ],
         ],
     ];
+    
+    public function getProtectedTables()
+    {
+        return ['_empty_'];
+    }
 }
