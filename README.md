@@ -31,7 +31,7 @@ composer create-project topthink/think=5.1.* myadmin
 
 cd myadmin
 
-composer require ichynul/tpextmyadmin:^1.0.1
+composer require ichynul/tpextmyadmin:^1.*
 ```
 
 或
@@ -43,7 +43,7 @@ composer create-project topthink/think=6.0.* myadmin6
 
 cd myadmin6
 
-composer require ichynul/tpextmyadmin:^3.0.1
+composer require ichynul/tpextmyadmin:^3.*
 ```
 
 > 安装完毕，此安装版是最小模式，只包含基本的后台功能，建议开发新项目时使用此方式。
