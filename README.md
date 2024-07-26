@@ -6,9 +6,14 @@
 
 - `5.1` 基于thinkphp 5.1 (**推荐(文档基于此版本)**)
 
-- `6.0` 基于thinkphp 6.0 (**beta**)
+- `6.0` 基于thinkphp 6.0
 
 ### 基于`webman`的实现：<https://github.com/hi-tpext/mywebman>
+
+###2024-07-06更新：
+
+tp6基于vue3的版本可试用，见：https://github.com/hi-tpext/tpext-myadmin/tree/5.0
+---
 
 ### 框架需要使用 composer和git
 
@@ -37,6 +42,7 @@ composer require ichynul/tpextmyadmin:^1.*
 或
 
 [6.0]分支对应 `tpextmyadmin`的[3.0]分支，依次执行以下命令，`myadmin6` 为新项目目录，可自行调整
+
 
 ```bash
 composer create-project topthink/think=6.0.* myadmin6
