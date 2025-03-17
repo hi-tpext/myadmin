@@ -4,9 +4,9 @@
 
 ### tp框架有两个版本
 
-- `5.1` 基于thinkphp 5.1 (**推荐(文档基于此版本)**)
+- `5.1` 基于thinkphp 5.1
 
-- `6.0` 基于thinkphp 6.0
+- `6.0` 基于thinkphp 6.x/8.x
 
 ### 基于`webman`的实现：<https://github.com/hi-tpext/mywebman>
 
@@ -42,14 +42,15 @@ composer require ichynul/tpextmyadmin:^1.*
 或
 
 [6.0]分支对应 `tpextmyadmin`的[3.0]分支，依次执行以下命令，`myadmin6` 为新项目目录，可自行调整
-
-
 ```bash
 composer create-project topthink/think=6.0.* myadmin6
 
 cd myadmin6
 
 composer require ichynul/tpextmyadmin:^3.*
+
+#2025-03-17 更新：已支持tp8，调整版本号 `topthink/think=8.0`
+
 ```
 
 > 安装完毕，此安装版是最小模式，只包含基本的后台功能，建议开发新项目时使用此方式。
@@ -75,7 +76,10 @@ git clone -b 6.0 https://github.com/hi-tpext/myadmin.git myadmin6
 
 cd myadmin6
 
+#2025-03-17 更新：已支持tp8，可在clone完成后，修改`composer.json`，调整thinkphp版本号 `"topthink/framework": "^8.0"`
+
 composer update
+
 ```
 
 > 相关演示代码在`application/admin/`或`app/admin/`中，数据库脚本由`[myadmindata]`扩展提供，请下载安装。
