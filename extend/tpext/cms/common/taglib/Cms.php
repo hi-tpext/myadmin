@@ -322,7 +322,7 @@ EOT;
 
         if(\$__cid_key__) {
             \$__cid_val__ = {$cid_val} ?? 0;
-            if(\$__cid_val__) {
+            if(\$__cid_val__ !== 0) {
                 if(is_array(\$__cid_val__) || strstr(\$__cid_val__, ',')) {
                     \$__where__[] = [\$__cid_key__, 'in', \$__cid_val__];
                 } else {
@@ -332,7 +332,7 @@ EOT;
         }
         if(\$__id_key__) {
             \$__id_val__ = {$id_val} ?? 0;
-            if(\$__id_val__) {
+            if(\$__id_val__ !== 0) {
                 if(is_array(\$__id_val__) || strstr(\$__id_val__, ',')) {
                     \$__where__[] = [\$__id_key__, 'in', \$__id_val__];
                 } else {
