@@ -157,6 +157,9 @@ class Table
                 if ($info['cid_key'] != 'cid') {
                     $listAttr .= ',cid';
                 }
+                if ($info['cid_key'] == 'parent_id') {
+                    $listAttr .= ',pid';
+                }
             }
 
             $tags[$info['tag_name'] . '@list'] = ['attr' => $listAttr, 'expression' => true];

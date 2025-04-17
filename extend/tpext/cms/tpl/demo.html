@@ -23,7 +23,9 @@
 </div>
 {/channel@list}
 
-<p>id一个表达式 <code>gt|eq|lt|egt|elt|neq|&lt;&gt;|=|!=|in|not in|like|not like|notlike|between|not between|notbetween</code></p>
+<p>id一个表达式
+    <code>gt|eq|lt|egt|elt|neq|&lt;|&gt;|=|!=|in|notin|not in|like|not like|notlike|between|not between|notbetween</code>
+</p>
 <p>避免使用尖括号<code>&gt;&nbsp;&lt;</code>，因为有些编辑器会识别为html标签起止符号，代码解析错误报警告</p>
 <p>{<code>content@list cid="gt 5"</code>}</p>
 {content@list cid="gt 5"}
@@ -100,15 +102,15 @@
 </div>
 类似的，支持类型写法的标签还有：
 <h3>栏目</h3>
-支持表达式：<code>id=""</code><code>cid=""</code><code>where=""</code>
+支持表达式：<code>id=""</code><code>parent_id=""</code><code>where=""</code>【语法糖<code>pid=""</code><code>cid=""</code>都相当于<code>parent_id=""</code>】
 <p>{<code>channel@list</code>}</p>
 <p>{<code>channel@get</code>}</p>
 <h3>内容</h3>
-支持表达式：<code>id=""</code><code>cid=""</code><code>where=""</code>
+支持表达式：<code>id=""</code><code>channel_id=""</code><code>where=""</code>【语法糖<code>cid=""</code>都相当于<code>channel_id=""</code>】
 <p>{<code>content@list</code>}</p>
 <p>{<code>content@get</code>}</p>
 <h3>广告</h3>
-支持表达式：<code>id=""</code><code>cid=""</code><code>where=""</code>
+支持表达式：<code>id=""</code><code>position_id=""</code><code>where=""</code>【语法糖<code>cid=""</code>都相当于<code>position_id=""</code>】
 <p>{<code>banner@list</code>}</p>
 <p>{<code>banner@get</code>}</p>
 <h3>广告位</h3>
@@ -130,6 +132,16 @@
 或
 <p>{<code>content@get .../</code>}</p>
 <p>内容html</p>
+
+<p>注意<code>cid=""</code>和是语法糖</p>
+
+<p>content@中等同于：<code>channel_id=""</code></p>
+<p>channel@中等同于：<code>parent_id=""</code></p>
+<p>banner@中等同于 <code>position_id=""</code></p>
+
+如 <p>{<code>content@list cid="3"</code>}相当于{<code>content@list channel_id="3"</code>}</p>
+<p>where中会尝试替换cid为真实字段，但因为where表达式复杂，可能会替换失败。所以使用where条件时，最好使用真实字段名。</p>
+<p>{<code>content@list where="channel_id=3"</code>}</p>
 
 <h3>直接使用list或get</h3>
 <p>其实常用的数据表，直接使用上面的标签就可完成了。但对于没有支持的其他表，可以支持使用list或get标签。</p>
