@@ -1,0 +1,63 @@
+<!--网站首页-->
+<div class="index-top">
+    <div class="slideBox">
+        <div class="hd">
+            <ul></ul>
+        </div>
+        <div class="bd">
+            <ul>
+                {banner@list cid="1" num="5"}
+                <li>
+                    <a href="{$banner.url}"><img src="{$banner.image}" alt="{$banner.title}" /></a>
+                </li>
+                {/banner@list}
+            </ul>
+        </div>
+    </div>
+    <div class="slideTxtBox">
+        {channel@list id="gt 1" num="3" assign="newsChannel"}{/channel@list}<!--暂不输出，存放为newsChannel的变量-->
+        <div class="hd">
+            <span class="arrow"><a class="next"></a><a class="prev"></a></span>
+            <ul>
+                {foreach name="$newsChannel" item="row"}<!--循环栏目-->
+                <li>{$row.name}</li>
+                {/foreach}
+            </ul>
+        </div>
+        <div class="bd">
+            {foreach name="$newsChannel" item="row"} <!--循环栏目-->
+            <ul>
+                {content@list cid="$row.id" num="7"}<!--获取栏目下文章-->
+                <li>
+                    <span class="date">{$content.publish_date}</span>
+                    <a href="{$content.url}" target="_blank">{$content.title}</a>
+                </li>
+                {/content@list}
+            </ul>
+            {/foreach}
+        </div>
+    </div>
+</div>
+<div class="index-grid">
+    {channel@list id="gt 1" num="20"}
+    <div class="index-item">
+        <div class="inner">
+            <div class="channel-title">
+                <img src="{$channel.logo}" class="logo" alt="{$channel.name}" />
+                <a href="{$channel.url}">{$channel.name}</a>
+            </div>
+            {content@list cid="$channel.id"}
+            <div class="item-info">
+                <span class="title">
+                    <a target="_blank" href="{$content.url}">{:mb_substr($content.title,0,36)}</a>
+                    {if $content.is_recommend==1}
+                    <b style="color: red;">[荐]</b>
+                    {/if}
+                </span>
+                <span class="date">{$content.publish_date}</span>
+            </div>
+            {/content@list}
+        </div>
+    </div>
+    {/channel@list}
+</div>
