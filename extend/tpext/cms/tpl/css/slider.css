@@ -1,0 +1,126 @@
+/* 滚动图片css */
+.slideBox {
+  width: 450px;
+  height: 230px;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid #ddd;
+  float: left;
+}
+.slideBox .hd {
+  height: 15px;
+  overflow: hidden;
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  z-index: 1;
+}
+.slideBox .hd ul {
+  overflow: hidden;
+  zoom: 1;
+  float: left;
+}
+.slideBox .hd ul li {
+  float: left;
+  margin-right: 2px;
+  width: 15px;
+  height: 15px;
+  line-height: 14px;
+  text-align: center;
+  background: #fff;
+  cursor: pointer;
+  list-style: none;
+}
+.slideBox .hd ul li.on {
+  background: #f00;
+  color: #fff;
+}
+.slideBox .bd {
+  position: relative;
+  height: 100%;
+  z-index: 0;
+}
+.slideBox .bd li {
+  zoom: 1;
+  vertical-align: middle;
+  list-style: none;
+}
+.slideBox .bd img {
+  width: 450px;
+  height: 230px;
+  display: block;
+}
+
+/**滚动文章**/
+.slideTxtBox {
+  width: 720px;
+  border: 1px solid #ddd;
+  text-align: left;
+  float: right;
+}
+
+.slideTxtBox .hd {
+  height: 30px;
+  line-height: 30px;
+  background: #f4f4f4;
+  padding: 0 10px 0 20px;
+  border-bottom: 1px solid #ddd;
+  position: relative;
+}
+.slideTxtBox .hd ul {
+  float: left;
+  position: absolute;
+  left: 20px;
+  top: -1px;
+  height: 32px;
+}
+.slideTxtBox .hd ul li {
+  float: left;
+  padding: 0 15px;
+  cursor: pointer;
+}
+.slideTxtBox .hd ul li.on {
+  height: 30px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-bottom: 2px solid #fff;
+}
+.slideTxtBox .bd ul {
+  padding: 15px;
+  zoom: 1;
+}
+.slideTxtBox .bd li {
+  height: 24px;
+  line-height: 24px;
+}
+.slideTxtBox .bd li .date {
+  float: right;
+  color: #999;
+}
+
+/* 下面是前/后按钮代码，如果不需要删除即可 */
+.slideTxtBox .arrow {
+  position: absolute;
+  right: 10px;
+  top: 0;
+}
+.slideTxtBox .arrow a {
+  display: block;
+  width: 5px;
+  height: 9px;
+  float: right;
+  margin-right: 5px;
+  margin-top: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  background: url("../images/arrow.png") 0 0 no-repeat;
+}
+.slideTxtBox .arrow .next {
+  background-position: 0 -50px;
+}
+.slideTxtBox .arrow .prevStop {
+  background-position: -60px 0;
+}
+.slideTxtBox .arrow .nextStop {
+  background-position: -60px -50px;
+}

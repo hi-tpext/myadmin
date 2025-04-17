@@ -1,0 +1,70 @@
+<!--文章详情(示例)-->
+<div class="breadcrumb">
+    当前位置：<a href="{$__site_home__}">首页</a>
+    {channel@parents id="$content.channel_id"}
+    &gt;<a href="{$channel.url}">{$channel.name}</a>
+    {/channel@parents}
+</div>
+<div class="main-content">
+    <div class="title">{$content.title}</div>
+    <div class="info">
+        <span>发布日期：{$content.publish_date}</span>
+        |<span>作者：{$content.author}</span>
+        |<span>来源：{$content.source}</span>
+        |<span>点击：{$content.click|raw}</span>
+    </div>
+    <div class="content">{$content.content|raw}</div>
+    <!--如果有附件-->
+    {if count($content.attachments_array)}
+    <div class="content-attachments">
+        <span>附件：</span>
+        <!--有附件时，会尝试把附件按[,]分隔，正文内容按换行分隔，作为每个附件的描述，放入attachments_array变量；
+        也会尝试把正文中嵌入的<a href="file">desc</a>提取出来，放入attachments_array变量；
+       格式：[{file:'文件路径',desc:'文件描述',size:'文件大小'}]
+       如果能确保附件只有一个时，可以直接用{content.attachments}变量作为文件路径{$content.title}作为文件描述，而不必使用foreach循环；
+       -->
+        {foreach name="$content.attachments_array" item="atta" key="key"}
+        {if preg_match('/\.(jpg|jpeg|png|gif|bmp)$/i', $atta.file)}
+        <img src="{$atta.file}" alt="{$atta.desc}">
+        {elseif preg_match('/\.(mp4)$/i', $atta.file)}
+        <video src="{$atta.file}" controls="controls" width="320" height="240">
+            您的浏览器不支持 video 标签。
+        </video>
+        {elseif preg_match('/\.(pfd)$/i', $atta.file)}
+        <!--显示pdf文件，暂时不做处理-->
+        {else}
+        <a href="{$atta.file}" target="_blank">{$atta.desc}</a>
+        {/if}
+        {/foreach}
+    </div>
+    {/if}
+    <!--如果有合集-->
+    {if $content.tags}
+    <div class="content-tags">
+        <span>所属合集：</span>
+        {tag@list id="in($content.tags)"}
+        <a href="{$tag.url}">{$tag.name}</a>
+        {/tag@list}
+    </div>
+    {/if}
+    <!--如果有关联文章-->
+    {if $content.mention_ids}
+    <div class="content-mention">
+        <span>关联内容：</span>
+        {content@list id="in($content.mention_ids)" item="mention"}
+        <a href="{$mention.url}" target="_blank">{$mention.title}</a>
+        {/content@list}
+    </div>
+    {/if}
+
+</div>
+<div class="next-prev">
+    <div class="prev">
+        {content@prev}
+        上一篇：<a href="{$prev.url}">{$prev.title}</a>
+    </div>
+    <div class="next">
+        {content@next}
+        下一篇：<a href="{$next.url}">{$next.title}</a>
+    </div>
+</div>

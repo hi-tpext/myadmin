@@ -1,0 +1,26 @@
+{
+    "name": "ichynul/tpextcms",
+    "description": "thinkphp extension",
+    "type": "library",
+    "keywords": [
+        "thinkphp"
+    ],
+    "homepage": "https://github.com/hi-tpext/tpextcms",
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "ichynul",
+            "email": "ichynul@163.com"
+        }
+    ],
+    "require": {
+    },
+    "autoload": {
+        "psr-4": {
+            "tpext\\cms\\": "./"
+        },
+        "files": [
+            "./helper.php"
+        ]
+    }
+}

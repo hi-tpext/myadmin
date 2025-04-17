@@ -99,46 +99,8 @@ class Module extends baseModule
             ],
         ],
         [
-            'title' => '内容管理',
-            'sort' => 3,
-            'url' => '＃',
-            'icon' => 'mdi mdi-library-books',
-            'children' => [
-                [
-                    'title' => '内容管理',
-                    'sort' => 1,
-                    'url' => '/admin/cmscontent/index',
-                    'icon' => 'mdi mdi-book-open',
-                ],
-                [
-                    'title' => '栏目管理',
-                    'sort' => 2,
-                    'url' => '/admin/cmscategory/index',
-                    'icon' => 'mdi mdi-file-tree',
-                ],
-                [
-                    'title' => '广告位置',
-                    'sort' => 3,
-                    'url' => '/admin/cmsposition/index',
-                    'icon' => 'mdi mdi-bullhorn',
-                ],
-                [
-                    'title' => '广告管理',
-                    'sort' => 4,
-                    'url' => '/admin/cmsbanner/index',
-                    'icon' => 'mdi mdi-image-multiple',
-                ],
-                [
-                    'title' => '标签管理',
-                    'sort' => 5,
-                    'url' => '/admin/cmstag/index',
-                    'icon' => 'mdi mdi-tag-outline',
-                ],
-            ],
-        ],
-        [
             'title' => '会员管理',
-            'sort' => 4,
+            'sort' => 3,
             'url' => '#',
             'icon' => 'mdi mdi-account-circle',
             'children' => [
@@ -219,26 +181,6 @@ class Module extends baseModule
                     'icon' => 'mdi mdi-cards',
                 ],
             ],
-        ],
-        [
-            'title' => '商家中心',
-            'sort' => 6,
-            'url' => '#',
-            'icon' => 'mdi mdi-bulletin-board',
-            'children' => [
-                [
-                    'title' => '订单发货',
-                    'sort' => 1,
-                    'url' => '/admin/shopordershipping/index',
-                    'icon' => 'mdi mdi-cube-send',
-                ],
-                [
-                    'title' => '发货记录',
-                    'sort' => 2,
-                    'url' => '/admin/deliverylog/index',
-                    'icon' => 'mdi mdi-calendar-text',
-                ],
-            ],
-        ],
+        ]
     ];
 }

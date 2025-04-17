@@ -1,0 +1,28 @@
+<!--文章列表:按栏目(示例)-->
+<div class="breadcrumb">
+    当前位置：<a href="{$__site_home__}">首页</a>
+    {channel@parents}
+    &gt;<a>{$channel.name}</a>
+    {/channel@parents}
+</div>
+<div class="list">
+    {content@list}
+    <dl class="list-item">
+        <dd class="title">
+            <span class="left">
+                <a target="_blank" href="{$content.url}">{$content.title}</a>
+                {if $content.is_top==1}
+                <b style="color: red;">[置顶]</b>
+                {/if}
+                {if $content.is_hot==1}
+                <b style="color: red;">[热门]</b>
+                {/if}
+            </span>
+            <span class="date">{$content.publish_date}</span>
+        </dd>
+        <dt class="info">
+            {$content.description}
+        </dt>
+    </dl>
+    {/content@list}
+</div>
