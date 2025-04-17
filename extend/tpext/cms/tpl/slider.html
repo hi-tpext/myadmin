@@ -1,0 +1,13 @@
+<script type="text/javascript" src="../static/js/jquery.SuperSlide.2.1.3.js" charset="utf-8"></script>
+<script type="text/javascript">
+    $(function () {
+        var length = $(".slideBox .bd ul li").length;
+        if (length > 0) {
+            for (var i = 0; i < length; i++) {
+                $(".slideBox .hd ul").append("<li>" + (i + 1) + "</li>");
+            }
+        }
+        $(".slideBox").slide({ mainCell: ".bd ul", autoPlay: true });//滚动图
+        $(".slideTxtBox").slide({ effect: "fold", autoPlay: true, easing: "easeInQuint", delayTime: 500 });//滚动文章
+    });
+</script>
