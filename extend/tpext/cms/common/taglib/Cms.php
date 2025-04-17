@@ -255,10 +255,12 @@ EOT;
         $where = $tag['where'] ?? '1=1';
 
         $cid_val = '';
-        if ($cid_key && isset($tag['cid']) && $tag['cid'] !== '') {
-            $cid_val = trim($tag['cid']);
-        } else if ($cid_key && isset($tag[$cid_key]) && $tag[$cid_key] !== '') {
+        if ($cid_key && isset($tag[$cid_key]) && $tag[$cid_key] !== '') {
             $cid_val = trim($tag[$cid_key]);
+        } else if ($cid_key && isset($tag['cid']) && $tag['cid'] !== '') {
+            $cid_val = trim($tag['cid']);
+        } else if ($cid_key == 'parent_id' && isset($tag['pid']) && $tag['pid'] !== '') {
+            $cid_val = trim($tag['pid']);
         }
 
         if ($cid_val !== '') {
@@ -306,7 +308,7 @@ EOT;
 
         $binds = '';
         if ($where && $where != '1=1') {
-            [$where, $binds] = $this->parseWhere($where); //解析变量
+            [$where, $binds] = $this->parseWhere($where, $cid_key); //解析变量
         }
 
         $parseStr = <<<EOT
@@ -348,11 +350,13 @@ EOT;
      * 解析where中的变量
      *
      * @param string $where
+     * @param string $cid_key
+     * 
      * @return array
      */
-    protected function parseWhere($where)
+    protected function parseWhere($where, $cid_key)
     {
-        $where = $this->whereExp($where);
+        $where = $this->whereExp($where, $cid_key);
         $binds = [];
         preg_match_all('/([\'\"])?\%?(\$[a-zA-Z_][a-zA-Z_\.\[\]\'\"]*)\%?\1?/', $where, $matches);
         if (isset($matches[2]) && count($matches[2]) > 0) {
@@ -421,8 +425,26 @@ EOT;
         return " and {$idKey} {$op} {$idVal}";
     }
 
-    protected function whereExp($where)
+    /**
+     * 替换表达式
+     *
+     * @param string $where
+     * @param string $cid_key
+     * 
+     * @return string
+     */
+    protected function whereExp($where, $cid_key)
     {
+        //替换where中的cid语法糖为真实字段
+        if ($cid_key && strstr($where, 'cid')) {
+            $where = preg_replace('/(\bcid\s+)(gt|eq|lt|egt|elt|neq|not\s*in|like|not\s*like|between|not\s*between)/is', $cid_key . '$2', $where);
+            $where = preg_replace('/(\bcid\s*)(\<|\>|=|!=)/is', $cid_key . '$2', $where);
+        }
+        if ($cid_key == 'parent_id' && strstr($where, 'pid')) {
+            $where = preg_replace('/(\bpid\s+)(gt|eq|lt|egt|elt|neq|not\s*in|like|not\s*like|between|not\s*between)/is', $cid_key . '$2', $where);
+            $where = preg_replace('/(\bpid\s*)(\<|\>|=|!=)/is', $cid_key . '$2', $where);
+        }
+        //替换表达式
         $where = str_ireplace(['egt', 'elt', 'neq'], ['>=', '<=', '<>'], $where);
         $where = str_ireplace(['gt', 'eq', 'lt', '!='], ['>', '=', '<', '<>'], $where);
         $where = str_ireplace(['notbetween', 'notin', 'notlike'], ['not between', 'not in', 'not like'], $where);
