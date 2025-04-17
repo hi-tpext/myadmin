@@ -1,0 +1,27 @@
+<!--文章列表:搜索(示例)-->
+<div class="breadcrumb">
+    当前位置：<a href="{$__site_home__}">首页</a>
+    &gt;<a>搜索【{$kwd|default='无关键字'}】</a>
+</div>
+{if !empty($kwd)}
+<div class="list">
+    {content@list where="title like %$kwd% or description like %$kwd% or keywords like %$kwd%" pagesize="10"
+    assign="slist"}
+    <dl class="list-item">
+        <dd class="title">
+            <a target="_blank" href="{$content.url}">{:str_replace($kwd, '<span class="kwd-txt">' . $kwd . '</span>',
+                $content.title)}</a>
+        </dd>
+        <dd class="info">
+            <p>{:str_replace($kwd, '<span class="kwd-txt">' . $kwd . '</span>', $content.keywords)}</p>
+            <p>{:str_replace($kwd, '<span class="kwd-txt">' . $kwd . '</span>', $content.description)}</p>
+            <p>{$content.publish_time}</p>
+        </dd>
+    </dl>
+    {/content@list}
+
+    {if empty($slist)}
+    <p>没有找到相关内容，换个关键字试试。</p>
+    {/if}
+</div>
+{/if}

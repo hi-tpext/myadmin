@@ -1,0 +1,22 @@
+<div class="footer">
+    <div class="main-container">
+        <ul class="friend-links">
+            <li><a>合集：</a></li>
+            {tag@list num="20"}
+            <li><a href="{$tag.url}" target="_blank">{$tag.name}</a></li>
+            {/tag@list}
+        </ul>
+        <ul class="friend-links">
+            <li><a>友情链接：</a></li>
+            {banner@list cid="2" num="20"}
+            <li><a href="{$banner.url}" target="_blank">{$banner.title}</a></li>
+            {/banner@list}
+        </ul>
+        <div class="copyright">
+            {$__wconf__.copyright|raw}
+        </div>
+    </div>
+</div>
+<script type="text/javascript">window.__site_home__ = '{$__site_home__}';</script>
+<script type="text/javascript" src="../static/js/jquery.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="../static/js/site.js" charset="utf-8"></script>

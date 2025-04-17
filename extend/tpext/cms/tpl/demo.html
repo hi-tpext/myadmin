@@ -1,0 +1,166 @@
+<!--动态页面(示例)-->
+<div class="breadcrumb">
+    当前位置：<a href="{$__site_home__}">首页</a>
+    &gt;<a>动态页面(示例)</a>
+</div>
+<h2>演示标签的使用：</h2>
+<h3>列表显示</h3>
+<p>注：对于文章而言，channel_id为栏目编号，id为内容编号，用法类似。</p>
+<p>
+    栏目channel_id可以是一个固定值:3
+</p>
+<p>{<code>content@list cid="3"</code>}</p>
+{content@list cid="3"}
+<div style="background-color: rgb(0, 162, 255);">
+    栏目id：{$content.channel_id}|文章id：{$content.id}|<a target="_blank" href="{$content.url}">{$content.title}</a>
+</div>
+{/content@list}
+<p>id可以是多个值固定值，相当于<code>in(ids)</code></p>
+<p>{<code>channel@list id="2,4,6"</code>}或{<code>channel@list id="in(2,4,6)"</code>}</p>
+{channel@list id="2,4,6"}
+<div style="background-color: rgba(133, 127, 167, 0.678);">
+    栏目id：{$channel.id}<a target="_blank" href="{$channel.url}">{$channel.name}</a>
+</div>
+{/channel@list}
+
+<p>id一个表达式 <code>gt|eq|lt|egt|elt|neq|&lt;&gt;|=|!=|in|not in|like|not like|notlike|between|not between|notbetween</code></p>
+<p>避免使用尖括号<code>&gt;&nbsp;&lt;</code>，因为有些编辑器会识别为html标签起止符号，代码解析错误报警告</p>
+<p>{<code>content@list cid="gt 5"</code>}</p>
+{content@list cid="gt 5"}
+<div style="background-color: rgba(62, 139, 107, 0.678);">
+    栏目id：{$content.channel_id}|文章id：{$content.id}|<a target="_blank" href="{$content.url}">{$content.title}</a>
+</div>
+{/content@list}
+<p>注意：id只能一个条件，不支持and多条件写法，如 <code>id="gt 3 and lt 10"</code>是错误的</p>
+
+<p>多个条件时，可以使用where</p>
+<p>{<code>content@list where="id gt 30 and id elt 40"</code>}</p>
+{content@list where="id gt 30 and id elt 40"}
+<div style="background-color: rgba(143, 141, 45, 0.678);">
+    栏目id：{$content.channel_id}|文章id：{$content.id}|<a target="_blank" href="{$content.url}">{$content.title}</a>
+</div>
+{/content@list}
+
+<p>限制输出数量，如<code>num="3"</code></p>
+<p>指定排序方式，如<code>order="sort asc"</code></p>
+<p>指定循环变量，如<code>item="hello"</code>，默认为@前面的名称，如content。在某些情况下多列表嵌套时指定不同名称可 能有用。</p>
+<p>指定查询字段，如<code>fields="id,title,description"</code>，默认是所有字段。谨慎使用，有的字段在表间关联时需要。</p>
+<p>使用缓存，如<code>cache="index_news_7,3600"</code></p>
+
+<p>{<code>list cid="7" num="3" order="sort asc" item="hello" cache="index_news_7,3600"</code>}</p>
+
+{content@list cid="7" num="3" order="sort asc" item="hello" cache="index_news_7,3600"}
+<div style="background-color: rgba(42, 148, 151, 0.678);">
+    栏目id：{$hello.channel_id}|文章id：{$hello.id}|排序：{$hello.sort}<a target="_blank" href="{$hello.url}">{$hello.title}</a>
+</div>
+{/content@list}
+
+<p>分页列表，使用<code>pagesize</code>参数后，列表会分页显示，如<code>pagesize="5"</code>，每页显示5条记录</p>
+<p>注意区分<code>num</code>和<code>pagesize</code>，使用<code>num</code>不产生分页链接</p>
+<p>控制分页导航位置，正常情况下，分页连接跟随列表后面，可以使用<code>links="no"</code>列表下面的分页链接暂不显示</p>
+<p>然后可以在其他地方输出分页链接</p>
+<p>{<code>content@list id="between 70 and 90" pagesize="5" links="no"</code>}</p>
+{content@list id="between 70 and 90" pagesize="5" links="no"}
+<div style="background-color: rgba(192, 53, 157, 0.678);">
+    栏目id：{$content.channel_id}|文章id：{$content.id}|<a target="_blank" href="{$content.url}">{$content.title}</a>
+</div>
+{/content@list}
+<b>这里不输出分页了</b>
+
+<p>列表赋值，可以使用<code>assign="mylist"</code>，将列表内容赋值给变量mylist，可以在其他地方输出</p>
+<p>{<code>content@list where="title like '%经济%'" num="3" assign="mylist"</code>}</p>
+{content@list where="title like '%经济%'" num="3" assign="mylist"}
+<!--正常情况下，列表内容包含在此处-->
+{/content@list}
+
+输出上面的分页：{$__links_html__|raw}
+
+输出上面的列表：
+{volist name="mylist" id="li"}
+<div style="background-color: rgba(43, 46, 80, 0.678);">
+    栏目id：{$content.channel_id}|文章id：{$content.id}|<a target="_blank" href="{$content.url}">{$content.title}</a>
+</div>
+{/volist}
+
+<h3>单条内容读取</h3>
+<p>读取<code>id</code>为<code>100</code>的文章内容</p>
+<p>{<code>content@get id="100"</code>}</p>
+{content@get id="100"}
+<div style="background-color: rgba(50, 134, 10, 0.678);">
+    栏目id：{$content.channel_id}|文章id：{$content.id}|<a target="_blank" href="{$content.url}">{$content.title}</a>
+    |发布日期：{$content.publish_date}
+    |栏目名称：{$content.channel.name}
+</div>
+
+<p>读取<code>id</code>为<code>5</code>的栏目</p>
+<p>{<code>channel@get id="5"</code>}</p>
+{channel@get id="5"}
+<div style="background-color: rgba(8, 46, 37, 0.678);">
+    栏目id：{$channel.id}<a target="_blank" href="{$channel.url}">{$channel.name}</a>
+</div>
+类似的，支持类型写法的标签还有：
+<h3>栏目</h3>
+支持表达式：<code>id=""</code><code>cid=""</code><code>where=""</code>
+<p>{<code>channel@list</code>}</p>
+<p>{<code>channel@get</code>}</p>
+<h3>内容</h3>
+支持表达式：<code>id=""</code><code>cid=""</code><code>where=""</code>
+<p>{<code>content@list</code>}</p>
+<p>{<code>content@get</code>}</p>
+<h3>广告</h3>
+支持表达式：<code>id=""</code><code>cid=""</code><code>where=""</code>
+<p>{<code>banner@list</code>}</p>
+<p>{<code>banner@get</code>}</p>
+<h3>广告位</h3>
+支持表达式：<code>id=""</code><code>where=""</code>
+<p>{<code>position@list</code>}</p>
+<p>{<code>position@get</code>}</p>
+<h3>合集</h3>
+支持表达式：<code>id=""</code><code>where=""</code>
+<p>{<code>tag@list</code>}</p>
+<p>{<code>tag@get</code>}</p>
+<h3>标签格式</h3>
+<p>list为闭环标签</p>
+<p>{<code>content@list ...</code>}</p>
+循环内容html
+<p>{<code>/content@list</code>}</p>
+<p>get非闭环标签</p>
+<p>{<code>content@get ...</code>}</p>
+<p>内容html</p>
+或
+<p>{<code>content@get .../</code>}</p>
+<p>内容html</p>
+
+<h3>直接使用list或get</h3>
+<p>其实常用的数据表，直接使用上面的标签就可完成了。但对于没有支持的其他表，可以支持使用list或get标签。</p>
+<p>使用其他表，需要配置</p>
+<p>需要指定表名，如<code>table="cms_content"</code></p>
+<p>表达式只支持主键<code>id="xxx"</code>，不支持<code>cid="xxx"</code></p>
+
+<p>list</p>
+<p>循环变量默认为<code>item</code>，其他使用<code>item="xxx"</code>指定</p>
+<p>{<code>list table="cms_content" where="channel_id in(6,7,8)"</code>}</p>
+{list table="cms_content" where="channel_id in(6,7,8)"}
+<div style="background-color: rgba(143, 141, 45, 0.678);">
+    栏目id：{$item.channel_id}|文章id：{$item.id}<a target="_blank" href="{$item.url}">{$item.title}</a>
+</div>
+{/list}
+<p>get</p>
+<p>变量默认为<code>data</code>，其他使用<code>assign="xxx"</code>指定</p>
+<p>{<code>get table="cms_channel" id="6"</code>}</p>
+{get table="cms_channel" id="6"}
+<div style="background-color: rgba(8, 46, 37, 0.678);">
+    栏目id：{$data.id}<a target="_blank" href="{$channel.url}">{$data.name}</a>
+</div>
+
+<h4>默认模板</h4>
+<p>内容列表：默认{<code>content@list</code>}就行，<code>pagesize</code><code>order</code>等参数会自动注入后台配置，若不使用注入的，可添加对应参数覆盖</p>
+
+<p>内容详情：数据会自动注入，不需要再使用{<code>content@get</code>}标签重复获取</p>
+
+<h4>结尾</h4>
+<p>
+    thinkphp：<a href="https://doc.thinkphp.cn/v5_1/neizhibiaoqian.html" target="_blank">模板标签使用文档</a>
+</p>
+
+<p>演示页面不需要请删除此文件(/theme/xxx/dynamic/demo.html)，重新生成路由</p>
