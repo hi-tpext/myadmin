@@ -70,7 +70,7 @@ class Render
             ];
             $config = [
                 'cache_prefix' => $tplHtml['path'],
-                'tpl_replace_string' => ['@static' => '/theme/' . $template['view_path'] . '/', '@site_home@' => $template['prefix']],
+                'tpl_replace_string' => ['@static@' => '/theme/' . $template['view_path'] . '/', '@site_home@' => $template['prefix']],
                 'view_path' => App::getRootPath() . 'theme' . DIRECTORY_SEPARATOR . $template['view_path'] . DIRECTORY_SEPARATOR,
                 'tpl_cache' => true,
             ];
@@ -122,6 +122,9 @@ class Render
                     'page' => $page,
                     'id' => $channel['id'],
                     'channel_id' => $channel['id'],
+                    'cid' => $channel['id'],
+                    'parent_id' => $channel['parent_id'],
+                    'pid' => $channel['parent_id'],
                     'channel_ids' => implode(',', array_unique($channel_ids)),
                     'channel' => $channel,
                     'page_title' => $channel['name'] . '_',
@@ -136,7 +139,7 @@ class Render
                 ];
                 $config = [
                     'cache_prefix' => $tplHtml['path'],
-                    'tpl_replace_string' => ['@static' => '/theme/' . $template['view_path'] . '/', '@site_home@' => $template['prefix']],
+                    'tpl_replace_string' => ['@static@' => '/theme/' . $template['view_path'] . '/', '@site_home@' => $template['prefix']],
                     'view_path' => App::getRootPath() . 'theme' . DIRECTORY_SEPARATOR . $template['view_path'] . DIRECTORY_SEPARATOR,
                     'tpl_cache' => true,
                 ];
@@ -195,6 +198,9 @@ class Render
                 $vars = [
                     'id' => $content['id'],
                     'channel_id' => $content['channel_id'],
+                    'cid' => $content['channel_id'],
+                    'parent_id' => $content['channel']['parent_id'],
+                    'pid' => $content['channel']['parent_id'],
                     'content_id' => $content['id'],
                     'content' => $content,
                     'channel' => $content['channel'],
@@ -207,7 +213,7 @@ class Render
                 ];
                 $config = [
                     'cache_prefix' => $tplHtml['path'],
-                    'tpl_replace_string' => ['@static' => '/theme/' . $template['view_path'] . '/', '@site_home@' => $template['prefix']],
+                    'tpl_replace_string' => ['@static@' => '/theme/' . $template['view_path'] . '/', '@site_home@' => $template['prefix']],
                     'view_path' => App::getRootPath() . 'theme' . DIRECTORY_SEPARATOR . $template['view_path'] . DIRECTORY_SEPARATOR,
                     'tpl_cache' => true,
                 ];
@@ -352,7 +358,7 @@ EOT;
             $vars = array_merge($vars, $param);
             $config = [
                 'cache_prefix' => $tplHtml['path'],
-                'tpl_replace_string' => ['@static' => '/theme/' . $template['view_path'] . '/', '@site_home@' => $template['prefix']],
+                'tpl_replace_string' => ['@static@' => '/theme/' . $template['view_path'] . '/', '@site_home@' => $template['prefix']],
                 'view_path' => App::getRootPath() . 'theme' . DIRECTORY_SEPARATOR . $template['view_path'] . DIRECTORY_SEPARATOR,
                 'tpl_cache' => true,
             ];
