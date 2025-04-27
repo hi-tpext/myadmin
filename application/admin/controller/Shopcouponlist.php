@@ -54,13 +54,13 @@ class Shopcouponlist extends Controller
         }
 
         if ($isEdit) {
-            $form->show('nickname ', '用户');
+            $form->show('nickname', '用户');
             $form->show('order_id', '订单id');
-            $form->show('use_time ', '使用时间');
+            $form->show('use_time', '使用时间');
             $form->show('code', '优惠券兑换码');
-            $form->show('create_time ', '发放时间');
-            $form->show('get_time ', '领取日期');
-            $form->match('status ', '可用状态')->options([0 => '禁用', 1 => '正常', 2 => '已使用']);
+            $form->show('create_time', '发放时间');
+            $form->show('get_time', '领取日期');
+            $form->match('status', '可用状态')->options([0 => '禁用', 1 => '正常', 2 => '已使用']);
             $form->show('no_', '编号');
         }
 
@@ -131,13 +131,13 @@ class Shopcouponlist extends Controller
         $table->show('type_name', '优惠券');
         $table->match('card_type', '类型')->options([1 => '折扣券', 2 => '购物券']);
         $table->match('type', '发放方式')->options([0 => '面额模板', 1 => '按用户发放', 2 => '注册', 3 => '邀请', 4 => '线下发放']);
-        $table->show('nickname ', '用户');
+        $table->show('nickname', '用户');
         $table->show('order_id', '订单id');
-        $table->show('use_time ', '使用时间');
+        $table->show('use_time', '使用时间');
         $table->show('code', '优惠券兑换码');
-        $table->show('create_time ', '发放时间')->getWrapper()->addStyle('width:160px;');
-        $table->show('get_time ', '领取日期')->getWrapper()->addStyle('width:160px;');
-        $table->match('status ', '可用状态')->options([0 => '禁用', 1 => '正常', 2 => '已使用'])->mapClassGroup([[0, 'danger'], [1, 'success']]);
+        $table->show('create_time', '发放时间')->getWrapper()->addStyle('width:160px;');
+        $table->show('get_time', '领取日期')->getWrapper()->addStyle('width:160px;');
+        $table->match('status', '可用状态')->options([0 => '禁用', 1 => '正常', 2 => '已使用'])->mapClassGroup([[0, 'danger'], [1, 'success']]);
         $table->show('no_', '编号');
         $table->sortable('id,card_type,get_time,send_time');
 
