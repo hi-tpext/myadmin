@@ -11,14 +11,15 @@
 
 namespace tpext\cms\common;
 
+use tpext\think\App;
+use tpext\common\ExtLoader;
+use tpext\cms\common\model\CmsChannel;
 use tpext\cms\common\model\CmsTemplate;
 use tpext\cms\common\model\CmsTemplateHtml;
-use tpext\cms\common\model\CmsChannel;
-use tpext\think\App;
 
 class RouteBuilder
 {
-    public function builder($focusWrite = false)
+    public function builder($forceWrite = false)
     {
         $channels = CmsChannel::select();
 
@@ -51,7 +52,7 @@ class RouteBuilder
         $contentRoutes = $this->makeContentRoute($contentPathArr);
 
         try {
-            $this->witeToFile(array_merge($indexRoutes, $channelRoutes, $contentRoutes), $focusWrite);
+            $this->witeToFile(array_merge($indexRoutes, $channelRoutes, $contentRoutes), $forceWrite);
         } catch (\Throwable $e) {
             trace('write route error:' . $e->__tostring(), 'error');
             return;
@@ -178,14 +179,14 @@ class RouteBuilder
      * Undocumented function
      *
      * @param array $routesGroup
-     * @param boolean $focusWrite
+     * @param boolean $forceWrite
      * @return void
      */
-    protected function witeToFile($routesRules, $focusWrite)
+    protected function witeToFile($routesRules, $forceWrite)
     {
         $routeFile = App::getRootPath() . 'route/tpext-cms.php';
 
-        if (is_file($routeFile) && time() - filemtime($routeFile) < 120 && !$focusWrite) {
+        if (is_file($routeFile) && time() - filemtime($routeFile) < 120 && !$forceWrite) {
             return;
         }
 
@@ -199,7 +200,12 @@ class RouteBuilder
         $lines[] = ' *时间:' . date('Y-m-d H:i:s');
         $lines[] = ' */';
         $lines[] = '';
-        $lines[] = 'use think\facade\Route;';
+        if (ExtLoader::isWebman()) {
+            $lines[] = 'use tpext\cms\common\webman\Route;//仅用于cms路由，不要使用在其他地方';
+        } else {
+            $lines[] = 'use think\facade\Route;';
+        }
+
         $lines[] = 'use tpext\cms\common\Page;';
         $lines[] = '';
 
@@ -275,5 +281,18 @@ class RouteBuilder
         }
 
         file_put_contents($routeFile, implode(PHP_EOL, $lines));
+
+        if (ExtLoader::isWebman()) {
+            $routeConfig = file_get_contents(config_path() . '/route.php');
+
+            if (!strstr($routeConfig, 'route/tpext-cms.php')) {
+                $routeConfig .= PHP_EOL . '//引入cms路由';
+                $routeConfig .= PHP_EOL . "if (file_exists(base_path('route/tpext-cms.php'))) {";
+                $routeConfig .= PHP_EOL . "    require_once base_path('route/tpext-cms.php');";
+                $routeConfig .= PHP_EOL . '}';
+            }
+
+            file_put_contents(config_path() . '/route.php', $routeConfig);
+        }
     }
 }

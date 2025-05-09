@@ -120,7 +120,7 @@ class Cmstemplatestatic extends Controller
                 $dir = $dirs[3];
                 if (!isset($list[$dir])) {
                     $list[$dir] = [
-                        'dir' => $dir . '/',
+                        'dir' => '├─' . $dir . ' /',
                         '__hi_edit__' => 1,
                         '__hi_delete__' => 1,
                         'is_default' => 1,
@@ -128,9 +128,9 @@ class Cmstemplatestatic extends Controller
                         'type' => 'dir',
                     ];
                 }
-                $d['dir'] = '<span style="margin-left:10px"></span>-|--';
+                $d['dir'] = '<span style="margin-left:20px"></span>├─';
             } else {
-                $d['dir'] = '--' . $dirs[3];
+                $d['dir'] = '├─' . $dirs[3];
             }
 
             $list[] = $d;

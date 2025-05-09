@@ -11,12 +11,10 @@
 
 namespace tpext\cms\common\model;
 
-use think\Model;
-
-class EmptyData extends Model
+class EmptyData implements \JsonSerializable, \ArrayAccess
 {
     protected $name = 'empty_data';
-    
+
     /**
      * @param string $name 名称
      * @return mixed
@@ -35,7 +33,7 @@ class EmptyData extends Model
         if ($name = 'channel') {
             return $this;
         }
-        if ($name == 'id' || $name = 'parent_id') {
+        if ($name == 'id' || $name == 'parent_id') {
             return 0;
         }
 
@@ -48,7 +46,7 @@ class EmptyData extends Model
      * @param string $name
      * @return bool
      */
-    public function offsetExists($name): bool
+    public function offsetExists($name)
     {
         return true;
     }
@@ -73,11 +71,33 @@ class EmptyData extends Model
         if ($name = 'channel') {
             return $this;
         }
-        if ($name == 'id' || $name = 'parent_id') {
+        if ($name == 'id' || $name == 'parent_id') {
             return 0;
         }
 
         return '__not_found__';
+    }
+
+    public function __set($name, $value): void {}
+
+    public function __isset($name)
+    {
+        return true;
+    }
+
+    public function __unset($name)
+    {
+        return $this;
+    }
+
+    public function offsetSet($name, $value)
+    {
+        return $this;
+    }
+
+    public function offsetUnset($name)
+    {
+        return $this;
     }
 
     public function __toString(): string
@@ -88,5 +108,25 @@ class EmptyData extends Model
     public function __call($name, $arguments = [])
     {
         return $this;
+    }
+
+    public function jsonSerialize()
+    {
+        return $this->toArray();
+    }
+
+    public function toArray()
+    {
+        return [
+            'title' => '无',
+            'name' => '无',
+            'content' => '无',
+            'description' => '无',
+            'url' => '#',
+            'link' => '#',
+            'channel' => ['id' => 0, 'name' => '无'],
+            'id' => 0,
+            'parent_id' => 0,
+        ];
     }
 }

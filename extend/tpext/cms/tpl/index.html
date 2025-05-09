@@ -29,8 +29,8 @@
             <ul>
                 {content@list cid="$row.id" num="7"}<!--获取栏目下文章-->
                 <li>
-                    <span class="date">{$content.publish_date}</span>
-                    <a href="{$content.url}" target="_blank">{$content.title}</a>
+                    <span class="date">{$content.date}</span>
+                    <a href="{$content.url}" target="_blank">{$content.title|more=36,'...更多'}</a>
                 </li>
                 {/content@list}
             </ul>
@@ -49,12 +49,12 @@
             {content@list cid="$channel.id"}
             <div class="item-info">
                 <span class="title">
-                    <a target="_blank" href="{$content.url}">{:mb_substr($content.title,0,36)}</a>
+                    <a target="_blank" href="{$content.url}">{$content.title|more=36,'...更多'}</a>
                     {if $content.is_recommend==1}
                     <b style="color: red;">[荐]</b>
                     {/if}
                 </span>
-                <span class="date">{$content.publish_date}</span>
+                <span class="date">{$content.date}</span>
             </div>
             {/content@list}
         </div>

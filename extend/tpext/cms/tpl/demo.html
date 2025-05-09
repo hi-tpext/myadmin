@@ -1,6 +1,6 @@
 <!--动态页面(示例)-->
 <div class="breadcrumb">
-    当前位置：<a href="{$__site_home__}">首页</a>
+    当前位置：<a href="@site_home@">首页</a>
     &gt;<a>动态页面(示例)</a>
 </div>
 <h2>演示标签的使用：</h2>
@@ -90,7 +90,7 @@
 {content@get id="100"}
 <div style="background-color: rgba(50, 134, 10, 0.678);">
     栏目id：{$content.channel_id}|文章id：{$content.id}|<a target="_blank" href="{$content.url}">{$content.title}</a>
-    |发布日期：{$content.publish_date}
+    |发布日期：{$content.date}
     |栏目名称：{$content.channel.name}
 </div>
 
@@ -107,20 +107,20 @@
 <p>{<code>channel@get</code>}</p>
 <h3>内容</h3>
 支持表达式：<code>id=""</code><code>channel_id=""</code><code>where=""</code>【语法糖<code>cid=""</code>都相当于<code>channel_id=""</code>】
-<p>{<code>content@list</code>}</p>
-<p>{<code>content@get</code>}</p>
+<p>{<code>content@list</code>}.....{<code>/content@list</code>}</p>
+<p>{<code>content@get</code>/}</p>
 <h3>广告</h3>
 支持表达式：<code>id=""</code><code>position_id=""</code><code>where=""</code>【语法糖<code>cid=""</code>都相当于<code>position_id=""</code>】
-<p>{<code>banner@list</code>}</p>
-<p>{<code>banner@get</code>}</p>
+<p>{<code>banner@list</code>}.....{<code>/banner@list</code>}</p>
+<p>{<code>banner@get</code>/}</p>
 <h3>广告位</h3>
 支持表达式：<code>id=""</code><code>where=""</code>
-<p>{<code>position@list</code>}</p>
-<p>{<code>position@get</code>}</p>
+<p>{<code>position@list</code>}.....{<code>/position@list</code>}</p>
+<p>{<code>position@get</code>/}</p>
 <h3>合集</h3>
 支持表达式：<code>id=""</code><code>where=""</code>
-<p>{<code>tag@list</code>}</p>
-<p>{<code>tag@get</code>}</p>
+<p>{<code>tag@list</code>}.....{<code>/tag@list</code>}</p>
+<p>{<code>tag@get</code>/}</p>
 <h3>标签格式</h3>
 <p>list为闭环标签</p>
 <p>{<code>content@list ...</code>}</p>
@@ -133,7 +133,7 @@
 <p>{<code>content@get .../</code>}</p>
 <p>内容html</p>
 
-<p>注意<code>cid=""</code>和是语法糖</p>
+<p>注意<code>cid=""</code>是语法糖</p>
 
 <p>content@中等同于：<code>channel_id=""</code></p>
 <p>channel@中等同于：<code>parent_id=""</code></p>
@@ -170,9 +170,76 @@
 
 <p>内容详情：数据会自动注入，不需要再使用{<code>content@get</code>}标签重复获取</p>
 
+<h4>动态页面</h4>
+<p>动态页面用于是复杂，不特定的内容，自由发挥</p>
+<p>模板存放在<code>dynamic</code>目录下</p>
+<p>如<code>dynamic/test.html</code>目录下，访问路径为<code>http://yourhost.com/dynamic/test</code></p>
+
+<h4>单页</h4>
+<p>单页必须绑定一篇文章，访问路径层级更高，一般用于突出显示的内容</p>
+<p>如<code>about.html</code>，访问路径为<code>http://yourhost.com/about.html</code></p>
+<p>而普通内容访问路径为<code>http://yourhost.com/content/a1.html</code></p>
+
+<h4>助手方法</h4>
+<p>1、字符截取<code>more($str,$len,$more='...更多')</code></p>
+<p>如截取标题长度为36，若长度超过36，则显示<code>...更多</code></p>
+<p>使用方式1(管道)：{<code>$content.title|more=36,'...更多'</code>}</p>
+<p>或方式2(方法)：{<code>:more($content.title,36,'...更多')</code>}</p>
+
+<p>2、获取指定栏目的url<code>channel_url($id)</code></p>
+<p>如：输出id为3的栏目的url：{<code>:channel_url(3)</code>}</p>
+
+<p>3、获取指定内容的url<code>content_url($id)</code></p>
+<p>如：输出id为3的栏目的url：{<code>:content_url(3)</code>}</p>
+
+<p>注：使用以上助手方法需在页面任意位置使用标签：<code>{use@functions/}</code>引入</p>
+
+<p>当然也可以使用内置方法：<a href="https://doc.thinkphp.cn/v5_1/shiyonghanshu.html" target="_blank">thinkpg内置方法</a></p>
+
+<h4>模板主题</h4>
+<p>主题存放在网站根目录的<code>/theme/</code></p>
+<p>系统自带默认主题为<code>default</code>，生成路径为<code>/</code>，访问路径为<code>http://yourhost.com/</code></p>
+<p>可以开发多个主题，如<code>mobile</code>，生成路径为<code>/m/</code>，访问路径为<code>http://yourhost.com/m/</code></p>
+<p>主题目录结构如下：</p>
+<pre>
+├─channel [存放栏目模板]
+├─common  [公共片段，如头部、底部]
+├─content [存放内容详情模板]
+├─dynamic [存放动态解析模板]
+├─static  [存放主题静态资源]
+    ├─css
+    ├─images
+    └─js
+├─about.html   [单页]
+├─contact.html [单页]
+├─index.html   [首页]
+└─....         [更多单页]
+</pre>
+
+<h4>静态资源</h4>
+<p>符串替换写法:<code>@static@css/style.css</code></p>
+<p>或相对路径:<code>../static/css/style.css</code>、<code>./static/css/style.css</code></p>
+<p>以上路径会被替换为<code>/theme/xxx/css/style.css</code></p>
+
+<p>不能使用绝对路径，如：<code>/static/css/style.css</code></p>
+
+<p>约定规则，静态资源应放在主题所在目录的<code>/static/</code>目录下，并在此修改，然后发布到<code>/theme/xxx/</code>目录下。</p>
+<p>不要直接修改<code>/theme/xxx/</code>里面的静态资源，以免被覆盖。</p>
+
+<p>如你不想这样，可以像上面说的使用绝对路径<code>/static/css/xxx.css</code></p>
+
+<h4>模板字符串替换</h4>
+<p>1、当前模板的静态资源路径@<code>static</code>@：@static@</p>
+<p>2、当前模板的首页路径@<code>site_home</code>@：@site_home@</p>
+
+<h4>调试</h4>
+<p>在页面任意位置使用标签：{<code>show@vars</code>}将显示当前页面环境变量，这些变量在套标签时也许有用。</p>
+<p>如当页面前环境变量为：</p>
+{show@vars}
+
 <h4>结尾</h4>
 <p>
     thinkphp：<a href="https://doc.thinkphp.cn/v5_1/neizhibiaoqian.html" target="_blank">模板标签使用文档</a>
 </p>
 
-<p>演示页面不需要请删除此文件(/theme/xxx/dynamic/demo.html)，重新生成路由</p>
+<p>演示页面不需要请删除此文件(/theme/xxx/dynamic/demo.html)，重新生成路由（后台菜单-模板管理-生成路由）</p>

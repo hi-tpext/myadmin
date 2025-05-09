@@ -1,6 +1,6 @@
 <!--文章列表:按栏目(示例)-->
 <div class="breadcrumb">
-    当前位置：<a href="{$__site_home__}">首页</a>
+    当前位置：<a href="@site_home@">首页</a>
     {channel@parents}
     &gt;<a>{$channel.name}</a>
     {/channel@parents}
@@ -18,7 +18,8 @@
                 <b style="color: red;">[热门]</b>
                 {/if}
             </span>
-            <span class="date">{$content.publish_date}</span>
+            <span class="date">{$content.date}</span>
+            <!-- <span class="date">{$content.yy}年{$content.mm}月{$content.dd}日</span> -->
         </dd>
         <dt class="info">
             {$content.description}
@@ -26,3 +27,5 @@
     </dl>
     {/content@list}
 </div>
+<p>如当页面前环境变量为：</p>
+{show@vars}
