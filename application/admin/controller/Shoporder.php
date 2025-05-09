@@ -389,8 +389,6 @@ class Shoporder extends Controller
 
             if (count($button)) {
 
-                $form->readonly(false);
-
                 $form->textarea('remark', '操作备注');
                 $form->fields('')->showLabel(false)->size(0, 12);
 
