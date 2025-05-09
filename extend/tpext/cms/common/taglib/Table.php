@@ -126,6 +126,7 @@ class Table
             'prev' => ['attr' => 'table,where,order,fields,assign,cache,sort', 'close' => 0],
             'next' => ['attr' => 'table,where,order,fields,assign,cache,sort', 'close' => 0],
             'use@functions' => ['attr' => '', 'close' => 0],
+            'show@vars' => ['attr' => '', 'close' => 0],
         ];
 
         $tables = static::getTables();

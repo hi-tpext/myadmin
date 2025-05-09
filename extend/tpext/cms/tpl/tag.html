@@ -1,7 +1,7 @@
 <!--文章列表:按合集(示例)-->
 {tag@get}<!--读取当前合集-->
 <div class="breadcrumb">
-    当前位置：<a href="{$__site_home__}">首页</a>
+    当前位置：<a href="@site_home@">首页</a>
     &gt;<a>合集【{$tag.name}】</a>
 </div>
 <div class="list">
@@ -12,7 +12,7 @@
         </dd>
         <dd class="info">
             <p>{$content.description}</p>
-            <p>{$content.publish_date}</p>
+            <p>{$content.date}</p>
         </dd>
     </dl>
     {/content@list}

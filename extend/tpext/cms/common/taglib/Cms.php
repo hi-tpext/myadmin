@@ -223,7 +223,7 @@ EOT;
      * 
      * @return string
      */
-    public function bindFunctions()
+    protected function bindFunctions()
     {
         if ($this->bindFunctions) {
             return '';
@@ -236,6 +236,24 @@ EOT;
         <?php
         include_once \\tpext\\cms\\common\\Module::getInstance()->getRoot() . 'functions.php';
 
+        ?>
+EOT;
+
+        return $parseStr;
+    }
+
+    protected function showVars()
+    {
+        $parseStr = <<<EOT
+
+        <?php
+        \$vars = \$vars ?? [];
+        if(isset(\$vars['content']) && is_array(\$vars['content'])) {
+            \$vars['content']['content'] = '**这里是文章内容(省略' . mb_strlen(\$vars['content']['content']) . '字)**';
+        }
+        
+        \$vars = json_encode(\$vars ?? [], JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES|JSON_PRETTY_PRINT);
+        echo '<pre>' . \$vars . '</pre>';
         ?>
 EOT;
 
@@ -315,7 +333,7 @@ EOT;
 
         <?php
         \$__where_raw__ = "{$where}";
-        \$__where_binds__ = [$binds];
+        \$__where_binds__ = [{$binds}];
         \$__where__ = [];
         \$__cid_key__ = '{$cid_key}';
         \$__id_key__ = '{$id_key}';
@@ -473,6 +491,9 @@ EOT;
             $tagName = strtolower($mchs[1]);
             if ('use@functions' == $tagName) {
                 return $this->bindFunctions();
+            }
+            if ('show@vars' == $tagName) {
+                return $this->showVars();
             }
             $tag = $arguments[0];
             $content = $arguments[1];

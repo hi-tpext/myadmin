@@ -55,7 +55,7 @@ class CmsBanner extends Model
         }
         cache('cms_banner_' . $data['id'], null);
 
-        ExtLoader::trigger('cms_banner_on_after_insert', $data);
+        ExtLoader::trigger('cms_banner_on_after_update', $data);
     }
 
     public static function onAfterDelete($data)

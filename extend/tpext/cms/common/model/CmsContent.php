@@ -69,7 +69,6 @@ class CmsContent extends Model
         }
 
         ExtLoader::trigger('cms_content_on_before_write', $data);
-
     }
 
     public static function onAfterInsert($data)
@@ -259,11 +258,6 @@ class CmsContent extends Model
         return isset($this->detail) ? $this->detail['attachments'] : '';
     }
 
-    public function getPublishDateAttr($value, $data)
-    {
-        return date('Y-m-d', strtotime($data['publish_time']));
-    }
-
     public function getAttrAttr($value, $data)
     {
         $attr = [];
@@ -311,5 +305,35 @@ class CmsContent extends Model
     public function getClickAttr($value, $data)
     {
         return cache('cms_content_click_' . $data['id']) ?: $data['click'];
+    }
+
+    public function getPublishDateAttr($value, $data)
+    {
+        return date('Y-m-d', strtotime($data['publish_time']));
+    }
+
+    public function getDateAttr($value, $data)
+    {
+        return date('Y-m-d', strtotime($data['publish_time']));
+    }
+
+    public function getTimeAttr($value, $data)
+    {
+        return date('H:i:s', strtotime($data['publish_time']));
+    }
+
+    public function getYyAttr($value, $data)
+    {
+        return date('Y', strtotime($data['publish_time']));
+    }
+
+    public function getMmAttr($value, $data)
+    {
+        return date('m', strtotime($data['publish_time']));
+    }
+
+    public function getDdAttr($value, $data)
+    {
+        return date('d', strtotime($data['publish_time']));
     }
 }

@@ -149,7 +149,7 @@ class CmsTemplate extends Model
     public static function getNewTpl()
     {
         $rootPath = Module::getInstance()->getRoot();
-        $newTpl = file_get_contents($rootPath . (Module::getInstance()->config('use_layout', 1) == 1 ? 'tpl/new1.html' : 'tpl/new2.html'));
+        $newTpl = file_get_contents($rootPath . (Module::getInstance()->config('use_layout', 1) == 1 ? 'tpl/new1.html' : 'tpl/new0.html'));
 
         return $newTpl;
     }
