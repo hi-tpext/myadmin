@@ -114,12 +114,12 @@ class Cmstemplate extends Controller
             ->btnView()
             ->btnLink('make', url('/admin/cmstemplatemake/make', ['template_id' => '__data.pk__']), '生成', 'btn-success', 'mdi-cloud-braces ', 'data-layer-size="98%,98%"')
             ->btnDelete()->mapClass([
-                    'delete' => [
-                        'disabled' => function ($data) {
-                            return $data['id'] == 1;
-                        }
-                    ]
-                ]);
+                'delete' => [
+                    'disabled' => function ($data) {
+                        return $data['id'] == 1;
+                    }
+                ]
+            ]);
     }
 
     /**
@@ -142,19 +142,15 @@ class Cmstemplate extends Controller
             Cache::clear($tag);
         }
 
-        Tool::deleteDir(App::getRuntimePath() . 'temp' . DIRECTORY_SEPARATOR . 'theme');
+        Tool::deleteDir(App::getRootPath() . 'runtime' . DIRECTORY_SEPARATOR . 'temp' . DIRECTORY_SEPARATOR . 'theme');
 
         $msgs[] = '已清模板除缓存目录runtime/temp/theme';
 
-        $make_static = Module::getInstance()->config('make_static', 1);
-
-        if ($make_static == 0) {
-            $builder = new TemplaBuilder;
-            $templates = $this->dataModel->select();
-            foreach ($templates as $template) {
-                $builder->clearHtml($template);
-                $msgs[] = '已清除' . $template['prefix'] . '路径下的channel、content、index的html';
-            }
+        $builder = new TemplaBuilder;
+        $templates = $this->dataModel->select();
+        foreach ($templates as $template) {
+            $builder->clearHtml($template);
+            $msgs[] = '已清除' . $template['prefix'] . '路径下的channel、content、index的html';
         }
         return $this->builder()->layer()->closeRefresh(1, implode('、', $msgs));
     }

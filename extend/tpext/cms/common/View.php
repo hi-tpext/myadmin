@@ -45,7 +45,7 @@ class View
             'tpl_end' => '}',
             'taglib_begin' => '{',
             'taglib_end' => '}',
-            'cache_path' => App::getRuntimePath() . 'temp' . DIRECTORY_SEPARATOR,
+            'cache_path' => App::getRootPath() . 'runtime' . DIRECTORY_SEPARATOR . 'temp' . DIRECTORY_SEPARATOR,
         ], $config);
 
 
