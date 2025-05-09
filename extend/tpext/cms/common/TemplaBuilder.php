@@ -218,7 +218,7 @@ class TemplaBuilder
             ->find();
 
         if ($singleHtml) {
-            $singleOutPath = '.' . str_replace(['\\', '/'], DIRECTORY_SEPARATOR, $template['prefix']);
+            $singleOutPath = App::getPublicPath() . str_replace(['\\', '/'], DIRECTORY_SEPARATOR, $template['prefix']);
             $singleName = preg_replace('/theme\/[\w\-]+?\/([\w\-]+?.html)$/i', '$1', $singleHtml['path']);
             $this->fileWrite($singleOutPath . $singleName, $output);
         }

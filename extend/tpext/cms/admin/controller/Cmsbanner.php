@@ -92,6 +92,7 @@ class Cmsbanner extends Controller
         $table->show('description', '摘要')->default('暂无')->getWrapper()->addStyle('max-width:200px');
         $table->show('link', '链接');
         $table->switchBtn('is_show', '显示')->default(1)->autoPost();
+        $table->text('sort', '排序')->autoPost('', true)->getWrapper()->addStyle('width:120px');
         $table->show('create_time', '添加时间')->getWrapper()->addStyle('width:180px');
         $table->show('update_time', '修改时间')->getWrapper()->addStyle('width:180px');
 

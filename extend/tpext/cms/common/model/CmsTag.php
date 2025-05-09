@@ -25,6 +25,12 @@ class CmsTag extends Model
             self::beforeInsert(function ($data) {
                 return self::onBeforeInsert($data);
             });
+            self::afterUpdate(function ($data) {
+                return self::onAfterUpdate($data);
+            });
+            self::afterDelete(function ($data) {
+                return self::onAfterDelete($data);
+            });
         }
     }
 
@@ -33,5 +39,18 @@ class CmsTag extends Model
         if (empty($data['sort'])) {
             $data['sort'] = static::max('sort') + 5;
         }
+    }
+
+    public static function onAfterUpdate($data)
+    {
+        if (!isset($data['id'])) {
+            return;
+        }
+        cache('cms_tag_' . $data['id'], null);
+    }
+
+    public static function onAfterDelete($data)
+    {
+        cache('cms_tag_' . $data['id'], null);
     }
 }

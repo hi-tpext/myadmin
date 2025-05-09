@@ -163,7 +163,7 @@ class Cmstemplatehtml extends Controller
                 $dir = $dirs[2];
                 if (!isset($list[$dir])) {
                     $list[$dir] = [
-                        'dir' => $dir . '/',
+                        'dir' => '├─' . $dir . ' /',
                         'name' => '',
                         'description' => '存放' . $this->pageTypes[$dir] . '模板',
                         '__hi_edit__' => 1,
@@ -174,9 +174,9 @@ class Cmstemplatehtml extends Controller
                         'type' => 'dir',
                     ];
                 }
-                $d['dir'] = '<span style="margin-left:30px"></span>' . '-|--' . $dirs[3] . '.html';
+                $d['dir'] = '<span style="margin-left:30px"></span>' . '├─' . $dirs[3] . '.html';
             } else {
-                $d['dir'] = '--' . $dirs[2] . '.html';
+                $d['dir'] = '├─' . $dirs[2] . '.html';
             }
 
             $list[] = $d;

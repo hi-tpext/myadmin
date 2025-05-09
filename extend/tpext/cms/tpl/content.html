@@ -1,6 +1,6 @@
 <!--文章详情(示例)-->
 <div class="breadcrumb">
-    当前位置：<a href="{$__site_home__}">首页</a>
+    当前位置：<a href="@site_home@">首页</a>
     {channel@parents id="$content.channel_id"}
     &gt;<a href="{$channel.url}">{$channel.name}</a>
     {/channel@parents}
@@ -8,7 +8,10 @@
 <div class="main-content">
     <div class="title">{$content.title}</div>
     <div class="info">
-        <span>发布日期：{$content.publish_date}</span>
+        <!--发布时间：{$content.datetime}-->
+        <!--发布时间：{$content.yy}年{$content.mm}月{$content.dd}日-->
+
+        <span>发布日期：{$content.date}</span>
         |<span>作者：{$content.author}</span>
         |<span>来源：{$content.source}</span>
         |<span>点击：{$content.click|raw}</span>
@@ -68,3 +71,5 @@
         下一篇：<a href="{$next.url}">{$next.title}</a>
     </div>
 </div>
+<p>如当页面前环境变量为：</p>
+{show@vars}
