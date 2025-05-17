@@ -43,7 +43,7 @@ composer require ichynul/tpextmyadmin:^1.*
 
 [6.0]分支对应 `tpextmyadmin`的[3.0]分支，依次执行以下命令，`myadmin6` 为新项目目录，可自行调整
 ```bash
-composer create-project topthink/think=6.0.* myadmin6
+composer create-project topthink/think=6.1.* myadmin6
 
 cd myadmin6
 
