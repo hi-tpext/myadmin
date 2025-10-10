@@ -44,6 +44,7 @@ class Page
             return '<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"/><title>500</title></head><body><h4>未能找到them-' . $tpl_id . '</h4></body></html>';
         }
 
+        Processer::setPath($template['prefix']);
         $render = new Render();
         $res = $render->index($template);
         if ($res['code'] == 0) {
@@ -69,6 +70,7 @@ class Page
             return '<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"/><title>500</title></head><body><h4>未能找到them-' . $tpl_id . '</h4></body></html>';
         }
 
+        Processer::setPath($template['prefix']);
         $table = 'cms_channel';
         $dbNameSpace = Processer::getDbNamespace();
         $channelScope = Table::defaultScope($table);
@@ -111,7 +113,7 @@ class Page
         if (!$template) {
             return '<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"/><title>500</title></head><body><h4>未能找到them-' . $tpl_id . '</h4></body></html>';
         }
-
+        Processer::setPath($template['prefix']);
         $table = 'cms_content';
         $dbNameSpace = Processer::getDbNamespace();
         $contentScope = Table::defaultScope($table);
@@ -166,7 +168,7 @@ class Page
         if (!$template) {
             return '<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"/><title>500</title></head><body><h4>未能找到them-' . $tpl_id . '</h4></body></html>';
         }
-
+        Processer::setPath($template['prefix']);
         $render = new Render();
         $res = $render->dynamic($template, $html_id);
         if ($res['code'] == 0) {

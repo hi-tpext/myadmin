@@ -13,6 +13,7 @@ namespace tpext\cms\common\model;
 
 use think\Model;
 use tpext\think\App;
+use tpext\cms\common\Cache;
 use tpext\common\ExtLoader;
 use tpext\cms\common\DirFilter;
 
@@ -21,48 +22,35 @@ class CmsTemplateHtml extends Model
     protected $name = 'cms_template_html';
     protected $autoWriteTimestamp = 'datetime';
 
-    protected static function init()
-    {
-        /**是否为tp5**/
-        if (method_exists(static::class, 'event')) {
-            self::afterInsert(function ($data) {
-                return self::onAfterInsert($data);
-            });
-            self::afterUpdate(function ($data) {
-                return self::onAfterUpdate($data);
-            });
-            self::afterDelete(function ($data) {
-                return self::onAfterDelete($data);
-            });
-        }
-    }
-
     public static function onAfterInsert($data)
     {
+        Cache::deleteTag('cms_html');
         ExtLoader::trigger('cms_template_html_on_after_insert', $data);
     }
 
     public static function onAfterUpdate($data)
     {
         if (isset($data['id'])) {
-            cache('cms_html_' . $data['id'], null);
+            Cache::delete('cms_html_' . $data['id']);
         }
 
         if (isset($data['to_id'])) {
-            cache('cms_html_to_' . $data['id'], null);
+            Cache::delete('cms_html_to_' . $data['id']);
         }
 
         if (isset($data['is_default']) && isset($data['type']) && isset($data['template_id'])) {
             if ($data['type'] == 'content' && $data['is_default'] == 1) {
-                cache('cms_html_content_default_' . $data['template_id'], null);
+                Cache::delete('cms_html_content_default_' . $data['template_id']);
             }
             if ($data['type'] == 'channel' && $data['is_default'] == 1) {
-                cache('cms_html_channel_default_' . $data['template_id'], null);
+                Cache::delete('cms_html_channel_default_' . $data['template_id']);
             }
             if ($data['type'] == 'index') {
-                cache('cms_html_index_' . $data['template_id'], null);
+                Cache::delete('cms_html_index_' . $data['template_id']);
             }
         }
+
+        Cache::deleteTag('cms_html');
 
         ExtLoader::trigger('cms_template_html_on_after_update', $data);
     }
@@ -77,12 +65,14 @@ class CmsTemplateHtml extends Model
         }
 
         if (isset($data['id'])) {
-            cache('cms_html_' . $data['id'], null);
+            Cache::delete('cms_html_' . $data['id']);
         }
 
         if (isset($data['to_id'])) {
-            cache('cms_html_to_' . $data['id'], null);
+            Cache::delete('cms_html_to_' . $data['id']);
         }
+
+        Cache::deleteTag('cms_html');
 
         CmsContentPage::where(['html_id' => $data['id']])->delete();
 
@@ -207,7 +197,7 @@ class CmsTemplateHtml extends Model
         //排除静态资源文件夹
         $excludDirs = ['images', 'fonts', 'font', 'img', 'lib', 'node_modules', 'components', 'dist', 'release', 'cache', 'runtime'];
 
-        $dirIterator = new \RecursiveDirectoryIterator($templatePath, \FilesystemIterator::SKIP_DOTS | \FilesystemIterator::FOLLOW_SYMLINKS);
+        $dirIterator = new \RecursiveDirectoryIterator($templatePath . DIRECTORY_SEPARATOR . '/static', \FilesystemIterator::SKIP_DOTS | \FilesystemIterator::FOLLOW_SYMLINKS);
         $filterIterator = new DirFilter($dirIterator, $excludDirs);
         $iterator = new \RecursiveIteratorIterator($filterIterator);
 

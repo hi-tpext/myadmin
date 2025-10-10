@@ -145,9 +145,8 @@
 
 <h3>直接使用list或get</h3>
 <p>其实常用的数据表，直接使用上面的标签就可完成了。但对于没有支持的其他表，可以支持使用list或get标签。</p>
-<p>使用其他表，需要配置</p>
-<p>需要指定表名，如<code>table="cms_content"</code></p>
-<p>表达式只支持主键<code>id="xxx"</code>，不支持<code>cid="xxx"</code></p>
+<p>使用其他表，需要指定表名，如<code>table="cms_content"</code></p>
+<p>表达式只支持主键<code>id="xxx"</code><code>where="xxx"</code>，不支持<code>cid="xxx"</code></p>
 
 <p>list</p>
 <p>循环变量默认为<code>item</code>，其他使用<code>item="xxx"</code>指定</p>
@@ -162,18 +161,18 @@
 <p>{<code>get table="cms_channel" id="6"</code>}</p>
 {get table="cms_channel" id="6"}
 <div style="background-color: rgba(8, 46, 37, 0.678);">
-    栏目id：{$data.id}<a target="_blank" href="{$channel.url}">{$data.name}</a>
+    栏目id：{$data.id}<a target="_blank" href="{$data.url}">{$data.name}</a>
 </div>
 
 <h4>默认模板</h4>
-<p>内容列表：默认{<code>content@list</code>}就行，<code>pagesize</code><code>order</code>等参数会自动注入后台配置，若不使用注入的，可添加对应参数覆盖</p>
+<p>内容列表：默认{<code>content@list</code>}就行，<code>pagesize</code>、<code>order</code>等参数会自动注入后台配置，若不使用注入的，可添加对应参数覆盖</p>
 
-<p>内容详情：数据会自动注入，不需要再使用{<code>content@get</code>}标签重复获取</p>
+<p>内容详情：数据会自动注入<code>$content</code>，不需要再使用{<code>content@get</code>}标签重复获取</p>
 
 <h4>动态页面</h4>
 <p>动态页面用于是复杂，不特定的内容，自由发挥</p>
 <p>模板存放在<code>dynamic</code>目录下</p>
-<p>如<code>dynamic/test.html</code>目录下，访问路径为<code>http://yourhost.com/dynamic/test</code></p>
+<p>如<code>dynamic/test.html</code>目录下，访问路径为<code>http://yourhost.com/e/test</code></p>
 
 <h4>单页</h4>
 <p>单页必须绑定一篇文章，访问路径层级更高，一般用于突出显示的内容</p>
@@ -186,15 +185,23 @@
 <p>使用方式1(管道)：{<code>$content.title|more=36,'...更多'</code>}</p>
 <p>或方式2(方法)：{<code>:more($content.title,36,'...更多')</code>}</p>
 
-<p>2、获取指定栏目的url<code>channel_url($id)</code></p>
-<p>如：输出id为3的栏目的url：{<code>:channel_url(3)</code>}</p>
+<p>2、获取指定栏目的url：<code>channel_url($id)</code></p>
+<p>如：输出id为3的栏目的url：{<code>:channel_url(3)</code>}：{:channel_url(3)}</p>
 
-<p>3、获取指定内容的url<code>content_url($id)</code></p>
-<p>如：输出id为3的栏目的url：{<code>:content_url(3)</code>}</p>
+<p>3、获取指定内容的url：<code>content_url($id)</code></p>
+<p>如：输出id为3的内容的url：{<code>:content_url(3)</code>}：{:content_url(3)}</p>
 
-<p>注：使用以上助手方法需在页面任意位置使用标签：<code>{use@functions/}</code>引入</p>
+<p>4、也可以自定义其他助手方法，例如对应thinkphp框架，可以在`app/common.php`（tp5为：`application/common.php`）中定义方法</p>
+<pre>
+&lt?php
+function text666($text){
+    return $text .' 666';
+}
+</pre>
 
-<p>当然也可以使用内置方法：<a href="https://doc.thinkphp.cn/v5_1/shiyonghanshu.html" target="_blank">thinkpg内置方法</a></p>
+<p>模板中使用：{<code>:text666('hello')</code>}，输出为：hello 666</p>
+
+<p>5、当然也可以使用内置方法：<a href="https://doc.thinkphp.cn/v5_1/shiyonghanshu.html" target="_blank">thinkphp内置方法</a></p>
 
 <h4>模板主题</h4>
 <p>主题存放在网站根目录的<code>/theme/</code></p>
@@ -202,30 +209,79 @@
 <p>可以开发多个主题，如<code>mobile</code>，生成路径为<code>/m/</code>，访问路径为<code>http://yourhost.com/m/</code></p>
 <p>主题目录结构如下：</p>
 <pre>
-├─channel [存放栏目模板]
-├─common  [公共片段，如头部、底部]
-├─content [存放内容详情模板]
-├─dynamic [存放动态解析模板]
-├─static  [存放主题静态资源]
-    ├─css
-    ├─images
-    └─js
-├─about.html   [单页]
-├─contact.html [单页]
-├─index.html   [首页]
-└─....         [更多单页]
+├─channel           [存放栏目模板]
+    ├─default.html  [栏目默认模板，未绑定模板的栏目使用此模]
+    └─....          [创建更多模板并绑定栏目]
+├─common            [公共片段，如头部、底部]
+    ├─footer.html   [底部]
+    ├─header.html   [头部]
+    ├─layout.html   [基础模板，继承模式时有用]
+    ├─navi.html     [导航]
+    └─....          [创建更多页面]    
+├─content           [存放内容详情模板]
+    ├─default.html  [详情默认模板，未绑定模板的栏目使用此模]
+    └─....          [创建更多模板并绑定栏目]
+├─dynamic           [存放动态解析模板]
+    ├─demo.html     [演示页面]
+    ├─search.html   [搜索页面]
+    ├─tag.html      [合集页面]
+    └─....          [创建更多页面]    
+├─static            [存放主题静态资源]
+    ├─css           [样式]
+    ├─images        [图片]
+    ├─js            [脚本]
+    └─....          [其他目录、文件]
+├─about.html        [单页：关于我们，可绑定一篇文章]
+├─contact.html      [单页：联系我们，可绑定一篇文章]
+├─index.html        [首页]
+└─....              [创建更多单页]
 </pre>
+
+<p>页面类型说明</p>
+<p>公共片段：供其他页面引用，使用<code>{</code>include<code>}</code>标签引用</p>
+<p>栏目模板：默认会注入当前栏目变量`$channel`，不需要再使用<code>{</code>channel@get<code>}</code>重复读取了。直接使用<code>{</code>$channel.name<code>}</code>等标签输出栏目信息即可。使用<code>{</code>content@list<code>}</code>读取所属文章列表，一般不需要额外的参数，栏目id，分页大小、排序等都会注入栏目后台设置。若需要个性化再按需使用相关参数设置。
+</p>
+<p>详情模板：默认会注入当前内容变量`$content`，不需要再使用<code>{</code>content@get<code>}</code>重复读取了。直接使用<code>{</code>$content.title<code>}</code>等标签输出文章信息即可。
+</p>
+<p>动态解析模板：使用比较自由，可做栏目列表也可做详情页，或者更复杂的组合。不像[栏目模板]和[详情模板]会有默认的注入或行为，纯看标签的写法。</p>
+<p>单页：可绑定已篇文章，绑定后和详情模板用法一样。若不绑定文章，用法和动态解析模板用法一样。</p>
+<p>
+    不同页面类型的区别：
+</p>
+<p>详情页：访问路径为二级：<code>/d/xx.html</code>，全部可生成静态化。</p>
+<p>栏目页：访问路径为二级：<code>/c/xx.html 或 /c/xx-p.html。
+    <br>可以静态化第一页，如<code>/c/4.html</code>、<code>/c/c4-1.html</code>可静态化，[<code>/c/4-2.html....</code>]不可静态化。</code>
+</p>
+<p>动态解析页：不可静态化，每次访问都要动态解析，并可自动注入url参数。访问路径为二级：<code>/e/xx.html</code></p>
+<pre>
+{literal}
+如url：`/e/test?a=1&b=2` 动态解析页：
+可在模板中使用：
+{content@list cid="$a" num="$b"}
+{/content@list}
+安全事项，注入的参数会进行基本的strip_tags()过滤，并且查询条件不会拼接字符串。
+但从谨慎的角度考虑，对于一些明确类型的参数，可进行类型转换，
+如上面的参数a、b可明确为数字类型，可以使用php的`intval()`函数进行转换：
+{content@list cid=":intval($a)" num=":intval($b)"}
+{/content@list}
+{/literal}
+</pre>
+<p>单页：绑定文章的可静态化，不绑定文章的不可静态化。访问路径为一级：<code>/xx.html</code>（与首页index.html同级）</p>
+
+<h4>页面路径个性化</h4>
+<p>栏目页默认为：<code>[id]</code>,[id]代表栏目编号，id为2的栏目访问路径为`/c/2.html`，假如栏目名称为[新闻]，那可以把<code>[id]</code>修改为<code>news</code>，那此栏目的路径为`/c/news.html`。
+</p>
+<p>详情页默认为：<code>[id]</code>,[id]代表文章编号，id为100的文章访问路径为`/d/100.html`，假如此文章属于[新闻]栏目，那可以把<code>[id]</code>修改为<code>news-[id]</code>，那此文章的路径为`/d/news-100.html`
+</p>
+<p>以上操作在栏目编辑的【生成设置】中操作</p>
 
 <h4>静态资源</h4>
 <p>符串替换写法:<code>@static@css/style.css</code></p>
 <p>或相对路径:<code>../static/css/style.css</code>、<code>./static/css/style.css</code></p>
 <p>以上路径会被替换为<code>/theme/xxx/css/style.css</code></p>
-
 <p>不能使用绝对路径，如：<code>/static/css/style.css</code></p>
-
 <p>约定规则，静态资源应放在主题所在目录的<code>/static/</code>目录下，并在此修改，然后发布到<code>/theme/xxx/</code>目录下。</p>
 <p>不要直接修改<code>/theme/xxx/</code>里面的静态资源，以免被覆盖。</p>
-
 <p>如你不想这样，可以像上面说的使用绝对路径<code>/static/css/xxx.css</code></p>
 
 <h4>模板字符串替换</h4>
@@ -235,7 +291,9 @@
 <h4>调试</h4>
 <p>在页面任意位置使用标签：{<code>show@vars</code>}将显示当前页面环境变量，这些变量在套标签时也许有用。</p>
 <p>如当页面前环境变量为：</p>
-{show@vars}
+<pre>
+    {show@vars}
+</pre>
 
 <h4>结尾</h4>
 <p>

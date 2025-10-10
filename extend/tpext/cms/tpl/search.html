@@ -10,7 +10,7 @@
     <dl class="list-item">
         <dd class="title">
             <a target="_blank" href="{$content.url}">{:str_replace($kwd, '<span class="kwd-txt">' . $kwd . '</span>',
-                $content.title)}</a>
+                $content.title)}——[{$content.channel.name}]</a>
         </dd>
         <dd class="info">
             <p>{:str_replace($kwd, '<span class="kwd-txt">' . $kwd . '</span>', $content.keywords)}</p>

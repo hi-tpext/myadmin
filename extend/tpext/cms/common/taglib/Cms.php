@@ -26,8 +26,6 @@ class Cms extends Taglib
 
     protected $usedTags = [];
 
-    protected $bindFunctions = false;
-
     public function __construct($template)
     {
         $this->tags = Table::getTagsList();
@@ -45,7 +43,7 @@ class Cms extends Taglib
         $take = $tag['num'] ?? 0;
         $pagesize = $tag['pagesize'] ?? 0;
         $item = !empty($tag['item']) ? $tag['item'] : ($tag['default_item'] ?? 'item');
-        $assign = !empty($tag['assign']) ? $tag['assign'] : $table . '_list_' . time();
+        $assign = !empty($tag['assign']) ? $tag['assign'] : $table . '_list_' . time() . mt_rand(100,  999);
         $item = ltrim($item, '$');
         $assign = ltrim($assign, '$');
         $cache = explode(',', $tag['cache'] ?? '');
@@ -53,6 +51,7 @@ class Cms extends Taglib
         $cacheTime = intval($cache[1] ?? 360);
         $tagOrder = !empty($tag['order']) ? $tag['order'] : Table::defaultOrder($table);
         $fields = $tag['fields'] ?? Table::defaultFields($table);
+        $simple = $tag['simple'] ?? 'false';
         $fields = is_array($fields) ? implode(',', $fields) : $fields;
         $scope = Table::defaultScope($table);
         $dbNameSpace = Processer::getDbNamespace();
@@ -66,6 +65,7 @@ class Cms extends Taglib
         $parseStr .= <<<EOT
 
         <?php
+
         \$__page__ = 1;
         \$__render_links__ = '{$links}' == '1';
         \$__has_paginator__ = false;
@@ -73,7 +73,7 @@ class Cms extends Taglib
         \$__pagesize__ = {$pagesize} ?: (\$__set_pagesize__ ?? 0);
         if(\$__take__ == 0) {
             if(\$__pagesize__ > 0) {
-                \$__page__ = isset(\$page) && \$page > 0 ? \$page : 1;
+                \$__page__ = isset(\$page) && intval(\$page) > 0 ? intval(\$page) : 1;
                 \$__take__ = \$__pagesize__;
                 \$__has_paginator__ = true;
             } else {
@@ -83,7 +83,7 @@ class Cms extends Taglib
         \$__list__ = [];
         \$__order_by__ = '{$table}' =='cms_content' && !empty(\$__set_order_by__) ? \$__set_order_by__ . '{$tagOrder}' : '{$tagOrder}';
 
-        \$__data__ = {$dbNameSpace}::name('{$table}')
+        \$__list__ = {$dbNameSpace}::name('{$table}')
             ->where(\$__where__)
             ->whereRaw(\$__where_raw__, \$__where_binds__)
             ->where('{$scope}')
@@ -92,32 +92,41 @@ class Cms extends Taglib
             ->limit((\$__page__ - 1) * \$__take__, \$__take__)
             ->cache({$cacheKey}, {$cacheTime}, '{$table}')
             ->select();
-        foreach(\$__data__ as \$__d__) {
-            \$__list__[] = \\tpext\\cms\\common\\taglib\\Processer::item('{$table}', \$__d__);
-        }
+
+        \$__list__ = \\tpext\\cms\\common\\taglib\\Processer::list('{$table}', \$__list__);
+        
         if(\$__has_paginator__) {
             \$__total__ = {$dbNameSpace}::name('{$table}')
                 ->where(\$__where__)
                 ->whereRaw(\$__where_raw__, \$__where_binds__)
                 ->where('{$scope}')
-                ->count();
-                
-            \$__paginator__ = new \\think\\paginator\\driver\\Bootstrap(\$__data__, \$__pagesize__, \$__page__, \$__total__, false, ['path' => \$__set_page_path__ ?? '']);
+                ->count('id');
+            \$simple = {$simple} ? true : false;
+            if(\$simple && count(\$__list__) == \$__pagesize__){
+                \$__pagesize__ -= 1;//简单分页问题
+            }
+            \$__paginator__ = new \\think\\paginator\\driver\\Bootstrap(\$__list__, \$__pagesize__, \$__page__, \$__total__, \$simple, ['path' => \$__set_page_path__ ?? '']);
             \$__links_html__ = \$__paginator__->render();
         }
+        \${$assign} = \$__list__;
         ?>
+
         {volist name="__list__" id="{$item}"}
         {$content}
         {/volist}
         {if condition="\$__has_paginator__ && \$__render_links__ && !empty(\$__links_html__)"}
         {\$__links_html__|raw}
-        {elseif condition="\$__has_paginator__"}
-        <!-- 未自动输出分页，请在页面需要的位置调用 -->
         {/if}
-        {assign name="{$assign}" value="\$__list__" /}
         <?php
-        unset(\$__data__, \$__where_raw__, \$__where_binds__, \$__where__, \$__id_key__, \$__id_val__, \$__cid_key__, \$__cid_val__);
-        unset(\$__order_by__, \$__paginator__, \$__total__, \$__take__, \$__pagesize__, \$__page__);
+        
+        unset(\$__list__, \$__where_raw__, \$__where_binds__, \$__where__, \$__id_key__, \$__id_val__, \$__cid_key__, \$__cid_val__);
+        unset(\$__order_by__, \$__paginator__, \$__total__, \$__take__, \$__pagesize__, \$__page__, \$simple);
+        if(\$__page_type__ == 'content' && '{$table}' =='cms_content') {
+            \$content = \$vars['content'];
+        }
+        else if((\$__page_type__ == 'channel' || \$__page_type__ == 'content') && '{$table}' =='cms_channel') {
+            \$channel = \$vars['channel'];
+        }
         ?>
 EOT;
         $this->usedTags[] = $tag;
@@ -133,7 +142,7 @@ EOT;
         $pid_key = $tag['pid_key'] ?? 'parent_id';
         $id_key = $tag['id_key'] ?? 'id';
         $item = !empty($tag['item']) ? $tag['item'] : ($tag['default_item'] ?? 'item');
-        $assign = !empty($tag['assign']) ? $tag['assign'] : $table . '_list_' . time();
+        $assign = !empty($tag['assign']) ? $tag['assign'] : $table . '_list_' . time() . mt_rand(100,  999);
         $item = ltrim($item, '$');
         $assign = ltrim($assign, '$');
         $fields = $tag['fields'] ?? Table::defaultFields($table);
@@ -160,6 +169,9 @@ EOT;
         \$__pid_key__ ='{$pid_key}';
         \$__id_key__ = '{$id_key}';
         \$__id_val__ = {$id_val} ?? 0;
+        if(\$__page_type__ == 'channel' || \$__page_type__ == 'content') {
+            \$__id_val__ = \$vars['channel_id'];
+        }
         \$__list__ = \\tpext\\cms\\common\\taglib\\Processer::getParents('{$table}', \$__id_val__, \$__id_key__, \$__pid_key__);
         ?>
         {volist name="__list__" id="{$item}"}
@@ -168,6 +180,12 @@ EOT;
         {assign name="{$assign}" value="\$__list__" /}
         <?php
         unset(\$__pid_key__, \$__id_key__, \$__id_val__);
+        if(\$__page_type__ == 'content' && '{$table}' =='cms_content') {
+            \$content = \$vars['content'];
+        }
+        else if((\$__page_type__ == 'channel' || \$__page_type__ == 'content') && '{$table}' =='cms_channel') {
+            \$channel = \$vars['channel'];
+        }
         ?>
 EOT;
         $this->usedTags[] = $tag;
@@ -215,30 +233,6 @@ EOT;
         ?>
 EOT;
         $this->usedTags[] = $tag;
-        return $parseStr;
-    }
-
-    /**
-     * 引入标签库助手方法
-     * 
-     * @return string
-     */
-    protected function bindFunctions()
-    {
-        if ($this->bindFunctions) {
-            return '';
-        }
-
-        $this->bindFunctions = true;
-
-        $parseStr = <<<EOT
-
-        <?php
-        include_once \\tpext\\cms\\common\\Module::getInstance()->getRoot() . 'functions.php';
-
-        ?>
-EOT;
-
         return $parseStr;
     }
 
@@ -426,10 +420,10 @@ EOT;
             if (!strstr($idVal, 'and')) {
                 $idVal = str_replace(',', ' and ', $idVal);
             }
-        } else if (preg_match('/^(>|=|<|>=|<=|<>)\s*(.+?)$/is', $idVal, $mch)) {
+        } else if (preg_match('/^(>|=|<|>=|<=|<>)\s+(.+?)$/is', $idVal, $mch)) {
             $op = $mch[1];
             $idVal = trim($mch[2]);
-        } else if (preg_match('/^(gt|eq|lt|egt|elt|neq|!=)\s*(.+?)$/is', $idVal, $mch)) {
+        } else if (preg_match('/^(gt|eq|lt|egt|elt|neq|!=)\s+(.+?)$/is', $idVal, $mch)) {
             $op = $mch[1];
             $idVal = trim($mch[2]);
         } else if (preg_match('/^(like|not\s*like)\s+(.+)$/is', $idVal, $mch)) {
@@ -455,11 +449,11 @@ EOT;
     {
         //替换where中的cid语法糖为真实字段
         if ($cid_key && strstr($where, 'cid')) {
-            $where = preg_replace('/(\bcid\s+)(gt|eq|lt|egt|elt|neq|not\s*in|like|not\s*like|between|not\s*between)/is', $cid_key . '$2', $where);
+            $where = preg_replace('/(\bcid\s+)(gt|eq|lt|egt|elt|neq|not\s*in|like|not\s*like|between|not\s*between)\b/is', $cid_key . '$2', $where);
             $where = preg_replace('/(\bcid\s*)(\<|\>|=|!=)/is', $cid_key . '$2', $where);
         }
         if ($cid_key == 'parent_id' && strstr($where, 'pid')) {
-            $where = preg_replace('/(\bpid\s+)(gt|eq|lt|egt|elt|neq|not\s*in|like|not\s*like|between|not\s*between)/is', $cid_key . '$2', $where);
+            $where = preg_replace('/(\bpid\s+)(gt|eq|lt|egt|elt|neq|not\s*in|like|not\s*like|between|not\s*between)\b/is', $cid_key . '$2', $where);
             $where = preg_replace('/(\bpid\s*)(\<|\>|=|!=)/is', $cid_key . '$2', $where);
         }
         //替换表达式
@@ -480,7 +474,7 @@ EOT;
     {
         $var = $this->autoBuildVar($var);
         if (preg_match('/\$_(SERVER|REQUEST|GET|POST|COOKIE|SESSION)/i', $var) || preg_match('/app\(/i', $var)) {
-            $var = "filter_var({$var}, FILTER_VALIDATE_INT)";
+            $var = "sql_guard({$var})";
         }
         return $var;
     }
@@ -489,9 +483,6 @@ EOT;
     {
         if (preg_match('/^tag(\w+@\w+)$/i', $name, $mchs) && count($arguments) == 2) {
             $tagName = strtolower($mchs[1]);
-            if ('use@functions' == $tagName) {
-                return $this->bindFunctions();
-            }
             if ('show@vars' == $tagName) {
                 return $this->showVars();
             }

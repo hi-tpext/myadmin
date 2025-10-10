@@ -12,28 +12,13 @@
 namespace tpext\cms\common\model;
 
 use think\Model;
+use tpext\cms\common\Cache;
 
 class CmsContentModel extends Model
 {
     protected $name = 'cms_content_model';
 
     protected $autoWriteTimestamp = 'datetime';
-
-    protected static function init()
-    {
-        /**是否为tp5**/
-        if (method_exists(static::class, 'event')) {
-            self::beforeInsert(function ($data) {
-                return self::onBeforeInsert($data);
-            });
-            self::afterWrite(function ($data) {
-                return self::onAfterWrite($data);
-            });
-            self::afterDelete(function ($data) {
-                return self::onAfterDelete($data);
-            });
-        }
-    }
 
     public static function onBeforeInsert($data)
     {
@@ -47,18 +32,18 @@ class CmsContentModel extends Model
         if (!isset($data['id'])) {
             return;
         }
-        cache('cms_content_model_fields_' . $data['id'], null);
-        cache('cms_content_model_fields_main_left_' . $data['id'], null);
-        cache('cms_content_model_fields_main_right_' . $data['id'], null);
-        cache('cms_content_model_fields_extend_' . $data['id'], null);
+        Cache::delete('cms_content_model_fields_' . $data['id']);
+        Cache::delete('cms_content_model_fields_main_left_' . $data['id']);
+        Cache::delete('cms_content_model_fields_main_right_' . $data['id']);
+        Cache::delete('cms_content_model_fields_extend_' . $data['id']);
     }
 
     public static function onAfterDelete($data)
     {
-        cache('cms_content_model_fields_' . $data['id'], null);
-        cache('cms_content_model_fields_main_left_' . $data['id'], null);
-        cache('cms_content_model_fields_main_right_' . $data['id'], null);
-        cache('cms_content_model_fields_extend_' . $data['id'], null);
+        Cache::delete('cms_content_model_fields_' . $data['id']);
+        Cache::delete('cms_content_model_fields_main_left_' . $data['id']);
+        Cache::delete('cms_content_model_fields_main_right_' . $data['id']);
+        Cache::delete('cms_content_model_fields_extend_' . $data['id']);
     }
 
     public function setFieldsAttr($value)

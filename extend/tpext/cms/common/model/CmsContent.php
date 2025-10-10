@@ -12,6 +12,7 @@
 namespace tpext\cms\common\model;
 
 use think\Model;
+use tpext\cms\common\Cache;
 use tpext\common\ExtLoader;
 use think\model\concern\SoftDelete;
 
@@ -20,29 +21,6 @@ class CmsContent extends Model
     use SoftDelete;
     protected $name = 'cms_content';
     protected $autoWriteTimestamp = 'datetime';
-
-    protected static function init()
-    {
-        /**是否为tp5**/
-        if (method_exists(static::class, 'event')) {
-
-            self::beforeInsert(function ($data) {
-                return self::onBeforeInsert($data);
-            });
-            self::afterInsert(function ($data) {
-                return self::onAfterInsert($data);
-            });
-            self::afterUpdate(function ($data) {
-                return self::onAfterUpdate($data);
-            });
-            self::afterDelete(function ($data) {
-                return self::onAfterDelete($data);
-            });
-            self::beforeWrite(function ($data) {
-                return self::onBeforeWrite($data);
-            });
-        }
-    }
 
     public static function onBeforeInsert($data)
     {
@@ -122,6 +100,10 @@ class CmsContent extends Model
             }
         }
 
+        if (!empty($data['channel_id'])) {
+            Cache::delete('content_count_' . $data['channel_id']);
+        }
+
         ExtLoader::trigger('cms_content_on_after_insert', $data);
     }
 
@@ -131,15 +113,15 @@ class CmsContent extends Model
             return;
         }
 
-        cache('cms_content_' . $data['id'], null);
-        cache('cms_content_click_' . $data['id'], null);
-        cache('cms_content_detail_' . $data['id'], null);
+        Cache::delete('cms_content_' . $data['id']);
+        Cache::delete('cms_content_click_' . $data['id']);
+        Cache::delete('cms_content_detail_' . $data['id']);
 
         $detail = CmsContentDetail::where('main_id', $data['id'])->find();
         if (!$detail) {
             $detail = new CmsContentDetail;
         } else {
-            cache('cms_content_detail_' . $detail['id'], null);
+            Cache::delete('cms_content_detail_' . $detail['id']);
         }
 
         if (isset($data['reference_id']) && $data['reference_id'] > 0) {
@@ -185,8 +167,11 @@ class CmsContent extends Model
     {
         CmsContentDetail::where('main_id', $data['id'])->delete();
 
-        cache('cms_content_' . $data['id'], null);
-        cache('cms_content_detail_' . $data['id'], null);
+        Cache::delete('cms_content_' . $data['id']);
+        Cache::delete('cms_content_detail_' . $data['id']);
+        if (!empty($data['channel_id'])) {
+            Cache::delete('content_count_' . $data['channel_id']);
+        }
 
         ExtLoader::trigger('cms_content_on_after_delete', $data);
     }
@@ -304,7 +289,10 @@ class CmsContent extends Model
 
     public function getClickAttr($value, $data)
     {
-        return cache('cms_content_click_' . $data['id']) ?: $data['click'];
+        if (empty($data['id'])) {
+            return 0;
+        }
+        return Cache::get('cms_content_click_' . $data['id']) ?: $data['click'];
     }
 
     public function getPublishDateAttr($value, $data)
