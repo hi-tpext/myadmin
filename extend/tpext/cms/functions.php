@@ -94,6 +94,21 @@ function tag_url($item)
     return $item['url'];
 }
 
+function sql_guard($val)
+{
+    $val = strip_tags($val);
+
+    if (preg_match('/\b(?:select|delete)\b.+?\bfrom\b/is', $val)) {
+        return 'invalid words';
+    }
+
+    if (preg_match('/\bunion\b.+?\bselect\b/is', $val)) {
+        return 'invalid words';
+    }
+
+    return $val;
+}
+
 function more($str, $len = 100, $more = '...')
 {
     if (mb_strlen($str, 'utf-8') > $len) {

@@ -46,7 +46,7 @@ class EmptyData implements \JsonSerializable, \ArrayAccess
      * @param string $name
      * @return bool
      */
-    public function offsetExists($name)
+    public function offsetExists($name): bool
     {
         return true;
     }
@@ -56,7 +56,9 @@ class EmptyData implements \JsonSerializable, \ArrayAccess
      *
      * @param string $name
      * @return mixed
+     * 
      */
+     #[\ReturnTypeWillChange]
     public function offsetGet($name)
     {
         if ($name == '__not_found__') {
@@ -78,9 +80,12 @@ class EmptyData implements \JsonSerializable, \ArrayAccess
         return '__not_found__';
     }
 
-    public function __set($name, $value): void {}
+    public function __set($name, $value): void
+    {
+        //
+    }
 
-    public function __isset($name)
+    public function __isset($name): bool
     {
         return true;
     }
@@ -90,14 +95,14 @@ class EmptyData implements \JsonSerializable, \ArrayAccess
         return $this;
     }
 
-    public function offsetSet($name, $value)
+    public function offsetSet($name, $value): void
     {
-        return $this;
+        //
     }
 
-    public function offsetUnset($name)
+    public function offsetUnset($name): void
     {
-        return $this;
+        //
     }
 
     public function __toString(): string
@@ -110,12 +115,12 @@ class EmptyData implements \JsonSerializable, \ArrayAccess
         return $this;
     }
 
-    public function jsonSerialize()
+    public function jsonSerialize(): array
     {
         return $this->toArray();
     }
 
-    public function toArray()
+    public function toArray(): array
     {
         return [
             'title' => '无',

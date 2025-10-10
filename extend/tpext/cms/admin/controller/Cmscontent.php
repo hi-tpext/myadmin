@@ -156,6 +156,8 @@ class Cmscontent extends Controller
             ->html('批量操作：')
             ->btnEnableAndDisable('显示', '隐藏')
             ->btnDelete()
+            ->btnRefresh()
+            ->btnToggleSearch()
             ->html('&nbsp;&nbsp;发布：');
 
         foreach ($models as $i => $model) {
@@ -167,11 +169,6 @@ class Cmscontent extends Controller
                 'data-layer-size="98%,98%" title="添加新的' . $model['name'] . '"'
             );
         }
-
-        $table->getToolbar()
-            ->html('&nbsp;&nbsp;')
-            ->btnRefresh()
-            ->btnToggleSearch();
 
         $table->getActionbar()
             ->btnEdit('', '', 'btn-primary', 'mdi-lead-pencil', 'data-layer-size="98%,98%" title="编辑"')
@@ -249,7 +246,7 @@ class Cmscontent extends Controller
     {
         $id = input('id/d');
 
-        $content = $this->dataModel->where('id', $id)->withAttr(['content'])->find();
+        $content = $this->dataModel->where('id', $id)->with(['detail'])->find();
 
         $builder = $this->builder($this->pageTitle, '复制');
         if (!$content) {
@@ -478,7 +475,7 @@ class Cmscontent extends Controller
                     ->default(0)
                     ->required(strstr($fields['sort']['rules'], 'required'));
             }
-            
+
             $form->html('');
 
             if (
@@ -636,6 +633,7 @@ class Cmscontent extends Controller
             'channel_id',
             'reference_id',
             'model_id',
+            'attr',
         ], $modelFieldNames), 'post');
 
         $result = $this->validate($data, [

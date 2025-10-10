@@ -13,6 +13,7 @@ namespace tpext\cms\common\model;
 
 use think\Model;
 use tpext\common\Tool;
+use tpext\cms\common\Cache;
 use tpext\common\ExtLoader;
 use tpext\cms\common\Module;
 
@@ -21,35 +22,23 @@ class CmsTemplate extends Model
     protected $name = 'cms_template';
     protected $autoWriteTimestamp = 'datetime';
 
-    protected static function init()
-    {
-        /**是否为tp5**/
-        if (method_exists(static::class, 'event')) {
-            self::beforeInsert(function ($data) {
-                return self::onBeforeInsert($data);
-            });
-            self::afterInsert(function ($data) {
-                return self::onAfterInsert($data);
-            });
-            self::afterUpdate(function ($data) {
-                return self::onAfterUpdate($data);
-            });
-            self::afterDelete(function ($data) {
-                return self::onAfterDelete($data);
-            });
-        }
-    }
-
     public static function onBeforeInsert($data)
     {
         if (empty($data['sort'])) {
             $data['sort'] = static::max('sort') + 5;
         }
+
+        ExtLoader::trigger('cms_template_on_before_insert', $data);
     }
 
     public static function onAfterInsert($data)
     {
         ExtLoader::trigger('cms_template_on_after_insert', $data);
+    }
+
+    public static function onBeforeUpdate($data)
+    {
+        ExtLoader::trigger('cms_template_on_before_update', $data);
     }
 
     public static function onAfterUpdate($data)
@@ -58,14 +47,14 @@ class CmsTemplate extends Model
             return;
         }
 
-        cache('cms_template_' . $data['id'], null);
+        Cache::delete('cms_template_' . $data['id']);
 
         ExtLoader::trigger('cms_template_on_after_update', $data);
     }
 
     public static function onAfterDelete($data)
     {
-        cache('cms_template_' . $data['id'], null);
+        Cache::delete('cms_template_' . $data['id']);
 
         ExtLoader::trigger('cms_template_on_after_delete', $data);
 
@@ -137,9 +126,8 @@ class CmsTemplate extends Model
                     file_put_contents($view_path . '/contact.html', str_replace('<!--__content__-->', $text, $newTpl));
                 }
             }
-        }
-        catch (\Throwable $e) {
-            trace('initPath error:'. $e->__tostring(), 'error');
+        } catch (\Throwable $e) {
+            trace('initPath error:' . $e->__tostring(), 'error');
         }
     }
 

@@ -1,5 +1,9 @@
 # 欢迎使用
 
+基于 [tp5.1 / tp6.x  /tp8.x / webman ]快速后台开发框架。
+
+UI 使用的是：光年(Light Year Admin)后台管理系统模板：https://gitee.com/yinqi/Light-Year-Admin-Template
+
 ## 一、安装
 
 ### tp框架有两个版本
@@ -131,13 +135,12 @@ composer update
 
 ### 网址
 
-1. [tp6.1] <http://gaosu.shenzhuo.vip:50469/admin>
-
-2. [webman] <http://gaosu.shenzhuo.vip:50468/admin>
+https://yes.shenzhuo.vip/admin
 
 ### 账号
 
-`admin`：`tpextadmin`
+账号：`admin`
+密码：`tpextadmin`
 
 ### 注意事项
 

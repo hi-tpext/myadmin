@@ -39,7 +39,7 @@ DROP TABLE IF EXISTS `__PREFIX__cms_tag`;
 server
 {
     listen 80;
-    server_name new.ynyysc.com;
+    server_name yourdomain.com;
     index index.html index.php index.htm default.php default.htm default.html;
 }
 ```

@@ -55,6 +55,8 @@ class View
         } else {
             $this->engine = new Template($config);
         }
+
+        include_once Module::getInstance()->getRoot() . 'functions.php';
     }
 
     /**
