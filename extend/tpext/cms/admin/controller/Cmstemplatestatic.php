@@ -2,12 +2,12 @@
 
 namespace tpext\cms\admin\controller;
 
-use think\Controller;
-use tpext\builder\traits\actions;
-use tpext\cms\common\model\CmsTemplateHtml;
-use tpext\cms\common\model\CmsTemplate;
 use tpext\think\App;
+use think\Controller;
 use tpext\cms\common\Render;
+use tpext\builder\traits\actions;
+use tpext\cms\common\model\CmsTemplate;
+use tpext\cms\common\model\CmsTemplateHtml;
 
 /**
  * Undocumented class
@@ -23,23 +23,12 @@ class Cmstemplatestatic extends Controller
     {
         $this->pageTitle = '静态资源管理';
         $this->pagesize = 6;
-        $this->pk = 'path';
 
         $this->pagesize = 9999;
     }
 
     protected function filterWhere()
     {
-        $searchData = request()->get();
-
-        $where = [];
-        if (!empty($searchData['path'])) {
-            $where[] = ['path', 'like', '%' . $searchData['path'] . '%'];
-        }
-        if (!empty($searchData['name'])) {
-            $where[] = ['name', 'like', '%' . $searchData['name'] . '%'];
-        }
-
         $where[] = ['template_id', '=', input('template_id/d')];
 
         return $where;
@@ -53,9 +42,6 @@ class Cmstemplatestatic extends Controller
     protected function buildSearch()
     {
         $search = $this->search;
-
-        $search->text('path', '路径', 3)->maxlength(20);
-        $search->text('name', '名称', 3)->maxlength(20);
         $search->hidden('template_id')->value(input('template_id/d'));
     }
 
@@ -87,7 +73,12 @@ class Cmstemplatestatic extends Controller
         $table->raw('path', '路径')->to('<a target="_blank" href="/admin/cmstemplatestatic/edit?path={fpath}&ext={ext}">{val}</a>');
         $table->match('type', '类型')->options(['js' => '脚本', 'css' => '样式', 'dir' => '目录'])->mapClassGroup([['js', 'success'], ['css', 'info']]);
         $table->show('ext', '后缀');
-        $table->show('size', '大小')->to('{val}kb');
+        $table->show('size', '大小')->to(function ($val, $row) {
+            if ($row['type'] == 'dir') {
+                return '';
+            }
+            return $val . 'KB';
+        });
         $table->show('filectime', '创建时间')->getWrapper()->addStyle('width:180px');
         $table->show('filemtime', '编辑时间')->getWrapper()->addStyle('width:180px');
 
@@ -114,12 +105,15 @@ class Cmstemplatestatic extends Controller
         $list = [];
 
         foreach ($data as &$d) {
-            $dirs = explode('/', $d['path']);
+
+            $dirs = array_values(array_filter(explode('/', $d['path'])));
 
             if (count($dirs) > 4) {
                 $dir = $dirs[3];
                 if (!isset($list[$dir])) {
                     $list[$dir] = [
+                        'id' => '',
+                        'path' => '',
                         'dir' => '├─' . $dir . ' /',
                         '__hi_edit__' => 1,
                         '__hi_delete__' => 1,
@@ -130,13 +124,15 @@ class Cmstemplatestatic extends Controller
                 }
                 $d['dir'] = '<span style="margin-left:20px"></span>├─';
             } else {
-                $d['dir'] = '├─' . $dirs[3];
+                $d['dir'] = '├─' . $dirs[3] ?? '';
             }
+
+            $d['id'] = $d['path'];
 
             $list[] = $d;
         }
 
-        $data = $list;
+        $data = array_values($list);
     }
 
     /**

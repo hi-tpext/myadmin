@@ -1,5 +1,8 @@
-{content@get id="$id"}
 <!--单页(示例)-->
+{literal}
+<!--{$content.xxx}等[文章信息]标签需要给单页绑定一篇文章-->
+<!--若未绑定，则不可使用，请删除{$content.xxx}相关标签，否则页面报错-->
+{/literal}
 <div class="main-content single">
     <div class="title">{$content.title}</div>
     <div class="content">{$content.content|raw}</div>

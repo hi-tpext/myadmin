@@ -8,7 +8,7 @@
     {content@list where="FIND_IN_SET($id,tags)" pagesize="10"}
     <dl class="list-item">
         <dd class="title">
-            <a target="_blank" href="{$content.url}">{$content.title}</a>
+            <a target="_blank" href="{$content.url}">{$content.title}——[{$content.channel.name}]</a>
         </dd>
         <dd class="info">
             <p>{$content.description}</p>

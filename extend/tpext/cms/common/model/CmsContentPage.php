@@ -12,28 +12,13 @@
 namespace tpext\cms\common\model;
 
 use think\Model;
+use tpext\cms\common\Cache;
 use tpext\common\ExtLoader;
 
 class CmsContentPage extends Model
 {
     protected $name = 'cms_content_page';
     protected $autoWriteTimestamp = 'datetime';
-
-    protected static function init()
-    {
-        /**是否为tp5**/
-        if (method_exists(static::class, 'event')) {
-            self::afterInsert(function ($data) {
-                return self::onAfterInsert($data);
-            });
-            self::afterUpdate(function ($data) {
-                return self::onAfterUpdate($data);
-            });
-            self::afterDelete(function ($data) {
-                return self::onAfterDelete($data);
-            });
-        }
-    }
 
     public static function onAfterInsert($data)
     {
@@ -45,7 +30,7 @@ class CmsContentPage extends Model
         if (!isset($data['html_type']) || !isset($data['to_id']) || !isset($data['template_id'])) {
             return;
         }
-        cache('cms_page_' . $data['template_id'] . '_' . $data['html_type'] . '_' . $data['to_id'], null);
+        Cache::delete('cms_page_' . $data['template_id'] . '_' . $data['html_type'] . '_' . $data['to_id']);
 
         ExtLoader::trigger('cms_content_page_on_after_update', $data);
     }
@@ -55,7 +40,7 @@ class CmsContentPage extends Model
         if (!isset($data['html_type']) || !isset($data['to_id']) || !isset($data['template_id'])) {
             return;
         }
-        cache('cms_page_' . $data['template_id'] . '_' . $data['html_type'] . '_' . $data['to_id'], null);
+        Cache::delete('cms_page_' . $data['template_id'] . '_' . $data['html_type'] . '_' . $data['to_id']);
 
         ExtLoader::trigger('cms_content_page_on_after_delete', $data);
     }

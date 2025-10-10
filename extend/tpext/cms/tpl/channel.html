@@ -5,6 +5,7 @@
     &gt;<a>{$channel.name}</a>
     {/channel@parents}
 </div>
+<!--当前栏目：{$channel.name}-->
 <div class="list">
     {content@list}
     <dl class="list-item">
@@ -27,5 +28,3 @@
     </dl>
     {/content@list}
 </div>
-<p>如当页面前环境变量为：</p>
-{show@vars}

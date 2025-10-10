@@ -7,6 +7,7 @@ use think\Controller;
 use tpext\builder\common\Builder;
 use tpext\builder\traits\actions;
 use tpext\cms\common\model\CmsChannel;
+use tpext\cms\common\model\CmsContent;
 use tpext\cms\common\model\CmsTemplate;
 use tpext\cms\common\model\CmsContentPage;
 use tpext\cms\common\model\CmsTemplateHtml as TemplateHtmlModel;
@@ -81,7 +82,7 @@ class Cmstemplatehtml extends Controller
     /**
      * Undocumented function
      *
-     * @param Builder $builder
+     * @param Builder|null $builder
      * @param string $type index/add/edit/view
      * @return void
      */
@@ -100,6 +101,35 @@ class Cmstemplatehtml extends Controller
         }
     }
 
+    public function selectByTplid()
+    {
+        $selected = input('selected');
+        $template_id = input('template_id');
+        $type = input('type', 'channel');
+
+
+        if ($selected == '0') {
+            return json([
+                'code' => 1,
+                'data' => [
+                    [
+                        'id' => 0,
+                        '__id__' => 0,
+                        '__text__' => 'theme/' . CmsTemplate::where('id', $template_id)->value('view_path') . '/' . $type . '/default.html [默认]',
+                    ]
+                ],
+                'has_more' => 0,
+            ]);
+        }
+
+        if (!$selected) {
+            $this->creating(null, 'index');
+        }
+        $this->selectScope = [['template_id', '=', $template_id], ['type', '=', $type]];
+
+        return $this->selectPage();
+    }
+
     /**
      * 构建表格
      *
@@ -114,9 +144,13 @@ class Cmstemplatehtml extends Controller
         $table->raw('path', '路径')->to('<a target="_blank" href="/admin/cmstemplatehtml/edit?id={id}">{val}</a>');
         $table->match('type', '类型')->options($this->pageTypes + ['dir' => '目录'])
             ->mapClassGroup([['channel', 'success'], ['content', 'info'], ['common', 'warning'], ['single', 'purple'], ['index', 'danger'], ['dynamic', 'dark']]);
-        $table->show('ext', '后缀');
-        $table->show('size', '大小')->to('{val}kb');
-        $table->show('conut', '统计');
+        $table->show('size', '大小')->to(function ($val, $row) {
+            if ($row['type'] == 'dir') {
+                return '';
+            }
+            return $val . 'KB';
+        });
+        $table->show('bind', '绑定');
         $table->show('filectime', '创建时间')->getWrapper()->addStyle('width:140px');
         $table->show('filemtime', '编辑时间')->getWrapper()->addStyle('width:140px');
 
@@ -132,37 +166,37 @@ class Cmstemplatehtml extends Controller
             ->btnDelete()
             ->mapClass([
                 'edit' => ['hidden' => '__hi_edit__'],
-                'apply' => ['hidden' => '__hi_apply__'],
-                'delete' => ['hidden' => '__hi_delete__'],
+                'apply' => ['hidden' => '__hi_apply__', 'disabled' => '__dis_apply__'],
+                'delete' => ['hidden' => '__hi_delete__', 'disabled' => '__dis_delete__'],
             ]);
 
         $list = [];
-
         foreach ($data as &$d) {
             $view_path = App::getRootPath() . str_replace(['\\', '/'], DIRECTORY_SEPARATOR, $d['path']);
             if (!is_file($view_path)) {
-                $this->dataModel->where('id', $d['id'])->delete(); //真实文件不存在，删除记录
+                $d['path'] .= '[文件不存在]';
             }
 
-            if ($d['type'] == 'channel' && $d['is_default'] == 0) {
-                $d['conut'] = '栏目：' . CmsContentPage::where('html_type', 'channel')->where('html_id', $d['id'])->count();
-            } else if ($d['type'] == 'content' && $d['is_default'] == 0) {
-                $d['conut'] = '栏目：' . CmsContentPage::where('html_type', 'content')->where('html_id', $d['id'])->count();
+            if (in_array($d['type'], ['channel', 'content']) && $d['is_default'] == 0) {
+                $ids = CmsContentPage::where('html_type', 'in', ['channel', 'content'])->where('html_id', $d['id'])->column('to_id');
+                $names = CmsChannel::where('id', 'in', $ids)->column('name');
+                $d['bind'] = implode(',', $names) ?: '无';
             } else if ($d['type'] == 'single') {
-                $d['conut'] = '文章：' . ($d['to_id'] ? 'id-' . $d['to_id'] : '未绑定');
+                $d['bind'] = ($d['to_id'] ? CmsContent::where('id', $d['to_id'])->value('title') : '') ?: '无';
             } else {
-                $d['conut'] = '无';
+                $d['bind'] = '无';
             }
 
-            $d['__dis_apply__'] = in_array($d['type'], ['common', 'dynamic']) || $d['is_default'];
+            $d['__dis_apply__'] = in_array($d['type'], ['common', 'dynamic', 'index']) || $d['is_default'];
             $d['__dis_delete__'] = $d['is_default'];
 
-            $dirs = explode('/', $d['path']);
+            $dirs = array_values(array_filter(explode('/', $d['path'])));
 
             if (count($dirs) > 3) {
                 $dir = $dirs[2];
                 if (!isset($list[$dir])) {
                     $list[$dir] = [
+                        'id' => '',
                         'dir' => '├─' . $dir . ' /',
                         'name' => '',
                         'description' => '存放' . $this->pageTypes[$dir] . '模板',
@@ -174,15 +208,15 @@ class Cmstemplatehtml extends Controller
                         'type' => 'dir',
                     ];
                 }
-                $d['dir'] = '<span style="margin-left:30px"></span>' . '├─' . $dirs[3] . '.html';
+                $d['dir'] = '<span style="margin-left:30px"></span>' . '├─' . $dirs[3];
             } else {
-                $d['dir'] = '├─' . $dirs[2] . '.html';
+                $d['dir'] = '├─' . $dirs[2];
             }
 
-            $list[] = $d;
+            $list[$d['path']] = $d;
         }
 
-        $data = $list;
+        $data = array_values($list);
     }
 
     /**
@@ -248,10 +282,16 @@ class Cmstemplatehtml extends Controller
             } else {
                 if ($page['type'] == 'channel' || $page['type'] == 'content') {
                     $relation_ids = CmsContentPage::where('html_id', $html_id)->column('to_id');
-                    $form->tree('relation_ids', '选择栏目')->optionsData(CmsChannel::where('is_show', 1)->field('id,name,parent_id')->select())->value($relation_ids)
-                        ->help('哪些' . ($page['type'] == 'content' ? '内容' : '栏目') . '页使用该模板，可选择多个栏目')->required();
+                    $optionsData = CmsChannel::field('id,name,parent_id')->select();
+                    $form->tree('relation_ids', '选择栏目')->optionsData($optionsData, 'name', 'id', 'parent_id', '')
+                        ->required()
+                        ->value($relation_ids)
+                        ->help('哪些' . ($page['type'] == 'content' ? '内容' : '栏目') . '页使用该模板，可选择多个栏目')
+                        ->expandAll();
                 } else if ($page['type'] == 'single') {
-                    $form->select('to_id', '选择内容详情')->help('选择一篇文章')->dataUrl(url('/admin/cmscontent/selectpage'), '{id}#{title} — [所属栏目：{channel.full_name}]')->required();
+                    $form->select('to_id', '选择内容详情')->help('选择一篇文章')
+                        ->help('绑定文章后模板中可使用{$content.xxx}读取文章信息')
+                        ->dataUrl(url('/admin/cmscontent/selectpage'), '{id}#{title} — [所属栏目：{channel.full_name}]');
                 } else {
                     $form->show('tips', ' ')->value('未知页面类型');
                 }

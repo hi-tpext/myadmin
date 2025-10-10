@@ -12,27 +12,12 @@
 namespace tpext\cms\common\model;
 
 use think\Model;
+use tpext\cms\common\Cache;
 
 class CmsTag extends Model
 {
     protected $name = 'cms_tag';
     protected $autoWriteTimestamp = 'datetime';
-
-    protected static function init()
-    {
-        /**是否为tp5**/
-        if (method_exists(static::class, 'event')) {
-            self::beforeInsert(function ($data) {
-                return self::onBeforeInsert($data);
-            });
-            self::afterUpdate(function ($data) {
-                return self::onAfterUpdate($data);
-            });
-            self::afterDelete(function ($data) {
-                return self::onAfterDelete($data);
-            });
-        }
-    }
 
     public static function onBeforeInsert($data)
     {
@@ -46,11 +31,11 @@ class CmsTag extends Model
         if (!isset($data['id'])) {
             return;
         }
-        cache('cms_tag_' . $data['id'], null);
+        Cache::delete('cms_tag_' . $data['id']);
     }
 
     public static function onAfterDelete($data)
     {
-        cache('cms_tag_' . $data['id'], null);
+        Cache::delete('cms_tag_' . $data['id']);
     }
 }

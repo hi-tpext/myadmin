@@ -12,7 +12,7 @@
 namespace tpext\cms\common\model;
 
 use think\Model;
-use think\facade\Cache;
+use tpext\cms\common\Cache;
 use tpext\common\ExtLoader;
 use think\model\concern\SoftDelete;
 use tpext\builder\traits\TreeModel;
@@ -26,29 +26,6 @@ class CmsChannel extends Model
 
     protected $autoWriteTimestamp = 'datetime';
 
-    protected static function init()
-    {
-        /**是否为tp5**/
-        if (method_exists(static::class, 'event')) {
-            //调用tp6事件，达到兼容
-            self::beforeWrite(function ($data) {
-                return self::onBeforeWrite($data);
-            });
-            self::afterInsert(function ($data) {
-                return self::onAfterInsert($data);
-            });
-            self::afterUpdate(function ($data) {
-                return self::onAfterUpdate($data);
-            });
-            self::beforeInsert(function ($data) {
-                return self::onBeforeInsert($data);
-            });
-            self::afterDelete(function ($data) {
-                return self::onAfterDelete($data);
-            });
-        }
-    }
-
     public static function onBeforeInsert($data)
     {
         if (empty($data['sort'])) {
@@ -59,10 +36,10 @@ class CmsChannel extends Model
     public static function onAfterInsert($data)
     {
         if (!empty($data['parent_id'])) {
-            cache('cms_channel_children_ids_' . $data['parent_id'], null);
+            Cache::delete('cms_channel_children_ids_' . $data['parent_id']);
         }
 
-        Cache::clear('cms_channel');
+        Cache::deleteTag('cms_channel');
 
         ExtLoader::trigger('cms_channel_on_after_insert', $data);
     }
@@ -72,13 +49,13 @@ class CmsChannel extends Model
         if (!isset($data['id'])) {
             return;
         }
-        cache('cms_channel_' . $data['id'], null);
+        Cache::delete('cms_channel_' . $data['id']);
 
         if (!empty($data['parent_id'])) {
-            cache('cms_channel_children_ids_' . $data['parent_id'], null);
+            Cache::delete('cms_channel_children_ids_' . $data['parent_id']);
         }
 
-        Cache::clear('cms_channel');
+        Cache::deleteTag('cms_channel');
 
         ExtLoader::trigger('cms_channel_on_after_update', $data);
 
@@ -117,10 +94,10 @@ class CmsChannel extends Model
         static::where(['parent_id' => $data['id']])->update(['parent_id' => $data['parent_id']]);
         CmsContent::where(['channel_id' => $data['id']])->update(['channel_id' => $data['parent_id']]);
 
-        cache('cms_channel_' . $data['id'], null);
-        cache('cms_channel_children_ids_' . $data['parent_id'], null);
+        Cache::delete('cms_channel_' . $data['id']);
+        Cache::delete('cms_channel_children_ids_' . $data['parent_id']);
 
-        Cache::clear('cms_channel');
+        Cache::deleteTag('cms_channel');
 
         ExtLoader::trigger('cms_channel_on_after_delete', $data);
     }
@@ -133,7 +110,16 @@ class CmsChannel extends Model
 
     public function getContentCountAttr($value, $data)
     {
-        return CmsContent::where('channel_id', $data['id'])->count();
+        return CmsContent::where('channel_id', $data['id'])
+            ->cache('content_count_' . $data['id'], 60 * 60 * 24, 'cms_content')
+            ->count();
+    }
+
+    public function bindhtmls()
+    {
+        return $this->hasMany(CmsContentPage::class, 'to_id', 'id')
+            ->where('html_type', 'in', ['channel', 'content'])
+            ->where('template_id', 1);
     }
 
     /**
@@ -190,7 +176,7 @@ class CmsChannel extends Model
     public function getChannelPathAttr($value, $data)
     {
         if (empty($value)) {
-            $value = 'c[id]';
+            $value = '[id]';
         }
         return $value;
     }
@@ -198,7 +184,7 @@ class CmsChannel extends Model
     public function getContentPathAttr($value, $data)
     {
         if (empty($value)) {
-            $value = 'a[id]';
+            $value = '[id]';
         }
         return $value;
     }

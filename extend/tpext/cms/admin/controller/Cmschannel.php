@@ -3,7 +3,7 @@
 namespace tpext\cms\admin\controller;
 
 use think\Controller;
-use think\facade\Cache;
+use tpext\cms\common\Cache;
 use tpext\builder\traits\actions;
 use tpext\cms\common\taglib\Processer;
 use tpext\cms\common\model\CmsTemplate;
@@ -44,6 +44,8 @@ class Cmschannel extends Controller
         $this->selectSearch = 'name';
         $this->selectFields = 'id,name,full_name';
         $this->selectTextField = 'name';
+
+        $this->indexWith = ['bindhtmls'];
     }
 
     /**
@@ -65,11 +67,14 @@ class Cmschannel extends Controller
         $table->matches('model_ids', '内容模型')->optionsData(CmsContentModel::select(), 'name');
         $table->text('sort', '排序')->autoPost('', true)->getWrapper()->addStyle('width:60px');
         $table->text('pagesize', '分页大小')->autoPost()->getWrapper()->addStyle('width:60px');
+        $table->raw('html_namess', '模板绑定');
         $table->show('order_by', '内容排序方式');
         $table->show('content_count', '内容统计');
         $table->fields('page_path', '生成路径')->with(
-            $table->show('channel_path', '栏目生成路径')->to('channel/{val}.html'),
-            $table->show('content_path', '内容生成路径')->to('content/{val}.html')
+            $table->show('channel_path', '栏目生成路径')->to(function ($val, $row) {
+                return 'c/' . str_replace('[id]', $row['id'], $val) . '.html';
+            }),
+            $table->show('content_path', '内容生成路径')->to('d/{val}.html')
         );
         $table->fields('create_time', '添加/修改时间')->with(
             $table->show('create_time', '添加时间'),
@@ -78,15 +83,16 @@ class Cmschannel extends Controller
 
         $table->getToolbar()
             ->btnAdd()
-            ->btnRefresh()
-            ->btnLink(url('refresh'), '刷新层级', 'btn-success', 'mdi-autorenew', 'data-layer-size="300px,150px" title="重新整理栏目上下级关系"');
+            ->btnOpenChecked(url('/admin/cmstemplatemake/makeChannel'), '生成静态', 'btn-yellow', 'mdi-xml', 'title="批量生成静态"')
+            ->btnLink(url('refresh'), '刷新层级', 'btn-success', 'mdi-autorenew', 'data-layer-size="300px,150px" title="重新整理栏目上下级关系"')
+            ->btnRefresh();
 
         $table->getActionbar()
             ->btnLink('add', url('add', ['parend_id' => '__data.pk__']), '', 'btn-secondary', 'mdi-plus', 'title="添加下级"')
             ->btnEdit()
             ->btnView()
             ->br()
-            ->btnLink('make_channel', url('/admin/cmstemplatemake/makeChannel', ['channel_id' => '__data.pk__']), '', 'btn-dark', 'mdi-xml', 'title="生成静态"')
+            ->btnLink('make_channel', url('/admin/cmstemplatemake/makeChannel', ['ids' => '__data.pk__']), '', 'btn-yellow', 'mdi-xml', 'title="生成静态"')
             ->btnDelete()
             ->mapClass([
                 'add' => [
@@ -100,6 +106,16 @@ class Cmschannel extends Controller
         foreach ($data as &$d) {
             $d['__hi_add__'] = $d['type'] == 3;
             $d['preview_url'] = str_replace(['\\', '/'], DIRECTORY_SEPARATOR, $template['prefix']) . Processer::resolveChannelPath($d) . '.html';
+            $htmlIds = [];
+            foreach ($d['bindhtmls'] as $html) {
+                $htmlIds[] = $html['html_id'];
+            }
+            $htmls = CmsTemplateHtml::where('id', 'in', $htmlIds)->order('type')->field('path,type')->select();
+            $names = [];
+            foreach ($htmls as $html) {
+                $names[] = ($html['type'] == 'channel' ? '栏目:' : '详情:') . pathinfo($html['path'], PATHINFO_BASENAME);
+            }
+            $d['html_namess'] = implode('<br>', $names);
         }
     }
 
@@ -109,10 +125,10 @@ class Cmschannel extends Controller
      */
     public function refresh()
     {
-        $builder = $this->builder();
+        $builder = $this->builder('刷新');
         $step = input('step', '0');
         if ($step == 0) {
-            Cache::clear('cms_channel');
+            Cache::deleteTag('cms_channel');
         }
         $list = [];
         $maxLevel = $this->dataModel->max('deep') + 1;
@@ -177,56 +193,58 @@ class Cmschannel extends Controller
         $form->tab('生成设置');
         $form->number('pagesize', '分页大小')->default(12)->required();
         $form->text('order_by', '内容排序方式')->help('默认为：sort desc,publish_time desc,id desc');
-        $form->text('channel_path', '栏目生成路径')->required()->size(2, 6)->beforSymbol('channel/')->afterSymbol('[-page].html')->default('c[id]')->help('[id]为栏目编号变量。如不生成，填入#');
-        $form->text('content_path', '内容生成路径')->required()->size(2, 6)->beforSymbol('content/')->afterSymbol('.html')->default('a[id]')->help('[id]为内容编号变量');
+        $form->text('channel_path', '栏目生成路径')->required()->size(2, 6)->beforSymbol('c/')->afterSymbol('[-page].html')->default('[id]')->help('[id]为栏目编号变量。如不生成，填入#');
+        $form->text('content_path', '内容生成路径')->required()->size(2, 6)->beforSymbol('d/')->afterSymbol('.html')->default('[id]')->help('[id]为内容编号变量');
         $form->text('link', '跳转链接')->help('设置后覆盖栏目生成地址，用于外链或站内跳转');
         $form->selectTree('extend_ids', '附加栏目')->optionsData($list, 'name', 'id', 'parent_id', '')->help('可选多个附加栏目，此栏目列表页同时显示其他栏目内容');
 
         if ($isEdit) {
             $form->hidden('id');
-            $form->tab('模板信息');
+            $form->tab('模板绑定');
+            $form->raw('template_tips', '提示')->value('<p>每个栏目可绑定栏目列表模板和内容详情模板，若未绑定，则使用`default.html`</p>');
 
             $templates = CmsTemplate::select();
+            $pages = CmsContentPage::where('html_type', 'in', ['channel', 'content'])
+                ->where('to_id', $data['id'])
+                ->select();
+
+            $channel_template = [];
+            $content_template = [];
 
             foreach ($templates as $tpl) {
-                $form->divider($tpl['name']);
-                $tplHtml = $this->getHtml($tpl, 'channel', $data['id']);
-                $form->show('channel_template' . $tpl['id'], $tpl['name'] . '[栏目]')->value($tplHtml ? $tplHtml['path'] : '-无，使用默认-');
-                $tplHtml = $this->getHtml($tpl, 'content', $data['id']);
-                $form->show('content_template' . $tpl['id'], $tpl['name'] . '[内容]')->value($tplHtml ? $tplHtml['path'] : '-无，使用默认-');
-                $form->raw('template_' . $tpl['id'], $tpl['name'])->to('<a class="label label-secondary" data-title="[' . $tpl['name'] . ']文件管理" onclick="top.$.fn.multitabs().create(this, true); return false;" href="/admin/cmstemplatehtml/index?template_id=' . $tpl['id'] . '">[管理<i title="打开文件管理页面" class="mdi mdi-arrow-top-right"></i>]</a>');
+                $tpl['name'] = ucfirst($tpl['name']);
+                $channel_template[$tpl['id']] = 0;
+                $content_template[$tpl['id']] = 0;
+
+                foreach ($pages as $page) {
+                    if ($page['template_id'] == $tpl['id']) {
+                        if ($page['html_type'] == 'channel') {
+                            $channel_template[$tpl['id']] = $page['html_id'];
+                        } else {
+                            $content_template[$tpl['id']] = $page['html_id'];
+                        }
+                    }
+                }
+
+                $form->divider($tpl['name'], '模板');
+                $form->select('channel_template.' . $tpl['id'], '栏目列表')
+                    ->beforOptions([0 => '默认'])
+                    ->dataUrl(url('/admin/cmstemplatehtml/selectByTplid', ['template_id' => $tpl['id'], 'type' => 'channel']));
+
+                $form->select('content_template.' . $tpl['id'], '内容详情')
+                    ->beforOptions([0 => '默认'])
+                    ->dataUrl(url('/admin/cmstemplatehtml/selectByTplid', ['template_id' => $tpl['id'], 'type' => 'content']));
+                $form->raw('template_' . $tpl['id'], $tpl['name'])
+                    ->to('<a class="label label-secondary" data-title="[' . $tpl['name'] . ']文件管理" onclick="top.$.fn.multitabs().create(this, true); return false;" href="/admin/cmstemplatehtml/index?template_id=' . $tpl['id'] . '">[管理<i title="打开文件管理页面" class="mdi mdi-arrow-top-right"></i>]</a>');
             }
+
+            $data['channel_template'] = $channel_template;
+            $data['content_template'] = $content_template;
         }
 
         $form->tab('SEO设置');
         $form->text('keywords', '关键字')->maxlength(255)->help('多个关键字请用英文逗号隔开');
         $form->textarea('description', '摘要')->maxlength(255)->help('留空则自动从内容中提取');
-    }
-
-    /**
-     * @param array|CmsTemplate $template
-     * @param string $type
-     * @param int $toId
-     * @return CmsTemplateHtml|null
-     */
-    protected function getHtml($template, $type, $toId)
-    {
-        $pageModel = new CmsContentPage();
-        $htmlModel = new CmsTemplateHtml();
-
-        $pageInfo = $pageModel->where(['html_type' => $type, 'template_id' => $template['id'], 'to_id' => $toId])
-            ->find();
-
-        if ($pageInfo) {
-            $tplHtml = $htmlModel->where('id', $pageInfo['html_id'])
-                ->find();
-            if (!$tplHtml) {
-                $pageInfo->delete();
-            }
-            return $tplHtml;
-        }
-
-        return null;
     }
 
     protected function _autopost()
@@ -275,6 +293,8 @@ class Cmschannel extends Controller
             'order_by',
             'keywords',
             'description',
+            'channel_template',
+            'content_template',
         ], 'post');
 
         $result = $this->validate($data, [
@@ -322,6 +342,89 @@ class Cmschannel extends Controller
             $this->error('内容生成路径必须包含[id]变量');
         }
 
+        if ($id) {
+            $this->htmlBind($id, $data);
+        }
+
         return $this->doSave($data, $id);
+    }
+
+    protected function htmlBind($id, $data)
+    {
+        $channel_template = $data['channel_template'] ?? [];
+        $content_template = $data['content_template'] ?? [];
+
+        foreach ($channel_template as $template_id => $html_id) {
+            $exist = CmsContentPage::where('template_id', $template_id)
+                ->where('html_type', 'channel')
+                ->where('to_id', $id)
+                ->find();
+            if ($html_id > 0) {
+                $tpl = CmsTemplateHtml::find($html_id);
+                if (!$tpl) {
+                    $this->error('模板不存在');
+                }
+                if ($tpl['is_default']) {
+                    if ($exist) {
+                        $exist->delete();
+                    }
+                    continue;
+                }
+                if ($exist) {
+                    $exist->save([
+                        'html_id' => $html_id,
+                    ]);
+                } else {
+                    $perm = new CmsContentPage;
+                    $perm->save([
+                        'to_id' => $id,
+                        'template_id' => $template_id,
+                        'html_id' => $html_id,
+                        'html_type' => 'channel',
+                    ]);
+                }
+            } else {
+                if ($exist) {
+                    $exist->delete();
+                }
+            }
+        }
+
+        foreach ($content_template as $template_id => $html_id) {
+
+            $exist = CmsContentPage::where('template_id', $template_id)
+                ->where('html_type', 'content')
+                ->where('to_id', $id)
+                ->find();
+            if ($html_id > 0) {
+                $tpl = CmsTemplateHtml::find($html_id);
+                if (!$tpl) {
+                    $this->error('模板不存在');
+                }
+                if ($tpl['is_default']) {
+                    if ($exist) {
+                        $exist->delete();
+                    }
+                    continue;
+                }
+                if ($exist) {
+                    $exist->save([
+                        'html_id' => $html_id,
+                    ]);
+                } else {
+                    $perm = new CmsContentPage;
+                    $perm->save([
+                        'to_id' => $id,
+                        'template_id' => $template_id,
+                        'html_id' => $html_id,
+                        'html_type' => 'content',
+                    ]);
+                }
+            } else {
+                if ($exist) {
+                    $exist->delete();
+                }
+            }
+        }
     }
 }
