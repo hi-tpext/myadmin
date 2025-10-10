@@ -5,8 +5,7 @@ namespace tpext\cms\admin\controller;
 use tpext\think\App;
 use think\Controller;
 use tpext\common\Tool;
-use think\facade\Cache;
-use tpext\cms\common\Module;
+use tpext\cms\common\Cache;
 use tpext\builder\traits\actions;
 use tpext\cms\common\RouteBuilder;
 use tpext\cms\common\TemplaBuilder;
@@ -139,7 +138,7 @@ class Cmstemplate extends Controller
 
         $msgs = ['已清除数据缓存'];
         foreach ($tags as $tag) {
-            Cache::clear($tag);
+            Cache::deleteTag($tag);
         }
 
         Tool::deleteDir(App::getRootPath() . 'runtime' . DIRECTORY_SEPARATOR . 'temp' . DIRECTORY_SEPARATOR . 'theme');
@@ -225,10 +224,6 @@ class Cmstemplate extends Controller
         } else if ($data['prefix'] !== '/') {
             $data['prefix'] = '/' . preg_replace('/[^\w\-]/', '', trim(strtolower($data['prefix']), '/\\')) . '/';
         }
-
-        $view_path = App::getRootPath() . 'theme' . DIRECTORY_SEPARATOR . $data['view_path'];
-
-        TemplateModel::initPath($view_path);
 
         return $this->doSave($data, $id);
     }

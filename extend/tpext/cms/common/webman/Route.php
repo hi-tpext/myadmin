@@ -47,7 +47,7 @@ class Route extends BaseRoute
     protected static function addRoute($methods, string $path, $callback): RouteObject
     {
         $path = rtrim($path, '$') . '[.html]';
-        $path = str_replace('<id>', '{id:\d+}', $path);
+        $path = str_replace(['<id>', '<page>'], ['{id:\d+}', '{page:\d+}'], $path);
 
         $route = new RouteObject($methods, static::$groupPrefix . $path, $callback);
         parent::$allRoutes[] = $route;

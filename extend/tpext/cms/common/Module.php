@@ -13,15 +13,16 @@ namespace tpext\cms\common;
 
 use tpext\think\App;
 use tpext\common\Tool;
-use think\facade\Cache;
+use tpext\cms\common\Cache;
 use tpext\cms\common\event;
+use tpext\common\ExtLoader;
 use tpext\common\Module as baseModule;
 use tpext\cms\common\model\CmsTemplate;
 use tpext\cms\common\model\CmsTemplateHtml;
 
 class Module extends baseModule
 {
-    protected $version = '2.0.3';
+    protected $version = '2.0.13';
 
     protected $name = 'tpext.cms';
 
@@ -133,6 +134,8 @@ class Module extends baseModule
                 foreach ($tpls as $tpl) {
                     $render->copyStatic($tpl);
                 }
+                $routeBuilder = new RouteBuilder;
+                $routeBuilder->builder(true);
             } catch (\Throwable $e) {
                 trace($e->__toString());
             }
@@ -140,7 +143,7 @@ class Module extends baseModule
             $tags = ['cms_html', 'cms_page', 'cms_template', 'cms_channel', 'cms_content', 'cms_position', 'cms_banner', 'cms_tag'];
 
             foreach ($tags as $tag) {
-                Cache::clear($tag);
+                Cache::deleteTag($tag);
             }
         }
 
@@ -191,5 +194,14 @@ class Module extends baseModule
 
         $maker = new event\MakeRoute;
         $maker->watch();
+
+        $maker = new event\MakeTemplate;
+        $maker->watch();
+
+        //tp5.1模型事件处理
+        if (ExtLoader::isTP51()) {
+            $maker = new event\ModelEvent;
+            $maker->watch();
+        }
     }
 }

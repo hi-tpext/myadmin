@@ -1,7 +1,7 @@
 <!--文章详情(示例)-->
 <div class="breadcrumb">
     当前位置：<a href="@site_home@">首页</a>
-    {channel@parents id="$content.channel_id"}
+    {channel@parents}
     &gt;<a href="{$channel.url}">{$channel.name}</a>
     {/channel@parents}
 </div>
@@ -33,7 +33,7 @@
         <video src="{$atta.file}" controls="controls" width="320" height="240">
             您的浏览器不支持 video 标签。
         </video>
-        {elseif preg_match('/\.(pfd)$/i', $atta.file)}
+        {elseif preg_match('/\.(pdf)$/i', $atta.file)}
         <!--显示pdf文件，暂时不做处理-->
         {else}
         <a href="{$atta.file}" target="_blank">{$atta.desc}</a>
@@ -71,5 +71,3 @@
         下一篇：<a href="{$next.url}">{$next.title}</a>
     </div>
 </div>
-<p>如当页面前环境变量为：</p>
-{show@vars}

@@ -11,7 +11,6 @@
 
 namespace tpext\cms\common\event;
 
-use tpext\think\App;
 use tpext\cms\common\model;
 use tpext\common\ExtLoader;
 use tpext\cms\common\TemplaBuilder;
@@ -41,10 +40,6 @@ class MakeStatic
         });
         ExtLoader::watch('cms_channel_on_after_delete', function ($data) {
             $this->channelChange($data);
-        });
-
-        ExtLoader::watch('cms_template_on_after_insert', function ($data) {
-            $this->templateNew($data);
         });
     }
 
@@ -87,20 +82,5 @@ class MakeStatic
             $res = $buiilder->makeIndex($template);
             trace('[模板首页]成静态文件：' . $res['msg'], 'info');
         }
-    }
-
-    /**
-     * @param mixed $data
-     * @return void
-     */
-    protected function templateNew($data)
-    {
-        $view_path = App::getRootPath() . 'theme' . DIRECTORY_SEPARATOR . $data['view_path'];
-        model\CmsTemplate::initPath($view_path);
-        model\CmsTemplateHtml::scanPageFiles($data['id'], $view_path);
-        $builer = new TemplaBuilder;
-        $builer->copyStatic($data);
-
-        trace('模板[' . $data['name'] . ']触路由生成', 'info');
     }
 }

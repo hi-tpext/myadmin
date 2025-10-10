@@ -9,8 +9,8 @@ CREATE TABLE IF NOT EXISTS `__PREFIX__cms_channel`  (
   `deep` tinyint(2) unsigned NOT NULL DEFAULT 0 COMMENT '层级',
   `path` varchar(55) NOT NULL DEFAULT '' COMMENT '层级路径',
   `model_ids` varchar(55) NOT NULL DEFAULT '1' COMMENT '允许的模型',
-  `channel_path` varchar(55) NOT NULL DEFAULT 'c[id]' COMMENT '栏目路径',
-  `content_path` varchar(55) NOT NULL DEFAULT 'a[id]' COMMENT '内容路径',
+  `channel_path` varchar(55) NOT NULL DEFAULT '[id]' COMMENT '栏目路径',
+  `content_path` varchar(55) NOT NULL DEFAULT '[id]' COMMENT '内容路径',
   `extend_ids` VARCHAR(55) NOT NULL DEFAULT '' COMMENT '附加其他栏目',
   `description` varchar(255) NOT NULL DEFAULT '' COMMENT '摘要',
   `keywords` varchar(255) NOT NULL DEFAULT '' COMMENT '关键字',
@@ -196,7 +196,7 @@ INSERT INTO `__PREFIX__cms_template` (`id`, `name`, `platform`, `view_path`, `pr
 (1, 'default', 'pc', 'default', '/', 'pc端默认模板', 5, 1, '2024-12-06 14:34:34', '2024-12-06 14:34:34');
 
 INSERT INTO `__PREFIX__cms_channel` (`id`, `name`, `full_name`, `parent_id`, `logo`, `type`, `link`, `deep`, `path`, `model_ids`, `order_by`, `channel_path`, `content_path`, `description`, `keywords`, `extend_ids`, `is_show`, `is_navi`, `sort`, `pagesize`, `create_time`, `update_time`, `delete_time`) VALUES
-(1, '关于', '关于', 0, '', 3, '', 1, ',0,', '1', '', 'c[id]', 'a[id]', '', '', '', 1, 0, 999, 12, '2024-12-06 14:34:34', '2024-12-06 15:21:43', NULL);
+(1, '关于', '关于', 0, '', 3, '', 1, ',0,', '1', '', '[id]', '[id]', '', '', '', 1, 0, 999, 12, '2024-12-06 14:34:34', '2024-12-06 15:21:43', NULL);
 
 INSERT INTO `__PREFIX__cms_content` (`id`, `title`, `channel_id`, `author`, `source`, `is_recommend`, `is_hot`, `is_top`, `tags`, `keywords`, `link`, `logo`, `description`, `mention_ids`, `publish_time`, `sort`, `is_show`, `click`, `admin_id`, `reference_id`, `create_time`, `update_time`, `delete_time`) VALUES
 (2, '联系我们', 1, '管理员', '默认分组', 0, 0, 0, '', '', '', '', '联系我们', '', '2024-12-09 22:10:17', 10, 1, 40, 0, 0, '2024-12-09 22:12:08', '2024-12-10 00:29:12', NULL),

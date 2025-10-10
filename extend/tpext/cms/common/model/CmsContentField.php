@@ -55,15 +55,6 @@ class CmsContentField extends Model
         'none' => '不需要录入'
     ];
 
-    protected static function init()
-    {
-        if (method_exists(static::class, 'event')) {
-            self::afterDelete(function ($data) {
-                return self::onAfterDelete($data);
-            });
-        }
-    }
-
     public static function onAfterDelete($data)
     {
         CmsContentModelField::where('name', $data['name'])->delete();
