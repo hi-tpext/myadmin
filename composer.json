@@ -20,10 +20,10 @@
         }
     ],
     "require": {
-        "php": ">=7.1.0",
-        "topthink/framework": "^6.1.4",
-        "topthink/think-orm": "^2.0",
-        "ichynul/tpextmyadmin": "^3.0",
+        "php": ">=8.0.0",
+        "topthink/framework": "^8.1",
+        "ichynul/tpextmyadmin": "^5.0",
+        "ichynul/tpextbuilder": "^3.9",
         "ichynul/tpextareacity": "^1.1"
     },
     "require-dev": {
