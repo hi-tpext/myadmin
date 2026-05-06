@@ -6,17 +6,6 @@ UI 使用的是：光年(Light Year Admin)后台管理系统模板：https://git
 
 ## 一、安装
 
-### tp框架有两个版本
-
-- `5.1` 基于thinkphp 5.1
-
-- `6.0` 基于thinkphp 6.x/8.x
-
-### 基于`webman`的实现：<https://github.com/hi-tpext/mywebman>
-
-###2024-07-06更新：
-
-tp6基于vue3的版本可试用，见：https://github.com/hi-tpext/tpext-myadmin/tree/5.0
 ---
 
 ### 框架需要使用 composer和git
@@ -31,29 +20,18 @@ tp6基于vue3的版本可试用，见：https://github.com/hi-tpext/tpext-myadmi
 
 ### 使用 `composer` 全新安装
 
-> 安装 thinkphp(`5.1` 或 `6.0`，根据您的需要，选择其中一个版本)，
-
- [5.1]分支对应 `tpextmyadmin`的[1.0]分支，依次执行以下命令，`myadmin` 为新项目目录，可自行调整
-
+[8.0]分支对应 `tpextmyadmin`的[3.0/5.0]分支，依次执行以下命令，`myadmin8` 为新项目目录，可自行调整
 ```bash
-composer create-project topthink/think=5.1.* myadmin
+#1、安装p8
+composer create-project topthink/think=8.1.* myadmin8
 
-cd myadmin
+cd myadmin8
 
-composer require ichynul/tpextmyadmin:^1.*
-```
+#2、安装 myadmin核心。 3.x 与5.x 的区别：3.x 强制绑定uibuilder为`tpextbuilder`，如果想要切换ui builder，就安装5.x
+composer require ichynul/tpextmyadmin:^5.1
 
-或
-
-[6.0]分支对应 `tpextmyadmin`的[3.0]分支，依次执行以下命令，`myadmin6` 为新项目目录，可自行调整
-```bash
-composer create-project topthink/think=6.1.* myadmin6
-
-cd myadmin6
-
-composer require ichynul/tpextmyadmin:^3.*
-
-#2025-03-17 更新：已支持tp8，调整版本号 `topthink/think=8.0`
+#3、安装builder(多版本可选，以下安装默认基于bootstrap的。基于vue3的版本可试用，见：https://github.com/hi-tpext/tpext-myadmin/tree/5.0)
+composer require ichynul/tpextbuilder:^3.9
 
 ```
 
@@ -63,28 +41,18 @@ composer require ichynul/tpextmyadmin:^3.*
 
 ### 使用 `git` 安装演示站
 
-> 拉取 `5.1` 分支代码，依次执行以下命令，`myadmin` 为新项目目录，可自行调整
+或 拉取 `8.x` 分支代码，依次执行以下命令，`myadmin8` 为新项目目录，可自行调整
 
 ```bash
-git clone -b 5.1 https://github.com/hi-tpext/myadmin.git myadmin
+git clone -b 8.x https://github.com/hi-tpext/myadmin.git myadmin8
 
-cd myadmin
-
-composer update
-````
-
-或 拉取 `6.0` 分支代码，依次执行以下命令，`myadmin6` 为新项目目录，可自行调整
-
-```bash
-git clone -b 6.0 https://github.com/hi-tpext/myadmin.git myadmin6
-
-cd myadmin6
-
-#2025-03-17 更新：已支持tp8，可在clone完成后，修改`composer.json`，调整thinkphp版本号 `"topthink/framework": "^8.0"`
+cd myadmin8
 
 composer update
 
 ```
+
+### 基于`webman`的实现：<https://github.com/hi-tpext/mywebman>
 
 > 相关演示代码在`application/admin/`或`app/admin/`中，数据库脚本由`[myadmindata]`扩展提供，请下载安装。
 > 安装完毕，此安装版是最和演示站同步的，如果你想自己搭建演示站可用此方式。
