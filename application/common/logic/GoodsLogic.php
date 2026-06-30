@@ -200,7 +200,7 @@ class GoodsLogic
                 if ($is_del) {
                     $goodsPriceModel->destroy($key);
                 } else {
-                    $res = $goodsPriceModel->save($pdata, ['id' => $key]);
+                    $res = $goodsPriceModel->isUpdate(true, ['id' => $key])->save($pdata);
                     if ($res) {
                         $specKeyIds[] = $pdata['spec_key'];
                     } else {
